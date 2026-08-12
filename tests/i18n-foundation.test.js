@@ -4,6 +4,7 @@
  */
 const fs = require( 'fs' );
 const path = require( 'path' );
+const crypto = require( 'crypto' );
 
 const root = path.resolve( __dirname, '..' );
 const read = ( file ) => fs.readFileSync( path.join( root, file ), 'utf8' );
@@ -13,10 +14,31 @@ const pageBuilders = read( 'includes/adapters/page-builders.php' );
 const template = read( 'includes/template.php' );
 const app = read( 'assets/js/app.js' );
 const pot = read( 'languages/minn-admin.pot' );
+const po = read( 'languages/minn-admin-fa_IR.po' );
+const moPath = path.join( root, 'languages/minn-admin-fa_IR.mo' );
+const scriptPath = 'assets/js/app.js';
+const scriptHash = crypto.createHash( 'md5' ).update( scriptPath ).digest( 'hex' );
+const jsonPath = `languages/minn-admin-fa_IR-${ scriptHash }.json`;
+const scriptCatalog = JSON.parse( read( jsonPath ) );
 const potIds = pot.split( /\r?\n/ )
 	.filter( ( line ) => line.startsWith( 'msgid "' ) && line !== 'msgid ""' )
 	.map( ( line ) => line.slice( 7, -1 ) );
 const duplicatePotIds = potIds.filter( ( id, index ) => potIds.indexOf( id ) !== index );
+const poBlocks = po.split( /\r?\n\r?\n/ ).slice( 1 );
+const poIds = poBlocks.map( ( block ) => ( block.match( /^msgid "(.*)"$/m ) || [] )[ 1 ] ).filter( Boolean );
+const duplicatePoIds = poIds.filter( ( id, index ) => poIds.indexOf( id ) !== index );
+const untranslatedPoEntries = poBlocks.filter( ( block ) => (
+	/^msgstr ""$/m.test( block ) || /^msgstr\[\d+\] ""$/m.test( block )
+) );
+const placeholderPattern = /%(?:\d+\$)?[bcdeEfFgGosuxX]/g;
+const placeholders = ( value ) => ( value.match( placeholderPattern ) || [] ).sort().join( ',' );
+const placeholderErrors = poBlocks.filter( ( block ) => {
+	const source = ( block.match( /^msgid "(.*)"$/m ) || [] )[ 1 ] || '';
+	const plural = ( block.match( /^msgid_plural "(.*)"$/m ) || [] )[ 1 ];
+	const targets = [ ...block.matchAll( /^msgstr(?:\[\d+\])? "(.*)"$/gm ) ].map( ( match ) => match[ 1 ] );
+	return targets.some( ( target, index ) => placeholders( target ) !== placeholders( index && plural ? plural : source ) );
+} );
+const localeData = scriptCatalog.locale_data.messages;
 
 const checks = [
 	[ 'plugin declares the text domain', /Text Domain:\s+minn-admin/.test( plugin ) ],
@@ -36,6 +58,16 @@ const checks = [
 	[ 'POT version matches the plugin version', /Project-Id-Version: Minn Admin 0\.27\.0/.test( pot ) ],
 	[ 'new PHP shell strings are in the POT', [ 'Invalid plugin or status.', 'English (United States)', 'Minn Admin — %s' ].every( ( id ) => potIds.includes( id ) ) ],
 	[ 'POT contains no duplicate singular entries', duplicatePotIds.length === 0 ],
+	[ 'Persian PO declares the WordPress/JED plural rule', /Language: fa_IR/.test( po ) && /Plural-Forms: nplurals=2; plural=\(n > 1\);/.test( po ) ],
+	[ 'Persian PO covers every POT entry', poIds.length === potIds.length && potIds.every( ( id ) => poIds.includes( id ) ) ],
+	[ 'Persian PO contains no duplicate entries', duplicatePoIds.length === 0 ],
+	[ 'Persian PO contains no fuzzy or obsolete entries', ! /^#,.*\bfuzzy\b/m.test( po ) && ! /^#~/m.test( po ) ],
+	[ 'Persian PO contains no untranslated entries', untranslatedPoEntries.length === 0 ],
+	[ 'Persian PO preserves every printf placeholder', placeholderErrors.length === 0 ],
+	[ 'Persian MO catalog is compiled', fs.existsSync( moPath ) && fs.statSync( moPath ).size > 0 ],
+	[ 'Persian JSON filename matches the app path hash', fs.existsSync( path.join( root, jsonPath ) ) ],
+	[ 'Persian JSON targets the registered app source', scriptCatalog.source === scriptPath ],
+	[ 'Persian JSON contains singular and plural translations', localeData.Overview[ 0 ] === 'نمای کلی' && localeData[ '%d type' ].length === 2 ],
 ];
 
 let failed = 0;

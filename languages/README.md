@@ -56,6 +56,11 @@ The generated JSON filename contains either the registered script handle or the 
 of the script path. Do not rename it manually; WordPress resolves that name when
 `wp_set_script_translations()` runs.
 
+The repository ships a complete Persian (`fa_IR`) catalog as PO, compiled MO and
+the path-hashed JSON generated for `assets/js/app.js`. Persian uses the WordPress/JED
+rule `nplurals=2; plural=(n > 1);`. Regenerate the MO and JSON files with the commands
+above whenever the PO changes; never edit those compiled artifacts by hand.
+
 ## Validation
 
 Run the site-independent contract check after regenerating:
@@ -71,6 +76,12 @@ fallback and console errors. For a release check, also load a real generated JSO
 under a non-English user locale. That final smoke test covers the filename and filesystem
 lookup performed by `wp_set_script_translations()`; verify that navigation and a plural
 entry come from the generated file.
+
+`tests/i18n-fa-ir-smoke.test.js` performs that release smoke check when run against a
+disposable administrator whose profile locale is `fa_IR`. It covers PHP boot strings,
+the generated JavaScript catalog, plural selection, positional placeholders, English
+fallback, script ordering and browser errors. The test harness must restore the user and
+runtime files after it runs.
 
 PHP syntax validation should cover `minn-admin.php` and every PHP file under
 `includes/`. The project has no production build step.
