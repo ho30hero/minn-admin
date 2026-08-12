@@ -658,6 +658,10 @@ class Minn_Admin {
 		$roles = array_values( $user->roles );
 		$role  = $roles ? wp_roles()->role_names[ $roles[0] ] ?? $roles[0] : '';
 
+		// Front-end requests use the site locale by default. Switch before
+		// building the shell so PHP and script catalogs honor the user's choice.
+		switch_to_user_locale( $user->ID );
+
 		// Raw forms drive insertable_blocks' candidacy (so its shared render
 		// probe caches per SITE, not per user); the per-user-filtered copy is
 		// only the descriptor payload sent to the client. See insertable_blocks.

@@ -21,6 +21,7 @@ const checks = [
 	[ 'plugin declares the text domain', /Text Domain:\s+minn-admin/.test( plugin ) ],
 	[ 'plugin declares the language directory', /Domain Path:\s+\/languages/.test( plugin ) ],
 	[ 'PHP translations load on init', /add_action\( 'init', array\( __CLASS__, 'load_textdomain' \) \)/.test( core ) ],
+	[ 'the standalone shell switches to the user locale', /switch_to_user_locale\( \$user->ID \)/.test( core ) ],
 	[ 'app depends on the WordPress i18n runtime', /array\( 'wp-i18n' \)/.test( core ) ],
 	[ 'script translations use the plugin domain', /wp_set_script_translations\( 'minn-admin-app', 'minn-admin'/.test( core ) ],
 	[ 'the registered app handle is printed', /wp_print_scripts\( 'minn-admin-app' \)/.test( template ) ],

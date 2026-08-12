@@ -4,6 +4,37 @@ Minn Admin uses `minn-admin` as its text domain. PHP strings use WordPress gette
 functions and the standalone JavaScript app is registered with `wp-i18n` plus
 `wp_set_script_translations()`.
 
+## Runtime design
+
+Minn renders outside wp-admin and deliberately does not call `wp_head()` or
+`wp_footer()`. The shell therefore registers `assets/js/app.js` itself, declares
+`wp-i18n` as a dependency, and prints that registered handle. This lets WordPress
+emit the i18n runtime and load script catalogs from either this directory or
+`WP_LANG_DIR/plugins`.
+
+Front-end requests normally use the site locale. Before the shell and its boot
+payload are built, Minn switches to the signed-in user's locale so PHP strings and
+JavaScript catalogs follow the Language choice on that user's profile.
+
+The module-local `__()`, `_n()` and `sprintf()` helpers delegate to `wp.i18n`. They
+retain an English fallback so a missing catalog never prevents the app from loading.
+The `minn_admin_js_translations` filter and `B.i18n` map are override seams for sites
+and test fixtures; production catalogs should use the standard WordPress files.
+
+## Source-string rules
+
+- Wrap every Minn-owned user-facing PHP string with the WordPress gettext function
+  appropriate to its context and pass `minn-admin` explicitly.
+- Wrap JavaScript strings with the module-local `__()` or `_n()` helper.
+- Use `sprintf()` for placeholders and `_n()` for counts. Do not build translatable
+  sentences through concatenation.
+- Put a short English `translators:` comment immediately before every extraction call
+  containing placeholders.
+- Escape translated output for its destination: HTML text, attributes or URLs.
+- Do not wrap labels supplied by WordPress or third-party plugins in Minn's domain.
+
+## Catalog workflow
+
 Regenerate the source catalog from the repository root with WP-CLI:
 
 ```sh
@@ -21,6 +52,12 @@ wp i18n make-mo languages
 wp i18n make-json languages --no-purge
 ```
 
+The generated JSON filename contains either the registered script handle or the MD5
+of the script path. Do not rename it manually; WordPress resolves that name when
+`wp_set_script_translations()` runs.
+
+## Validation
+
 Run the site-independent contract check after regenerating:
 
 ```sh
@@ -29,4 +66,10 @@ npm run test:i18n
 ```
 
 The browser-backed `tests/i18n.test.js` verifies the complete runtime path on a
-configured development site.
+configured development site. It covers the WordPress i18n runtime, translated shell
+strings, plural formatting, English fallback and console errors. For a release check,
+also load a real generated JED catalog under a non-English user locale and verify that
+the navigation and a plural entry come from that file.
+
+PHP syntax validation should cover `minn-admin.php` and every PHP file under
+`includes/`. The project has no production build step.

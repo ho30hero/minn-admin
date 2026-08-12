@@ -3155,7 +3155,9 @@
 			</div>
 			${ filtered.length ? filtered.map( ( p ) => `
 				<div class="minn-table-row minn-content-cols${ state.contentTrash ? ' trash' : '' }${ sel.has( p.id ) ? ' sel' : '' }" data-id="${ p.id }" data-type="${ esc( p.type ) }" data-status="${ esc( p.status ) }" data-link="${ esc( p.link || '' ) }">
-					<div class="minn-cbcell"><input type="checkbox" class="minn-cb minn-row-cb" data-cbid="${ p.id }" aria-label="${ esc( sprintf( __( 'Select %s' ), p.title ) ) }"${ sel.has( p.id ) ? ' checked' : '' }></div>
+					<div class="minn-cbcell"><input type="checkbox" class="minn-cb minn-row-cb" data-cbid="${ p.id }" aria-label="${ esc( sprintf(
+						/* translators: %s: content title. */
+						__( 'Select %s' ), p.title ) ) }"${ sel.has( p.id ) ? ' checked' : '' }></div>
 					<div class="minn-row-icon${ p.thumb ? ' has-thumb' : '' }">${ rowIcon( p ) }</div>
 					<div class="minn-cell-clip">
 						<div class="minn-row-title">${ esc( p.title ) }</div>
@@ -13380,9 +13382,12 @@
 				/* translators: 1: number of database tables, 2: total size (e.g. "97.8 MB"). */
 				__( '%1$s tables · %2$s' ), String( c.tables.length ), c.total_size_human ) ) }</div>
 			${ c.foreign > 0 ? `<button class="minn-btn-soft${ ds.all ? ' active' : '' }" id="minn-db-all">${ esc( ds.all
-				/* translators: %d: number of tables outside this install's prefix. */
-				? sprintf( __( 'Hide %d other-prefix tables' ), c.foreign )
-				: sprintf( __( 'Show %d other-prefix tables' ), c.foreign ) ) }</button>` : '' }
+				? sprintf(
+					/* translators: %d: number of tables outside this install's prefix. */
+					__( 'Hide %d other-prefix tables' ), c.foreign )
+				: sprintf(
+					/* translators: %d: number of tables outside this install's prefix. */
+					__( 'Show %d other-prefix tables' ), c.foreign ) ) }</button>` : '' }
 			<span class="minn-db-ro">${ icon( 'lock' ) } ${ esc( __( 'Read-only by design' ) ) }</span>
 		</div>
 		<div id="minn-db-list"></div>`;
@@ -13461,9 +13466,10 @@
 		const h = state.cache.dbHealth;
 		let summary = '';
 		if ( h ) {
-			/* translators: %s: number of database health checks needing attention. */
 			summary = h.warnings
-				? sprintf( _n( '%s check needs attention', '%s checks need attention', h.warnings ), Number( h.warnings ).toLocaleString() )
+				? sprintf( _n(
+					/* translators: %s: number of database health checks needing attention. */
+					'%s check needs attention', '%s checks need attention', h.warnings ), Number( h.warnings ).toLocaleString() )
 				: __( 'Everything looks healthy' );
 		}
 		const head = `

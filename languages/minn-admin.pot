@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-12T00:00:00+00:00\n"
+"POT-Creation-Date: 2026-08-12T09:18:39+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -88,7 +88,8 @@ msgstr[1] ""
 msgid "%1$s of %2$s connections failing the daily health check (%3$s)"
 msgstr ""
 
-#: includes/adapters/fluent-smtp.php:740
+#. translators: %s: number of times the email was resent.
+#: includes/adapters/fluent-smtp.php:742
 #, php-format
 msgid "%s time"
 msgid_plural "%s times"
@@ -99,6 +100,10 @@ msgstr[1] ""
 #: includes/adapters/kadence.php:111
 #: includes/adapters/stackable.php:130
 msgid "Design not found."
+msgstr ""
+
+#: includes/adapters/jetpack-tiled-gallery.php:41
+msgid "Tiled Gallery"
 msgstr ""
 
 #: includes/adapters/page-builders.php:285
@@ -165,409 +170,421 @@ msgstr ""
 msgid "Profiled “%s”. Open Profiles to inspect it."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:295
-#: includes/class-minn-admin-db.php:323
-#: includes/class-minn-admin-db.php:432
+#: includes/class-minn-admin-db.php:329
+#: includes/class-minn-admin-db.php:357
+#: includes/class-minn-admin-db.php:466
 msgid "Unknown table."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:299
-#: includes/class-minn-admin-db.php:327
+#: includes/class-minn-admin-db.php:333
+#: includes/class-minn-admin-db.php:361
 msgid "Could not read the table structure."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:438
+#: includes/class-minn-admin-db.php:472
 msgid "This table has no usable primary key."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:448
+#: includes/class-minn-admin-db.php:482
 msgid "Row not found."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:507
+#: includes/class-minn-admin-db.php:541
 msgid "Not checked"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:508
+#: includes/class-minn-admin-db.php:542
 msgid "This table is too large to count cheaply, so Minn does not scan it. Run the command below to check it yourself."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:558
+#: includes/class-minn-admin-db.php:592
 msgid "Database hygiene"
 msgstr ""
 
 #. translators: %s: number of database checks needing attention.
-#: includes/class-minn-admin-db.php:564
+#: includes/class-minn-admin-db.php:598
 #, php-format
 msgid "%s storage check needs attention"
 msgid_plural "%s storage checks need attention"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/class-minn-admin-db.php:572
+#: includes/class-minn-admin-db.php:606
 msgid "Orphaned rows, indexes and engines all look healthy"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:636
+#: includes/class-minn-admin-db.php:670
 msgid "Tables without a primary key"
 msgstr ""
 
 #. translators: %s: comma-separated list of database table names.
-#: includes/class-minn-admin-db.php:642
+#: includes/class-minn-admin-db.php:676
 #, php-format
 msgid "These tables have no primary key, which breaks row-level replication and confuses backup and migration tools: %s"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:645
+#: includes/class-minn-admin-db.php:679
 msgid "Every table has a primary key."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:657
+#: includes/class-minn-admin-db.php:691
 msgid "Storage engine"
 msgstr ""
 
 #. translators: %s: comma-separated list of tables and their storage engines.
-#: includes/class-minn-admin-db.php:663
+#: includes/class-minn-admin-db.php:697
 #, php-format
 msgid "These tables do not use InnoDB, so they miss row-level locking and crash recovery: %s"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:666
+#: includes/class-minn-admin-db.php:700
 msgid "Every table uses InnoDB."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:668
+#: includes/class-minn-admin-db.php:702
 msgid "Convert a table"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:670
+#: includes/class-minn-admin-db.php:704
 msgid "Back up first. Converting locks the table while it runs."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:689
+#: includes/class-minn-admin-db.php:723
 msgid "Reclaimable space"
 msgstr ""
 
 #. translators: 1: table name, 2: reclaimable size (e.g. "82.0 MB").
-#: includes/class-minn-admin-db.php:696
+#: includes/class-minn-admin-db.php:730
 #, php-format
 msgid "%1$s alone is holding %2$s of free space inside its own file. Optimising rewrites the table and returns it to the disk."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:700
+#: includes/class-minn-admin-db.php:734
 msgid "No table is holding a significant amount of reclaimable space."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:702
+#: includes/class-minn-admin-db.php:736
 msgid "Optimise tables"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:704
+#: includes/class-minn-admin-db.php:738
 msgid "Back up first. Optimising locks each table while it runs."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:722
+#: includes/class-minn-admin-db.php:756
 msgid "Post meta lookup index"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:725
+#: includes/class-minn-admin-db.php:759
 msgid "Present"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:725
+#: includes/class-minn-admin-db.php:759
 msgid "Missing"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:727
+#: includes/class-minn-admin-db.php:761
 msgid "A combined post_id and meta_key index is present, so meta lookups stay fast."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:728
+#: includes/class-minn-admin-db.php:762
 msgid "Lookups by post and meta key fall back to two separate indexes. On sites with heavy meta use (WooCommerce, event and booking plugins) a combined index is a large, low-risk speed win."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:730
+#: includes/class-minn-admin-db.php:764
 msgid "Add the index"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:732
+#: includes/class-minn-admin-db.php:766
 msgid "Back up first. Adding an index locks the table briefly."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:771
+#: includes/class-minn-admin-db.php:805
 msgid "Auto-increment headroom"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:773
+#: includes/class-minn-admin-db.php:807
 msgid "Healthy"
 msgstr ""
 
 #. translators: %s: comma-separated list of database table names.
-#: includes/class-minn-admin-db.php:778
+#: includes/class-minn-admin-db.php:812
 #, php-format
 msgid "These tables are within 20 percent of the largest id their column type can store. Once the ceiling is reached, new rows stop being written: %s"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:781
+#: includes/class-minn-admin-db.php:815
 msgid "No table is close to exhausting its id column."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:789
+#: includes/class-minn-admin-db.php:823
 msgid "Orphaned post meta"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:792
+#: includes/class-minn-admin-db.php:826
 msgid "These meta rows belong to posts that no longer exist. They are dead weight in every query that touches post meta."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:793
+#: includes/class-minn-admin-db.php:827
 msgid "Every meta row belongs to a post that still exists."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:795
-#: includes/class-minn-admin-db.php:813
-#: includes/class-minn-admin-db.php:831
+#: includes/class-minn-admin-db.php:829
+#: includes/class-minn-admin-db.php:847
+#: includes/class-minn-admin-db.php:865
 msgid "Delete them"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:797
-#: includes/class-minn-admin-db.php:815
-#: includes/class-minn-admin-db.php:833
+#: includes/class-minn-admin-db.php:831
+#: includes/class-minn-admin-db.php:849
+#: includes/class-minn-admin-db.php:867
 msgid "Back up first. This permanently deletes rows."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:807
+#: includes/class-minn-admin-db.php:841
 msgid "Orphaned user meta"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:810
+#: includes/class-minn-admin-db.php:844
 msgid "These meta rows belong to users who no longer exist, usually left behind by a plugin that removed accounts directly."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:811
+#: includes/class-minn-admin-db.php:845
 msgid "Every meta row belongs to a user who still exists."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:825
+#: includes/class-minn-admin-db.php:859
 msgid "Orphaned term relationships"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:828
+#: includes/class-minn-admin-db.php:862
 msgid "These rows link content to categories or tags that no longer exist."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:829
+#: includes/class-minn-admin-db.php:863
 msgid "Every relationship points at a term that still exists."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:843
+#: includes/class-minn-admin-db.php:877
 msgid "Stored revisions"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:846
+#: includes/class-minn-admin-db.php:880
 msgid "Revisions are the editor safety net, so a large number is normal and not a fault. Trimming them is only worthwhile if the posts table has grown unwieldy."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:847
+#: includes/class-minn-admin-db.php:881
 msgid "No revisions are stored."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:849
+#: includes/class-minn-admin-db.php:883
 msgid "Delete all revisions"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:851
+#: includes/class-minn-admin-db.php:885
 msgid "Back up first. This removes every saved revision permanently."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:861
+#: includes/class-minn-admin-db.php:895
 msgid "Spam and trashed comments"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:864
+#: includes/class-minn-admin-db.php:898
 msgid "Spam and trashed comments stay in the database until they are emptied. WordPress clears them on its own after a while."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:865
+#: includes/class-minn-admin-db.php:899
 msgid "No spam or trashed comments are waiting."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:867
+#: includes/class-minn-admin-db.php:901
 msgid "Delete spam"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:869
+#: includes/class-minn-admin-db.php:903
 msgid "Back up first. This permanently deletes the comments."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:880
+#: includes/class-minn-admin-db.php:914
 msgid "Expired WooCommerce sessions"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:883
+#: includes/class-minn-admin-db.php:917
 msgid "Expired cart sessions should be cleared by a scheduled WooCommerce job. A large backlog usually means that job has stopped running."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:884
+#: includes/class-minn-admin-db.php:918
 msgid "No expired sessions are left behind."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:886
+#: includes/class-minn-admin-db.php:920
 msgid "Delete expired sessions"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:888
+#: includes/class-minn-admin-db.php:922
 msgid "Back up first. Shoppers with an expired cart lose it, which has already happened by definition."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:899
+#: includes/class-minn-admin-db.php:933
 msgid "Action Scheduler backlog"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:902
+#: includes/class-minn-admin-db.php:936
 msgid "Pending and failed background jobs. A steady backlog is normal on a busy store; a very large one suggests the queue is not draining."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:903
+#: includes/class-minn-admin-db.php:937
 msgid "No pending or failed background jobs."
 msgstr ""
 
-#: includes/class-minn-admin-db.php:905
+#: includes/class-minn-admin-db.php:939
 msgid "Clean the queue"
 msgstr ""
 
-#: includes/class-minn-admin-db.php:907
+#: includes/class-minn-admin-db.php:941
 msgid "Removes finished actions. Pending work is left alone."
 msgstr ""
 
-#: includes/class-minn-admin-rest.php:2131
+#: includes/class-minn-admin-rest.php:1907
+msgid "That block does not offer image editing here."
+msgstr ""
+
+#: includes/class-minn-admin-rest.php:1928
+msgid "Pick at least one image."
+msgstr ""
+
+#: includes/class-minn-admin-rest.php:1937
+msgid "That block could not be rebuilt for those images."
+msgstr ""
+
+#: includes/class-minn-admin-rest.php:2250
 msgid "Pattern not found."
 msgstr ""
 
-#: includes/class-minn-admin-rest.php:3195
+#: includes/class-minn-admin-rest.php:3402
 msgid "Automatic updates are turned off for this site."
 msgstr ""
 
-#: includes/class-minn-admin-rest.php:3204
+#: includes/class-minn-admin-rest.php:3411
 msgid "Unknown plugin."
 msgstr ""
 
-#: includes/class-minn-admin-rest.php:3204
+#: includes/class-minn-admin-rest.php:3411
 msgid "Unknown theme."
 msgstr ""
 
 #. translators: 1: admin name, 2: subject
-#: includes/class-minn-admin-rest.php:3776
+#: includes/class-minn-admin-rest.php:3999
 #, php-format
 msgid "Minn Admin email sent by %1$s: %2$s"
 msgstr ""
 
 #. translators: 1: email title, 2: admin name
-#: includes/class-minn-admin-rest.php:3985
+#: includes/class-minn-admin-rest.php:4227
 #, php-format
 msgid "“%1$s” email resent via Minn Admin by %2$s."
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:240
-#: assets/js/app.js:680
-#: assets/js/app.js:1539
+#: assets/js/app.js:698
+#: assets/js/app.js:1561
 msgid "Content"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:241
-#: assets/js/app.js:681
-#: assets/js/app.js:1540
+#: assets/js/app.js:699
+#: assets/js/app.js:1562
 msgid "Media"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:242
-#: assets/js/app.js:682
-#: assets/js/app.js:1543
+#: assets/js/app.js:700
+#: assets/js/app.js:1565
 msgid "Comments"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:243
-#: assets/js/app.js:683
-#: assets/js/app.js:1546
+#: assets/js/app.js:701
+#: assets/js/app.js:1568
 msgid "Orders"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:244
-#: assets/js/app.js:685
-#: assets/js/app.js:1549
+#: assets/js/app.js:703
+#: assets/js/app.js:1571
 msgid "Subscriptions"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:245
-#: assets/js/app.js:686
-#: assets/js/app.js:1552
+#: assets/js/app.js:704
+#: assets/js/app.js:1574
 msgid "Products"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:246
-#: assets/js/app.js:687
-#: assets/js/app.js:1555
+#: assets/js/app.js:705
+#: assets/js/app.js:1577
 msgid "Coupons"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:247
-#: assets/js/app.js:688
-#: assets/js/app.js:1558
+#: assets/js/app.js:706
+#: assets/js/app.js:1580
 msgid "Customers"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:248
-#: assets/js/app.js:689
-#: assets/js/app.js:1579
-#: assets/js/app.js:28761
+#: assets/js/app.js:707
+#: assets/js/app.js:1601
+#: assets/js/app.js:31801
 msgid "Users"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:249
-#: assets/js/app.js:691
-#: assets/js/app.js:1597
+#: assets/js/app.js:709
+#: assets/js/app.js:1619
 msgid "Terms"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:250
-#: assets/js/app.js:692
-#: assets/js/app.js:1584
+#: assets/js/app.js:710
+#: assets/js/app.js:1606
 msgid "Menus"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:251
-#: assets/js/app.js:693
-#: assets/js/app.js:1586
+#: assets/js/app.js:711
+#: assets/js/app.js:1608
 msgid "Widgets"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:252
-#: assets/js/app.js:695
-#: assets/js/app.js:1595
-#: assets/js/app.js:13292
+#: assets/js/app.js:713
+#: assets/js/app.js:1617
+#: assets/js/app.js:13346
 msgid "Structure"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:253
-#: assets/js/app.js:694
-#: assets/js/app.js:1576
+#: assets/js/app.js:712
+#: assets/js/app.js:1598
 msgid "Extensions"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:254
-#: assets/js/app.js:698
+#: assets/js/app.js:716
 msgid "Database"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:255
-#: assets/js/app.js:697
-#: assets/js/app.js:1600
+#: assets/js/app.js:715
+#: assets/js/app.js:1622
 msgid "System"
 msgstr ""
 
 #: includes/class-minn-admin-surfaces.php:256
-#: assets/js/app.js:696
-#: assets/js/app.js:1601
+#: assets/js/app.js:714
+#: assets/js/app.js:1623
 msgid "Settings"
 msgstr ""
 
@@ -575,988 +592,16 @@ msgstr ""
 msgid "Sorry, you are not allowed to manage plugins for this site."
 msgstr ""
 
-#: includes/class-minn-admin.php:103
-msgid "Site default"
-msgstr ""
-
-#: includes/class-minn-admin.php:638
-msgid "Sorry, you are not allowed to access Minn Admin."
-msgstr ""
-
-#: assets/js/app.js:678
-#: assets/js/app.js:1538
-#: assets/js/app.js:1846
-msgid "Overview"
-msgstr ""
-
-#: assets/js/app.js:678
-msgid "Dashboard"
-msgstr ""
-
-#: assets/js/app.js:681
-msgid "Library"
-msgstr ""
-
-#: assets/js/app.js:682
-msgid "Moderation"
-msgstr ""
-
-#: assets/js/app.js:684
-msgid "Order"
-msgstr ""
-
-#: assets/js/app.js:689
-#: assets/js/app.js:690
-msgid "People"
-msgstr ""
-
-#: assets/js/app.js:690
-msgid "Edit user"
-msgstr ""
-
-#: assets/js/app.js:691
-msgid "Categories & Tags"
-msgstr ""
-
-#: assets/js/app.js:692
-msgid "Navigation"
-msgstr ""
-
-#: assets/js/app.js:693
-msgid "Sidebars & footers"
-msgstr ""
-
-#: assets/js/app.js:694
-msgid "Installed"
-msgstr ""
-
-#: assets/js/app.js:695
-msgid "Post types, taxonomies & terms"
-msgstr ""
-
-#: assets/js/app.js:696
-msgid "Site"
-msgstr ""
-
-#: assets/js/app.js:697
-msgid "Diagnostics"
-msgstr ""
-
-#: assets/js/app.js:698
-msgid "Read-only viewer"
-msgstr ""
-
-#: assets/js/app.js:699
-msgid "Editor"
-msgstr ""
-
-#: assets/js/app.js:699
-msgid "Draft"
-msgstr ""
-
-#: assets/js/app.js:700
-msgid "Your profile"
-msgstr ""
-
-#: assets/js/app.js:700
-#: assets/js/app.js:28770
-msgid "Account"
-msgstr ""
-
-#: assets/js/app.js:708
-msgid "Trash"
-msgstr ""
-
-#: assets/js/app.js:710
-#: assets/js/app.js:717
-msgid "Posts"
-msgstr ""
-
-#: assets/js/app.js:711
-msgid "Pages"
-msgstr ""
-
-#: assets/js/app.js:718
-msgid "pages"
-msgstr ""
-
-#. translators: %d: number of custom post types in the Content list.
-#: assets/js/app.js:722
-#, js-format
-msgid "%d type"
-msgid_plural "%d types"
-msgstr[0] ""
-msgstr[1] ""
-
-#: assets/js/app.js:1326
-msgid "Pattern"
-msgstr ""
-
-#: assets/js/app.js:1824
-#: assets/js/app.js:2046
-msgid "Click again to refresh"
-msgstr ""
-
-#: assets/js/app.js:1854
-msgid "Search…"
-msgstr ""
-
-#: assets/js/app.js:1856
-msgid "Main navigation"
-msgstr ""
-
-#: assets/js/app.js:1857
-msgid "Workspace"
-msgstr ""
-
-#: assets/js/app.js:1858
-msgid "Tools"
-msgstr ""
-
-#: assets/js/app.js:1859
-msgid "Manage"
-msgstr ""
-
-#: assets/js/app.js:1862
-msgid "End this switched session"
-msgstr ""
-
-#. translators: %s: display name of the user to switch back to.
-#: assets/js/app.js:1864
-#, js-format
-msgid "Switch back to %s"
-msgstr ""
-
-#: assets/js/app.js:1866
-msgid "Your account"
-msgstr ""
-
-#: assets/js/app.js:1873
-msgid "WordPress admin (opens in a new tab)"
-msgstr ""
-
-#: assets/js/app.js:1874
-msgid "Log out"
-msgstr ""
-
-#: assets/js/app.js:1880
-msgid "Show / hide navigation"
-msgstr ""
-
-#: assets/js/app.js:1880
-msgid "Show or hide the navigation sidebar"
-msgstr ""
-
-#: assets/js/app.js:1884
-msgid "Updates are running — click for details"
-msgstr ""
-
-#: assets/js/app.js:1885
-msgid "Your site is not fully public"
-msgstr ""
-
-#: assets/js/app.js:1886
-msgid "A WordPress update is available"
-msgstr ""
-
-#: assets/js/app.js:1887
-msgid "What's new — full changelog"
-msgstr ""
-
-#: assets/js/app.js:1888
-msgid "View site"
-msgstr ""
-
-#: assets/js/app.js:1888
-msgid "View site (opens in a new tab)"
-msgstr ""
-
-#: assets/js/app.js:1889
-msgid "About Minn"
-msgstr ""
-
-#: assets/js/app.js:1890
-msgid "Theme: System (click to cycle, right-click for options)"
-msgstr ""
-
-#: assets/js/app.js:1890
-msgid "Color theme"
-msgstr ""
-
-#: assets/js/app.js:1891
-msgid "Notifications"
-msgstr ""
-
-#: assets/js/app.js:1894
-msgid "New post"
-msgstr ""
-
-#: assets/js/app.js:1894
-msgid "New"
-msgstr ""
-
-#: assets/js/app.js:2334
-msgid "Light colors"
-msgstr ""
-
-#: assets/js/app.js:2334
-msgid "Dark colors"
-msgstr ""
-
-#: assets/js/app.js:2852
-msgid "Patterns"
-msgstr ""
-
-#: assets/js/app.js:3113
-msgid "Select all items"
-msgstr ""
-
-#: assets/js/app.js:3118
-#: assets/js/app.js:6599
-#: assets/js/app.js:7901
-#, js-format
-msgid "Select %s"
-msgstr ""
-
-#: assets/js/app.js:6594
-msgid "Select all products"
-msgstr ""
-
-#. translators: %s: column name.
-#: assets/js/app.js:7780
-#, js-format
-msgid "Sort by %s"
-msgstr ""
-
-#: assets/js/app.js:7782
-msgid "sorted ascending"
-msgstr ""
-
-#: assets/js/app.js:7782
-msgid "sorted descending"
-msgstr ""
-
-#: assets/js/app.js:7837
-#: assets/js/app.js:7882
-msgid "Session filter"
-msgstr ""
-
-#: assets/js/app.js:7890
-msgid "Select all users"
-msgstr ""
-
-#: assets/js/app.js:9399
-msgid "Select page"
-msgstr ""
-
-#: assets/js/app.js:9416
-msgid "Select row"
-msgstr ""
-
-#: assets/js/app.js:11037
-msgid "Connected"
-msgstr ""
-
-#: assets/js/app.js:11037
-#: assets/js/app.js:11123
-msgid "Valid"
-msgstr ""
-
-#: assets/js/app.js:11038
-msgid "Expired"
-msgstr ""
-
-#: assets/js/app.js:11039
-msgid "Invalid"
-msgstr ""
-
-#: assets/js/app.js:11040
-msgid "Not connected"
-msgstr ""
-
-#: assets/js/app.js:11040
-msgid "No key"
-msgstr ""
-
-#: assets/js/app.js:11040
-msgid "No license"
-msgstr ""
-
-#: assets/js/app.js:11041
-msgid "Unknown"
-msgstr ""
-
-#: assets/js/app.js:11065
-msgid "Connect ↗"
-msgstr ""
-
-#: assets/js/app.js:11065
-msgid "Activate ↗"
-msgstr ""
-
-#: assets/js/app.js:11074
-msgid "service key"
-msgstr ""
-
-#: assets/js/app.js:11074
-msgid "connection"
-msgstr ""
-
-#: assets/js/app.js:11122
-msgid "Needs attention"
-msgstr ""
-
-#: assets/js/app.js:11124
-msgid "Not set up"
-msgstr ""
-
-#. translators: %s: number of rows on the Licenses tab.
-#: assets/js/app.js:11130
-#, js-format
-msgid "%s component"
-msgid_plural "%s components"
-msgstr[0] ""
-msgstr[1] ""
-
-#. translators: %s: how many rows need attention.
-#: assets/js/app.js:11132
-#, js-format
-msgid "%s needs attention"
-msgid_plural "%s need attention"
-msgstr[0] ""
-msgstr[1] ""
-
-#. translators: %s: a button reading "Settings → Connectors".
-#: assets/js/app.js:11134
-#, js-format
-msgid "Core connector keys (AI providers) are managed in %s."
-msgstr ""
-
-#: assets/js/app.js:11134
-msgid "Settings → Connectors"
-msgstr ""
-
-#: assets/js/app.js:11154
-msgid "Each state is the vendor's own last-recorded check, not a live lookup. Activate and deactivate run through the vendor's own code; a pasted key is used once and never stored."
-msgstr ""
-
-#: assets/js/app.js:11155
-msgid "No licenses or connected services detected."
-msgstr ""
-
-#. translators: %s: plugin name
-#: assets/js/app.js:11602
-#, js-format
-msgid "%s turned back on"
-msgstr ""
-
-#. translators: %s: plugin name
-#: assets/js/app.js:11605
-#, js-format
-msgid "%s turned off"
-msgstr ""
-
-#: assets/js/app.js:11605
-msgid "Undo"
-msgstr ""
-
-#. translators: %s: theme name.
-#: assets/js/app.js:12136
-#, js-format
-msgid "Preview the site in %s without switching"
-msgstr ""
-
-#. translators: %s: plugin or theme name.
-#: assets/js/app.js:12141
-#, js-format
-msgid "Automatic updates are on for %s. Click to turn them off."
-msgstr ""
-
-#. translators: %s: plugin or theme name.
-#: assets/js/app.js:12143
-#, js-format
-msgid "Turn on automatic updates for %s."
-msgstr ""
-
-#: assets/js/app.js:12144
-msgid "Auto"
-msgstr ""
-
-#: assets/js/app.js:12169
-msgid "Automatic updates on"
-msgstr ""
-
-#: assets/js/app.js:12169
-msgid "Automatic updates off"
-msgstr ""
-
-#: assets/js/app.js:12256
-msgid "Live preview"
-msgstr ""
-
-#: assets/js/app.js:12673
-msgid "Browse every table in the read-only database viewer"
-msgstr ""
-
-#: assets/js/app.js:12673
-msgid "browse all"
-msgstr ""
-
-#: assets/js/app.js:12675
-msgid "Open this table in the read-only database viewer"
-msgstr ""
-
-#: assets/js/app.js:13206
-#: assets/js/app.js:13482
-#: assets/js/app.js:13577
-msgid "Tables"
-msgstr ""
-
-#: assets/js/app.js:13207
-msgid "Health"
-msgstr ""
-
-#. translators: %s: human-readable byte size of a binary database value.
-#: assets/js/app.js:13252
-#, js-format
-msgid "(%s binary)"
-msgstr ""
-
-#: assets/js/app.js:13291
-msgid "Rows"
-msgstr ""
-
-#: assets/js/app.js:13309
-msgid "You need administrator permissions to view the database."
-msgstr ""
-
-#: assets/js/app.js:13319
-msgid "Loading tables…"
-msgstr ""
-
-#: assets/js/app.js:13326
-msgid "Search tables…"
-msgstr ""
-
-#. translators: 1: number of database tables, 2: total size (e.g. "97.8 MB").
-#: assets/js/app.js:13329
-#, js-format
-msgid "%1$s tables · %2$s"
-msgstr ""
-
-#: assets/js/app.js:13332
-#, js-format
-msgid "Hide %d other-prefix tables"
-msgstr ""
-
-#: assets/js/app.js:13333
-#, js-format
-msgid "Show %d other-prefix tables"
-msgstr ""
-
-#: assets/js/app.js:13334
-#: assets/js/app.js:13422
-#: assets/js/app.js:13506
-#: assets/js/app.js:13608
-msgid "Read-only by design"
-msgstr ""
-
-#: assets/js/app.js:13350
-msgid "Table"
-msgstr ""
-
-#: assets/js/app.js:13351
-msgid "Rows (est.)"
-msgstr ""
-
-#: assets/js/app.js:13352
-msgid "Size"
-msgstr ""
-
-#: assets/js/app.js:13353
-msgid "Engine"
-msgstr ""
-
-#: assets/js/app.js:13362
-msgid "No tables match."
-msgstr ""
-
-#: assets/js/app.js:13414
-#, js-format
-msgid "%s check needs attention"
-msgid_plural "%s checks need attention"
-msgstr[0] ""
-msgstr[1] ""
-
-#: assets/js/app.js:13415
-msgid "Everything looks healthy"
-msgstr ""
-
-#: assets/js/app.js:13421
-msgid "Refresh"
-msgstr ""
-
-#: assets/js/app.js:13425
-msgid "Running checks…"
-msgstr ""
-
-#: assets/js/app.js:13473
-msgid "Command copied"
-msgstr ""
-
-#: assets/js/app.js:13475
-#: assets/js/app.js:26117
-msgid "Copy failed"
-msgstr ""
-
-#: assets/js/app.js:13489
-msgid "Loading rows…"
-msgstr ""
-
-#. translators: 1: row count, 2: table size, 3: storage engine.
-#: assets/js/app.js:13505
-#, js-format
-msgid "%1$s rows · %2$s · %3$s"
-msgstr ""
-
-#: assets/js/app.js:13509
-msgid "Filter column"
-msgstr ""
-
-#: assets/js/app.js:13512
-msgid "Contains…"
-msgstr ""
-
-#: assets/js/app.js:13513
-msgid "Clear filter"
-msgstr ""
-
-#. translators: %s: number of rows browsable per ordering (e.g. "10,000").
-#: assets/js/app.js:13516
-#, js-format
-msgid "Browsing the first %s rows of this order; filter to reach the rest."
-msgstr ""
-
-#: assets/js/app.js:13530
-msgid "No rows match this filter."
-msgstr ""
-
-#: assets/js/app.js:13530
-msgid "This table is empty."
-msgstr ""
-
-#: assets/js/app.js:13585
-msgid "Loading structure…"
-msgstr ""
-
-#. translators: %s: estimated row count.
-#: assets/js/app.js:13592
-#, js-format
-msgid "~%s rows"
-msgstr ""
-
-#. translators: %s: reclaimable space inside the table file (e.g. "2.4 MB").
-#: assets/js/app.js:13597
-#, js-format
-msgid "%s free"
-msgstr ""
-
-#. translators: %s: the next AUTO_INCREMENT value for this table.
-#: assets/js/app.js:13601
-#, js-format
-msgid "next id %s"
-msgstr ""
-
-#: assets/js/app.js:13610
-#: assets/js/app.js:13636
-msgid "Columns"
-msgstr ""
-
-#: assets/js/app.js:13613
-msgid "Column"
-msgstr ""
-
-#: assets/js/app.js:13614
-#: assets/js/app.js:13638
-msgid "Type"
-msgstr ""
-
-#: assets/js/app.js:13615
-msgid "Null"
-msgstr ""
-
-#: assets/js/app.js:13616
-msgid "Default"
-msgstr ""
-
-#: assets/js/app.js:13617
-msgid "Extra"
-msgstr ""
-
-#: assets/js/app.js:13626
-#: assets/js/app.js:13645
-msgid "Yes"
-msgstr ""
-
-#: assets/js/app.js:13626
-#: assets/js/app.js:13645
-msgid "No"
-msgstr ""
-
-#: assets/js/app.js:13631
-msgid "Indexes"
-msgstr ""
-
-#: assets/js/app.js:13635
-msgid "Index"
-msgstr ""
-
-#: assets/js/app.js:13637
-msgid "Unique"
-msgstr ""
-
-#: assets/js/app.js:13639
-msgid "Cardinality"
-msgstr ""
-
-#: assets/js/app.js:13649
-msgid "This table has no indexes."
-msgstr ""
-
-#: assets/js/app.js:13710
-msgid "Copy"
-msgstr ""
-
-#. translators: 1: shown byte size, 2: total byte size of the value.
-#: assets/js/app.js:13715
-#, js-format
-msgid "Showing the first %1$s of %2$s."
-msgstr ""
-
-#: assets/js/app.js:14137
-msgid "Turn off"
-msgstr ""
-
-#: assets/js/app.js:14458
-msgid "Key saved and verified"
-msgstr ""
-
-#: assets/js/app.js:14465
-msgid "The key was not accepted."
-msgstr ""
-
-#: assets/js/app.js:14473
-msgid "Could not reach the server. Please try again."
-msgstr ""
-
-#: assets/js/app.js:15078
-msgid "Styled block: edit text via ⚙"
-msgstr ""
-
-#: assets/js/app.js:15079
-msgid "Edit via ⚙ or the block editor"
-msgstr ""
-
-#: assets/js/app.js:18394
-msgid "Status"
-msgstr ""
-
-#: assets/js/app.js:19556
-msgid "This is a synced pattern — saving changes here updates every post and page that uses it."
-msgstr ""
-
-#: assets/js/app.js:23187
-msgid "(untitled pattern)"
-msgstr ""
-
-#: assets/js/app.js:23469
-msgid "Your patterns"
-msgstr ""
-
-#: assets/js/app.js:23470
-msgid "Synced"
-msgstr ""
-
-#: assets/js/app.js:23666
-msgid "Pattern unavailable"
-msgstr ""
-
-#: assets/js/app.js:23669
-msgid "Pattern insert failed: "
-msgstr ""
-
-#. translators: %s: number of plugins.
-#: assets/js/app.js:24160
-#, js-format
-msgid "Updating %s plugin…"
-msgid_plural "Updating %s plugins…"
-msgstr[0] ""
-msgstr[1] ""
-
-#: assets/js/app.js:24516
-msgid "Browse database (read-only)"
-msgstr ""
-
-#: assets/js/app.js:24551
-msgid "Open the user guide"
-msgstr ""
-
-#: assets/js/app.js:25757
-msgid "View the full changelog with screenshots on minnadmin.com"
-msgstr ""
-
-#: assets/js/app.js:25767
-#: assets/js/app.js:25934
-msgid "User guide"
-msgstr ""
-
-#: assets/js/app.js:25770
-msgid "Loading the guide…"
-msgstr ""
-
-#: assets/js/app.js:25902
-msgid "Minn is a reimagined WordPress admin."
-msgstr ""
-
-#: assets/js/app.js:25902
-msgid "A calm, fast surface for the work you do every day: writing, moderating, uploading, and keeping an eye on the site. Classic wp-admin stays fully available, one click away."
-msgstr ""
-
-#: assets/js/app.js:25904
-msgid "Getting around"
-msgstr ""
-
-#: assets/js/app.js:25905
-msgid "The sidebar has three groups: Workspace (the daily material), Tools (what your plugins add) and Manage (the site itself). The fastest way anywhere is the command palette:"
-msgstr ""
-
-#: assets/js/app.js:25905
-msgid ", then start typing a view, a post or a command."
-msgstr ""
-
-#: assets/js/app.js:25907
-msgid "Right-click almost anything"
-msgstr ""
-
-#: assets/js/app.js:25908
-msgid "The least discoverable thing in Minn, so here it is in writing: rows in Content and Media, comments, the theme button, plugin entries in the sidebar and group headings in the block library all have right-click menus. When in doubt, try a right-click."
-msgstr ""
-
-#: assets/js/app.js:25910
-msgid "Make it yours"
-msgstr ""
-
-#: assets/js/app.js:25911
-msgid "Anything a plugin adds here can be hidden for you alone: right-click its sidebar entry or block-library heading and choose Hide. Everything hidden is listed on Your profile, where one click restores it."
-msgstr ""
-
-#: assets/js/app.js:25929
-msgid "Deliberately minimal"
-msgstr ""
-
-#: assets/js/app.js:25930
-msgid "Minn surfaces the settings people change day to day; the long tail stays in wp-admin on purpose. For plugin configuration Minn doesn't rebuild, open"
-msgstr ""
-
-#: assets/js/app.js:25930
-msgid "Your profile → AI Access"
-msgstr ""
-
-#: assets/js/app.js:25930
-msgid " and hand your AI agent a revocable credential to do the fiddly work over the REST API."
-msgstr ""
-
-#: assets/js/app.js:25931
-msgid "Everything Minn writes is native WordPress: real block markup, core options, core users. Deactivate the plugin and nothing is lost. Plugins extend Minn with one PHP filter, as plain data, which is why nothing here can nag you."
-msgstr ""
-
-#: assets/js/app.js:26115
-msgid "Copied (truncated value)"
-msgstr ""
-
-#: assets/js/app.js:26115
-msgid "Value copied"
-msgstr ""
-
-#: assets/js/app.js:28171
-msgid "No guide found."
-msgstr ""
-
-#: assets/js/app.js:28726
-msgid "Could not load this user."
-msgstr ""
-
-#: assets/js/app.js:28753
-msgid "Loading user…"
-msgstr ""
-
-#: assets/js/app.js:28773
-msgid "Display name"
-msgstr ""
-
-#: assets/js/app.js:28777
-msgid "Email"
-msgstr ""
-
-#: assets/js/app.js:28781
-msgid "Role"
-msgstr ""
-
-#: assets/js/app.js:28790
-msgid "Language"
-msgstr ""
-
-#: assets/js/app.js:28797
-msgid "New password (leave blank to keep)"
-msgstr ""
-
-#: assets/js/app.js:28800
-msgid "Generate"
-msgstr ""
-
-#: assets/js/app.js:28803
-#: assets/js/app.js:28827
-msgid "Save changes"
-msgstr ""
-
-#: assets/js/app.js:28807
-msgid "Public profile"
-msgstr ""
-
-#: assets/js/app.js:28807
-msgid "author boxes & archives"
-msgstr ""
-
-#: assets/js/app.js:28811
-msgid "First name"
-msgstr ""
-
-#: assets/js/app.js:28815
-msgid "Last name"
-msgstr ""
-
-#: assets/js/app.js:28820
-msgid "Website"
-msgstr ""
-
-#: assets/js/app.js:28824
-msgid "Bio"
-msgstr ""
-
-#: assets/js/app.js:28833
-msgid "Appearance"
-msgstr ""
-
-#: assets/js/app.js:28833
-msgid "what this user sees"
-msgstr ""
-
-#: assets/js/app.js:28834
-msgid "Set their Minn palette now so it looks right before their first sign-in. Light or dark mode stays a device preference each person controls themselves."
-msgstr ""
-
-#: assets/js/app.js:28837
-msgid "Color scheme"
-msgstr ""
-
-#: assets/js/app.js:28843
-#: assets/js/app.js:28845
-msgid "Minn is their default admin"
-msgstr ""
-
-#: assets/js/app.js:28846
-msgid "After sign-in they land in Minn. Full wp-admin stays available."
-msgstr ""
-
-#: assets/js/app.js:28850
-#: assets/js/app.js:28852
-msgid "Show toolbar when viewing the site"
-msgstr ""
-
-#: assets/js/app.js:28853
-msgid "The WordPress admin bar on the front end while they are signed in."
-msgstr ""
-
-#: assets/js/app.js:28862
-msgid "Hidden for them"
-msgstr ""
-
-#: assets/js/app.js:28863
-msgid "Items this user chose to hide from their own Minn. Restoring brings one back for them."
-msgstr ""
-
-#: assets/js/app.js:28870
-msgid "Restore"
-msgstr ""
-
-#: assets/js/app.js:28874
-msgid "Sessions"
-msgstr ""
-
-#: assets/js/app.js:28875
-msgid "No active sessions."
-msgstr ""
-
-#: assets/js/app.js:28880
-msgid "signed in"
-msgstr ""
-
-#: assets/js/app.js:28882
-msgid "Sign out"
-msgstr ""
-
-#: assets/js/app.js:28884
-msgid "Sign out everywhere"
-msgstr ""
-
-#: assets/js/app.js:28888
-msgid "Danger zone"
-msgstr ""
-
-#: assets/js/app.js:28889
-msgid "Deleting a user asks what happens to their content first."
-msgstr ""
-
-#: assets/js/app.js:28890
-msgid "Delete user"
-msgstr ""
-
-#: assets/js/app.js:28945
-msgid "language pack installed"
-msgstr ""
-
-#: assets/js/app.js:28947
-msgid "User updated"
-msgstr ""
-
-#: assets/js/app.js:28982
-msgid "Session signed out"
-msgstr ""
-
-#: assets/js/app.js:28993
-msgid "Sign this user out of all sessions?"
-msgstr ""
-
-#: assets/js/app.js:28997
-msgid "Signed out everywhere"
-msgstr ""
-
-#. translators: %s: name of the restored item.
-#: assets/js/app.js:29017
-#, js-format
-msgid "%s restored for them"
-msgstr ""
-
-#: assets/js/app.js:29017
-msgid "Item"
-msgstr ""
-
-#: includes/class-minn-admin.php:49
+#: includes/class-minn-admin.php:48
 msgid "Invalid plugin or status."
 msgstr ""
 
 #: includes/class-minn-admin.php:56
 msgid "Plugin not found."
+msgstr ""
+
+#: includes/class-minn-admin.php:103
+msgid "Site default"
 msgstr ""
 
 #: includes/class-minn-admin.php:106
@@ -1573,60 +618,1207 @@ msgstr ""
 msgid "We’re making some improvements. Back soon."
 msgstr ""
 
+#: includes/class-minn-admin.php:651
+msgid "Sorry, you are not allowed to access Minn Admin."
+msgstr ""
+
+#: includes/class-minn-admin.php:702
+msgid "Background"
+msgstr ""
+
+#: includes/class-minn-admin.php:703
+msgid "Background elevated"
+msgstr ""
+
+#: includes/class-minn-admin.php:704
+msgid "Panel"
+msgstr ""
+
+#: includes/class-minn-admin.php:705
+msgid "Panel elevated"
+msgstr ""
+
+#: includes/class-minn-admin.php:706
+msgid "Hover"
+msgstr ""
+
+#: includes/class-minn-admin.php:707
+msgid "Border"
+msgstr ""
+
+#: includes/class-minn-admin.php:708
+msgid "Border strong"
+msgstr ""
+
+#: includes/class-minn-admin.php:709
+msgid "Text"
+msgstr ""
+
+#: includes/class-minn-admin.php:710
+msgid "Text secondary"
+msgstr ""
+
+#: includes/class-minn-admin.php:711
+msgid "Text muted"
+msgstr ""
+
+#: includes/class-minn-admin.php:712
+msgid "Accent"
+msgstr ""
+
+#: includes/class-minn-admin.php:713
+msgid "Accent hover / links"
+msgstr ""
+
+#: includes/class-minn-admin.php:714
+msgid "Text on accent"
+msgstr ""
+
 #. translators: %s: site name.
 #: includes/template.php:18
 #, php-format
 msgid "Minn Admin — %s"
 msgstr ""
 
-#: includes/class-minn-admin.php:697
-msgid "Background"
+#: assets/js/app.js:696
+#: assets/js/app.js:1560
+#: assets/js/app.js:1873
+msgid "Overview"
 msgstr ""
 
-#: includes/class-minn-admin.php:698
-msgid "Background elevated"
+#: assets/js/app.js:696
+msgid "Dashboard"
 msgstr ""
 
-#: includes/class-minn-admin.php:699
-msgid "Panel"
+#: assets/js/app.js:699
+msgid "Library"
 msgstr ""
 
-#: includes/class-minn-admin.php:700
-msgid "Panel elevated"
+#: assets/js/app.js:700
+msgid "Moderation"
 msgstr ""
 
-#: includes/class-minn-admin.php:701
-msgid "Hover"
+#: assets/js/app.js:702
+msgid "Order"
 msgstr ""
 
-#: includes/class-minn-admin.php:702
-msgid "Border"
+#: assets/js/app.js:707
+#: assets/js/app.js:708
+msgid "People"
 msgstr ""
 
-#: includes/class-minn-admin.php:703
-msgid "Border strong"
+#: assets/js/app.js:708
+msgid "Edit user"
 msgstr ""
 
-#: includes/class-minn-admin.php:704
-msgid "Text"
+#: assets/js/app.js:709
+msgid "Categories & Tags"
 msgstr ""
 
-#: includes/class-minn-admin.php:705
-msgid "Text secondary"
+#: assets/js/app.js:710
+msgid "Navigation"
 msgstr ""
 
-#: includes/class-minn-admin.php:706
-msgid "Text muted"
+#: assets/js/app.js:711
+msgid "Sidebars & footers"
 msgstr ""
 
-#: includes/class-minn-admin.php:707
-msgid "Accent"
+#: assets/js/app.js:712
+msgid "Installed"
 msgstr ""
 
-#: includes/class-minn-admin.php:708
-msgid "Accent hover / links"
+#: assets/js/app.js:713
+msgid "Post types, taxonomies & terms"
 msgstr ""
 
-#: includes/class-minn-admin.php:709
-msgid "Text on accent"
+#: assets/js/app.js:714
+msgid "Site"
+msgstr ""
+
+#: assets/js/app.js:715
+msgid "Diagnostics"
+msgstr ""
+
+#: assets/js/app.js:716
+msgid "Read-only viewer"
+msgstr ""
+
+#: assets/js/app.js:717
+msgid "Editor"
+msgstr ""
+
+#: assets/js/app.js:717
+msgid "Draft"
+msgstr ""
+
+#: assets/js/app.js:718
+msgid "Your profile"
+msgstr ""
+
+#: assets/js/app.js:718
+#: assets/js/app.js:31810
+msgid "Account"
+msgstr ""
+
+#: assets/js/app.js:726
+msgid "Trash"
+msgstr ""
+
+#: assets/js/app.js:728
+#: assets/js/app.js:735
+msgid "Posts"
+msgstr ""
+
+#: assets/js/app.js:729
+msgid "Pages"
+msgstr ""
+
+#: assets/js/app.js:736
+msgid "pages"
+msgstr ""
+
+#. translators: %d: number of custom post types in the Content list.
+#: assets/js/app.js:740
+#, js-format
+msgid "%d type"
+msgid_plural "%d types"
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/js/app.js:1344
+msgid "Pattern"
+msgstr ""
+
+#: assets/js/app.js:1851
+#: assets/js/app.js:2084
+msgid "Click again to refresh"
+msgstr ""
+
+#: assets/js/app.js:1881
+msgid "Search…"
+msgstr ""
+
+#: assets/js/app.js:1883
+msgid "Main navigation"
+msgstr ""
+
+#: assets/js/app.js:1884
+msgid "Workspace"
+msgstr ""
+
+#: assets/js/app.js:1885
+msgid "Tools"
+msgstr ""
+
+#: assets/js/app.js:1886
+msgid "Manage"
+msgstr ""
+
+#: assets/js/app.js:1889
+msgid "End this switched session"
+msgstr ""
+
+#. translators: %s: display name of the user to switch back to.
+#: assets/js/app.js:1891
+#, js-format
+msgid "Switch back to %s"
+msgstr ""
+
+#: assets/js/app.js:1893
+msgid "Your account"
+msgstr ""
+
+#: assets/js/app.js:1901
+msgid "WordPress admin (opens in a new tab) · ⌥-click while editing opens this post in the block editor)"
+msgstr ""
+
+#: assets/js/app.js:1901
+msgid "WordPress admin (opens in a new tab)"
+msgstr ""
+
+#: assets/js/app.js:1902
+msgid "Log out"
+msgstr ""
+
+#: assets/js/app.js:1908
+msgid "Show / hide navigation"
+msgstr ""
+
+#: assets/js/app.js:1908
+msgid "Show or hide the navigation sidebar"
+msgstr ""
+
+#: assets/js/app.js:1912
+msgid "Updates are running — click for details"
+msgstr ""
+
+#: assets/js/app.js:1913
+msgid "Your site is not fully public"
+msgstr ""
+
+#: assets/js/app.js:1914
+msgid "A WordPress update is available"
+msgstr ""
+
+#: assets/js/app.js:1915
+msgid "What's new — full changelog"
+msgstr ""
+
+#: assets/js/app.js:1916
+msgid "View site"
+msgstr ""
+
+#: assets/js/app.js:1916
+msgid "View site (opens in a new tab)"
+msgstr ""
+
+#: assets/js/app.js:1917
+msgid "About Minn"
+msgstr ""
+
+#: assets/js/app.js:1918
+msgid "Theme: System (click to cycle, right-click for options)"
+msgstr ""
+
+#: assets/js/app.js:1918
+msgid "Color theme"
+msgstr ""
+
+#: assets/js/app.js:1919
+msgid "Notifications"
+msgstr ""
+
+#: assets/js/app.js:1922
+msgid "New post"
+msgstr ""
+
+#: assets/js/app.js:1922
+msgid "New"
+msgstr ""
+
+#: assets/js/app.js:2372
+msgid "Light colors"
+msgstr ""
+
+#: assets/js/app.js:2372
+msgid "Dark colors"
+msgstr ""
+
+#: assets/js/app.js:2892
+msgid "Patterns"
+msgstr ""
+
+#: assets/js/app.js:3153
+msgid "Select all items"
+msgstr ""
+
+#. translators: %s: content title.
+#: assets/js/app.js:3160
+#: assets/js/app.js:6641
+#: assets/js/app.js:7943
+#, js-format
+msgid "Select %s"
+msgstr ""
+
+#: assets/js/app.js:6636
+msgid "Select all products"
+msgstr ""
+
+#. translators: %s: column name.
+#: assets/js/app.js:7822
+#, js-format
+msgid "Sort by %s"
+msgstr ""
+
+#: assets/js/app.js:7824
+msgid "sorted ascending"
+msgstr ""
+
+#: assets/js/app.js:7824
+msgid "sorted descending"
+msgstr ""
+
+#: assets/js/app.js:7879
+#: assets/js/app.js:7924
+msgid "Session filter"
+msgstr ""
+
+#: assets/js/app.js:7932
+msgid "Select all users"
+msgstr ""
+
+#: assets/js/app.js:9453
+msgid "Select page"
+msgstr ""
+
+#: assets/js/app.js:9470
+msgid "Select row"
+msgstr ""
+
+#: assets/js/app.js:11091
+msgid "Connected"
+msgstr ""
+
+#: assets/js/app.js:11091
+#: assets/js/app.js:11177
+msgid "Valid"
+msgstr ""
+
+#: assets/js/app.js:11092
+msgid "Expired"
+msgstr ""
+
+#: assets/js/app.js:11093
+msgid "Invalid"
+msgstr ""
+
+#: assets/js/app.js:11094
+msgid "Not connected"
+msgstr ""
+
+#: assets/js/app.js:11094
+msgid "No key"
+msgstr ""
+
+#: assets/js/app.js:11094
+msgid "No license"
+msgstr ""
+
+#: assets/js/app.js:11095
+msgid "Unknown"
+msgstr ""
+
+#: assets/js/app.js:11119
+msgid "Connect ↗"
+msgstr ""
+
+#: assets/js/app.js:11119
+msgid "Activate ↗"
+msgstr ""
+
+#: assets/js/app.js:11128
+msgid "service key"
+msgstr ""
+
+#: assets/js/app.js:11128
+msgid "connection"
+msgstr ""
+
+#: assets/js/app.js:11176
+msgid "Needs attention"
+msgstr ""
+
+#: assets/js/app.js:11178
+msgid "Not set up"
+msgstr ""
+
+#. translators: %s: number of rows on the Licenses tab.
+#: assets/js/app.js:11184
+#, js-format
+msgid "%s component"
+msgid_plural "%s components"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: how many rows need attention.
+#: assets/js/app.js:11186
+#, js-format
+msgid "%s needs attention"
+msgid_plural "%s need attention"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: a button reading "Settings → Connectors".
+#: assets/js/app.js:11188
+#, js-format
+msgid "Core connector keys (AI providers) are managed in %s."
+msgstr ""
+
+#: assets/js/app.js:11188
+msgid "Settings → Connectors"
+msgstr ""
+
+#: assets/js/app.js:11208
+msgid "Each state is the vendor's own last-recorded check, not a live lookup. Activate and deactivate run through the vendor's own code; a pasted key is used once and never stored."
+msgstr ""
+
+#: assets/js/app.js:11209
+msgid "No licenses or connected services detected."
+msgstr ""
+
+#. translators: %s: plugin name
+#: assets/js/app.js:11656
+#, js-format
+msgid "%s turned back on"
+msgstr ""
+
+#. translators: %s: plugin name
+#: assets/js/app.js:11659
+#, js-format
+msgid "%s turned off"
+msgstr ""
+
+#: assets/js/app.js:11659
+msgid "Undo"
+msgstr ""
+
+#. translators: %s: theme name.
+#: assets/js/app.js:12190
+#, js-format
+msgid "Preview the site in %s without switching"
+msgstr ""
+
+#. translators: %s: plugin or theme name.
+#: assets/js/app.js:12195
+#, js-format
+msgid "Automatic updates are on for %s. Click to turn them off."
+msgstr ""
+
+#. translators: %s: plugin or theme name.
+#: assets/js/app.js:12197
+#, js-format
+msgid "Turn on automatic updates for %s."
+msgstr ""
+
+#: assets/js/app.js:12198
+msgid "Auto"
+msgstr ""
+
+#: assets/js/app.js:12223
+msgid "Automatic updates on"
+msgstr ""
+
+#: assets/js/app.js:12223
+msgid "Automatic updates off"
+msgstr ""
+
+#: assets/js/app.js:12310
+msgid "Live preview"
+msgstr ""
+
+#: assets/js/app.js:12727
+msgid "Browse every table in the read-only database viewer"
+msgstr ""
+
+#: assets/js/app.js:12727
+msgid "browse all"
+msgstr ""
+
+#: assets/js/app.js:12729
+msgid "Open this table in the read-only database viewer"
+msgstr ""
+
+#: assets/js/app.js:13260
+#: assets/js/app.js:13540
+#: assets/js/app.js:13635
+msgid "Tables"
+msgstr ""
+
+#: assets/js/app.js:13261
+msgid "Health"
+msgstr ""
+
+#. translators: %s: human-readable byte size of a binary database value.
+#: assets/js/app.js:13306
+#, js-format
+msgid "(%s binary)"
+msgstr ""
+
+#: assets/js/app.js:13345
+msgid "Rows"
+msgstr ""
+
+#: assets/js/app.js:13363
+msgid "You need administrator permissions to view the database."
+msgstr ""
+
+#: assets/js/app.js:13373
+msgid "Loading tables…"
+msgstr ""
+
+#: assets/js/app.js:13380
+msgid "Search tables…"
+msgstr ""
+
+#. translators: 1: number of database tables, 2: total size (e.g. "97.8 MB").
+#: assets/js/app.js:13383
+#, js-format
+msgid "%1$s tables · %2$s"
+msgstr ""
+
+#. translators: %d: number of tables outside this install's prefix.
+#: assets/js/app.js:13387
+#, js-format
+msgid "Hide %d other-prefix tables"
+msgstr ""
+
+#. translators: %d: number of tables outside this install's prefix.
+#: assets/js/app.js:13390
+#, js-format
+msgid "Show %d other-prefix tables"
+msgstr ""
+
+#: assets/js/app.js:13391
+#: assets/js/app.js:13480
+#: assets/js/app.js:13564
+#: assets/js/app.js:13666
+msgid "Read-only by design"
+msgstr ""
+
+#: assets/js/app.js:13407
+msgid "Table"
+msgstr ""
+
+#: assets/js/app.js:13408
+msgid "Rows (est.)"
+msgstr ""
+
+#: assets/js/app.js:13409
+msgid "Size"
+msgstr ""
+
+#: assets/js/app.js:13410
+msgid "Engine"
+msgstr ""
+
+#: assets/js/app.js:13419
+msgid "No tables match."
+msgstr ""
+
+#. translators: %s: number of database health checks needing attention.
+#: assets/js/app.js:13470
+#, js-format
+msgid "%s check needs attention"
+msgid_plural "%s checks need attention"
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/js/app.js:13473
+msgid "Everything looks healthy"
+msgstr ""
+
+#: assets/js/app.js:13479
+msgid "Refresh"
+msgstr ""
+
+#: assets/js/app.js:13483
+msgid "Running checks…"
+msgstr ""
+
+#: assets/js/app.js:13531
+msgid "Command copied"
+msgstr ""
+
+#: assets/js/app.js:13533
+#: assets/js/app.js:29131
+msgid "Copy failed"
+msgstr ""
+
+#: assets/js/app.js:13547
+msgid "Loading rows…"
+msgstr ""
+
+#. translators: 1: row count, 2: table size, 3: storage engine.
+#: assets/js/app.js:13563
+#, js-format
+msgid "%1$s rows · %2$s · %3$s"
+msgstr ""
+
+#: assets/js/app.js:13567
+msgid "Filter column"
+msgstr ""
+
+#: assets/js/app.js:13570
+msgid "Contains…"
+msgstr ""
+
+#: assets/js/app.js:13571
+msgid "Clear filter"
+msgstr ""
+
+#. translators: %s: number of rows browsable per ordering (e.g. "10,000").
+#: assets/js/app.js:13574
+#, js-format
+msgid "Browsing the first %s rows of this order; filter to reach the rest."
+msgstr ""
+
+#: assets/js/app.js:13588
+msgid "No rows match this filter."
+msgstr ""
+
+#: assets/js/app.js:13588
+msgid "This table is empty."
+msgstr ""
+
+#: assets/js/app.js:13643
+msgid "Loading structure…"
+msgstr ""
+
+#. translators: %s: estimated row count.
+#: assets/js/app.js:13650
+#, js-format
+msgid "~%s rows"
+msgstr ""
+
+#. translators: %s: reclaimable space inside the table file (e.g. "2.4 MB").
+#: assets/js/app.js:13655
+#, js-format
+msgid "%s free"
+msgstr ""
+
+#. translators: %s: the next AUTO_INCREMENT value for this table.
+#: assets/js/app.js:13659
+#, js-format
+msgid "next id %s"
+msgstr ""
+
+#: assets/js/app.js:13668
+#: assets/js/app.js:13694
+msgid "Columns"
+msgstr ""
+
+#: assets/js/app.js:13671
+msgid "Column"
+msgstr ""
+
+#: assets/js/app.js:13672
+#: assets/js/app.js:13696
+msgid "Type"
+msgstr ""
+
+#: assets/js/app.js:13673
+msgid "Null"
+msgstr ""
+
+#: assets/js/app.js:13674
+msgid "Default"
+msgstr ""
+
+#: assets/js/app.js:13675
+msgid "Extra"
+msgstr ""
+
+#: assets/js/app.js:13684
+#: assets/js/app.js:13703
+msgid "Yes"
+msgstr ""
+
+#: assets/js/app.js:13684
+#: assets/js/app.js:13703
+msgid "No"
+msgstr ""
+
+#: assets/js/app.js:13689
+msgid "Indexes"
+msgstr ""
+
+#: assets/js/app.js:13693
+msgid "Index"
+msgstr ""
+
+#: assets/js/app.js:13695
+msgid "Unique"
+msgstr ""
+
+#: assets/js/app.js:13697
+msgid "Cardinality"
+msgstr ""
+
+#: assets/js/app.js:13707
+msgid "This table has no indexes."
+msgstr ""
+
+#: assets/js/app.js:13768
+msgid "Copy"
+msgstr ""
+
+#. translators: 1: shown byte size, 2: total byte size of the value.
+#: assets/js/app.js:13773
+#, js-format
+msgid "Showing the first %1$s of %2$s."
+msgstr ""
+
+#: assets/js/app.js:14195
+msgid "Turn off"
+msgstr ""
+
+#: assets/js/app.js:14516
+msgid "Key saved and verified"
+msgstr ""
+
+#: assets/js/app.js:14523
+msgid "The key was not accepted."
+msgstr ""
+
+#: assets/js/app.js:14531
+msgid "Could not reach the server. Please try again."
+msgstr ""
+
+#: assets/js/app.js:15615
+msgid "Styled block: edit text via ⚙"
+msgstr ""
+
+#. translators: %d: number of images in the block
+#: assets/js/app.js:15624
+#, js-format
+msgid "Edit image · %d"
+msgid_plural "Edit images · %d"
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/js/app.js:15626
+msgid "Replace image"
+msgstr ""
+
+#. translators: %d: number of nested blocks
+#: assets/js/app.js:15642
+#, js-format
+msgid "Edit content · %d"
+msgstr ""
+
+#: assets/js/app.js:15648
+msgid "Edit this pattern"
+msgstr ""
+
+#: assets/js/app.js:15648
+msgid "Edit pattern"
+msgstr ""
+
+#: assets/js/app.js:16353
+msgid "Text is editable in place · structure via ⚙"
+msgstr ""
+
+#. translators: toast after duplicating a block
+#: assets/js/app.js:16578
+msgid "Block duplicated"
+msgstr ""
+
+#: assets/js/app.js:19560
+msgid "Status"
+msgstr ""
+
+#: assets/js/app.js:20722
+msgid "This is a synced pattern — saving changes here updates every post and page that uses it."
+msgstr ""
+
+#: assets/js/app.js:21256
+msgid "Add column before"
+msgstr ""
+
+#: assets/js/app.js:21257
+msgid "Add column after"
+msgstr ""
+
+#: assets/js/app.js:21258
+msgid "Remove column"
+msgstr ""
+
+#: assets/js/app.js:21371
+msgid "Island text is plain-text only — use ⚙ or the block editor for formatting"
+msgstr ""
+
+#: assets/js/app.js:21381
+msgid "This block keeps custom styling — change its type in the block editor"
+msgstr ""
+
+#: assets/js/app.js:22475
+msgid "Caption"
+msgstr ""
+
+#: assets/js/app.js:22738
+msgid "This block’s content can’t be edited here."
+msgstr ""
+
+#: assets/js/app.js:22745
+#: assets/js/app.js:22747
+msgid "Edit content"
+msgstr ""
+
+#: assets/js/app.js:22749
+msgid "Text first; each block’s other settings are tucked below it."
+msgstr ""
+
+#: assets/js/app.js:22750
+msgid "Text first; each block’s other settings are tucked below it. This block’s structure is locked."
+msgstr ""
+
+#: assets/js/app.js:22754
+msgid "Loading block schema…"
+msgstr ""
+
+#: assets/js/app.js:22759
+msgid "Cancel"
+msgstr ""
+
+#: assets/js/app.js:22760
+msgid "Apply"
+msgstr ""
+
+#. translators: %d: number of settings fields
+#: assets/js/app.js:22789
+#, js-format
+msgid "Settings (%d)"
+msgstr ""
+
+#: assets/js/app.js:22799
+msgid "Move up"
+msgstr ""
+
+#: assets/js/app.js:22800
+msgid "Move down"
+msgstr ""
+
+#: assets/js/app.js:22801
+#: assets/js/app.js:24449
+msgid "Remove"
+msgstr ""
+
+#: assets/js/app.js:22805
+msgid "No editable settings."
+msgstr ""
+
+#: assets/js/app.js:22811
+msgid "No blocks left. Add one, or Cancel and remove the whole block from its ⚙ popover instead."
+msgstr ""
+
+#: assets/js/app.js:22818
+msgid "Add"
+msgstr ""
+
+#: assets/js/app.js:22818
+msgid "block"
+msgstr ""
+
+#. translators: %d: number of collapsed settings fields
+#: assets/js/app.js:22867
+#, js-format
+msgid "More settings (%d)"
+msgstr ""
+
+#: assets/js/app.js:22867
+msgid "Fewer settings"
+msgstr ""
+
+#: assets/js/app.js:22879
+#: assets/js/app.js:23817
+msgid "Block updated"
+msgstr ""
+
+#: assets/js/app.js:22879
+#: assets/js/app.js:23817
+msgid "This block could not be updated."
+msgstr ""
+
+#: assets/js/app.js:23298
+msgid "Link, size and lightbox options live in the block editor."
+msgstr ""
+
+#. translators: %d: number of nested blocks
+#: assets/js/app.js:23315
+#, js-format
+msgid "Content · %d block"
+msgid_plural "Content · %d blocks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/js/app.js:23317
+msgid "Edit content…"
+msgstr ""
+
+#: assets/js/app.js:24443
+msgid "Syntax highlighting"
+msgstr ""
+
+#: assets/js/app.js:24449
+msgid "Remove this code block"
+msgstr ""
+
+#: assets/js/app.js:26079
+msgid "(untitled pattern)"
+msgstr ""
+
+#: assets/js/app.js:26374
+msgid "Your patterns"
+msgstr ""
+
+#: assets/js/app.js:26375
+msgid "Synced"
+msgstr ""
+
+#: assets/js/app.js:26608
+msgid "Pattern unavailable"
+msgstr ""
+
+#: assets/js/app.js:26611
+msgid "Pattern insert failed: "
+msgstr ""
+
+#. translators: %s: number of plugins.
+#: assets/js/app.js:27127
+#, js-format
+msgid "Updating %s plugin…"
+msgid_plural "Updating %s plugins…"
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/js/app.js:27488
+msgid "Browse database (read-only)"
+msgstr ""
+
+#: assets/js/app.js:27523
+msgid "Open the user guide"
+msgstr ""
+
+#: assets/js/app.js:28733
+msgid "Versions"
+msgstr ""
+
+#: assets/js/app.js:28742
+msgid "View the full changelog with screenshots on minnadmin.com"
+msgstr ""
+
+#: assets/js/app.js:28752
+#: assets/js/app.js:28923
+msgid "User guide"
+msgstr ""
+
+#: assets/js/app.js:28755
+msgid "Loading the guide…"
+msgstr ""
+
+#: assets/js/app.js:28887
+msgid "Minn is a reimagined WordPress admin."
+msgstr ""
+
+#: assets/js/app.js:28887
+msgid "A calm, fast surface for the work you do every day: writing, moderating, uploading, and keeping an eye on the site. Classic wp-admin stays fully available, one click away."
+msgstr ""
+
+#: assets/js/app.js:28889
+msgid "Getting around"
+msgstr ""
+
+#: assets/js/app.js:28890
+msgid "The sidebar has three groups: Workspace (the daily material), Tools (what your plugins add) and Manage (the site itself). The fastest way anywhere is the command palette:"
+msgstr ""
+
+#: assets/js/app.js:28890
+msgid ", then start typing a view, a post or a command."
+msgstr ""
+
+#: assets/js/app.js:28892
+msgid "Right-click almost anything"
+msgstr ""
+
+#: assets/js/app.js:28893
+msgid "The least discoverable thing in Minn, so here it is in writing: rows in Content and Media, comments, the theme button, plugin entries in the sidebar and group headings in the block library all have right-click menus. When in doubt, try a right-click."
+msgstr ""
+
+#: assets/js/app.js:28895
+msgid "Make it yours"
+msgstr ""
+
+#: assets/js/app.js:28896
+msgid "Anything a plugin adds here can be hidden for you alone: right-click its sidebar entry or block-library heading and choose Hide. Everything hidden is listed on Your profile, where one click restores it."
+msgstr ""
+
+#: assets/js/app.js:28918
+msgid "Deliberately minimal"
+msgstr ""
+
+#: assets/js/app.js:28919
+msgid "Minn surfaces the settings people change day to day; the long tail stays in wp-admin on purpose. For plugin configuration Minn doesn't rebuild, open"
+msgstr ""
+
+#: assets/js/app.js:28919
+msgid "Your profile → AI Access"
+msgstr ""
+
+#: assets/js/app.js:28919
+msgid " and hand your AI agent a revocable credential to do the fiddly work over the REST API."
+msgstr ""
+
+#: assets/js/app.js:28920
+msgid "Everything Minn writes is native WordPress: real block markup, core options, core users. Deactivate the plugin and nothing is lost. Plugins extend Minn with one PHP filter, as plain data, which is why nothing here can nag you."
+msgstr ""
+
+#: assets/js/app.js:29129
+msgid "Copied (truncated value)"
+msgstr ""
+
+#: assets/js/app.js:29129
+msgid "Value copied"
+msgstr ""
+
+#: assets/js/app.js:31211
+msgid "No guide found."
+msgstr ""
+
+#: assets/js/app.js:31766
+msgid "Could not load this user."
+msgstr ""
+
+#: assets/js/app.js:31793
+msgid "Loading user…"
+msgstr ""
+
+#: assets/js/app.js:31813
+msgid "Display name"
+msgstr ""
+
+#: assets/js/app.js:31817
+msgid "Email"
+msgstr ""
+
+#: assets/js/app.js:31821
+msgid "Role"
+msgstr ""
+
+#: assets/js/app.js:31830
+msgid "Language"
+msgstr ""
+
+#: assets/js/app.js:31837
+msgid "New password (leave blank to keep)"
+msgstr ""
+
+#: assets/js/app.js:31840
+msgid "Generate"
+msgstr ""
+
+#: assets/js/app.js:31843
+#: assets/js/app.js:31867
+msgid "Save changes"
+msgstr ""
+
+#: assets/js/app.js:31847
+msgid "Public profile"
+msgstr ""
+
+#: assets/js/app.js:31847
+msgid "author boxes & archives"
+msgstr ""
+
+#: assets/js/app.js:31851
+msgid "First name"
+msgstr ""
+
+#: assets/js/app.js:31855
+msgid "Last name"
+msgstr ""
+
+#: assets/js/app.js:31860
+msgid "Website"
+msgstr ""
+
+#: assets/js/app.js:31864
+msgid "Bio"
+msgstr ""
+
+#: assets/js/app.js:31873
+msgid "Appearance"
+msgstr ""
+
+#: assets/js/app.js:31873
+msgid "what this user sees"
+msgstr ""
+
+#: assets/js/app.js:31874
+msgid "Set their Minn palette now so it looks right before their first sign-in. Light or dark mode stays a device preference each person controls themselves."
+msgstr ""
+
+#: assets/js/app.js:31877
+msgid "Color scheme"
+msgstr ""
+
+#: assets/js/app.js:31883
+#: assets/js/app.js:31885
+msgid "Minn is their default admin"
+msgstr ""
+
+#: assets/js/app.js:31886
+msgid "After sign-in they land in Minn. Full wp-admin stays available."
+msgstr ""
+
+#: assets/js/app.js:31890
+#: assets/js/app.js:31892
+msgid "Show toolbar when viewing the site"
+msgstr ""
+
+#: assets/js/app.js:31893
+msgid "The WordPress admin bar on the front end while they are signed in."
+msgstr ""
+
+#: assets/js/app.js:31902
+msgid "Hidden for them"
+msgstr ""
+
+#: assets/js/app.js:31903
+msgid "Items this user chose to hide from their own Minn. Restoring brings one back for them."
+msgstr ""
+
+#: assets/js/app.js:31910
+msgid "Restore"
+msgstr ""
+
+#: assets/js/app.js:31914
+msgid "Sessions"
+msgstr ""
+
+#: assets/js/app.js:31915
+msgid "No active sessions."
+msgstr ""
+
+#: assets/js/app.js:31920
+msgid "signed in"
+msgstr ""
+
+#: assets/js/app.js:31922
+msgid "Sign out"
+msgstr ""
+
+#: assets/js/app.js:31924
+msgid "Sign out everywhere"
+msgstr ""
+
+#: assets/js/app.js:31928
+msgid "Danger zone"
+msgstr ""
+
+#: assets/js/app.js:31929
+msgid "Deleting a user asks what happens to their content first."
+msgstr ""
+
+#: assets/js/app.js:31930
+msgid "Delete user"
+msgstr ""
+
+#: assets/js/app.js:31985
+msgid "language pack installed"
+msgstr ""
+
+#: assets/js/app.js:31987
+msgid "User updated"
+msgstr ""
+
+#: assets/js/app.js:32022
+msgid "Session signed out"
+msgstr ""
+
+#: assets/js/app.js:32033
+msgid "Sign this user out of all sessions?"
+msgstr ""
+
+#: assets/js/app.js:32037
+msgid "Signed out everywhere"
+msgstr ""
+
+#. translators: %s: name of the restored item.
+#: assets/js/app.js:32057
+#, js-format
+msgid "%s restored for them"
+msgstr ""
+
+#: assets/js/app.js:32057
+msgid "Item"
 msgstr ""
