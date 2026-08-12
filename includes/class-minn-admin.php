@@ -660,7 +660,13 @@ class Minn_Admin {
 
 		// Front-end requests use the site locale by default. Switch before
 		// building the shell so PHP and script catalogs honor the user's choice.
-		switch_to_user_locale( $user->ID );
+		// switch_to_user_locale() arrived in WordPress 6.2; retain the plugin's
+		// declared WordPress 6.0 floor with the equivalent older API there.
+		if ( function_exists( 'switch_to_user_locale' ) ) {
+			switch_to_user_locale( $user->ID );
+		} else {
+			switch_to_locale( get_user_locale( $user ) );
+		}
 
 		// Raw forms drive insertable_blocks' candidacy (so its shared render
 		// probe caches per SITE, not per user); the per-user-filtered copy is

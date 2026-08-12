@@ -282,7 +282,7 @@ add_action(
 					if ( '' === $title ) {
 						// wp_insert_post refuses an entirely empty post
 						// ("Content, title, and excerpt are empty.").
-						$title = __( 'Untitled' );
+						$title = __( 'Untitled', 'minn-admin' );
 					}
 					$post_id = wp_insert_post(
 						array(

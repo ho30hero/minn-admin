@@ -65,11 +65,12 @@ cd tests
 npm run test:i18n
 ```
 
-The browser-backed `tests/i18n.test.js` verifies the complete runtime path on a
-configured development site. It covers the WordPress i18n runtime, translated shell
-strings, plural formatting, English fallback and console errors. For a release check,
-also load a real generated JED catalog under a non-English user locale and verify that
-the navigation and a plural entry come from that file.
+The browser-backed `tests/i18n.test.js` verifies the WordPress i18n runtime, a standard
+in-memory JED catalog with a non-English plural rule, translated Minn DOM, English
+fallback and console errors. For a release check, also load a real generated JSON file
+under a non-English user locale. That final smoke test covers the filename and filesystem
+lookup performed by `wp_set_script_translations()`; verify that navigation and a plural
+entry come from the generated file.
 
 PHP syntax validation should cover `minn-admin.php` and every PHP file under
 `includes/`. The project has no production build step.

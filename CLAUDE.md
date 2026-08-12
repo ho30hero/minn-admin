@@ -95,8 +95,7 @@ literal, so the app runs with zero tooling. The convention:
   dependency and calls `wp_set_script_translations()`. WordPress therefore loads
   standard JED files from the bundled `languages/` directory or the global plugin
   language-pack directory and applies each locale's plural rules. `B.i18n` is an
-  override seam only (filter `minn_admin_js_translations`; the dev-fixtures option
-  `minn_test_i18n` arms a German test catalog for `tests/i18n.test.js`).
+  override seam only (filter `minn_admin_js_translations`).
 - **Toolchain** (translation time only, never needed for development):
   `wp i18n make-pot . languages/minn-admin.pot --ignore-domain
   --exclude=tests,docs,.wp-playground,.github` regenerates the catalog (the stock

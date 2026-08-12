@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-12T09:18:39+00:00\n"
+"POT-Creation-Date: 2026-08-12T10:09:07+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -536,7 +536,7 @@ msgstr ""
 #: includes/class-minn-admin-surfaces.php:248
 #: assets/js/app.js:707
 #: assets/js/app.js:1601
-#: assets/js/app.js:31801
+#: assets/js/app.js:31805
 msgid "Users"
 msgstr ""
 
@@ -622,55 +622,55 @@ msgstr ""
 msgid "Sorry, you are not allowed to access Minn Admin."
 msgstr ""
 
-#: includes/class-minn-admin.php:702
+#: includes/class-minn-admin.php:708
 msgid "Background"
 msgstr ""
 
-#: includes/class-minn-admin.php:703
+#: includes/class-minn-admin.php:709
 msgid "Background elevated"
 msgstr ""
 
-#: includes/class-minn-admin.php:704
+#: includes/class-minn-admin.php:710
 msgid "Panel"
 msgstr ""
 
-#: includes/class-minn-admin.php:705
+#: includes/class-minn-admin.php:711
 msgid "Panel elevated"
 msgstr ""
 
-#: includes/class-minn-admin.php:706
+#: includes/class-minn-admin.php:712
 msgid "Hover"
 msgstr ""
 
-#: includes/class-minn-admin.php:707
+#: includes/class-minn-admin.php:713
 msgid "Border"
 msgstr ""
 
-#: includes/class-minn-admin.php:708
+#: includes/class-minn-admin.php:714
 msgid "Border strong"
 msgstr ""
 
-#: includes/class-minn-admin.php:709
+#: includes/class-minn-admin.php:715
 msgid "Text"
 msgstr ""
 
-#: includes/class-minn-admin.php:710
+#: includes/class-minn-admin.php:716
 msgid "Text secondary"
 msgstr ""
 
-#: includes/class-minn-admin.php:711
+#: includes/class-minn-admin.php:717
 msgid "Text muted"
 msgstr ""
 
-#: includes/class-minn-admin.php:712
+#: includes/class-minn-admin.php:718
 msgid "Accent"
 msgstr ""
 
-#: includes/class-minn-admin.php:713
+#: includes/class-minn-admin.php:719
 msgid "Accent hover / links"
 msgstr ""
 
-#: includes/class-minn-admin.php:714
+#: includes/class-minn-admin.php:720
 msgid "Text on accent"
 msgstr ""
 
@@ -756,7 +756,7 @@ msgid "Your profile"
 msgstr ""
 
 #: assets/js/app.js:718
-#: assets/js/app.js:31810
+#: assets/js/app.js:31814
 msgid "Account"
 msgstr ""
 
@@ -1210,7 +1210,7 @@ msgid "Command copied"
 msgstr ""
 
 #: assets/js/app.js:13533
-#: assets/js/app.js:29131
+#: assets/js/app.js:29135
 msgid "Copy failed"
 msgstr ""
 
@@ -1546,279 +1546,291 @@ msgid "Synced"
 msgstr ""
 
 #: assets/js/app.js:26608
+#: assets/js/app.js:26630
 msgid "Pattern unavailable"
 msgstr ""
 
-#: assets/js/app.js:26611
-msgid "Pattern insert failed: "
+#. translators: %s: error message returned while inserting a pattern.
+#: assets/js/app.js:26613
+#: assets/js/app.js:26635
+#, js-format
+msgid "Pattern insert failed: %s"
 msgstr ""
 
 #. translators: %s: number of plugins.
-#: assets/js/app.js:27127
+#: assets/js/app.js:27131
 #, js-format
 msgid "Updating %s plugin…"
 msgid_plural "Updating %s plugins…"
 msgstr[0] ""
 msgstr[1] ""
 
-#: assets/js/app.js:27488
+#: assets/js/app.js:27492
 msgid "Browse database (read-only)"
 msgstr ""
 
-#: assets/js/app.js:27523
+#: assets/js/app.js:27527
 msgid "Open the user guide"
 msgstr ""
 
-#: assets/js/app.js:28733
+#: assets/js/app.js:28737
 msgid "Versions"
 msgstr ""
 
-#: assets/js/app.js:28742
+#: assets/js/app.js:28746
 msgid "View the full changelog with screenshots on minnadmin.com"
 msgstr ""
 
-#: assets/js/app.js:28752
-#: assets/js/app.js:28923
+#: assets/js/app.js:28756
+#: assets/js/app.js:28927
 msgid "User guide"
 msgstr ""
 
-#: assets/js/app.js:28755
+#: assets/js/app.js:28759
 msgid "Loading the guide…"
 msgstr ""
 
-#: assets/js/app.js:28887
+#: assets/js/app.js:28891
 msgid "Minn is a reimagined WordPress admin."
 msgstr ""
 
-#: assets/js/app.js:28887
+#: assets/js/app.js:28891
 msgid "A calm, fast surface for the work you do every day: writing, moderating, uploading, and keeping an eye on the site. Classic wp-admin stays fully available, one click away."
 msgstr ""
 
-#: assets/js/app.js:28889
+#: assets/js/app.js:28893
 msgid "Getting around"
 msgstr ""
 
-#: assets/js/app.js:28890
+#: assets/js/app.js:28894
 msgid "The sidebar has three groups: Workspace (the daily material), Tools (what your plugins add) and Manage (the site itself). The fastest way anywhere is the command palette:"
 msgstr ""
 
-#: assets/js/app.js:28890
+#: assets/js/app.js:28894
 msgid ", then start typing a view, a post or a command."
 msgstr ""
 
-#: assets/js/app.js:28892
+#: assets/js/app.js:28896
 msgid "Right-click almost anything"
 msgstr ""
 
-#: assets/js/app.js:28893
+#: assets/js/app.js:28897
 msgid "The least discoverable thing in Minn, so here it is in writing: rows in Content and Media, comments, the theme button, plugin entries in the sidebar and group headings in the block library all have right-click menus. When in doubt, try a right-click."
 msgstr ""
 
-#: assets/js/app.js:28895
+#: assets/js/app.js:28899
 msgid "Make it yours"
 msgstr ""
 
-#: assets/js/app.js:28896
+#: assets/js/app.js:28900
 msgid "Anything a plugin adds here can be hidden for you alone: right-click its sidebar entry or block-library heading and choose Hide. Everything hidden is listed on Your profile, where one click restores it."
 msgstr ""
 
-#: assets/js/app.js:28918
+#: assets/js/app.js:28922
 msgid "Deliberately minimal"
 msgstr ""
 
-#: assets/js/app.js:28919
+#: assets/js/app.js:28923
 msgid "Minn surfaces the settings people change day to day; the long tail stays in wp-admin on purpose. For plugin configuration Minn doesn't rebuild, open"
 msgstr ""
 
-#: assets/js/app.js:28919
+#: assets/js/app.js:28923
 msgid "Your profile → AI Access"
 msgstr ""
 
-#: assets/js/app.js:28919
+#: assets/js/app.js:28923
 msgid " and hand your AI agent a revocable credential to do the fiddly work over the REST API."
 msgstr ""
 
-#: assets/js/app.js:28920
+#: assets/js/app.js:28924
 msgid "Everything Minn writes is native WordPress: real block markup, core options, core users. Deactivate the plugin and nothing is lost. Plugins extend Minn with one PHP filter, as plain data, which is why nothing here can nag you."
 msgstr ""
 
-#: assets/js/app.js:29129
+#: assets/js/app.js:29133
 msgid "Copied (truncated value)"
 msgstr ""
 
-#: assets/js/app.js:29129
+#: assets/js/app.js:29133
 msgid "Value copied"
 msgstr ""
 
-#: assets/js/app.js:31211
+#: assets/js/app.js:31215
 msgid "No guide found."
 msgstr ""
 
-#: assets/js/app.js:31766
+#: assets/js/app.js:31770
 msgid "Could not load this user."
 msgstr ""
 
-#: assets/js/app.js:31793
+#: assets/js/app.js:31797
 msgid "Loading user…"
 msgstr ""
 
-#: assets/js/app.js:31813
+#: assets/js/app.js:31817
 msgid "Display name"
 msgstr ""
 
-#: assets/js/app.js:31817
+#: assets/js/app.js:31821
 msgid "Email"
 msgstr ""
 
-#: assets/js/app.js:31821
+#: assets/js/app.js:31825
 msgid "Role"
 msgstr ""
 
-#: assets/js/app.js:31830
+#: assets/js/app.js:31834
 msgid "Language"
 msgstr ""
 
-#: assets/js/app.js:31837
+#: assets/js/app.js:31841
 msgid "New password (leave blank to keep)"
 msgstr ""
 
-#: assets/js/app.js:31840
+#: assets/js/app.js:31844
 msgid "Generate"
 msgstr ""
 
-#: assets/js/app.js:31843
-#: assets/js/app.js:31867
+#: assets/js/app.js:31847
+#: assets/js/app.js:31871
 msgid "Save changes"
 msgstr ""
 
-#: assets/js/app.js:31847
+#: assets/js/app.js:31851
 msgid "Public profile"
 msgstr ""
 
-#: assets/js/app.js:31847
+#: assets/js/app.js:31851
 msgid "author boxes & archives"
 msgstr ""
 
-#: assets/js/app.js:31851
+#: assets/js/app.js:31855
 msgid "First name"
 msgstr ""
 
-#: assets/js/app.js:31855
+#: assets/js/app.js:31859
 msgid "Last name"
 msgstr ""
 
-#: assets/js/app.js:31860
+#: assets/js/app.js:31864
 msgid "Website"
 msgstr ""
 
-#: assets/js/app.js:31864
+#: assets/js/app.js:31868
 msgid "Bio"
 msgstr ""
 
-#: assets/js/app.js:31873
+#: assets/js/app.js:31877
 msgid "Appearance"
 msgstr ""
 
-#: assets/js/app.js:31873
+#: assets/js/app.js:31877
 msgid "what this user sees"
 msgstr ""
 
-#: assets/js/app.js:31874
+#: assets/js/app.js:31878
 msgid "Set their Minn palette now so it looks right before their first sign-in. Light or dark mode stays a device preference each person controls themselves."
 msgstr ""
 
-#: assets/js/app.js:31877
+#: assets/js/app.js:31881
 msgid "Color scheme"
 msgstr ""
 
-#: assets/js/app.js:31883
-#: assets/js/app.js:31885
+#: assets/js/app.js:31887
+#: assets/js/app.js:31889
 msgid "Minn is their default admin"
 msgstr ""
 
-#: assets/js/app.js:31886
+#: assets/js/app.js:31890
 msgid "After sign-in they land in Minn. Full wp-admin stays available."
 msgstr ""
 
-#: assets/js/app.js:31890
-#: assets/js/app.js:31892
+#: assets/js/app.js:31894
+#: assets/js/app.js:31896
 msgid "Show toolbar when viewing the site"
 msgstr ""
 
-#: assets/js/app.js:31893
+#: assets/js/app.js:31897
 msgid "The WordPress admin bar on the front end while they are signed in."
 msgstr ""
 
-#: assets/js/app.js:31902
+#: assets/js/app.js:31906
 msgid "Hidden for them"
 msgstr ""
 
-#: assets/js/app.js:31903
+#: assets/js/app.js:31907
 msgid "Items this user chose to hide from their own Minn. Restoring brings one back for them."
 msgstr ""
 
-#: assets/js/app.js:31910
+#: assets/js/app.js:31914
 msgid "Restore"
 msgstr ""
 
-#: assets/js/app.js:31914
+#: assets/js/app.js:31918
 msgid "Sessions"
 msgstr ""
 
-#: assets/js/app.js:31915
+#: assets/js/app.js:31919
 msgid "No active sessions."
 msgstr ""
 
-#: assets/js/app.js:31920
+#: assets/js/app.js:31924
 msgid "signed in"
 msgstr ""
 
-#: assets/js/app.js:31922
+#: assets/js/app.js:31926
 msgid "Sign out"
 msgstr ""
 
-#: assets/js/app.js:31924
+#: assets/js/app.js:31928
 msgid "Sign out everywhere"
 msgstr ""
 
-#: assets/js/app.js:31928
+#: assets/js/app.js:31932
 msgid "Danger zone"
 msgstr ""
 
-#: assets/js/app.js:31929
+#: assets/js/app.js:31933
 msgid "Deleting a user asks what happens to their content first."
 msgstr ""
 
-#: assets/js/app.js:31930
+#: assets/js/app.js:31934
 msgid "Delete user"
 msgstr ""
 
-#: assets/js/app.js:31985
-msgid "language pack installed"
+#: assets/js/app.js:31992
+msgid "User updated. Language pack installed."
 msgstr ""
 
-#: assets/js/app.js:31987
+#: assets/js/app.js:31993
 msgid "User updated"
 msgstr ""
 
-#: assets/js/app.js:32022
+#: assets/js/app.js:32028
 msgid "Session signed out"
 msgstr ""
 
-#: assets/js/app.js:32033
+#: assets/js/app.js:32039
 msgid "Sign this user out of all sessions?"
 msgstr ""
 
-#: assets/js/app.js:32037
+#: assets/js/app.js:32043
 msgid "Signed out everywhere"
 msgstr ""
 
 #. translators: %s: name of the restored item.
-#: assets/js/app.js:32057
+#: assets/js/app.js:32063
 #, js-format
 msgid "%s restored for them"
 msgstr ""
 
-#: assets/js/app.js:32057
+#: assets/js/app.js:32063
 msgid "Item"
+msgstr ""
+
+#: assets/js/app.js:32433
+msgid "Profile updated. Language pack installed."
+msgstr ""
+
+#: assets/js/app.js:32434
+msgid "Profile updated"
 msgstr ""

@@ -26608,7 +26608,9 @@
 					if ( ! md ) throw new Error( __( 'Pattern unavailable' ) );
 					insertPatternIslands( p, md );
 				} )
-				.catch( ( e ) => toast( __( 'Pattern insert failed: ' ) + e.message, true ) );
+				.catch( ( e ) => toast( sprintf(
+					/* translators: %s: error message returned while inserting a pattern. */
+					__( 'Pattern insert failed: %s' ), e.message ), true ) );
 			return;
 		}
 		if ( action && action.pattern ) {
@@ -26625,10 +26627,12 @@
 			sel.addRange( range );
 			api( 'minn-admin/v1/pattern?name=' + encodeURIComponent( action.pattern ) )
 				.then( ( r ) => {
-					if ( ! r || ! r.content ) throw new Error( 'Pattern unavailable' );
+					if ( ! r || ! r.content ) throw new Error( __( 'Pattern unavailable' ) );
 					insertPatternIslands( p, r.content );
 				} )
-				.catch( ( e ) => toast( 'Pattern insert failed: ' + e.message, true ) );
+				.catch( ( e ) => toast( sprintf(
+					/* translators: %s: error message returned while inserting a pattern. */
+					__( 'Pattern insert failed: %s' ), e.message ), true ) );
 			return;
 		}
 		if ( action && action.block ) {
@@ -31978,13 +31982,15 @@
 			const langChanged = langPicked !== undefined && langPicked !== ( ue.languages.current || '' );
 			try {
 				await api( `wp/v2/users/${ u.id }`, { method: 'POST', body: JSON.stringify( payload ) } );
-				let langNote = '';
+				let languagePackInstalled = false;
 				if ( langChanged ) {
 					const lr = await api( `minn-admin/v1/users/${ u.id }/language`, { method: 'POST', body: JSON.stringify( { locale: langPicked } ) } );
 					ue.languages.current = lr.locale;
-					if ( lr.installed ) langNote = ' — ' + __( 'language pack installed' );
+					languagePackInstalled = !! lr.installed;
 				}
-				toast( __( 'User updated' ) + langNote );
+				toast( languagePackInstalled
+					? __( 'User updated. Language pack installed.' )
+					: __( 'User updated' ) );
 				ue.user = Object.assign( {}, ue.user, payload );
 				state.cache.users = null;
 				btn.disabled = false;
@@ -32409,11 +32415,11 @@
 			const langChanged = langPicked !== undefined && langPicked !== ( p.languages.current || '' );
 			try {
 				await api( `wp/v2/users/${ B.user.id }`, { method: 'POST', body: JSON.stringify( payload ) } );
-				let langNote = '';
+				let languagePackInstalled = false;
 				if ( langChanged ) {
 					const lr = await api( 'minn-admin/v1/me/language', { method: 'POST', body: JSON.stringify( { locale: langPicked } ) } );
 					p.languages.current = lr.locale;
-					if ( lr.installed ) langNote = ' — language pack installed';
+					languagePackInstalled = !! lr.installed;
 				}
 				// Changing your own password rotates the session token, which
 				// invalidates the REST nonce baked into this page — reload to
@@ -32423,7 +32429,9 @@
 					setTimeout( () => location.reload(), 600 );
 					return;
 				}
-				toast( 'Profile updated' + langNote );
+				toast( languagePackInstalled
+					? __( 'Profile updated. Language pack installed.' )
+					: __( 'Profile updated' ) );
 				p.user = Object.assign( {}, p.user, payload );
 				// Keep the sidebar's name in sync with a display-name edit.
 				if ( payload.name ) {
