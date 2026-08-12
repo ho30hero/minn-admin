@@ -2,6 +2,9 @@
 	"name": "minn-admin-tests",
 	"private": true,
 	"description": "Browser test harness for Minn Admin — see README.md",
+	"scripts": {
+		"test:i18n": "node i18n-foundation.test.js"
+	},
 	"dependencies": {
 		"playwright-core": "^1.45.0"
 	},

@@ -1,9 +1,8 @@
 /**
- * i18n plumbing — translations ride the boot payload (B.i18n, built by
- * Minn_Admin::js_translations from JED files + the filter) into the SPA's
- * __()/_n()/sprintf helpers. The mu-fixture arms a handful of German strings
- * through the filter when minn_test_i18n is set, so this asserts the whole
- * pipeline (payload → helper → DOM) without shipping a translation file.
+ * i18n plumbing — WordPress' wp-i18n runtime backs the SPA's __()/_n()/sprintf
+ * helpers, while B.i18n remains a fixture override. The mu-fixture arms a
+ * handful of German strings through the filter when minn_test_i18n is set, so
+ * this asserts the whole pipeline without shipping a translation file.
  *
  * English is the source vocabulary: the baseline pass also proves that an
  * empty catalog falls through to the literals.
@@ -44,6 +43,7 @@ const { BASE, launch, login, reporter } = require( './helpers' );
 		group: ( document.querySelector( '[data-navgroup="workspace"]' ) || {} ).textContent || '',
 		search: ( document.querySelector( '#minn-open-palette' ) || {} ).textContent || '',
 		i18nKeys: Object.keys( window.MINN.i18n || {} ).length,
+		wpI18n: !! ( window.wp && window.wp.i18n && window.wp.i18n.__ && window.wp.i18n._n ),
 	} ) );
 
 	try {
@@ -57,6 +57,7 @@ const { BASE, launch, login, reporter } = require( './helpers' );
 		await page.goto( BASE + '/minn-admin/overview', { waitUntil: 'domcontentloaded' } );
 		await page.waitForSelector( '.minn-nav-btn', { timeout: 15000 } );
 		let s = await shellState();
+		t.check( 'WordPress i18n runtime is loaded', s.wpI18n );
 		t.check( 'Empty catalog serves as {}', s.i18nKeys === 0 );
 		t.check( 'Baseline nav is English', /Overview/.test( s.overview ) && /Content/.test( s.content ) );
 		t.check( 'Baseline group + search are English', /Workspace/.test( s.group ) && /Search…/.test( s.search ) );

@@ -8,29 +8,31 @@
 	const B = window.MINN;
 
 	/* ===== i18n =====
-	 * Translations ride the boot payload (B.i18n), built server-side from
-	 * standard JED files in languages/ (Minn_Admin::js_translations). English
-	 * is the source vocabulary: a missing catalog or entry falls through to
-	 * the literal, so development needs no tooling and `wp i18n make-pot`
-	 * extracts these calls with the stock WordPress toolchain.
+	 * WordPress loads standard JED files for this script via
+	 * wp_set_script_translations(). English is the source vocabulary: a missing
+	 * catalog or entry falls through to the literal, so development needs no
+	 * tooling and `wp i18n make-pot` extracts these calls with the stock
+	 * WordPress toolchain.
 	 * CONVENTION (CLAUDE.md "Internationalization"): every NEW user-facing
 	 * string is written as __( '…' ) / _n() / sprintf(); existing literals
 	 * convert opportunistically, view by view. */
 
+	// Test/site overrides win; production strings fall through to wp.i18n.
 	const I18N = B.i18n || {};
+	const WP_I18N = window.wp && window.wp.i18n ? window.wp.i18n : null;
 
 	const __ = ( text ) => {
 		const t = I18N[ text ];
-		return typeof t === 'string' ? t : ( Array.isArray( t ) ? t[ 0 ] : text );
+		if ( typeof t === 'string' || Array.isArray( t ) ) return Array.isArray( t ) ? t[ 0 ] : t;
+		return WP_I18N ? WP_I18N.__( text, 'minn-admin' ) : text;
 	};
 
-	// JED plural entries are [singular, plural, …]. Until a locale that needs
-	// a real Plural-Forms evaluator ships a catalog, the n !== 1 rule covers
-	// the Germanic/Romance languages likely to translate first.
+	// The override path is only for development fixtures. Production plurals
+	// go through WordPress, which evaluates each catalog's Plural-Forms rule.
 	const _n = ( single, plural, n ) => {
 		const t = I18N[ single ];
 		if ( Array.isArray( t ) && t.length > 1 ) return 1 === n ? t[ 0 ] : t[ 1 ];
-		return 1 === n ? __( single ) : plural;
+		return WP_I18N ? WP_I18N._n( single, plural, n, 'minn-admin' ) : ( 1 === n ? __( single ) : plural );
 	};
 
 	// JS-initiated smooth scrolls ignore the CSS scroll-behavior override, so
@@ -40,11 +42,12 @@
 
 	// printf-lite for translatable strings: %s, %d and positional %1$s forms
 	// (translations reorder words; concatenation can't).
-	const sprintf = ( fmt, ...args ) => {
+	const sprintfFallback = ( fmt, ...args ) => {
 		let i = 0;
 		return String( fmt ).replace( /%(\d+\$)?[sd]/g, ( m, pos ) =>
 			String( args[ pos ? parseInt( pos, 10 ) - 1 : i++ ] ) );
 	};
+	const sprintf = ( fmt, ...args ) => WP_I18N ? WP_I18N.sprintf( fmt, ...args ) : sprintfFallback( fmt, ...args );
 
 	/* ===== Utilities ===== */
 

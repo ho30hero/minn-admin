@@ -2,14 +2,14 @@
 # This file is distributed under the MIT.
 msgid ""
 msgstr ""
-"Project-Id-Version: Minn Admin 0.25.0\n"
+"Project-Id-Version: Minn Admin 0.27.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/minn-admin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-08T20:42:04+00:00\n"
+"POT-Creation-Date: 2026-08-12T00:00:00+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -1549,4 +1549,84 @@ msgstr ""
 
 #: assets/js/app.js:29017
 msgid "Item"
+msgstr ""
+
+#: includes/class-minn-admin.php:49
+msgid "Invalid plugin or status."
+msgstr ""
+
+#: includes/class-minn-admin.php:56
+msgid "Plugin not found."
+msgstr ""
+
+#: includes/class-minn-admin.php:106
+msgid "English (United States)"
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/class-minn-admin.php:634
+#, php-format
+msgid "%s — Coming soon"
+msgstr ""
+
+#: includes/class-minn-admin.php:635
+msgid "We’re making some improvements. Back soon."
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/template.php:18
+#, php-format
+msgid "Minn Admin — %s"
+msgstr ""
+
+#: includes/class-minn-admin.php:697
+msgid "Background"
+msgstr ""
+
+#: includes/class-minn-admin.php:698
+msgid "Background elevated"
+msgstr ""
+
+#: includes/class-minn-admin.php:699
+msgid "Panel"
+msgstr ""
+
+#: includes/class-minn-admin.php:700
+msgid "Panel elevated"
+msgstr ""
+
+#: includes/class-minn-admin.php:701
+msgid "Hover"
+msgstr ""
+
+#: includes/class-minn-admin.php:702
+msgid "Border"
+msgstr ""
+
+#: includes/class-minn-admin.php:703
+msgid "Border strong"
+msgstr ""
+
+#: includes/class-minn-admin.php:704
+msgid "Text"
+msgstr ""
+
+#: includes/class-minn-admin.php:705
+msgid "Text secondary"
+msgstr ""
+
+#: includes/class-minn-admin.php:706
+msgid "Text muted"
+msgstr ""
+
+#: includes/class-minn-admin.php:707
+msgid "Accent"
+msgstr ""
+
+#: includes/class-minn-admin.php:708
+msgid "Accent hover / links"
+msgstr ""
+
+#: includes/class-minn-admin.php:709
+msgid "Text on accent"
 msgstr ""

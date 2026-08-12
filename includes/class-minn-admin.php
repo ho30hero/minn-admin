@@ -40,12 +40,12 @@ class Minn_Admin {
 	public static function ajax_plugin_status() {
 		check_ajax_referer( 'minn-plugin-status' );
 		if ( ! current_user_can( 'activate_plugins' ) ) {
-			wp_send_json_error( array( 'message' => __( 'Sorry, you are not allowed to manage plugins for this site.' ) ), 403 );
+			wp_send_json_error( array( 'message' => __( 'Sorry, you are not allowed to manage plugins for this site.', 'minn-admin' ) ), 403 );
 		}
 		$id     = isset( $_POST['plugin'] ) ? sanitize_text_field( wp_unslash( $_POST['plugin'] ) ) : '';
 		$status = isset( $_POST['status'] ) ? sanitize_key( wp_unslash( $_POST['status'] ) ) : '';
 		if ( '' === $id || validate_file( $id ) || ! in_array( $status, array( 'active', 'inactive' ), true ) ) {
-			wp_send_json_error( array( 'message' => 'Invalid plugin or status.' ), 400 );
+			wp_send_json_error( array( 'message' => __( 'Invalid plugin or status.', 'minn-admin' ) ), 400 );
 		}
 		$file = $id . '.php';
 		if ( ! function_exists( 'get_plugins' ) ) {
@@ -53,7 +53,7 @@ class Minn_Admin {
 		}
 		$all = get_plugins();
 		if ( ! isset( $all[ $file ] ) ) {
-			wp_send_json_error( array( 'message' => 'Plugin not found.' ), 404 );
+			wp_send_json_error( array( 'message' => __( 'Plugin not found.', 'minn-admin' ) ), 404 );
 		}
 		if ( 'active' === $status ) {
 			$result = activate_plugin( $file );
@@ -103,7 +103,7 @@ class Minn_Admin {
 		$out          = array( array( '', __( 'Site default', 'minn-admin' ) ) );
 		foreach ( array_unique( array_merge( array( 'en_US' ), get_available_languages() ) ) as $code ) {
 			if ( 'en_US' === $code ) {
-				$label = 'English (United States)';
+				$label = __( 'English (United States)', 'minn-admin' );
 			} elseif ( is_array( $translations ) && isset( $translations[ $code ]['native_name'] ) ) {
 				$label = $translations[ $code ]['native_name'];
 			} else {
@@ -629,8 +629,11 @@ class Minn_Admin {
 		}
 		status_header( 503 );
 		header( 'Retry-After: 3600' );
-		$title = esc_html( get_bloginfo( 'name' ) );
-		echo "<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>{$title} — Coming soon</title><style>body{font-family:system-ui,sans-serif;background:#0b0b0d;color:#ececed;display:flex;align-items:center;justify-content:center;height:100vh;margin:0}div{text-align:center}h1{font-size:22px;letter-spacing:-0.3px}p{color:#9d9da7}</style></head><body><div><h1>{$title}</h1><p>We&rsquo;re making some improvements. Back soon.</p></div></body></html>";
+		$title       = esc_html( get_bloginfo( 'name' ) );
+		/* translators: %s: site name. */
+		$page_title  = esc_html( sprintf( __( '%s — Coming soon', 'minn-admin' ), get_bloginfo( 'name' ) ) );
+		$description = esc_html__( 'We’re making some improvements. Back soon.', 'minn-admin' );
+		echo "<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>{$page_title}</title><style>body{font-family:system-ui,sans-serif;background:#0b0b0d;color:#ececed;display:flex;align-items:center;justify-content:center;height:100vh;margin:0}div{text-align:center}h1{font-size:22px;letter-spacing:-0.3px}p{color:#9d9da7}</style></head><body><div><h1>{$title}</h1><p>{$description}</p></div></body></html>";
 		exit;
 	}
 
@@ -661,6 +664,19 @@ class Minn_Admin {
 		$raw_block_forms = apply_filters( 'minn_admin_block_forms', array() );
 		$block_forms     = self::filter_block_forms( $raw_block_forms );
 
+		// The standalone app shell deliberately skips wp_head/wp_footer. Register
+		// the SPA explicitly so WordPress can load its locale JSON (including
+		// language packs from WP_LANG_DIR/plugins) through the standard API.
+		$script_version = MINN_ADMIN_VERSION . '.' . (string) filemtime( MINN_ADMIN_DIR . 'assets/js/app.js' );
+		wp_register_script(
+			'minn-admin-app',
+			MINN_ADMIN_URL . 'assets/js/app.js',
+			array( 'wp-i18n' ),
+			$script_version,
+			false
+		);
+		wp_set_script_translations( 'minn-admin-app', 'minn-admin', MINN_ADMIN_DIR . 'languages' );
+
 		$boot = array(
 			'restUrl'  => esc_url_raw( rest_url() ),
 			'nonce'    => wp_create_nonce( 'wp_rest' ),
@@ -679,19 +695,19 @@ class Minn_Admin {
 			'appearanceSlots' => array_map(
 				function ( $css, $key ) {
 					$labels = array(
-						'bg'       => 'Background',
-						'bg2'      => 'Background elevated',
-						'panel'    => 'Panel',
-						'panel2'   => 'Panel elevated',
-						'hover'    => 'Hover',
-						'border'   => 'Border',
-						'border2'  => 'Border strong',
-						'text'     => 'Text',
-						'text2'    => 'Text secondary',
-						'text3'    => 'Text muted',
-						'accent'   => 'Accent',
-						'accent2'  => 'Accent hover / links',
-						'accentFg' => 'Text on accent',
+						'bg'       => __( 'Background', 'minn-admin' ),
+						'bg2'      => __( 'Background elevated', 'minn-admin' ),
+						'panel'    => __( 'Panel', 'minn-admin' ),
+						'panel2'   => __( 'Panel elevated', 'minn-admin' ),
+						'hover'    => __( 'Hover', 'minn-admin' ),
+						'border'   => __( 'Border', 'minn-admin' ),
+						'border2'  => __( 'Border strong', 'minn-admin' ),
+						'text'     => __( 'Text', 'minn-admin' ),
+						'text2'    => __( 'Text secondary', 'minn-admin' ),
+						'text3'    => __( 'Text muted', 'minn-admin' ),
+						'accent'   => __( 'Accent', 'minn-admin' ),
+						'accent2'  => __( 'Accent hover / links', 'minn-admin' ),
+						'accentFg' => __( 'Text on accent', 'minn-admin' ),
 					);
 					return array(
 						'key'   => $key,
@@ -1333,33 +1349,16 @@ class Minn_Admin {
 	}
 
 	/**
-	 * Translation map for the SPA's __()/_n() helpers, keyed by SOURCE
-	 * string (English is the source vocabulary — a missing catalog or entry
-	 * falls through to the literal, so the app runs with zero tooling).
-	 *
-	 * Files are the standard JED JSON that `wp i18n make-json` emits into
-	 * languages/ from a translated .po (one file per locale; the suffix is
-	 * the md5 of the script path). Values are a string, or an array of
-	 * plural forms for _n() entries. The filter lets sites and fixtures
-	 * inject or override entries without shipping files.
+	 * Optional translation overrides for the SPA. Production catalogs load
+	 * through wp_set_script_translations(); this map remains as a narrow
+	 * extension seam and lets the browser fixture test translations without
+	 * installing a language pack on the development site.
 	 */
 	public static function js_translations() {
 		$locale = get_user_locale();
 		$map    = array();
-		if ( 0 !== strpos( $locale, 'en' ) ) {
-			foreach ( glob( MINN_ADMIN_DIR . 'languages/minn-admin-' . $locale . '-*.json' ) ?: array() as $file ) {
-				$jed     = json_decode( (string) file_get_contents( $file ), true );
-				$entries = $jed['locale_data']['messages'] ?? array();
-				foreach ( (array) $entries as $key => $forms ) {
-					if ( '' === $key || ! is_array( $forms ) || '' === (string) ( $forms[0] ?? '' ) ) {
-						continue;
-					}
-					$map[ $key ] = count( $forms ) > 1 ? array_values( $forms ) : (string) $forms[0];
-				}
-			}
-		}
 		/**
-		 * Filter the SPA translation map.
+		 * Filter optional SPA translation overrides.
 		 *
 		 * @param array  $map    source string => translation (or plural-forms array).
 		 * @param string $locale The user locale being served.

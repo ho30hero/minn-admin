@@ -91,15 +91,18 @@ literal, so the app runs with zero tooling. The convention:
   placeholders get a `/* translators: … */` comment on the line above the call.
 - Translated values placed in HTML attributes go through `esc()` like any other
   dynamic value.
-- **Plumbing:** `Minn_Admin::js_translations()` reads standard JED files from
-  `languages/` for `get_user_locale()` and ships the map in the boot payload as
-  `B.i18n` (filter `minn_admin_js_translations`; the dev-fixtures option
+- **Plumbing:** the standalone shell registers `app.js` with the `wp-i18n`
+  dependency and calls `wp_set_script_translations()`. WordPress therefore loads
+  standard JED files from the bundled `languages/` directory or the global plugin
+  language-pack directory and applies each locale's plural rules. `B.i18n` is an
+  override seam only (filter `minn_admin_js_translations`; the dev-fixtures option
   `minn_test_i18n` arms a German test catalog for `tests/i18n.test.js`).
 - **Toolchain** (translation time only, never needed for development):
   `wp i18n make-pot . languages/minn-admin.pot --ignore-domain
   --exclude=tests,docs,.wp-playground,.github` regenerates the catalog (the stock
   extractor understands the JS helpers because they share core's names); translated
   `.po` files compile with `wp i18n make-mo` (PHP) and `wp i18n make-json` (JS JED
-  files, into `languages/`).
+  files, into `languages/`). See `languages/README.md` for the repeatable commands and
+  validation checks.
 - Plugin-supplied labels (surface descriptors, adapter data) are the PLUGIN's to
   translate; never wrap third-party data in Minn's catalog.
