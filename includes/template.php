@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Minn Admin — <?php echo esc_html( get_bloginfo( 'name' ) ); ?></title>
+<title><?php /* translators: %s: site name. */ echo esc_html( sprintf( __( 'Minn Admin — %s', 'minn-admin' ), get_bloginfo( 'name' ) ) ); ?></title>
 <?php
 // The site icon (settable from Minn's own Settings → General), when one exists.
 if ( has_site_icon() ) {
@@ -100,7 +100,8 @@ window.MINN = <?php echo wp_json_encode( $boot, JSON_HEX_TAG | JSON_HEX_AMP | JS
 </head>
 <body>
 <div id="minn-app"><div class="minn-boot-spinner"></div></div>
-<script src="<?php echo esc_url( MINN_ADMIN_URL . 'assets/js/app.js?ver=' . $minn_asset_ver( 'assets/js/app.js' ) ); ?>"></script>
+<?php // Printing the registered handle emits wp-i18n and its translation data first. ?>
+<?php wp_print_scripts( 'minn-admin-app' ); ?>
 <?php
 /**
  * Fires at the end of Minn's app document — the ONLY hook inside it. Minn

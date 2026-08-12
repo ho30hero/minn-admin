@@ -8,29 +8,31 @@
 	const B = window.MINN;
 
 	/* ===== i18n =====
-	 * Translations ride the boot payload (B.i18n), built server-side from
-	 * standard JED files in languages/ (Minn_Admin::js_translations). English
-	 * is the source vocabulary: a missing catalog or entry falls through to
-	 * the literal, so development needs no tooling and `wp i18n make-pot`
-	 * extracts these calls with the stock WordPress toolchain.
+	 * WordPress loads standard JED files for this script via
+	 * wp_set_script_translations(). English is the source vocabulary: a missing
+	 * catalog or entry falls through to the literal, so development needs no
+	 * tooling and `wp i18n make-pot` extracts these calls with the stock
+	 * WordPress toolchain.
 	 * CONVENTION (CLAUDE.md "Internationalization"): every NEW user-facing
 	 * string is written as __( '…' ) / _n() / sprintf(); existing literals
 	 * convert opportunistically, view by view. */
 
+	// Test/site overrides win; production strings fall through to wp.i18n.
 	const I18N = B.i18n || {};
+	const WP_I18N = window.wp && window.wp.i18n ? window.wp.i18n : null;
 
 	const __ = ( text ) => {
 		const t = I18N[ text ];
-		return typeof t === 'string' ? t : ( Array.isArray( t ) ? t[ 0 ] : text );
+		if ( typeof t === 'string' || Array.isArray( t ) ) return Array.isArray( t ) ? t[ 0 ] : t;
+		return WP_I18N ? WP_I18N.__( text, 'minn-admin' ) : text;
 	};
 
-	// JED plural entries are [singular, plural, …]. Until a locale that needs
-	// a real Plural-Forms evaluator ships a catalog, the n !== 1 rule covers
-	// the Germanic/Romance languages likely to translate first.
+	// The override path is only for development fixtures. Production plurals
+	// go through WordPress, which evaluates each catalog's Plural-Forms rule.
 	const _n = ( single, plural, n ) => {
 		const t = I18N[ single ];
 		if ( Array.isArray( t ) && t.length > 1 ) return 1 === n ? t[ 0 ] : t[ 1 ];
-		return 1 === n ? __( single ) : plural;
+		return WP_I18N ? WP_I18N._n( single, plural, n, 'minn-admin' ) : ( 1 === n ? __( single ) : plural );
 	};
 
 	// JS-initiated smooth scrolls ignore the CSS scroll-behavior override, so
@@ -40,11 +42,12 @@
 
 	// printf-lite for translatable strings: %s, %d and positional %1$s forms
 	// (translations reorder words; concatenation can't).
-	const sprintf = ( fmt, ...args ) => {
+	const sprintfFallback = ( fmt, ...args ) => {
 		let i = 0;
 		return String( fmt ).replace( /%(\d+\$)?[sd]/g, ( m, pos ) =>
 			String( args[ pos ? parseInt( pos, 10 ) - 1 : i++ ] ) );
 	};
+	const sprintf = ( fmt, ...args ) => WP_I18N ? WP_I18N.sprintf( fmt, ...args ) : sprintfFallback( fmt, ...args );
 
 	/* ===== Utilities ===== */
 
@@ -3152,7 +3155,9 @@
 			</div>
 			${ filtered.length ? filtered.map( ( p ) => `
 				<div class="minn-table-row minn-content-cols${ state.contentTrash ? ' trash' : '' }${ sel.has( p.id ) ? ' sel' : '' }" data-id="${ p.id }" data-type="${ esc( p.type ) }" data-status="${ esc( p.status ) }" data-link="${ esc( p.link || '' ) }">
-					<div class="minn-cbcell"><input type="checkbox" class="minn-cb minn-row-cb" data-cbid="${ p.id }" aria-label="${ esc( sprintf( __( 'Select %s' ), p.title ) ) }"${ sel.has( p.id ) ? ' checked' : '' }></div>
+					<div class="minn-cbcell"><input type="checkbox" class="minn-cb minn-row-cb" data-cbid="${ p.id }" aria-label="${ esc( sprintf(
+						/* translators: %s: content title. */
+						__( 'Select %s' ), p.title ) ) }"${ sel.has( p.id ) ? ' checked' : '' }></div>
 					<div class="minn-row-icon${ p.thumb ? ' has-thumb' : '' }">${ rowIcon( p ) }</div>
 					<div class="minn-cell-clip">
 						<div class="minn-row-title">${ esc( p.title ) }</div>
@@ -13377,9 +13382,12 @@
 				/* translators: 1: number of database tables, 2: total size (e.g. "97.8 MB"). */
 				__( '%1$s tables · %2$s' ), String( c.tables.length ), c.total_size_human ) ) }</div>
 			${ c.foreign > 0 ? `<button class="minn-btn-soft${ ds.all ? ' active' : '' }" id="minn-db-all">${ esc( ds.all
-				/* translators: %d: number of tables outside this install's prefix. */
-				? sprintf( __( 'Hide %d other-prefix tables' ), c.foreign )
-				: sprintf( __( 'Show %d other-prefix tables' ), c.foreign ) ) }</button>` : '' }
+				? sprintf(
+					/* translators: %d: number of tables outside this install's prefix. */
+					__( 'Hide %d other-prefix tables' ), c.foreign )
+				: sprintf(
+					/* translators: %d: number of tables outside this install's prefix. */
+					__( 'Show %d other-prefix tables' ), c.foreign ) ) }</button>` : '' }
 			<span class="minn-db-ro">${ icon( 'lock' ) } ${ esc( __( 'Read-only by design' ) ) }</span>
 		</div>
 		<div id="minn-db-list"></div>`;
@@ -13458,9 +13466,10 @@
 		const h = state.cache.dbHealth;
 		let summary = '';
 		if ( h ) {
-			/* translators: %s: number of database health checks needing attention. */
 			summary = h.warnings
-				? sprintf( _n( '%s check needs attention', '%s checks need attention', h.warnings ), Number( h.warnings ).toLocaleString() )
+				? sprintf( _n(
+					/* translators: %s: number of database health checks needing attention. */
+					'%s check needs attention', '%s checks need attention', h.warnings ), Number( h.warnings ).toLocaleString() )
 				: __( 'Everything looks healthy' );
 		}
 		const head = `
@@ -26599,7 +26608,9 @@
 					if ( ! md ) throw new Error( __( 'Pattern unavailable' ) );
 					insertPatternIslands( p, md );
 				} )
-				.catch( ( e ) => toast( __( 'Pattern insert failed: ' ) + e.message, true ) );
+				.catch( ( e ) => toast( sprintf(
+					/* translators: %s: error message returned while inserting a pattern. */
+					__( 'Pattern insert failed: %s' ), e.message ), true ) );
 			return;
 		}
 		if ( action && action.pattern ) {
@@ -26616,10 +26627,12 @@
 			sel.addRange( range );
 			api( 'minn-admin/v1/pattern?name=' + encodeURIComponent( action.pattern ) )
 				.then( ( r ) => {
-					if ( ! r || ! r.content ) throw new Error( 'Pattern unavailable' );
+					if ( ! r || ! r.content ) throw new Error( __( 'Pattern unavailable' ) );
 					insertPatternIslands( p, r.content );
 				} )
-				.catch( ( e ) => toast( 'Pattern insert failed: ' + e.message, true ) );
+				.catch( ( e ) => toast( sprintf(
+					/* translators: %s: error message returned while inserting a pattern. */
+					__( 'Pattern insert failed: %s' ), e.message ), true ) );
 			return;
 		}
 		if ( action && action.block ) {
@@ -31969,13 +31982,15 @@
 			const langChanged = langPicked !== undefined && langPicked !== ( ue.languages.current || '' );
 			try {
 				await api( `wp/v2/users/${ u.id }`, { method: 'POST', body: JSON.stringify( payload ) } );
-				let langNote = '';
+				let languagePackInstalled = false;
 				if ( langChanged ) {
 					const lr = await api( `minn-admin/v1/users/${ u.id }/language`, { method: 'POST', body: JSON.stringify( { locale: langPicked } ) } );
 					ue.languages.current = lr.locale;
-					if ( lr.installed ) langNote = ' — ' + __( 'language pack installed' );
+					languagePackInstalled = !! lr.installed;
 				}
-				toast( __( 'User updated' ) + langNote );
+				toast( languagePackInstalled
+					? __( 'User updated. Language pack installed.' )
+					: __( 'User updated' ) );
 				ue.user = Object.assign( {}, ue.user, payload );
 				state.cache.users = null;
 				btn.disabled = false;
@@ -32400,11 +32415,11 @@
 			const langChanged = langPicked !== undefined && langPicked !== ( p.languages.current || '' );
 			try {
 				await api( `wp/v2/users/${ B.user.id }`, { method: 'POST', body: JSON.stringify( payload ) } );
-				let langNote = '';
+				let languagePackInstalled = false;
 				if ( langChanged ) {
 					const lr = await api( 'minn-admin/v1/me/language', { method: 'POST', body: JSON.stringify( { locale: langPicked } ) } );
 					p.languages.current = lr.locale;
-					if ( lr.installed ) langNote = ' — language pack installed';
+					languagePackInstalled = !! lr.installed;
 				}
 				// Changing your own password rotates the session token, which
 				// invalidates the REST nonce baked into this page — reload to
@@ -32414,7 +32429,9 @@
 					setTimeout( () => location.reload(), 600 );
 					return;
 				}
-				toast( 'Profile updated' + langNote );
+				toast( languagePackInstalled
+					? __( 'Profile updated. Language pack installed.' )
+					: __( 'Profile updated' ) );
 				p.user = Object.assign( {}, p.user, payload );
 				// Keep the sidebar's name in sync with a display-name edit.
 				if ( payload.name ) {

@@ -11,6 +11,7 @@
  * License:           MIT
  * License URI:       https://opensource.org/licenses/MIT
  * Text Domain:       minn-admin
+ * Domain Path:       /languages
  */
 
 defined( 'ABSPATH' ) || exit;
