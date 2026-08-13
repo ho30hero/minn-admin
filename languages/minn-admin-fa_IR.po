@@ -6679,3 +6679,25 @@ msgstr ""
 "خدمات خارجی که WordPress می تواند استفاده کند: ارائه دهندگان هوش مصنوعی و "
 "سایر APIهای متصل. کلیدها توسط هسته ذخیره می شوند، در ذخیره اعتبارسنجی می "
 "شوند و پس از ذخیره شدن دیگر هرگز نشان داده نمی شوند."
+
+#. translators: %s: localized start date of a week.
+#: includes/class-minn-admin-rest.php
+#, php-format
+msgid "Week of %s"
+msgstr "هفتهٔ %s"
+
+#. translators: %s: localized page-view count.
+#: includes/class-minn-admin-rest.php
+#, php-format
+msgid "%s pageview"
+msgid_plural "%s pageviews"
+msgstr[0] "%s بازدید صفحه"
+msgstr[1] "%s بازدید صفحه"
+
+#. translators: 1: percentage change, 2: number of days in the comparison period.
+#: includes/class-minn-admin-rest.php
+#, php-format
+msgid "%1$s%% vs prior %2$d day"
+msgid_plural "%1$s%% vs prior %2$d days"
+msgstr[0] "%1$s%% در مقایسه با %2$d روز قبل"
+msgstr[1] "%1$s%% در مقایسه با %2$d روز قبل"

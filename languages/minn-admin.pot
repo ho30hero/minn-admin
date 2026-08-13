@@ -6354,3 +6354,25 @@ msgstr ""
 #: assets/js/app.js:32765
 msgid "Scroll tabs right"
 msgstr ""
+
+#. translators: %s: localized start date of a week.
+#: includes/class-minn-admin-rest.php
+#, php-format
+msgid "Week of %s"
+msgstr ""
+
+#. translators: %s: localized page-view count.
+#: includes/class-minn-admin-rest.php
+#, php-format
+msgid "%s pageview"
+msgid_plural "%s pageviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: percentage change, 2: number of days in the comparison period.
+#: includes/class-minn-admin-rest.php
+#, php-format
+msgid "%1$s%% vs prior %2$d day"
+msgid_plural "%1$s%% vs prior %2$d days"
+msgstr[0] ""
+msgstr[1] ""

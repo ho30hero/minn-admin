@@ -2448,7 +2448,11 @@ class Minn_Admin_REST {
 			$offset  = ( $buckets - 1 - $i ) * $bucket_days;
 			$label   = 1 === $bucket_days
 				? date_i18n( 'M j', time() - $offset * DAY_IN_SECONDS )
-				: 'Week of ' . date_i18n( 'M j', time() - ( $offset + $bucket_days - 1 ) * DAY_IN_SECONDS );
+				: sprintf(
+					/* translators: %s: localized start date of a week. */
+					__( 'Week of %s', 'minn-admin' ),
+					date_i18n( 'M j', time() - ( $offset + $bucket_days - 1 ) * DAY_IN_SECONDS )
+				);
 			$chart[] = array(
 				'label' => $label,
 				'value' => $count,
@@ -2499,7 +2503,11 @@ class Minn_Admin_REST {
 				$to_ts    = time() - $offset * DAY_IN_SECONDS;
 				$label    = 1 === $bucket_days
 					? date_i18n( 'M j, Y', $to_ts )
-					: 'Week of ' . date_i18n( 'M j, Y', $from_ts );
+					: sprintf(
+						/* translators: %s: localized start date of a week. */
+						__( 'Week of %s', 'minn-admin' ),
+						date_i18n( 'M j, Y', $from_ts )
+					);
 				$tchart[] = array(
 					'label' => $label,
 					'value' => $bucket['v'],
@@ -2516,21 +2524,32 @@ class Minn_Admin_REST {
 			$delta = $prev > 0 ? round( ( $visitors - $prev ) / $prev * 100, 1 ) : null;
 			// Always surface pageviews on the card; when a period delta exists
 			// it leads, with pageviews as a quiet second clause.
-			$views_bit = $compact( $pageviews ) . ' pageviews';
-			$delta_bit = null !== $delta
-				? ( $delta >= 0 ? '↑ ' : '↓ ' ) . abs( $delta ) . '% vs prior ' . $days . 'd · ' . $views_bit
-				: $views_bit;
+			$views_bit = sprintf(
+				/* translators: %s: localized page-view count. */
+				_n( '%s pageview', '%s pageviews', $pageviews, 'minn-admin' ),
+				$compact( $pageviews )
+			);
+			$delta_bit = $views_bit;
+			if ( null !== $delta ) {
+				$comparison = sprintf(
+					/* translators: 1: percentage change, 2: number of days in the comparison period. */
+					_n( '%1$s%% vs prior %2$d day', '%1$s%% vs prior %2$d days', $days, 'minn-admin' ),
+					abs( $delta ),
+					$days
+				);
+				$delta_bit = ( $delta >= 0 ? '↑ ' : '↓ ' ) . $comparison . ' · ' . $views_bit;
+			}
 			array_unshift(
 				$stats,
 				array(
-					'label' => 'Visitors',
+					'label' => __( 'Visitors', 'minn-admin' ),
 					'value' => $compact( $visitors ),
 					'delta' => $delta_bit,
 					'up'    => null !== $delta ? ( $delta >= 0 ? true : 'down' ) : null,
 				)
 			);
 			$traffic_out = array(
-				'source' => isset( $traffic['source'] ) ? $traffic['source'] : 'Analytics',
+				'source' => isset( $traffic['source'] ) ? $traffic['source'] : __( 'Analytics', 'minn-admin' ),
 				'chart'  => $tchart,
 			);
 		}
