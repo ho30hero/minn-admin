@@ -301,7 +301,9 @@ class Minn_Admin_DB {
 			$tables[] = array(
 				'name'       => $t->name,
 				'own'        => $own,
-				'engine'     => (string) $t->engine,
+				// Some MySQL/MariaDB combinations preserve the information_schema
+				// column's uppercase property name despite the SQL alias.
+				'engine'     => isset( $t->engine ) ? (string) $t->engine : ( isset( $t->ENGINE ) ? (string) $t->ENGINE : '' ),
 				'rows'       => (int) $t->rows_est,
 				'size'       => (int) $t->size,
 				'size_human' => size_format( (int) $t->size, 1 ),

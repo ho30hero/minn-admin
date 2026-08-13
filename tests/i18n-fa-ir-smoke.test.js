@@ -15,6 +15,7 @@ const { BASE, launch, login, reporter } = require( './helpers' );
 
 		const state = await page.evaluate( () => ( {
 			htmlLang: document.documentElement.lang,
+			htmlDir: document.documentElement.dir,
 			overview: ( document.querySelector( '.minn-nav-btn[data-nav="overview"]' ) || {} ).textContent || '',
 			content: ( document.querySelector( '.minn-nav-btn[data-nav="content"]' ) || {} ).textContent || '',
 			group: ( document.querySelector( '[data-navgroup="workspace"]' ) || {} ).textContent || '',
@@ -42,6 +43,7 @@ const { BASE, launch, login, reporter } = require( './helpers' );
 		} ) );
 
 		t.check( 'user locale reaches the document', /^fa(?:-|$)/i.test( state.htmlLang ) );
+		t.check( 'user locale makes the document RTL', state.htmlDir === 'rtl' );
 		t.check( 'PHP catalog translates boot-payload strings', state.phpLabel === 'پس‌زمینه' );
 		t.check( 'generated JSON translates direct wp.i18n calls', state.wpI18n && state.singular === 'نمای کلی' );
 		t.check( 'generated JSON translates rendered navigation', /نمای کلی/.test( state.overview ) && /محتوا/.test( state.content ) );
