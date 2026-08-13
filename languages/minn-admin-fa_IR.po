@@ -5,7 +5,7 @@ msgstr ""
 "Last-Translator: Minn Admin Contributors\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2026-08-12T10:09:07+00:00\n"
 "PO-Revision-Date: 2026-08-12 15:15+0330\n"
@@ -13,41 +13,45 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
-#. Plugin Name of the plugin
 #: minn-admin.php
+#. Plugin Name of the plugin
 msgid "Minn Admin"
 msgstr "Minn Admin"
 
-#. Plugin URI of the plugin
 #: minn-admin.php
+#. Plugin URI of the plugin
 msgid "https://minnadmin.com"
 msgstr "https://minnadmin.com"
 
+#: minn-admin.php
 #. Description of the plugin
-#: minn-admin.php
-msgid "A reimagined WordPress admin experience. Fast, focused and beautiful. Served at /minn-admin/."
-msgstr "تجربه‌ای نو از مدیریت وردپرس؛ سریع، متمرکز و زیبا. در مسیر /minn-admin/ ارائه می‌شود."
+msgid ""
+"A reimagined WordPress admin experience. Fast, focused and beautiful. "
+"Served at /minn-admin/."
+msgstr ""
+"تجربه‌ای نو از مدیریت وردپرس؛ سریع، متمرکز و زیبا. در مسیر /minn-admin/ "
+"ارائه می‌شود."
 
-#. Author of the plugin
 #: minn-admin.php
+#. Author of the plugin
 msgid "Austin Ginder"
 msgstr "Austin Ginder"
 
-#. Author URI of the plugin
 #: minn-admin.php
+#. Author URI of the plugin
 msgid "https://austinginder.com"
 msgstr "https://austinginder.com"
 
-#. translators: %s: number of failed logins.
 #: includes/adapters/all-in-one-security.php:136
+#. translators: %s: number of failed logins.
 #, php-format
 msgid "%s failed login in 24h"
 msgid_plural "%s failed logins in 24h"
 msgstr[0] "%s ورود ناموفق در ۲۴ ساعت"
 msgstr[1] "%s ورود ناموفق در ۲۴ ساعت"
 
-#. translators: %s: number of locked IPs.
 #: includes/adapters/all-in-one-security.php:142
+#. translators: %s: number of locked IPs.
 #, php-format
 msgid "%s locked out now"
 msgid_plural "%s locked out now"
@@ -58,38 +62,38 @@ msgstr[1] "اکنون %s مورد مسدود است"
 msgid "nobody locked out"
 msgstr "هیچ‌کس مسدود نیست"
 
-#. translators: %s: number of permanent blocks.
 #: includes/adapters/all-in-one-security.php:148
+#. translators: %s: number of permanent blocks.
 #, php-format
 msgid "%s permanent block"
 msgid_plural "%s permanent blocks"
 msgstr[0] "%s مسدودسازی دائمی"
 msgstr[1] "%s مسدودسازی دائمی"
 
-#. translators: %s: number of Disembark scan sessions.
 #: includes/adapters/disembark.php:141
+#. translators: %s: number of Disembark scan sessions.
 #, php-format
 msgid "%s scan session on disk"
 msgid_plural "%s scan sessions on disk"
 msgstr[0] "%s نشست اسکن روی دیسک"
 msgstr[1] "%s نشست اسکن روی دیسک"
 
-#. translators: %s: number of email connections.
 #: includes/adapters/fluent-smtp.php:181
+#. translators: %s: number of email connections.
 #, php-format
 msgid "%s connection passing its daily health check"
 msgid_plural "All %s connections passing their daily health check"
 msgstr[0] "%s اتصال با بررسی سلامت روزانهٔ موفق"
 msgstr[1] "همهٔ %s اتصال بررسی سلامت روزانه را با موفقیت گذرانده‌اند"
 
-#. translators: 1: failing count, 2: total count, 3: sender list.
 #: includes/adapters/fluent-smtp.php:198
+#. translators: 1: failing count, 2: total count, 3: sender list.
 #, php-format
 msgid "%1$s of %2$s connections failing the daily health check (%3$s)"
 msgstr "%1$s از %2$s اتصال در بررسی سلامت روزانه ناموفق‌اند (%3$s)"
 
-#. translators: %s: number of times the email was resent.
 #: includes/adapters/fluent-smtp.php:742
+#. translators: %s: number of times the email was resent.
 #, php-format
 msgid "%s time"
 msgid_plural "%s times"
@@ -134,14 +138,14 @@ msgstr "Cron"
 msgid "CLI"
 msgstr "CLI"
 
-#. translators: %s: date and time of the most recent capture.
 #: includes/adapters/scrutoscope.php:415
+#. translators: %s: date and time of the most recent capture.
 #, php-format
 msgid "Latest %s"
 msgstr "آخرین %s"
 
-#. translators: %s: number of pinned profiles.
 #: includes/adapters/scrutoscope.php:418
+#. translators: %s: number of pinned profiles.
 #, php-format
 msgid "%s pinned"
 msgstr "%s سنجاق‌شده"
@@ -150,298 +154,362 @@ msgstr "%s سنجاق‌شده"
 msgid "Routes covered"
 msgstr "مسیرهای پوشش‌داده‌شده"
 
-#. translators: %s: date and time of the oldest stored capture.
 #: includes/adapters/scrutoscope.php:453
+#. translators: %s: date and time of the oldest stored capture.
 #, php-format
 msgid "History since %s"
 msgstr "تاریخچه از %s"
 
 #: includes/adapters/scrutoscope.php:542
 msgid "This version of Scrutoscope cannot profile cron hooks on demand."
-msgstr "این نسخهٔ Scrutoscope نمی‌تواند hookهای cron را به‌صورت درخواستی پروفایل کند."
+msgstr ""
+"این نسخهٔ Scrutoscope نمی‌تواند hookهای cron را به‌صورت درخواستی پروفایل "
+"کند."
 
 #: includes/adapters/scrutoscope.php:552
 msgid "Cron event not found. It may have already run."
 msgstr "رویداد Cron پیدا نشد؛ شاید قبلاً اجرا شده باشد."
 
-#. translators: %s: cron hook name.
 #: includes/adapters/scrutoscope.php:568
+#. translators: %s: cron hook name.
 #, php-format
 msgid "Profiled “%s”. Open Profiles to inspect it."
 msgstr "«%s» پروفایل شد. برای بررسی آن، پروفایل‌ها را باز کنید."
 
-#: includes/class-minn-admin-db.php:329
-#: includes/class-minn-admin-db.php:357
-#: includes/class-minn-admin-db.php:466
+#: includes/class-minn-admin-db.php:331
+#: includes/class-minn-admin-db.php:359
+#: includes/class-minn-admin-db.php:468
 msgid "Unknown table."
 msgstr "جدول ناشناخته است."
 
-#: includes/class-minn-admin-db.php:333
-#: includes/class-minn-admin-db.php:361
+#: includes/class-minn-admin-db.php:335
+#: includes/class-minn-admin-db.php:363
 msgid "Could not read the table structure."
 msgstr "ساختار جدول خوانده نشد."
 
-#: includes/class-minn-admin-db.php:472
+#: includes/class-minn-admin-db.php:474
 msgid "This table has no usable primary key."
 msgstr "این جدول کلید اصلی قابل‌استفاده‌ای ندارد."
 
-#: includes/class-minn-admin-db.php:482
+#: includes/class-minn-admin-db.php:484
 msgid "Row not found."
 msgstr "ردیف پیدا نشد."
 
-#: includes/class-minn-admin-db.php:541
+#: includes/class-minn-admin-db.php:543
 msgid "Not checked"
 msgstr "بررسی‌نشده"
 
-#: includes/class-minn-admin-db.php:542
-msgid "This table is too large to count cheaply, so Minn does not scan it. Run the command below to check it yourself."
-msgstr "این جدول برای شمارش سریع بیش از حد بزرگ است؛ بنابراین Minn آن را اسکن نمی‌کند. برای بررسی دستی، فرمان زیر را اجرا کنید."
+#: includes/class-minn-admin-db.php:544
+msgid ""
+"This table is too large to count cheaply, so Minn does not scan it. Run the "
+"command below to check it yourself."
+msgstr ""
+"این جدول برای شمارش سریع بیش از حد بزرگ است؛ بنابراین Minn آن را اسکن "
+"نمی‌کند. برای بررسی دستی، فرمان زیر را اجرا کنید."
 
-#: includes/class-minn-admin-db.php:592
+#: includes/class-minn-admin-db.php:594
 msgid "Database hygiene"
 msgstr "پاکیزگی پایگاه داده"
 
+#: includes/class-minn-admin-db.php:600
 #. translators: %s: number of database checks needing attention.
-#: includes/class-minn-admin-db.php:598
 #, php-format
 msgid "%s storage check needs attention"
 msgid_plural "%s storage checks need attention"
 msgstr[0] "%s بررسی ذخیره‌سازی نیازمند توجه است"
 msgstr[1] "%s بررسی ذخیره‌سازی نیازمند توجه‌اند"
 
-#: includes/class-minn-admin-db.php:606
+#: includes/class-minn-admin-db.php:608
 msgid "Orphaned rows, indexes and engines all look healthy"
 msgstr "ردیف‌های یتیم، ایندکس‌ها و موتورهای ذخیره‌سازی همگی سالم‌اند"
 
-#: includes/class-minn-admin-db.php:670
+#: includes/class-minn-admin-db.php:672
 msgid "Tables without a primary key"
 msgstr "جدول‌های بدون کلید اصلی"
 
+#: includes/class-minn-admin-db.php:678
 #. translators: %s: comma-separated list of database table names.
-#: includes/class-minn-admin-db.php:676
 #, php-format
-msgid "These tables have no primary key, which breaks row-level replication and confuses backup and migration tools: %s"
-msgstr "این جدول‌ها کلید اصلی ندارند؛ این وضعیت همانندسازی در سطح ردیف را مختل می‌کند و ابزارهای پشتیبان‌گیری و انتقال را به خطا می‌اندازد: %s"
+msgid ""
+"These tables have no primary key, which breaks row-level replication and "
+"confuses backup and migration tools: %s"
+msgstr ""
+"این جدول‌ها کلید اصلی ندارند؛ این وضعیت همانندسازی در سطح ردیف را مختل "
+"می‌کند و ابزارهای پشتیبان‌گیری و انتقال را به خطا می‌اندازد: %s"
 
-#: includes/class-minn-admin-db.php:679
+#: includes/class-minn-admin-db.php:681
 msgid "Every table has a primary key."
 msgstr "همهٔ جدول‌ها کلید اصلی دارند."
 
-#: includes/class-minn-admin-db.php:691
+#: includes/class-minn-admin-db.php:693
 msgid "Storage engine"
 msgstr "موتور ذخیره‌سازی"
 
+#: includes/class-minn-admin-db.php:699
 #. translators: %s: comma-separated list of tables and their storage engines.
-#: includes/class-minn-admin-db.php:697
 #, php-format
-msgid "These tables do not use InnoDB, so they miss row-level locking and crash recovery: %s"
-msgstr "این جدول‌ها از InnoDB استفاده نمی‌کنند؛ بنابراین قفل‌گذاری در سطح ردیف و بازیابی پس از خرابی را ندارند: %s"
+msgid ""
+"These tables do not use InnoDB, so they miss row-level locking and crash "
+"recovery: %s"
+msgstr ""
+"این جدول‌ها از InnoDB استفاده نمی‌کنند؛ بنابراین قفل‌گذاری در سطح ردیف و "
+"بازیابی پس از خرابی را ندارند: %s"
 
-#: includes/class-minn-admin-db.php:700
+#: includes/class-minn-admin-db.php:702
 msgid "Every table uses InnoDB."
 msgstr "همهٔ جدول‌ها از InnoDB استفاده می‌کنند."
 
-#: includes/class-minn-admin-db.php:702
+#: includes/class-minn-admin-db.php:704
 msgid "Convert a table"
 msgstr "تبدیل جدول"
 
-#: includes/class-minn-admin-db.php:704
+#: includes/class-minn-admin-db.php:706
 msgid "Back up first. Converting locks the table while it runs."
 msgstr "ابتدا پشتیبان بگیرید. تبدیل، جدول را هنگام اجرا قفل می‌کند."
 
-#: includes/class-minn-admin-db.php:723
+#: includes/class-minn-admin-db.php:725
 msgid "Reclaimable space"
 msgstr "فضای قابل‌بازیابی"
 
+#: includes/class-minn-admin-db.php:732
 #. translators: 1: table name, 2: reclaimable size (e.g. "82.0 MB").
-#: includes/class-minn-admin-db.php:730
 #, php-format
-msgid "%1$s alone is holding %2$s of free space inside its own file. Optimising rewrites the table and returns it to the disk."
-msgstr "%1$s به‌تنهایی %2$s فضای آزاد را در فایل خود نگه داشته است. بهینه‌سازی، جدول را بازنویسی و این فضا را به دیسک بازمی‌گرداند."
+msgid ""
+"%1$s alone is holding %2$s of free space inside its own file. Optimising "
+"rewrites the table and returns it to the disk."
+msgstr ""
+"%1$s به‌تنهایی %2$s فضای آزاد را در فایل خود نگه داشته است. بهینه‌سازی، "
+"جدول را بازنویسی و این فضا را به دیسک بازمی‌گرداند."
 
-#: includes/class-minn-admin-db.php:734
+#: includes/class-minn-admin-db.php:736
 msgid "No table is holding a significant amount of reclaimable space."
 msgstr "هیچ جدولی فضای قابل‌بازیابی قابل‌توجهی نگه نداشته است."
 
-#: includes/class-minn-admin-db.php:736
+#: includes/class-minn-admin-db.php:738
 msgid "Optimise tables"
 msgstr "بهینه‌سازی جدول‌ها"
 
-#: includes/class-minn-admin-db.php:738
+#: includes/class-minn-admin-db.php:740
 msgid "Back up first. Optimising locks each table while it runs."
 msgstr "ابتدا پشتیبان بگیرید. بهینه‌سازی، هر جدول را هنگام اجرا قفل می‌کند."
 
-#: includes/class-minn-admin-db.php:756
+#: includes/class-minn-admin-db.php:758
 msgid "Post meta lookup index"
 msgstr "ایندکس جست‌وجوی فرادادهٔ نوشته"
 
-#: includes/class-minn-admin-db.php:759
+#: includes/class-minn-admin-db.php:761
 msgid "Present"
 msgstr "موجود"
 
-#: includes/class-minn-admin-db.php:759
+#: includes/class-minn-admin-db.php:761
 msgid "Missing"
 msgstr "ناموجود"
 
-#: includes/class-minn-admin-db.php:761
+#: includes/class-minn-admin-db.php:763
 msgid "A combined post_id and meta_key index is present, so meta lookups stay fast."
-msgstr "ایندکس ترکیبی post_id و meta_key موجود است؛ بنابراین جست‌وجوی فراداده سریع می‌ماند."
-
-#: includes/class-minn-admin-db.php:762
-msgid "Lookups by post and meta key fall back to two separate indexes. On sites with heavy meta use (WooCommerce, event and booking plugins) a combined index is a large, low-risk speed win."
-msgstr "جست‌وجو بر پایهٔ نوشته و کلید فراداده به دو ایندکس جدا متکی است. در سایت‌های پُراستفاده از فراداده (WooCommerce و افزونه‌های رویداد و رزرو)، یک ایندکس ترکیبی با ریسک کم، سرعت را به‌طور محسوسی افزایش می‌دهد."
+msgstr ""
+"ایندکس ترکیبی post_id و meta_key موجود است؛ بنابراین جست‌وجوی فراداده سریع "
+"می‌ماند."
 
 #: includes/class-minn-admin-db.php:764
+msgid ""
+"Lookups by post and meta key fall back to two separate indexes. On sites "
+"with heavy meta use (WooCommerce, event and booking plugins) a combined "
+"index is a large, low-risk speed win."
+msgstr ""
+"جست‌وجو بر پایهٔ نوشته و کلید فراداده به دو ایندکس جدا متکی است. در "
+"سایت‌های پُراستفاده از فراداده (WooCommerce و افزونه‌های رویداد و رزرو)، یک "
+"ایندکس ترکیبی با ریسک کم، سرعت را به‌طور محسوسی افزایش می‌دهد."
+
+#: includes/class-minn-admin-db.php:766
 msgid "Add the index"
 msgstr "افزودن ایندکس"
 
-#: includes/class-minn-admin-db.php:766
+#: includes/class-minn-admin-db.php:768
 msgid "Back up first. Adding an index locks the table briefly."
 msgstr "ابتدا پشتیبان بگیرید. افزودن ایندکس، جدول را برای مدت کوتاهی قفل می‌کند."
 
-#: includes/class-minn-admin-db.php:805
+#: includes/class-minn-admin-db.php:807
 msgid "Auto-increment headroom"
 msgstr "ظرفیت باقی‌ماندهٔ افزایش خودکار"
 
-#: includes/class-minn-admin-db.php:807
+#: includes/class-minn-admin-db.php:809
 msgid "Healthy"
 msgstr "سالم"
 
+#: includes/class-minn-admin-db.php:814
 #. translators: %s: comma-separated list of database table names.
-#: includes/class-minn-admin-db.php:812
 #, php-format
-msgid "These tables are within 20 percent of the largest id their column type can store. Once the ceiling is reached, new rows stop being written: %s"
-msgstr "این جدول‌ها به ۲۰ درصد پایانیِ بیشترین شناسهٔ قابل‌ذخیره در نوع ستون خود رسیده‌اند. با رسیدن به سقف، نوشتن ردیف‌های تازه متوقف می‌شود: %s"
+msgid ""
+"These tables are within 20 percent of the largest id their column type can "
+"store. Once the ceiling is reached, new rows stop being written: %s"
+msgstr ""
+"این جدول‌ها به ۲۰ درصد پایانیِ بیشترین شناسهٔ قابل‌ذخیره در نوع ستون خود "
+"رسیده‌اند. با رسیدن به سقف، نوشتن ردیف‌های تازه متوقف می‌شود: %s"
 
-#: includes/class-minn-admin-db.php:815
+#: includes/class-minn-admin-db.php:817
 msgid "No table is close to exhausting its id column."
 msgstr "هیچ جدولی به پر شدن ظرفیت ستون شناسهٔ خود نزدیک نیست."
 
-#: includes/class-minn-admin-db.php:823
+#: includes/class-minn-admin-db.php:825
 msgid "Orphaned post meta"
 msgstr "فرادادهٔ یتیم نوشته‌ها"
 
-#: includes/class-minn-admin-db.php:826
-msgid "These meta rows belong to posts that no longer exist. They are dead weight in every query that touches post meta."
-msgstr "این ردیف‌های فراداده متعلق به نوشته‌هایی هستند که دیگر وجود ندارند و در هر کوئریِ فرادادهٔ نوشته سربار ایجاد می‌کنند."
-
-#: includes/class-minn-admin-db.php:827
-msgid "Every meta row belongs to a post that still exists."
-msgstr "هر ردیف فراداده به نوشته‌ای موجود تعلق دارد."
+#: includes/class-minn-admin-db.php:828
+msgid ""
+"These meta rows belong to posts that no longer exist. They are dead weight "
+"in every query that touches post meta."
+msgstr ""
+"این ردیف‌های فراداده متعلق به نوشته‌هایی هستند که دیگر وجود ندارند و در هر "
+"کوئریِ فرادادهٔ نوشته سربار ایجاد می‌کنند."
 
 #: includes/class-minn-admin-db.php:829
-#: includes/class-minn-admin-db.php:847
-#: includes/class-minn-admin-db.php:865
-msgid "Delete them"
-msgstr "حذف آن‌ها"
+msgid "Every meta row belongs to a post that still exists."
+msgstr "هر ردیف فراداده به نوشته‌ای موجود تعلق دارد."
 
 #: includes/class-minn-admin-db.php:831
 #: includes/class-minn-admin-db.php:849
 #: includes/class-minn-admin-db.php:867
+msgid "Delete them"
+msgstr "حذف آن‌ها"
+
+#: includes/class-minn-admin-db.php:833
+#: includes/class-minn-admin-db.php:851
+#: includes/class-minn-admin-db.php:869
 msgid "Back up first. This permanently deletes rows."
 msgstr "ابتدا پشتیبان بگیرید. این کار ردیف‌ها را برای همیشه حذف می‌کند."
 
-#: includes/class-minn-admin-db.php:841
+#: includes/class-minn-admin-db.php:843
 msgid "Orphaned user meta"
 msgstr "فرادادهٔ یتیم کاربران"
 
-#: includes/class-minn-admin-db.php:844
-msgid "These meta rows belong to users who no longer exist, usually left behind by a plugin that removed accounts directly."
-msgstr "این ردیف‌های فراداده متعلق به کاربرانی هستند که دیگر وجود ندارند؛ معمولاً افزونه‌ای که حساب‌ها را مستقیم حذف کرده آن‌ها را باقی گذاشته است."
+#: includes/class-minn-admin-db.php:846
+msgid ""
+"These meta rows belong to users who no longer exist, usually left behind by "
+"a plugin that removed accounts directly."
+msgstr ""
+"این ردیف‌های فراداده متعلق به کاربرانی هستند که دیگر وجود ندارند؛ معمولاً "
+"افزونه‌ای که حساب‌ها را مستقیم حذف کرده آن‌ها را باقی گذاشته است."
 
-#: includes/class-minn-admin-db.php:845
+#: includes/class-minn-admin-db.php:847
 msgid "Every meta row belongs to a user who still exists."
 msgstr "هر ردیف فراداده به کاربری موجود تعلق دارد."
 
-#: includes/class-minn-admin-db.php:859
+#: includes/class-minn-admin-db.php:861
 msgid "Orphaned term relationships"
 msgstr "رابطه‌های یتیم رده‌ها"
 
-#: includes/class-minn-admin-db.php:862
+#: includes/class-minn-admin-db.php:864
 msgid "These rows link content to categories or tags that no longer exist."
-msgstr "این ردیف‌ها محتوا را به دسته‌ها یا برچسب‌هایی پیوند می‌دهند که دیگر وجود ندارند."
+msgstr ""
+"این ردیف‌ها محتوا را به دسته‌ها یا برچسب‌هایی پیوند می‌دهند که دیگر وجود "
+"ندارند."
 
-#: includes/class-minn-admin-db.php:863
+#: includes/class-minn-admin-db.php:865
 msgid "Every relationship points at a term that still exists."
 msgstr "هر رابطه به رده‌ای موجود اشاره می‌کند."
 
-#: includes/class-minn-admin-db.php:877
+#: includes/class-minn-admin-db.php:879
 msgid "Stored revisions"
 msgstr "رونوشت‌های ذخیره‌شده"
 
-#: includes/class-minn-admin-db.php:880
-msgid "Revisions are the editor safety net, so a large number is normal and not a fault. Trimming them is only worthwhile if the posts table has grown unwieldy."
-msgstr "رونوشت‌ها شبکهٔ ایمنی ویرایشگرند؛ بنابراین تعداد زیاد آن‌ها طبیعی است و ایراد محسوب نمی‌شود. حذفشان فقط وقتی ارزش دارد که جدول نوشته‌ها بیش از حد بزرگ شده باشد."
+#: includes/class-minn-admin-db.php:882
+msgid ""
+"Revisions are the editor safety net, so a large number is normal and not a "
+"fault. Trimming them is only worthwhile if the posts table has grown "
+"unwieldy."
+msgstr ""
+"رونوشت‌ها شبکهٔ ایمنی ویرایشگرند؛ بنابراین تعداد زیاد آن‌ها طبیعی است و "
+"ایراد محسوب نمی‌شود. حذفشان فقط وقتی ارزش دارد که جدول نوشته‌ها بیش از حد "
+"بزرگ شده باشد."
 
-#: includes/class-minn-admin-db.php:881
+#: includes/class-minn-admin-db.php:883
 msgid "No revisions are stored."
 msgstr "هیچ رونوشتی ذخیره نشده است."
 
-#: includes/class-minn-admin-db.php:883
+#: includes/class-minn-admin-db.php:885
 msgid "Delete all revisions"
 msgstr "حذف همهٔ رونوشت‌ها"
 
-#: includes/class-minn-admin-db.php:885
+#: includes/class-minn-admin-db.php:887
 msgid "Back up first. This removes every saved revision permanently."
-msgstr "ابتدا پشتیبان بگیرید. این کار همهٔ رونوشت‌های ذخیره‌شده را برای همیشه حذف می‌کند."
+msgstr ""
+"ابتدا پشتیبان بگیرید. این کار همهٔ رونوشت‌های ذخیره‌شده را برای همیشه حذف "
+"می‌کند."
 
-#: includes/class-minn-admin-db.php:895
+#: includes/class-minn-admin-db.php:897
 msgid "Spam and trashed comments"
 msgstr "دیدگاه‌های جفنگ و زباله‌دان"
 
-#: includes/class-minn-admin-db.php:898
-msgid "Spam and trashed comments stay in the database until they are emptied. WordPress clears them on its own after a while."
-msgstr "دیدگاه‌های جفنگ و زباله‌دان تا زمان تخلیه در پایگاه داده می‌مانند. وردپرس پس از مدتی آن‌ها را خودکار پاک می‌کند."
+#: includes/class-minn-admin-db.php:900
+msgid ""
+"Spam and trashed comments stay in the database until they are emptied. "
+"WordPress clears them on its own after a while."
+msgstr ""
+"دیدگاه‌های جفنگ و زباله‌دان تا زمان تخلیه در پایگاه داده می‌مانند. وردپرس "
+"پس از مدتی آن‌ها را خودکار پاک می‌کند."
 
-#: includes/class-minn-admin-db.php:899
+#: includes/class-minn-admin-db.php:901
 msgid "No spam or trashed comments are waiting."
 msgstr "هیچ دیدگاه جفنگ یا زباله‌دانی در انتظار حذف نیست."
 
-#: includes/class-minn-admin-db.php:901
+#: includes/class-minn-admin-db.php:903
 msgid "Delete spam"
 msgstr "حذف جفنگ‌ها"
 
-#: includes/class-minn-admin-db.php:903
+#: includes/class-minn-admin-db.php:905
 msgid "Back up first. This permanently deletes the comments."
 msgstr "ابتدا پشتیبان بگیرید. این کار دیدگاه‌ها را برای همیشه حذف می‌کند."
 
-#: includes/class-minn-admin-db.php:914
+#: includes/class-minn-admin-db.php:916
 msgid "Expired WooCommerce sessions"
 msgstr "نشست‌های منقضی‌شدهٔ WooCommerce"
 
-#: includes/class-minn-admin-db.php:917
-msgid "Expired cart sessions should be cleared by a scheduled WooCommerce job. A large backlog usually means that job has stopped running."
-msgstr "نشست‌های منقضی‌شدهٔ سبد خرید باید با یک وظیفهٔ زمان‌بندی‌شدهٔ WooCommerce پاک شوند. انباشت زیاد معمولاً یعنی آن وظیفه دیگر اجرا نمی‌شود."
+#: includes/class-minn-admin-db.php:919
+msgid ""
+"Expired cart sessions should be cleared by a scheduled WooCommerce job. A "
+"large backlog usually means that job has stopped running."
+msgstr ""
+"نشست‌های منقضی‌شدهٔ سبد خرید باید با یک وظیفهٔ زمان‌بندی‌شدهٔ WooCommerce "
+"پاک شوند. انباشت زیاد معمولاً یعنی آن وظیفه دیگر اجرا نمی‌شود."
 
-#: includes/class-minn-admin-db.php:918
+#: includes/class-minn-admin-db.php:920
 msgid "No expired sessions are left behind."
 msgstr "هیچ نشست منقضی‌شده‌ای باقی نمانده است."
 
-#: includes/class-minn-admin-db.php:920
+#: includes/class-minn-admin-db.php:922
 msgid "Delete expired sessions"
 msgstr "حذف نشست‌های منقضی"
 
-#: includes/class-minn-admin-db.php:922
-msgid "Back up first. Shoppers with an expired cart lose it, which has already happened by definition."
-msgstr "ابتدا پشتیبان بگیرید. خریداران سبد منقضی‌شده آن را از دست می‌دهند؛ اتفاقی که طبق تعریف از قبل رخ داده است."
+#: includes/class-minn-admin-db.php:924
+msgid ""
+"Back up first. Shoppers with an expired cart lose it, which has already "
+"happened by definition."
+msgstr ""
+"ابتدا پشتیبان بگیرید. خریداران سبد منقضی‌شده آن را از دست می‌دهند؛ اتفاقی "
+"که طبق تعریف از قبل رخ داده است."
 
-#: includes/class-minn-admin-db.php:933
+#: includes/class-minn-admin-db.php:935
 msgid "Action Scheduler backlog"
 msgstr "صف عقب‌افتادهٔ Action Scheduler"
 
-#: includes/class-minn-admin-db.php:936
-msgid "Pending and failed background jobs. A steady backlog is normal on a busy store; a very large one suggests the queue is not draining."
-msgstr "کارهای پس‌زمینهٔ در انتظار و ناموفق. یک صف ثابت در فروشگاه شلوغ طبیعی است؛ اما صف بسیار بزرگ نشان می‌دهد که صف تخلیه نمی‌شود."
+#: includes/class-minn-admin-db.php:938
+msgid ""
+"Pending and failed background jobs. A steady backlog is normal on a busy "
+"store; a very large one suggests the queue is not draining."
+msgstr ""
+"کارهای پس‌زمینهٔ در انتظار و ناموفق. یک صف ثابت در فروشگاه شلوغ طبیعی است؛ "
+"اما صف بسیار بزرگ نشان می‌دهد که صف تخلیه نمی‌شود."
 
-#: includes/class-minn-admin-db.php:937
+#: includes/class-minn-admin-db.php:939
 msgid "No pending or failed background jobs."
 msgstr "هیچ کار پس‌زمینهٔ در انتظار یا ناموفقی وجود ندارد."
 
-#: includes/class-minn-admin-db.php:939
+#: includes/class-minn-admin-db.php:941
 msgid "Clean the queue"
 msgstr "پاک‌سازی صف"
 
-#: includes/class-minn-admin-db.php:941
+#: includes/class-minn-admin-db.php:943
 msgid "Removes finished actions. Pending work is left alone."
 msgstr "عملیات پایان‌یافته را حذف می‌کند و به کارهای در انتظار دست نمی‌زند."
 
@@ -461,130 +529,144 @@ msgstr "بازسازی آن بلوک برای این تصاویر ممکن نب�
 msgid "Pattern not found."
 msgstr "الگو پیدا نشد."
 
-#: includes/class-minn-admin-rest.php:3402
+#: includes/class-minn-admin-rest.php:3410
 msgid "Automatic updates are turned off for this site."
 msgstr "به‌روزرسانی خودکار برای این سایت خاموش است."
 
-#: includes/class-minn-admin-rest.php:3411
+#: includes/class-minn-admin-rest.php:3419
 msgid "Unknown plugin."
 msgstr "افزونهٔ ناشناخته."
 
-#: includes/class-minn-admin-rest.php:3411
+#: includes/class-minn-admin-rest.php:3419
 msgid "Unknown theme."
 msgstr "پوستهٔ ناشناخته."
 
+#: includes/class-minn-admin-rest.php:4007
 #. translators: 1: admin name, 2: subject
-#: includes/class-minn-admin-rest.php:3999
 #, php-format
 msgid "Minn Admin email sent by %1$s: %2$s"
 msgstr "ایمیل Minn Admin توسط %1$s ارسال شد: %2$s"
 
+#: includes/class-minn-admin-rest.php:4235
 #. translators: 1: email title, 2: admin name
-#: includes/class-minn-admin-rest.php:4227
 #, php-format
 msgid "“%1$s” email resent via Minn Admin by %2$s."
 msgstr "ایمیل «%1$s» توسط %2$s از طریق Minn Admin دوباره ارسال شد."
 
 #: includes/class-minn-admin-surfaces.php:240
-#: assets/js/app.js:698
-#: assets/js/app.js:1561
+#: assets/js/app.js:702
+#: assets/js/app.js:1566
+#: assets/js/app.js:13796
 msgid "Content"
 msgstr "محتوا"
 
 #: includes/class-minn-admin-surfaces.php:241
-#: assets/js/app.js:699
-#: assets/js/app.js:1562
+#: assets/js/app.js:703
+#: assets/js/app.js:1567
 msgid "Media"
 msgstr "رسانه"
 
+#: includes/class-minn-admin-rest.php:2403
 #: includes/class-minn-admin-surfaces.php:242
-#: assets/js/app.js:700
-#: assets/js/app.js:1565
+#: assets/js/app.js:704
+#: assets/js/app.js:1570
+#: assets/js/app.js:13796
 msgid "Comments"
 msgstr "دیدگاه‌ها"
 
 #: includes/class-minn-admin-surfaces.php:243
-#: assets/js/app.js:701
-#: assets/js/app.js:1568
+#: assets/js/app.js:705
+#: assets/js/app.js:1573
+#: assets/js/app.js:5811
+#: assets/js/app.js:28261
 msgid "Orders"
 msgstr "سفارش‌ها"
 
 #: includes/class-minn-admin-surfaces.php:244
-#: assets/js/app.js:703
-#: assets/js/app.js:1571
+#: assets/js/app.js:707
+#: assets/js/app.js:1576
+#: assets/js/app.js:5043
+#: assets/js/app.js:28291
 msgid "Subscriptions"
 msgstr "اشتراک‌ها"
 
 #: includes/class-minn-admin-surfaces.php:245
-#: assets/js/app.js:704
-#: assets/js/app.js:1574
+#: assets/js/app.js:708
+#: assets/js/app.js:1579
 msgid "Products"
 msgstr "محصولات"
 
 #: includes/class-minn-admin-surfaces.php:246
-#: assets/js/app.js:705
-#: assets/js/app.js:1577
+#: assets/js/app.js:709
+#: assets/js/app.js:1582
 msgid "Coupons"
 msgstr "کدهای تخفیف"
 
 #: includes/class-minn-admin-surfaces.php:247
-#: assets/js/app.js:706
-#: assets/js/app.js:1580
+#: assets/js/app.js:710
+#: assets/js/app.js:1585
 msgid "Customers"
 msgstr "مشتریان"
 
+#: includes/class-minn-admin-rest.php:2397
 #: includes/class-minn-admin-surfaces.php:248
-#: assets/js/app.js:707
-#: assets/js/app.js:1601
-#: assets/js/app.js:31805
+#: assets/js/app.js:711
+#: assets/js/app.js:1606
+#: assets/js/app.js:31815
 msgid "Users"
 msgstr "کاربران"
 
 #: includes/class-minn-admin-surfaces.php:249
-#: assets/js/app.js:709
-#: assets/js/app.js:1619
+#: assets/js/app.js:713
+#: assets/js/app.js:1624
+#: assets/js/app.js:12559
 msgid "Terms"
 msgstr "رده‌ها"
 
 #: includes/class-minn-admin-surfaces.php:250
-#: assets/js/app.js:710
-#: assets/js/app.js:1606
+#: assets/js/app.js:714
+#: assets/js/app.js:1611
 msgid "Menus"
 msgstr "فهرست‌ها"
 
 #: includes/class-minn-admin-surfaces.php:251
-#: assets/js/app.js:711
-#: assets/js/app.js:1608
+#: assets/js/app.js:715
+#: assets/js/app.js:1613
 msgid "Widgets"
 msgstr "ابزارک‌ها"
 
 #: includes/class-minn-admin-surfaces.php:252
-#: assets/js/app.js:713
-#: assets/js/app.js:1617
-#: assets/js/app.js:13346
+#: assets/js/app.js:717
+#: assets/js/app.js:1622
+#: assets/js/app.js:13352
 msgid "Structure"
 msgstr "ساختار"
 
 #: includes/class-minn-admin-surfaces.php:253
-#: assets/js/app.js:712
-#: assets/js/app.js:1598
+#: assets/js/app.js:716
+#: assets/js/app.js:1603
+#: assets/js/app.js:12804
+#: assets/js/app.js:14322
 msgid "Extensions"
 msgstr "افزونه‌ها"
 
 #: includes/class-minn-admin-surfaces.php:254
-#: assets/js/app.js:716
+#: assets/js/app.js:720
 msgid "Database"
 msgstr "پایگاه داده"
 
 #: includes/class-minn-admin-surfaces.php:255
-#: assets/js/app.js:715
-#: assets/js/app.js:1622
+#: assets/js/app.js:719
+#: assets/js/app.js:1627
+#: assets/js/app.js:2395
 msgid "System"
 msgstr "سیستم"
 
 #: includes/class-minn-admin-surfaces.php:256
-#: assets/js/app.js:714
-#: assets/js/app.js:1623
+#: assets/js/app.js:718
+#: assets/js/app.js:1628
+#: assets/js/app.js:19608
+#: assets/js/app.js:20153
 msgid "Settings"
 msgstr "تنظیمات"
 
@@ -608,8 +690,8 @@ msgstr "پیش‌فرض سایت"
 msgid "English (United States)"
 msgstr "انگلیسی (ایالات متحده)"
 
-#. translators: %s: site name.
 #: includes/class-minn-admin.php:634
+#. translators: %s: site name.
 #, php-format
 msgid "%s — Coming soon"
 msgstr "%s — به‌زودی"
@@ -651,6 +733,8 @@ msgid "Border strong"
 msgstr "حاشیهٔ پررنگ"
 
 #: includes/class-minn-admin.php:715
+#: assets/js/app.js:10444
+#: assets/js/app.js:23313
 msgid "Text"
 msgstr "متن"
 
@@ -674,1163 +758,5946 @@ msgstr "رنگ تأکیدیِ اشاره / پیوندها"
 msgid "Text on accent"
 msgstr "متن روی رنگ تأکیدی"
 
-#. translators: %s: site name.
 #: includes/template.php:18
+#. translators: %s: site name.
 #, php-format
 msgid "Minn Admin — %s"
 msgstr "Minn Admin — %s"
 
-#: assets/js/app.js:696
-#: assets/js/app.js:1560
-#: assets/js/app.js:1873
+#: assets/js/app.js:700
+#: assets/js/app.js:1565
+#: assets/js/app.js:1878
 msgid "Overview"
 msgstr "نمای کلی"
 
-#: assets/js/app.js:696
+#: assets/js/app.js:700
 msgid "Dashboard"
 msgstr "پیشخوان"
 
-#: assets/js/app.js:699
+#: assets/js/app.js:703
 msgid "Library"
 msgstr "کتابخانه"
 
-#: assets/js/app.js:700
+#: assets/js/app.js:704
 msgid "Moderation"
 msgstr "بازبینی"
 
-#: assets/js/app.js:702
+#: assets/js/app.js:706
+#: assets/js/app.js:5968
+#: assets/js/app.js:19508
 msgid "Order"
 msgstr "سفارش"
 
-#: assets/js/app.js:707
-#: assets/js/app.js:708
+#: assets/js/app.js:711
+#: assets/js/app.js:712
 msgid "People"
 msgstr "افراد"
 
-#: assets/js/app.js:708
+#: assets/js/app.js:712
+#: assets/js/app.js:28549
 msgid "Edit user"
 msgstr "ویرایش کاربر"
 
-#: assets/js/app.js:709
+#: assets/js/app.js:713
 msgid "Categories & Tags"
 msgstr "دسته‌ها و برچسب‌ها"
 
-#: assets/js/app.js:710
+#: assets/js/app.js:714
 msgid "Navigation"
 msgstr "ناوبری"
 
-#: assets/js/app.js:711
+#: assets/js/app.js:715
 msgid "Sidebars & footers"
 msgstr "نوارهای کناری و پاورقی‌ها"
 
-#: assets/js/app.js:712
+#: assets/js/app.js:716
 msgid "Installed"
 msgstr "نصب‌شده"
 
-#: assets/js/app.js:713
+#: assets/js/app.js:717
 msgid "Post types, taxonomies & terms"
 msgstr "نوع‌های نوشته، طبقه‌بندی‌ها و رده‌ها"
 
-#: assets/js/app.js:714
+#: assets/js/app.js:718
+#: assets/js/app.js:13795
 msgid "Site"
 msgstr "سایت"
 
-#: assets/js/app.js:715
+#: assets/js/app.js:719
 msgid "Diagnostics"
 msgstr "عیب‌یابی"
 
-#: assets/js/app.js:716
+#: assets/js/app.js:720
 msgid "Read-only viewer"
 msgstr "نمایشگر فقط‌خواندنی"
 
-#: assets/js/app.js:717
+#: assets/js/app.js:721
 msgid "Editor"
 msgstr "ویرایشگر"
 
-#: assets/js/app.js:717
+#: assets/js/app.js:721
+#: assets/js/app.js:3501
+#: assets/js/app.js:6760
+#: assets/js/app.js:28176
+#: assets/js/app.js:28329
 msgid "Draft"
 msgstr "پیش‌نویس"
 
-#: assets/js/app.js:718
+#: assets/js/app.js:722
 msgid "Your profile"
 msgstr "نمایهٔ شما"
 
-#: assets/js/app.js:718
-#: assets/js/app.js:31814
+#: assets/js/app.js:722
+#: assets/js/app.js:31824
+#: assets/js/app.js:32199
 msgid "Account"
 msgstr "حساب"
 
-#: assets/js/app.js:726
+#: assets/js/app.js:730
 msgid "Trash"
 msgstr "زباله‌دان"
 
-#: assets/js/app.js:728
-#: assets/js/app.js:735
+#: assets/js/app.js:732
+#: assets/js/app.js:739
+#: assets/js/app.js:7487
 msgid "Posts"
 msgstr "نوشته‌ها"
 
-#: assets/js/app.js:729
+#: includes/class-minn-admin-rest.php:2387
+#: assets/js/app.js:733
 msgid "Pages"
 msgstr "برگه‌ها"
 
-#: assets/js/app.js:736
+#: assets/js/app.js:740
 msgid "pages"
 msgstr "برگه‌ها"
 
+#: assets/js/app.js:744
 #. translators: %d: number of custom post types in the Content list.
-#: assets/js/app.js:740
 #, js-format
 msgid "%d type"
 msgid_plural "%d types"
 msgstr[0] "%d نوع"
 msgstr[1] "%d نوع"
 
-#: assets/js/app.js:1344
+#: assets/js/app.js:1348
 msgid "Pattern"
 msgstr "الگو"
 
-#: assets/js/app.js:1851
-#: assets/js/app.js:2084
+#: assets/js/app.js:1856
+#: assets/js/app.js:2089
 msgid "Click again to refresh"
 msgstr "برای تازه‌سازی دوباره کلیک کنید"
 
-#: assets/js/app.js:1881
+#: assets/js/app.js:1886
 msgid "Search…"
 msgstr "جست‌وجو…"
 
-#: assets/js/app.js:1883
+#: assets/js/app.js:1888
 msgid "Main navigation"
 msgstr "ناوبری اصلی"
 
-#: assets/js/app.js:1884
+#: assets/js/app.js:1889
 msgid "Workspace"
 msgstr "فضای کاری"
 
-#: assets/js/app.js:1885
+#: assets/js/app.js:1890
+#: assets/js/app.js:12921
 msgid "Tools"
 msgstr "ابزارها"
 
-#: assets/js/app.js:1886
+#: assets/js/app.js:1891
 msgid "Manage"
 msgstr "مدیریت"
 
-#: assets/js/app.js:1889
+#: assets/js/app.js:1894
 msgid "End this switched session"
 msgstr "پایان دادن به این نشست جابه‌جاشده"
 
+#: assets/js/app.js:1896
 #. translators: %s: display name of the user to switch back to.
-#: assets/js/app.js:1891
 #, js-format
 msgid "Switch back to %s"
 msgstr "بازگشت به %s"
 
-#: assets/js/app.js:1893
+#: assets/js/app.js:1898
 msgid "Your account"
 msgstr "حساب شما"
 
-#: assets/js/app.js:1901
-msgid "WordPress admin (opens in a new tab) · ⌥-click while editing opens this post in the block editor)"
-msgstr "مدیریت وردپرس (در زبانهٔ جدید باز می‌شود) · با کلیک ⌥ هنگام ویرایش، این نوشته در ویرایشگر بلوک باز می‌شود)"
+#: assets/js/app.js:1906
+msgid ""
+"WordPress admin (opens in a new tab) · ⌥-click while editing opens this "
+"post in the block editor)"
+msgstr ""
+"مدیریت وردپرس (در زبانهٔ جدید باز می‌شود) · با کلیک ⌥ هنگام ویرایش، این "
+"نوشته در ویرایشگر بلوک باز می‌شود)"
 
-#: assets/js/app.js:1901
+#: assets/js/app.js:1906
 msgid "WordPress admin (opens in a new tab)"
 msgstr "مدیریت وردپرس (در زبانهٔ جدید باز می‌شود)"
 
-#: assets/js/app.js:1902
+#: assets/js/app.js:1907
+#: assets/js/app.js:27541
 msgid "Log out"
 msgstr "خروج"
 
-#: assets/js/app.js:1908
+#: assets/js/app.js:1913
 msgid "Show / hide navigation"
 msgstr "نمایش / پنهان‌کردن ناوبری"
 
-#: assets/js/app.js:1908
+#: assets/js/app.js:1913
 msgid "Show or hide the navigation sidebar"
 msgstr "نمایش یا پنهان‌کردن نوار کناری ناوبری"
 
-#: assets/js/app.js:1912
+#: assets/js/app.js:1917
 msgid "Updates are running — click for details"
 msgstr "به‌روزرسانی‌ها در حال اجرا هستند — برای جزئیات کلیک کنید"
 
-#: assets/js/app.js:1913
+#: assets/js/app.js:1918
 msgid "Your site is not fully public"
 msgstr "سایت شما کاملاً عمومی نیست"
 
-#: assets/js/app.js:1914
+#: assets/js/app.js:1919
 msgid "A WordPress update is available"
 msgstr "یک به‌روزرسانی وردپرس در دسترس است"
 
-#: assets/js/app.js:1915
+#: assets/js/app.js:1920
 msgid "What's new — full changelog"
 msgstr "تازه‌ها — گزارش کامل تغییرات"
 
-#: assets/js/app.js:1916
+#: assets/js/app.js:1921
 msgid "View site"
 msgstr "نمایش سایت"
 
-#: assets/js/app.js:1916
+#: assets/js/app.js:1921
 msgid "View site (opens in a new tab)"
 msgstr "نمایش سایت (در زبانهٔ جدید باز می‌شود)"
 
-#: assets/js/app.js:1917
+#: assets/js/app.js:1922
+#: assets/js/app.js:28896
 msgid "About Minn"
 msgstr "دربارهٔ Minn"
 
-#: assets/js/app.js:1918
+#: assets/js/app.js:1923
 msgid "Theme: System (click to cycle, right-click for options)"
 msgstr "پوسته: سیستم (برای جابه‌جایی کلیک و برای گزینه‌ها راست‌کلیک کنید)"
 
-#: assets/js/app.js:1918
+#: assets/js/app.js:1923
 msgid "Color theme"
 msgstr "پوستهٔ رنگی"
 
-#: assets/js/app.js:1919
+#: assets/js/app.js:1924
+#: assets/js/app.js:27359
 msgid "Notifications"
 msgstr "اعلان‌ها"
 
-#: assets/js/app.js:1922
+#: assets/js/app.js:1927
 msgid "New post"
 msgstr "نوشتهٔ تازه"
 
-#: assets/js/app.js:1922
+#: assets/js/app.js:1927
+#: assets/js/app.js:3184
 msgid "New"
 msgstr "تازه"
 
-#: assets/js/app.js:2372
+#: assets/js/app.js:2377
 msgid "Light colors"
 msgstr "رنگ‌های روشن"
 
-#: assets/js/app.js:2372
+#: assets/js/app.js:2377
 msgid "Dark colors"
 msgstr "رنگ‌های تیره"
 
-#: assets/js/app.js:2892
+#: assets/js/app.js:2898
 msgid "Patterns"
 msgstr "الگوها"
 
-#: assets/js/app.js:3153
+#: assets/js/app.js:3159
 msgid "Select all items"
 msgstr "انتخاب همهٔ موارد"
 
+#: assets/js/app.js:3166
+#: assets/js/app.js:6647
+#: assets/js/app.js:7949
 #. translators: %s: content title.
-#: assets/js/app.js:3160
-#: assets/js/app.js:6641
-#: assets/js/app.js:7943
 #, js-format
 msgid "Select %s"
 msgstr "انتخاب %s"
 
-#: assets/js/app.js:6636
+#: assets/js/app.js:6642
 msgid "Select all products"
 msgstr "انتخاب همهٔ محصولات"
 
+#: assets/js/app.js:7828
 #. translators: %s: column name.
-#: assets/js/app.js:7822
 #, js-format
 msgid "Sort by %s"
 msgstr "مرتب‌سازی بر اساس %s"
 
-#: assets/js/app.js:7824
+#: assets/js/app.js:7830
 msgid "sorted ascending"
 msgstr "مرتب‌شده به‌صورت صعودی"
 
-#: assets/js/app.js:7824
+#: assets/js/app.js:7830
 msgid "sorted descending"
 msgstr "مرتب‌شده به‌صورت نزولی"
 
-#: assets/js/app.js:7879
-#: assets/js/app.js:7924
+#: assets/js/app.js:7885
+#: assets/js/app.js:7930
 msgid "Session filter"
 msgstr "فیلتر نشست"
 
-#: assets/js/app.js:7932
+#: assets/js/app.js:7938
 msgid "Select all users"
 msgstr "انتخاب همهٔ کاربران"
 
-#: assets/js/app.js:9453
+#: assets/js/app.js:4417
+#: assets/js/app.js:9459
 msgid "Select page"
 msgstr "انتخاب برگه"
 
-#: assets/js/app.js:9470
+#: assets/js/app.js:9476
 msgid "Select row"
 msgstr "انتخاب ردیف"
 
-#: assets/js/app.js:11091
+#: assets/js/app.js:11097
 msgid "Connected"
 msgstr "متصل"
 
-#: assets/js/app.js:11091
-#: assets/js/app.js:11177
+#: assets/js/app.js:11097
+#: assets/js/app.js:11183
 msgid "Valid"
 msgstr "معتبر"
 
-#: assets/js/app.js:11092
+#: assets/js/app.js:11098
 msgid "Expired"
 msgstr "منقضی"
 
-#: assets/js/app.js:11093
+#: assets/js/app.js:11099
 msgid "Invalid"
 msgstr "نامعتبر"
 
-#: assets/js/app.js:11094
+#: assets/js/app.js:11100
+#: assets/js/app.js:14367
 msgid "Not connected"
 msgstr "متصل نیست"
 
-#: assets/js/app.js:11094
+#: assets/js/app.js:11100
 msgid "No key"
 msgstr "بدون کلید"
 
-#: assets/js/app.js:11094
+#: assets/js/app.js:11100
 msgid "No license"
 msgstr "بدون مجوز"
 
-#: assets/js/app.js:11095
+#: assets/js/app.js:11101
 msgid "Unknown"
 msgstr "ناشناخته"
 
-#: assets/js/app.js:11119
+#: assets/js/app.js:11125
 msgid "Connect ↗"
 msgstr "اتصال ↗"
 
-#: assets/js/app.js:11119
+#: assets/js/app.js:11125
 msgid "Activate ↗"
 msgstr "فعال‌سازی ↗"
 
-#: assets/js/app.js:11128
+#: assets/js/app.js:11134
 msgid "service key"
 msgstr "کلید سرویس"
 
-#: assets/js/app.js:11128
+#: assets/js/app.js:11134
 msgid "connection"
 msgstr "اتصال"
 
-#: assets/js/app.js:11176
+#: assets/js/app.js:11182
 msgid "Needs attention"
 msgstr "نیازمند توجه"
 
-#: assets/js/app.js:11178
+#: assets/js/app.js:11184
 msgid "Not set up"
 msgstr "راه‌اندازی‌نشده"
 
+#: assets/js/app.js:11190
 #. translators: %s: number of rows on the Licenses tab.
-#: assets/js/app.js:11184
 #, js-format
 msgid "%s component"
 msgid_plural "%s components"
 msgstr[0] "%s مؤلفه"
 msgstr[1] "%s مؤلفه"
 
+#: assets/js/app.js:11192
 #. translators: %s: how many rows need attention.
-#: assets/js/app.js:11186
 #, js-format
 msgid "%s needs attention"
 msgid_plural "%s need attention"
 msgstr[0] "%s مورد نیازمند توجه است"
 msgstr[1] "%s مورد نیازمند توجه‌اند"
 
+#: assets/js/app.js:11194
 #. translators: %s: a button reading "Settings → Connectors".
-#: assets/js/app.js:11188
 #, js-format
 msgid "Core connector keys (AI providers) are managed in %s."
 msgstr "کلیدهای اتصال اصلی (ارائه‌دهندگان هوش مصنوعی) در %s مدیریت می‌شوند."
 
-#: assets/js/app.js:11188
+#: assets/js/app.js:11194
 msgid "Settings → Connectors"
 msgstr "تنظیمات → اتصال‌ها"
 
-#: assets/js/app.js:11208
-msgid "Each state is the vendor's own last-recorded check, not a live lookup. Activate and deactivate run through the vendor's own code; a pasted key is used once and never stored."
-msgstr "هر وضعیت، آخرین بررسی ثبت‌شدهٔ خود ارائه‌دهنده است، نه یک استعلام زنده. فعال‌سازی و غیرفعال‌سازی با کد خود ارائه‌دهنده انجام می‌شود؛ کلید جای‌گذاری‌شده فقط یک‌بار استفاده می‌شود و هرگز ذخیره نمی‌شود."
+#: assets/js/app.js:11214
+msgid ""
+"Each state is the vendor's own last-recorded check, not a live lookup. "
+"Activate and deactivate run through the vendor's own code; a pasted key is "
+"used once and never stored."
+msgstr ""
+"هر وضعیت، آخرین بررسی ثبت‌شدهٔ خود ارائه‌دهنده است، نه یک استعلام زنده. "
+"فعال‌سازی و غیرفعال‌سازی با کد خود ارائه‌دهنده انجام می‌شود؛ کلید "
+"جای‌گذاری‌شده فقط یک‌بار استفاده می‌شود و هرگز ذخیره نمی‌شود."
 
-#: assets/js/app.js:11209
+#: assets/js/app.js:11215
 msgid "No licenses or connected services detected."
 msgstr "هیچ مجوز یا سرویس متصلی شناسایی نشد."
 
+#: assets/js/app.js:11662
 #. translators: %s: plugin name
-#: assets/js/app.js:11656
 #, js-format
 msgid "%s turned back on"
 msgstr "%s دوباره روشن شد"
 
+#: assets/js/app.js:11665
 #. translators: %s: plugin name
-#: assets/js/app.js:11659
 #, js-format
 msgid "%s turned off"
 msgstr "%s خاموش شد"
 
-#: assets/js/app.js:11659
+#: assets/js/app.js:11665
 msgid "Undo"
 msgstr "واگرد"
 
+#: assets/js/app.js:12196
 #. translators: %s: theme name.
-#: assets/js/app.js:12190
 #, js-format
 msgid "Preview the site in %s without switching"
 msgstr "پیش‌نمایش سایت در %s بدون جابه‌جایی"
 
+#: assets/js/app.js:12201
 #. translators: %s: plugin or theme name.
-#: assets/js/app.js:12195
 #, js-format
 msgid "Automatic updates are on for %s. Click to turn them off."
 msgstr "به‌روزرسانی خودکار برای %s روشن است. برای خاموش‌کردن کلیک کنید."
 
+#: assets/js/app.js:12203
 #. translators: %s: plugin or theme name.
-#: assets/js/app.js:12197
 #, js-format
 msgid "Turn on automatic updates for %s."
 msgstr "به‌روزرسانی خودکار را برای %s روشن کنید."
 
-#: assets/js/app.js:12198
+#: assets/js/app.js:12204
 msgid "Auto"
 msgstr "خودکار"
 
-#: assets/js/app.js:12223
+#: assets/js/app.js:12229
 msgid "Automatic updates on"
 msgstr "به‌روزرسانی خودکار روشن"
 
-#: assets/js/app.js:12223
+#: assets/js/app.js:12229
 msgid "Automatic updates off"
 msgstr "به‌روزرسانی خودکار خاموش"
 
-#: assets/js/app.js:12310
+#: assets/js/app.js:12316
 msgid "Live preview"
 msgstr "پیش‌نمایش زنده"
 
-#: assets/js/app.js:12727
+#: assets/js/app.js:12733
 msgid "Browse every table in the read-only database viewer"
 msgstr "مرور همهٔ جدول‌ها در نمایشگر فقط‌خواندنی پایگاه داده"
 
-#: assets/js/app.js:12727
+#: assets/js/app.js:12733
 msgid "browse all"
 msgstr "مرور همه"
 
-#: assets/js/app.js:12729
+#: assets/js/app.js:12735
 msgid "Open this table in the read-only database viewer"
 msgstr "بازکردن این جدول در نمایشگر فقط‌خواندنی پایگاه داده"
 
-#: assets/js/app.js:13260
-#: assets/js/app.js:13540
-#: assets/js/app.js:13635
+#: assets/js/app.js:13266
+#: assets/js/app.js:13546
+#: assets/js/app.js:13641
 msgid "Tables"
 msgstr "جدول‌ها"
 
-#: assets/js/app.js:13261
+#: assets/js/app.js:13267
 msgid "Health"
 msgstr "سلامت"
 
+#: assets/js/app.js:13312
 #. translators: %s: human-readable byte size of a binary database value.
-#: assets/js/app.js:13306
 #, js-format
 msgid "(%s binary)"
 msgstr "(%s دودویی)"
 
-#: assets/js/app.js:13345
+#: assets/js/app.js:13351
 msgid "Rows"
 msgstr "ردیف‌ها"
 
-#: assets/js/app.js:13363
+#: assets/js/app.js:13369
 msgid "You need administrator permissions to view the database."
 msgstr "برای مشاهدهٔ پایگاه داده به دسترسی مدیر نیاز دارید."
 
-#: assets/js/app.js:13373
+#: assets/js/app.js:13379
 msgid "Loading tables…"
 msgstr "در حال بارگذاری جدول‌ها…"
 
-#: assets/js/app.js:13380
+#: assets/js/app.js:13386
 msgid "Search tables…"
 msgstr "جست‌وجوی جدول‌ها…"
 
+#: assets/js/app.js:13389
 #. translators: 1: number of database tables, 2: total size (e.g. "97.8 MB").
-#: assets/js/app.js:13383
 #, js-format
 msgid "%1$s tables · %2$s"
 msgstr "%1$s جدول · %2$s"
 
+#: assets/js/app.js:13393
 #. translators: %d: number of tables outside this install's prefix.
-#: assets/js/app.js:13387
 #, js-format
 msgid "Hide %d other-prefix tables"
 msgstr "پنهان‌کردن %d جدول با پیشوند دیگر"
 
+#: assets/js/app.js:13396
 #. translators: %d: number of tables outside this install's prefix.
-#: assets/js/app.js:13390
 #, js-format
 msgid "Show %d other-prefix tables"
 msgstr "نمایش %d جدول با پیشوند دیگر"
 
-#: assets/js/app.js:13391
-#: assets/js/app.js:13480
-#: assets/js/app.js:13564
-#: assets/js/app.js:13666
+#: assets/js/app.js:13397
+#: assets/js/app.js:13486
+#: assets/js/app.js:13570
+#: assets/js/app.js:13672
 msgid "Read-only by design"
 msgstr "عمداً فقط‌خواندنی"
 
-#: assets/js/app.js:13407
+#: assets/js/app.js:13413
+#: assets/js/app.js:24207
 msgid "Table"
 msgstr "جدول"
 
-#: assets/js/app.js:13408
+#: assets/js/app.js:13414
 msgid "Rows (est.)"
 msgstr "ردیف‌ها (تخمینی)"
 
-#: assets/js/app.js:13409
+#: assets/js/app.js:13074
+#: assets/js/app.js:13415
 msgid "Size"
 msgstr "اندازه"
 
-#: assets/js/app.js:13410
+#: assets/js/app.js:13416
 msgid "Engine"
 msgstr "موتور"
 
-#: assets/js/app.js:13419
+#: assets/js/app.js:13425
 msgid "No tables match."
 msgstr "هیچ جدولی مطابقت ندارد."
 
+#: assets/js/app.js:13476
 #. translators: %s: number of database health checks needing attention.
-#: assets/js/app.js:13470
 #, js-format
 msgid "%s check needs attention"
 msgid_plural "%s checks need attention"
 msgstr[0] "%s بررسی نیازمند توجه است"
 msgstr[1] "%s بررسی نیازمند توجه‌اند"
 
-#: assets/js/app.js:13473
+#: assets/js/app.js:13479
 msgid "Everything looks healthy"
 msgstr "همه‌چیز سالم به نظر می‌رسد"
 
-#: assets/js/app.js:13479
+#: assets/js/app.js:13142
+#: assets/js/app.js:13485
 msgid "Refresh"
 msgstr "تازه‌سازی"
 
-#: assets/js/app.js:13483
+#: assets/js/app.js:13489
 msgid "Running checks…"
 msgstr "در حال اجرای بررسی‌ها…"
 
-#: assets/js/app.js:13531
+#: assets/js/app.js:8640
+#: assets/js/app.js:13537
 msgid "Command copied"
 msgstr "فرمان کپی شد"
 
-#: assets/js/app.js:13533
-#: assets/js/app.js:29135
+#: assets/js/app.js:13044
+#: assets/js/app.js:13218
+#: assets/js/app.js:13539
+#: assets/js/app.js:29145
 msgid "Copy failed"
 msgstr "کپی ناموفق بود"
 
-#: assets/js/app.js:13547
+#: assets/js/app.js:13553
 msgid "Loading rows…"
 msgstr "در حال بارگذاری ردیف‌ها…"
 
+#: assets/js/app.js:13569
 #. translators: 1: row count, 2: table size, 3: storage engine.
-#: assets/js/app.js:13563
 #, js-format
 msgid "%1$s rows · %2$s · %3$s"
 msgstr "%1$s ردیف · %2$s · %3$s"
 
-#: assets/js/app.js:13567
+#: assets/js/app.js:13573
 msgid "Filter column"
 msgstr "فیلتر ستون"
 
-#: assets/js/app.js:13570
+#: assets/js/app.js:13576
 msgid "Contains…"
 msgstr "شامل…"
 
-#: assets/js/app.js:13571
+#: assets/js/app.js:13577
 msgid "Clear filter"
 msgstr "پاک‌کردن فیلتر"
 
+#: assets/js/app.js:13580
 #. translators: %s: number of rows browsable per ordering (e.g. "10,000").
-#: assets/js/app.js:13574
 #, js-format
 msgid "Browsing the first %s rows of this order; filter to reach the rest."
 msgstr "در حال مرور %s ردیف نخست با این ترتیب؛ برای دسترسی به بقیه فیلتر کنید."
 
-#: assets/js/app.js:13588
+#: assets/js/app.js:13594
 msgid "No rows match this filter."
 msgstr "هیچ ردیفی با این فیلتر مطابقت ندارد."
 
-#: assets/js/app.js:13588
+#: assets/js/app.js:13594
 msgid "This table is empty."
 msgstr "این جدول خالی است."
 
-#: assets/js/app.js:13643
+#: assets/js/app.js:13649
 msgid "Loading structure…"
 msgstr "در حال بارگذاری ساختار…"
 
+#: assets/js/app.js:13656
 #. translators: %s: estimated row count.
-#: assets/js/app.js:13650
 #, js-format
 msgid "~%s rows"
 msgstr "حدود %s ردیف"
 
+#: assets/js/app.js:13661
 #. translators: %s: reclaimable space inside the table file (e.g. "2.4 MB").
-#: assets/js/app.js:13655
 #, js-format
 msgid "%s free"
 msgstr "%s آزاد"
 
+#: assets/js/app.js:13665
 #. translators: %s: the next AUTO_INCREMENT value for this table.
-#: assets/js/app.js:13659
 #, js-format
 msgid "next id %s"
 msgstr "شناسهٔ بعدی %s"
 
-#: assets/js/app.js:13668
-#: assets/js/app.js:13694
+#: assets/js/app.js:13674
+#: assets/js/app.js:13700
 msgid "Columns"
 msgstr "ستون‌ها"
 
-#: assets/js/app.js:13671
+#: assets/js/app.js:13677
+#: assets/js/app.js:24181
 msgid "Column"
 msgstr "ستون"
 
-#: assets/js/app.js:13672
-#: assets/js/app.js:13696
+#: assets/js/app.js:844
+#: assets/js/app.js:2172
+#: assets/js/app.js:7022
+#: assets/js/app.js:12559
+#: assets/js/app.js:13678
+#: assets/js/app.js:13702
+#: assets/js/app.js:28185
 msgid "Type"
 msgstr "نوع"
 
-#: assets/js/app.js:13673
+#: assets/js/app.js:13679
 msgid "Null"
 msgstr "تهی"
 
-#: assets/js/app.js:13674
+#: assets/js/app.js:13680
 msgid "Default"
 msgstr "پیش‌فرض"
 
-#: assets/js/app.js:13675
+#: assets/js/app.js:13681
 msgid "Extra"
 msgstr "اضافی"
 
-#: assets/js/app.js:13684
-#: assets/js/app.js:13703
+#: assets/js/app.js:13690
+#: assets/js/app.js:13709
 msgid "Yes"
 msgstr "بله"
 
-#: assets/js/app.js:13684
-#: assets/js/app.js:13703
+#: assets/js/app.js:13690
+#: assets/js/app.js:13709
 msgid "No"
 msgstr "خیر"
 
-#: assets/js/app.js:13689
+#: assets/js/app.js:13695
 msgid "Indexes"
 msgstr "ایندکس‌ها"
 
-#: assets/js/app.js:13693
+#: assets/js/app.js:13699
 msgid "Index"
 msgstr "ایندکس"
 
-#: assets/js/app.js:13695
+#: assets/js/app.js:13701
 msgid "Unique"
 msgstr "یکتا"
 
-#: assets/js/app.js:13697
+#: assets/js/app.js:13703
 msgid "Cardinality"
 msgstr "کاردینالیتی"
 
-#: assets/js/app.js:13707
+#: assets/js/app.js:13713
 msgid "This table has no indexes."
 msgstr "این جدول هیچ ایندکسی ندارد."
 
-#: assets/js/app.js:13768
+#: assets/js/app.js:13774
+#: assets/js/app.js:20009
 msgid "Copy"
 msgstr "کپی"
 
+#: assets/js/app.js:13779
 #. translators: 1: shown byte size, 2: total byte size of the value.
-#: assets/js/app.js:13773
 #, js-format
 msgid "Showing the first %1$s of %2$s."
 msgstr "نمایش %1$s مورد نخست از %2$s."
 
-#: assets/js/app.js:14195
+#: assets/js/app.js:14205
 msgid "Turn off"
 msgstr "خاموش‌کردن"
 
-#: assets/js/app.js:14516
+#: assets/js/app.js:14526
 msgid "Key saved and verified"
 msgstr "کلید ذخیره و تأیید شد"
 
-#: assets/js/app.js:14523
+#: assets/js/app.js:14533
 msgid "The key was not accepted."
 msgstr "کلید پذیرفته نشد."
 
-#: assets/js/app.js:14531
+#: assets/js/app.js:14541
 msgid "Could not reach the server. Please try again."
 msgstr "دسترسی به سرور ممکن نبود. دوباره تلاش کنید."
 
-#: assets/js/app.js:15615
+#: assets/js/app.js:15625
 msgid "Styled block: edit text via ⚙"
 msgstr "بلوک سبک‌دار: متن را با ⚙ ویرایش کنید"
 
+#: assets/js/app.js:15634
 #. translators: %d: number of images in the block
-#: assets/js/app.js:15624
 #, js-format
 msgid "Edit image · %d"
 msgid_plural "Edit images · %d"
 msgstr[0] "ویرایش تصویر · %d"
 msgstr[1] "ویرایش تصاویر · %d"
 
-#: assets/js/app.js:15626
+#: assets/js/app.js:1001
+#: assets/js/app.js:15636
+#: assets/js/app.js:19679
 msgid "Replace image"
 msgstr "جایگزینی تصویر"
 
+#: assets/js/app.js:15652
 #. translators: %d: number of nested blocks
-#: assets/js/app.js:15642
 #, js-format
 msgid "Edit content · %d"
 msgstr "ویرایش محتوا · %d"
 
-#: assets/js/app.js:15648
+#: assets/js/app.js:15658
 msgid "Edit this pattern"
 msgstr "ویرایش این الگو"
 
-#: assets/js/app.js:15648
+#: assets/js/app.js:15658
 msgid "Edit pattern"
 msgstr "ویرایش الگو"
 
-#: assets/js/app.js:16353
+#: assets/js/app.js:16363
 msgid "Text is editable in place · structure via ⚙"
 msgstr "متن درجا قابل‌ویرایش است · ساختار با ⚙"
 
+#: assets/js/app.js:16588
+#: assets/js/app.js:24055
 #. translators: toast after duplicating a block
-#: assets/js/app.js:16578
 msgid "Block duplicated"
 msgstr "بلوک تکثیر شد"
 
-#: assets/js/app.js:19560
+#: assets/js/app.js:3160
+#: assets/js/app.js:3313
+#: assets/js/app.js:4976
+#: assets/js/app.js:5968
+#: assets/js/app.js:6290
+#: assets/js/app.js:6643
+#: assets/js/app.js:7022
+#: assets/js/app.js:19570
+#: assets/js/app.js:20122
+#: assets/js/app.js:28001
+#: assets/js/app.js:28072
+#: assets/js/app.js:28173
+#: assets/js/app.js:28326
+#: assets/js/app.js:28366
 msgid "Status"
 msgstr "وضعیت"
 
-#: assets/js/app.js:20722
-msgid "This is a synced pattern — saving changes here updates every post and page that uses it."
-msgstr "این یک الگوی همگام است — ذخیرهٔ تغییرات در اینجا همهٔ نوشته‌ها و برگه‌های استفاده‌کننده از آن را به‌روز می‌کند."
+#: assets/js/app.js:20732
+msgid ""
+"This is a synced pattern — saving changes here updates every post and page "
+"that uses it."
+msgstr ""
+"این یک الگوی همگام است — ذخیرهٔ تغییرات در اینجا همهٔ نوشته‌ها و برگه‌های "
+"استفاده‌کننده از آن را به‌روز می‌کند."
 
-#: assets/js/app.js:21256
+#: assets/js/app.js:21266
 msgid "Add column before"
 msgstr "افزودن ستون پیش از این"
 
-#: assets/js/app.js:21257
+#: assets/js/app.js:21267
 msgid "Add column after"
 msgstr "افزودن ستون پس از این"
 
-#: assets/js/app.js:21258
+#: assets/js/app.js:21268
 msgid "Remove column"
 msgstr "حذف ستون"
 
-#: assets/js/app.js:21371
-msgid "Island text is plain-text only — use ⚙ or the block editor for formatting"
-msgstr "متن این بخش فقط متن ساده است — برای قالب‌بندی از ⚙ یا ویرایشگر بلوک استفاده کنید"
-
 #: assets/js/app.js:21381
+msgid "Island text is plain-text only — use ⚙ or the block editor for formatting"
+msgstr ""
+"متن این بخش فقط متن ساده است — برای قالب‌بندی از ⚙ یا ویرایشگر بلوک استفاده "
+"کنید"
+
+#: assets/js/app.js:21391
 msgid "This block keeps custom styling — change its type in the block editor"
 msgstr "این بلوک سبک سفارشی را حفظ می‌کند — نوع آن را در ویرایشگر بلوک تغییر دهید"
 
-#: assets/js/app.js:22475
+#: assets/js/app.js:22485
+#: assets/js/app.js:24769
+#: assets/js/app.js:27917
 msgid "Caption"
 msgstr "توضیح تصویر"
 
-#: assets/js/app.js:22738
+#: assets/js/app.js:22748
 msgid "This block’s content can’t be edited here."
 msgstr "محتوای این بلوک را نمی‌توان اینجا ویرایش کرد."
 
-#: assets/js/app.js:22745
-#: assets/js/app.js:22747
+#: assets/js/app.js:22755
+#: assets/js/app.js:22757
 msgid "Edit content"
 msgstr "ویرایش محتوا"
 
-#: assets/js/app.js:22749
+#: assets/js/app.js:22759
 msgid "Text first; each block’s other settings are tucked below it."
 msgstr "ابتدا متن؛ سایر تنظیمات هر بلوک زیر آن قرار دارند."
 
-#: assets/js/app.js:22750
-msgid "Text first; each block’s other settings are tucked below it. This block’s structure is locked."
+#: assets/js/app.js:22760
+msgid ""
+"Text first; each block’s other settings are tucked below it. This block’s "
+"structure is locked."
 msgstr "ابتدا متن؛ سایر تنظیمات هر بلوک زیر آن قرار دارند. ساختار این بلوک قفل است."
 
-#: assets/js/app.js:22754
+#: assets/js/app.js:22764
+#: assets/js/app.js:23550
 msgid "Loading block schema…"
 msgstr "در حال بارگذاری شِمای بلوک…"
 
-#: assets/js/app.js:22759
+#: assets/js/app.js:848
+#: assets/js/app.js:4443
+#: assets/js/app.js:4456
+#: assets/js/app.js:7623
+#: assets/js/app.js:7714
+#: assets/js/app.js:8464
+#: assets/js/app.js:10159
+#: assets/js/app.js:11467
+#: assets/js/app.js:22464
+#: assets/js/app.js:22769
+#: assets/js/app.js:27854
+#: assets/js/app.js:28336
+#: assets/js/app.js:28391
+#: assets/js/app.js:28423
+#: assets/js/app.js:28639
+#: assets/js/app.js:28673
 msgid "Cancel"
 msgstr "لغو"
 
-#: assets/js/app.js:22760
+#: assets/js/app.js:3480
+#: assets/js/app.js:6752
+#: assets/js/app.js:8145
+#: assets/js/app.js:22465
+#: assets/js/app.js:22656
+#: assets/js/app.js:22770
+#: assets/js/app.js:23396
+#: assets/js/app.js:24600
+#: assets/js/app.js:24778
 msgid "Apply"
 msgstr "اعمال"
 
+#: assets/js/app.js:22799
 #. translators: %d: number of settings fields
-#: assets/js/app.js:22789
 #, js-format
 msgid "Settings (%d)"
 msgstr "تنظیمات (%d)"
 
-#: assets/js/app.js:22799
+#: assets/js/app.js:10170
+#: assets/js/app.js:10513
+#: assets/js/app.js:22809
+#: assets/js/app.js:23348
+#: assets/js/app.js:23399
 msgid "Move up"
 msgstr "انتقال به بالا"
 
-#: assets/js/app.js:22800
+#: assets/js/app.js:10171
+#: assets/js/app.js:10514
+#: assets/js/app.js:22810
+#: assets/js/app.js:23349
+#: assets/js/app.js:23400
 msgid "Move down"
 msgstr "انتقال به پایین"
 
-#: assets/js/app.js:22801
-#: assets/js/app.js:24449
+#: assets/js/app.js:1004
+#: assets/js/app.js:14127
+#: assets/js/app.js:14146
+#: assets/js/app.js:14395
+#: assets/js/app.js:19682
+#: assets/js/app.js:20148
+#: assets/js/app.js:22479
+#: assets/js/app.js:22811
+#: assets/js/app.js:23350
+#: assets/js/app.js:24459
 msgid "Remove"
 msgstr "حذف"
 
-#: assets/js/app.js:22805
+#: assets/js/app.js:22815
+#: assets/js/app.js:23353
 msgid "No editable settings."
 msgstr "هیچ تنظیم قابل‌ویرایشی وجود ندارد."
 
-#: assets/js/app.js:22811
-msgid "No blocks left. Add one, or Cancel and remove the whole block from its ⚙ popover instead."
-msgstr "هیچ بلوکی باقی نمانده است. یکی اضافه کنید، یا لغو کنید و کل بلوک را از پنجرهٔ بازشوی ⚙ آن حذف کنید."
+#: assets/js/app.js:22821
+msgid ""
+"No blocks left. Add one, or Cancel and remove the whole block from its ⚙ "
+"popover instead."
+msgstr ""
+"هیچ بلوکی باقی نمانده است. یکی اضافه کنید، یا لغو کنید و کل بلوک را از "
+"پنجرهٔ بازشوی ⚙ آن حذف کنید."
 
-#: assets/js/app.js:22818
+#: assets/js/app.js:22828
 msgid "Add"
 msgstr "افزودن"
 
-#: assets/js/app.js:22818
+#: assets/js/app.js:22828
 msgid "block"
 msgstr "بلوک"
 
+#: assets/js/app.js:22877
 #. translators: %d: number of collapsed settings fields
-#: assets/js/app.js:22867
 #, js-format
 msgid "More settings (%d)"
 msgstr "تنظیمات بیشتر (%d)"
 
-#: assets/js/app.js:22867
+#: assets/js/app.js:22877
 msgid "Fewer settings"
 msgstr "تنظیمات کمتر"
 
-#: assets/js/app.js:22879
-#: assets/js/app.js:23817
+#: assets/js/app.js:22889
+#: assets/js/app.js:23496
+#: assets/js/app.js:23827
+#: assets/js/app.js:23865
 msgid "Block updated"
 msgstr "بلوک به‌روز شد"
 
-#: assets/js/app.js:22879
-#: assets/js/app.js:23817
+#: assets/js/app.js:22889
+#: assets/js/app.js:23827
 msgid "This block could not be updated."
 msgstr "این بلوک به‌روز نشد."
 
-#: assets/js/app.js:23298
+#: assets/js/app.js:23308
 msgid "Link, size and lightbox options live in the block editor."
 msgstr "گزینه‌های پیوند، اندازه و لایت‌باکس در ویرایشگر بلوک قرار دارند."
 
+#: assets/js/app.js:23325
 #. translators: %d: number of nested blocks
-#: assets/js/app.js:23315
 #, js-format
 msgid "Content · %d block"
 msgid_plural "Content · %d blocks"
 msgstr[0] "محتوا · %d بلوک"
 msgstr[1] "محتوا · %d بلوک"
 
-#: assets/js/app.js:23317
+#: assets/js/app.js:23327
 msgid "Edit content…"
 msgstr "ویرایش محتوا…"
 
-#: assets/js/app.js:24443
+#: assets/js/app.js:24453
 msgid "Syntax highlighting"
 msgstr "برجسته‌سازی نحو"
 
-#: assets/js/app.js:24449
+#: assets/js/app.js:24459
 msgid "Remove this code block"
 msgstr "حذف این بلوک کد"
 
-#: assets/js/app.js:26079
+#: assets/js/app.js:26089
 msgid "(untitled pattern)"
 msgstr "(الگوی بدون عنوان)"
 
-#: assets/js/app.js:26374
+#: assets/js/app.js:26384
 msgid "Your patterns"
 msgstr "الگوهای شما"
 
-#: assets/js/app.js:26375
+#: assets/js/app.js:26385
 msgid "Synced"
 msgstr "همگام"
 
-#: assets/js/app.js:26608
-#: assets/js/app.js:26630
+#: assets/js/app.js:26618
+#: assets/js/app.js:26640
 msgid "Pattern unavailable"
 msgstr "الگو در دسترس نیست"
 
+#: assets/js/app.js:26623
+#: assets/js/app.js:26645
 #. translators: %s: error message returned while inserting a pattern.
-#: assets/js/app.js:26613
-#: assets/js/app.js:26635
 #, js-format
 msgid "Pattern insert failed: %s"
 msgstr "درج الگو ناموفق بود: %s"
 
+#: assets/js/app.js:27141
 #. translators: %s: number of plugins.
-#: assets/js/app.js:27131
 #, js-format
 msgid "Updating %s plugin…"
 msgid_plural "Updating %s plugins…"
 msgstr[0] "در حال به‌روزرسانی افزونهٔ %s…"
 msgstr[1] "در حال به‌روزرسانی %s افزونه…"
 
-#: assets/js/app.js:27492
+#: assets/js/app.js:27502
 msgid "Browse database (read-only)"
 msgstr "مرور پایگاه داده (فقط‌خواندنی)"
 
-#: assets/js/app.js:27527
+#: assets/js/app.js:27537
 msgid "Open the user guide"
 msgstr "بازکردن راهنمای کاربر"
 
-#: assets/js/app.js:28737
+#: assets/js/app.js:28747
 msgid "Versions"
 msgstr "نسخه‌ها"
 
-#: assets/js/app.js:28746
+#: assets/js/app.js:28756
 msgid "View the full changelog with screenshots on minnadmin.com"
 msgstr "مشاهدهٔ گزارش کامل تغییرات همراه با تصویر در minnadmin.com"
 
-#: assets/js/app.js:28756
-#: assets/js/app.js:28927
+#: assets/js/app.js:28766
+#: assets/js/app.js:28937
 msgid "User guide"
 msgstr "راهنمای کاربر"
 
-#: assets/js/app.js:28759
+#: assets/js/app.js:28769
 msgid "Loading the guide…"
 msgstr "در حال بارگذاری راهنما…"
 
-#: assets/js/app.js:28891
+#: assets/js/app.js:28901
 msgid "Minn is a reimagined WordPress admin."
 msgstr "Minn تجربه‌ای نو از مدیریت وردپرس است."
 
-#: assets/js/app.js:28891
-msgid "A calm, fast surface for the work you do every day: writing, moderating, uploading, and keeping an eye on the site. Classic wp-admin stays fully available, one click away."
-msgstr "محیطی آرام و سریع برای کارهای روزمره: نوشتن، بازبینی، بارگذاری و زیر نظر داشتن سایت. wp-admin کلاسیک همچنان کامل و با یک کلیک در دسترس است."
+#: assets/js/app.js:28901
+msgid ""
+"A calm, fast surface for the work you do every day: writing, moderating, "
+"uploading, and keeping an eye on the site. Classic wp-admin stays fully "
+"available, one click away."
+msgstr ""
+"محیطی آرام و سریع برای کارهای روزمره: نوشتن، بازبینی، بارگذاری و زیر نظر "
+"داشتن سایت. wp-admin کلاسیک همچنان کامل و با یک کلیک در دسترس است."
 
-#: assets/js/app.js:28893
+#: assets/js/app.js:28903
 msgid "Getting around"
 msgstr "گشت‌وگذار"
 
-#: assets/js/app.js:28894
-msgid "The sidebar has three groups: Workspace (the daily material), Tools (what your plugins add) and Manage (the site itself). The fastest way anywhere is the command palette:"
-msgstr "نوار کناری سه گروه دارد: فضای کاری (محتوای روزمره)، ابزارها (موارد افزوده‌شده توسط افزونه‌ها) و مدیریت (خود سایت). سریع‌ترین راه برای رفتن به هرجا، پالت فرمان است:"
+#: assets/js/app.js:28904
+msgid ""
+"The sidebar has three groups: Workspace (the daily material), Tools (what "
+"your plugins add) and Manage (the site itself). The fastest way anywhere is "
+"the command palette:"
+msgstr ""
+"نوار کناری سه گروه دارد: فضای کاری (محتوای روزمره)، ابزارها (موارد "
+"افزوده‌شده توسط افزونه‌ها) و مدیریت (خود سایت). سریع‌ترین راه برای رفتن به "
+"هرجا، پالت فرمان است:"
 
-#: assets/js/app.js:28894
+#: assets/js/app.js:28904
 msgid ", then start typing a view, a post or a command."
 msgstr "، سپس نام یک نما، نوشته یا فرمان را تایپ کنید."
 
-#: assets/js/app.js:28896
+#: assets/js/app.js:28906
 msgid "Right-click almost anything"
 msgstr "تقریباً روی هرچیزی راست‌کلیک کنید"
 
-#: assets/js/app.js:28897
-msgid "The least discoverable thing in Minn, so here it is in writing: rows in Content and Media, comments, the theme button, plugin entries in the sidebar and group headings in the block library all have right-click menus. When in doubt, try a right-click."
-msgstr "این قابلیت کمتر از همه در Minn دیده می‌شود، پس اینجا روشن می‌گوییم: ردیف‌های محتوا و رسانه، دیدگاه‌ها، دکمهٔ پوسته، ورودی‌های افزونه در نوار کناری و عنوان گروه‌ها در کتابخانهٔ بلوک همگی منوی راست‌کلیک دارند. هر وقت تردید داشتید، راست‌کلیک را امتحان کنید."
+#: assets/js/app.js:28907
+msgid ""
+"The least discoverable thing in Minn, so here it is in writing: rows in "
+"Content and Media, comments, the theme button, plugin entries in the "
+"sidebar and group headings in the block library all have right-click menus. "
+"When in doubt, try a right-click."
+msgstr ""
+"این قابلیت کمتر از همه در Minn دیده می‌شود، پس اینجا روشن می‌گوییم: "
+"ردیف‌های محتوا و رسانه، دیدگاه‌ها، دکمهٔ پوسته، ورودی‌های افزونه در نوار "
+"کناری و عنوان گروه‌ها در کتابخانهٔ بلوک همگی منوی راست‌کلیک دارند. هر وقت "
+"تردید داشتید، راست‌کلیک را امتحان کنید."
 
-#: assets/js/app.js:28899
+#: assets/js/app.js:28909
 msgid "Make it yours"
 msgstr "آن را مطابق نیاز خود کنید"
 
-#: assets/js/app.js:28900
-msgid "Anything a plugin adds here can be hidden for you alone: right-click its sidebar entry or block-library heading and choose Hide. Everything hidden is listed on Your profile, where one click restores it."
-msgstr "هر چیزی که افزونه‌ای اینجا اضافه می‌کند فقط برای شما قابل‌پنهان‌کردن است: روی ورودی نوار کناری یا عنوان آن در کتابخانهٔ بلوک راست‌کلیک و «پنهان‌کردن» را انتخاب کنید. همهٔ موارد پنهان در نمایهٔ شما فهرست می‌شوند و با یک کلیک بازمی‌گردند."
+#: assets/js/app.js:28910
+msgid ""
+"Anything a plugin adds here can be hidden for you alone: right-click its "
+"sidebar entry or block-library heading and choose Hide. Everything hidden "
+"is listed on Your profile, where one click restores it."
+msgstr ""
+"هر چیزی که افزونه‌ای اینجا اضافه می‌کند فقط برای شما قابل‌پنهان‌کردن است: "
+"روی ورودی نوار کناری یا عنوان آن در کتابخانهٔ بلوک راست‌کلیک و «پنهان‌کردن» "
+"را انتخاب کنید. همهٔ موارد پنهان در نمایهٔ شما فهرست می‌شوند و با یک کلیک "
+"بازمی‌گردند."
 
-#: assets/js/app.js:28922
+#: assets/js/app.js:28932
 msgid "Deliberately minimal"
 msgstr "عمداً مینیمال"
 
-#: assets/js/app.js:28923
-msgid "Minn surfaces the settings people change day to day; the long tail stays in wp-admin on purpose. For plugin configuration Minn doesn't rebuild, open"
-msgstr "Minn تنظیماتی را نمایش می‌دهد که کاربران روزانه تغییر می‌دهند؛ تنظیمات کم‌کاربرد عمداً در wp-admin می‌مانند. برای پیکربندی افزونه‌هایی که Minn بازسازی نمی‌کند، باز کنید:"
+#: assets/js/app.js:28933
+msgid ""
+"Minn surfaces the settings people change day to day; the long tail stays in "
+"wp-admin on purpose. For plugin configuration Minn doesn't rebuild, open"
+msgstr ""
+"Minn تنظیماتی را نمایش می‌دهد که کاربران روزانه تغییر می‌دهند؛ تنظیمات "
+"کم‌کاربرد عمداً در wp-admin می‌مانند. برای پیکربندی افزونه‌هایی که Minn "
+"بازسازی نمی‌کند، باز کنید:"
 
-#: assets/js/app.js:28923
+#: assets/js/app.js:28933
 msgid "Your profile → AI Access"
 msgstr "نمایهٔ شما → دسترسی هوش مصنوعی"
 
-#: assets/js/app.js:28923
-msgid " and hand your AI agent a revocable credential to do the fiddly work over the REST API."
-msgstr " و یک اعتبارنامهٔ قابل‌لغو در اختیار عامل هوش مصنوعی خود بگذارید تا کارهای ظریف را از طریق REST API انجام دهد."
+#: assets/js/app.js:28933
+msgid ""
+" and hand your AI agent a revocable credential to do the fiddly work over "
+"the REST API."
+msgstr ""
+" و یک اعتبارنامهٔ قابل‌لغو در اختیار عامل هوش مصنوعی خود بگذارید تا کارهای "
+"ظریف را از طریق REST API انجام دهد."
 
-#: assets/js/app.js:28924
-msgid "Everything Minn writes is native WordPress: real block markup, core options, core users. Deactivate the plugin and nothing is lost. Plugins extend Minn with one PHP filter, as plain data, which is why nothing here can nag you."
-msgstr "هرچه Minn می‌نویسد بومی وردپرس است: نشانه‌گذاری واقعی بلوک، گزینه‌های هسته و کاربران هسته. با غیرفعال‌کردن افزونه چیزی از دست نمی‌رود. افزونه‌ها Minn را با یک فیلتر PHP و به‌شکل دادهٔ ساده گسترش می‌دهند؛ به همین دلیل چیزی در اینجا مزاحم شما نمی‌شود."
+#: assets/js/app.js:28934
+msgid ""
+"Everything Minn writes is native WordPress: real block markup, core "
+"options, core users. Deactivate the plugin and nothing is lost. Plugins "
+"extend Minn with one PHP filter, as plain data, which is why nothing here "
+"can nag you."
+msgstr ""
+"هرچه Minn می‌نویسد بومی وردپرس است: نشانه‌گذاری واقعی بلوک، گزینه‌های هسته "
+"و کاربران هسته. با غیرفعال‌کردن افزونه چیزی از دست نمی‌رود. افزونه‌ها Minn "
+"را با یک فیلتر PHP و به‌شکل دادهٔ ساده گسترش می‌دهند؛ به همین دلیل چیزی در "
+"اینجا مزاحم شما نمی‌شود."
 
-#: assets/js/app.js:29133
+#: assets/js/app.js:29143
 msgid "Copied (truncated value)"
 msgstr "کپی شد (مقدار کوتاه‌شده)"
 
-#: assets/js/app.js:29133
+#: assets/js/app.js:29143
 msgid "Value copied"
 msgstr "مقدار کپی شد"
 
-#: assets/js/app.js:31215
+#: assets/js/app.js:31225
 msgid "No guide found."
 msgstr "راهنمایی پیدا نشد."
 
-#: assets/js/app.js:31770
+#: assets/js/app.js:31780
 msgid "Could not load this user."
 msgstr "این کاربر بارگذاری نشد."
 
-#: assets/js/app.js:31797
+#: assets/js/app.js:31807
 msgid "Loading user…"
 msgstr "در حال بارگذاری کاربر…"
 
-#: assets/js/app.js:31817
+#: assets/js/app.js:28567
+#: assets/js/app.js:31827
+#: assets/js/app.js:32202
 msgid "Display name"
 msgstr "نام نمایشی"
 
-#: assets/js/app.js:31821
+#: assets/js/app.js:4896
+#: assets/js/app.js:4911
+#: assets/js/app.js:7205
+#: assets/js/app.js:7783
+#: assets/js/app.js:27978
+#: assets/js/app.js:28269
+#: assets/js/app.js:28365
+#: assets/js/app.js:28571
+#: assets/js/app.js:31831
+#: assets/js/app.js:32206
 msgid "Email"
 msgstr "ایمیل"
 
-#: assets/js/app.js:31825
+#: assets/js/app.js:7205
+#: assets/js/app.js:7943
+#: assets/js/app.js:28259
+#: assets/js/app.js:28575
+#: assets/js/app.js:31835
+#: assets/js/app.js:32210
 msgid "Role"
 msgstr "نقش"
 
-#: assets/js/app.js:31834
+#: assets/js/app.js:31844
+#: assets/js/app.js:32219
 msgid "Language"
 msgstr "زبان"
 
-#: assets/js/app.js:31841
+#: assets/js/app.js:31851
+#: assets/js/app.js:32227
 msgid "New password (leave blank to keep)"
 msgstr "رمز عبور تازه (برای حفظ رمز فعلی خالی بگذارید)"
 
-#: assets/js/app.js:31844
+#: assets/js/app.js:28587
+#: assets/js/app.js:31854
+#: assets/js/app.js:32230
 msgid "Generate"
 msgstr "تولید"
 
-#: assets/js/app.js:31847
-#: assets/js/app.js:31871
+#: assets/js/app.js:4979
+#: assets/js/app.js:5344
+#: assets/js/app.js:9803
+#: assets/js/app.js:14448
+#: assets/js/app.js:28126
+#: assets/js/app.js:29774
+#: assets/js/app.js:31857
+#: assets/js/app.js:31881
+#: assets/js/app.js:32233
+#: assets/js/app.js:32261
 msgid "Save changes"
 msgstr "ذخیرهٔ تغییرات"
 
-#: assets/js/app.js:31851
+#: assets/js/app.js:31861
+#: assets/js/app.js:32237
 msgid "Public profile"
 msgstr "نمایهٔ عمومی"
 
-#: assets/js/app.js:31851
+#: assets/js/app.js:31861
+#: assets/js/app.js:32237
 msgid "author boxes & archives"
 msgstr "جعبه‌های نویسنده و بایگانی‌ها"
 
-#: assets/js/app.js:31855
+#: assets/js/app.js:4893
+#: assets/js/app.js:28362
+#: assets/js/app.js:31865
+#: assets/js/app.js:32241
 msgid "First name"
 msgstr "نام"
 
-#: assets/js/app.js:31859
+#: assets/js/app.js:4894
+#: assets/js/app.js:28363
+#: assets/js/app.js:31869
+#: assets/js/app.js:32245
 msgid "Last name"
 msgstr "نام خانوادگی"
 
-#: assets/js/app.js:31864
+#: assets/js/app.js:31874
+#: assets/js/app.js:32250
 msgid "Website"
 msgstr "وب‌سایت"
 
-#: assets/js/app.js:31868
+#: assets/js/app.js:31878
+#: assets/js/app.js:32254
 msgid "Bio"
 msgstr "زندگی‌نامه"
 
-#: assets/js/app.js:31877
+#: assets/js/app.js:31887
+#: assets/js/app.js:32297
 msgid "Appearance"
 msgstr "نمایش"
 
-#: assets/js/app.js:31877
+#: assets/js/app.js:31887
 msgid "what this user sees"
 msgstr "آنچه این کاربر می‌بیند"
 
-#: assets/js/app.js:31878
-msgid "Set their Minn palette now so it looks right before their first sign-in. Light or dark mode stays a device preference each person controls themselves."
-msgstr "پالت Minn این کاربر را اکنون تنظیم کنید تا پیش از نخستین ورود درست به نظر برسد. حالت روشن یا تیره همچنان ترجیح دستگاه است و هر فرد خودش آن را کنترل می‌کند."
+#: assets/js/app.js:31888
+msgid ""
+"Set their Minn palette now so it looks right before their first sign-in. "
+"Light or dark mode stays a device preference each person controls "
+"themselves."
+msgstr ""
+"پالت Minn این کاربر را اکنون تنظیم کنید تا پیش از نخستین ورود درست به نظر "
+"برسد. حالت روشن یا تیره همچنان ترجیح دستگاه است و هر فرد خودش آن را کنترل "
+"می‌کند."
 
-#: assets/js/app.js:31881
+#: assets/js/app.js:2382
+#: assets/js/app.js:31891
+#: assets/js/app.js:32300
 msgid "Color scheme"
 msgstr "طرح رنگ"
 
-#: assets/js/app.js:31887
-#: assets/js/app.js:31889
+#: assets/js/app.js:31897
+#: assets/js/app.js:31899
 msgid "Minn is their default admin"
 msgstr "Minn مدیریت پیش‌فرض آن‌هاست"
 
-#: assets/js/app.js:31890
+#: assets/js/app.js:31900
 msgid "After sign-in they land in Minn. Full wp-admin stays available."
 msgstr "پس از ورود به Minn هدایت می‌شوند. wp-admin کامل همچنان در دسترس است."
 
-#: assets/js/app.js:31894
-#: assets/js/app.js:31896
+#: assets/js/app.js:31904
+#: assets/js/app.js:31906
+#: assets/js/app.js:32308
+#: assets/js/app.js:32310
 msgid "Show toolbar when viewing the site"
 msgstr "نمایش نوار ابزار هنگام مشاهدهٔ سایت"
 
-#: assets/js/app.js:31897
+#: assets/js/app.js:31907
 msgid "The WordPress admin bar on the front end while they are signed in."
 msgstr "نوار مدیریت وردپرس در بخش کاربری، هنگامی که وارد شده‌اند."
 
-#: assets/js/app.js:31906
+#: assets/js/app.js:31916
 msgid "Hidden for them"
 msgstr "پنهان برای آن‌ها"
 
-#: assets/js/app.js:31907
-msgid "Items this user chose to hide from their own Minn. Restoring brings one back for them."
-msgstr "مواردی که این کاربر در Minn خود پنهان کرده است. بازیابی، آن مورد را برایشان بازمی‌گرداند."
+#: assets/js/app.js:31917
+msgid ""
+"Items this user chose to hide from their own Minn. Restoring brings one "
+"back for them."
+msgstr ""
+"مواردی که این کاربر در Minn خود پنهان کرده است. بازیابی، آن مورد را برایشان "
+"بازمی‌گرداند."
 
-#: assets/js/app.js:31914
+#: assets/js/app.js:3181
+#: assets/js/app.js:3434
+#: assets/js/app.js:3470
+#: assets/js/app.js:20665
+#: assets/js/app.js:31924
+#: assets/js/app.js:32327
 msgid "Restore"
 msgstr "بازیابی"
 
-#: assets/js/app.js:31918
+#: assets/js/app.js:28593
+#: assets/js/app.js:31928
+#: assets/js/app.js:32331
 msgid "Sessions"
 msgstr "نشست‌ها"
 
-#: assets/js/app.js:31919
+#: assets/js/app.js:28595
+#: assets/js/app.js:31929
+#: assets/js/app.js:32332
 msgid "No active sessions."
 msgstr "هیچ نشست فعالی وجود ندارد."
 
-#: assets/js/app.js:31924
+#: assets/js/app.js:31934
 msgid "signed in"
 msgstr "واردشده"
 
-#: assets/js/app.js:31926
+#: assets/js/app.js:28602
+#: assets/js/app.js:31936
+#: assets/js/app.js:32339
 msgid "Sign out"
 msgstr "خروج از نشست"
 
-#: assets/js/app.js:31928
+#: assets/js/app.js:28604
+#: assets/js/app.js:31938
+#: assets/js/app.js:32341
 msgid "Sign out everywhere"
 msgstr "خروج از همه‌جا"
 
-#: assets/js/app.js:31932
+#: assets/js/app.js:31942
 msgid "Danger zone"
 msgstr "ناحیهٔ خطر"
 
-#: assets/js/app.js:31933
+#: assets/js/app.js:31943
 msgid "Deleting a user asks what happens to their content first."
 msgstr "پیش از حذف کاربر، دربارهٔ سرنوشت محتوای او پرسیده می‌شود."
 
-#: assets/js/app.js:31934
+#: assets/js/app.js:28608
+#: assets/js/app.js:28653
+#: assets/js/app.js:28672
+#: assets/js/app.js:30118
+#: assets/js/app.js:31944
 msgid "Delete user"
 msgstr "حذف کاربر"
 
-#: assets/js/app.js:31992
+#: assets/js/app.js:32002
 msgid "User updated. Language pack installed."
 msgstr "کاربر به‌روز شد. بستهٔ زبان نصب شد."
 
-#: assets/js/app.js:31993
+#: assets/js/app.js:31711
+#: assets/js/app.js:32003
 msgid "User updated"
 msgstr "کاربر به‌روز شد"
 
-#: assets/js/app.js:32028
+#: assets/js/app.js:31737
+#: assets/js/app.js:32038
+#: assets/js/app.js:32525
 msgid "Session signed out"
 msgstr "نشست خارج شد"
 
-#: assets/js/app.js:32039
+#: assets/js/app.js:31750
+#: assets/js/app.js:32049
 msgid "Sign this user out of all sessions?"
 msgstr "این کاربر از همهٔ نشست‌ها خارج شود؟"
 
-#: assets/js/app.js:32043
+#: assets/js/app.js:31754
+#: assets/js/app.js:32053
+#: assets/js/app.js:32540
 msgid "Signed out everywhere"
 msgstr "از همه‌جا خارج شد"
 
+#: assets/js/app.js:32073
 #. translators: %s: name of the restored item.
-#: assets/js/app.js:32063
 #, js-format
 msgid "%s restored for them"
 msgstr "%s برای آن‌ها بازیابی شد"
 
-#: assets/js/app.js:32063
+#: assets/js/app.js:32073
 msgid "Item"
 msgstr "مورد"
 
-#: assets/js/app.js:32433
+#: assets/js/app.js:32443
 msgid "Profile updated. Language pack installed."
 msgstr "نمایه به‌روز شد. بستهٔ زبان نصب شد."
 
-#: assets/js/app.js:32434
+#: assets/js/app.js:32444
 msgid "Profile updated"
 msgstr "نمایه به‌روز شد"
+
+#: assets/js/app.js:105
+msgid "Your session expired. Reloading…"
+msgstr "جلسه شما منقضی شد در حال بارگیری مجدد…"
+
+#: assets/js/app.js:385
+msgid "Pagination"
+msgstr "صفحه‌بندی"
+
+#: assets/js/app.js:387
+msgid "Previous page"
+msgstr "برگهٔ قبلی"
+
+#: assets/js/app.js:389
+msgid "Next page"
+msgstr "برگهٔ بعدی"
+
+#: assets/js/app.js:495
+msgid "Couldn’t load this list."
+msgstr "این فهرست بارگیری نشد."
+
+#: assets/js/app.js:495
+#: assets/js/app.js:14361
+msgid "Retry"
+msgstr "تلاش دوباره"
+
+#: assets/js/app.js:844
+msgid "to confirm"
+msgstr "برای تایید"
+
+#: assets/js/app.js:894
+msgid "Activate theme"
+msgstr "تم را فعال کنید"
+
+#: assets/js/app.js:903
+msgid ""
+"Visitors see a maintenance notice for a few seconds while files are "
+"replaced."
+msgstr ""
+"هنگامی که فایل‌ها جایگزین می‌شوند، بازدیدکنندگان یک اخطار نگهداری را برای "
+"چند ثانیه مشاهده می‌کنند."
+
+#: assets/js/app.js:904
+#: assets/js/app.js:11870
+msgid "Update WordPress"
+msgstr "به‌روزرسانی وردپرس"
+
+#: assets/js/app.js:1074
+msgid "— None"
+msgstr "- هیچکدام"
+
+#: assets/js/app.js:1342
+msgid "Page in…"
+msgstr "صفحه در…"
+
+#: assets/js/app.js:1346
+msgid "Post"
+msgstr "نوشته"
+
+#: assets/js/app.js:1347
+msgid "Page"
+msgstr "برگه"
+
+#: assets/js/app.js:2064
+msgid "Switch provider"
+msgstr "سوئیچ ارائه دهنده"
+
+#: assets/js/app.js:2065
+msgid "Provider"
+msgstr "ارائه دهنده"
+
+#: assets/js/app.js:2153
+msgid "Minn"
+msgstr "Minn"
+
+#: assets/js/app.js:2154
+msgid "Ocean"
+msgstr "اقیانوس"
+
+#: assets/js/app.js:2155
+msgid "Forest"
+msgstr "جنگل"
+
+#: assets/js/app.js:2156
+msgid "Amber"
+msgstr "کهربا"
+
+#: assets/js/app.js:2157
+msgid "Rose"
+msgstr "رز"
+
+#: assets/js/app.js:2158
+msgid "Coral"
+msgstr "مرجان"
+
+#: assets/js/app.js:2159
+msgid "Teal"
+msgstr "آبی رنگ"
+
+#: assets/js/app.js:2160
+msgid "Slate"
+msgstr "تخته سنگ"
+
+#: assets/js/app.js:2161
+msgid "Dusk"
+msgstr "گرگ و میش"
+
+#: assets/js/app.js:2171
+msgid "Surfaces"
+msgstr "سطوح"
+
+#: assets/js/app.js:2173
+msgid "Lines"
+msgstr "خطوط"
+
+#: assets/js/app.js:2174
+msgid "Brand"
+msgstr "نام تجاری"
+
+#: assets/js/app.js:2378
+msgid "Editing"
+msgstr "در حال ویرایش"
+
+#: assets/js/app.js:2378
+msgid "colors. Flip Theme below to tune the other mode."
+msgstr "رنگ ها برای تنظیم حالت دیگر، تم زیر را برگردانید."
+
+#: assets/js/app.js:2384
+msgid "Custom"
+msgstr "سفارشی"
+
+#: assets/js/app.js:2384
+msgid "Custom scheme"
+msgstr "طرح سفارشی"
+
+#: assets/js/app.js:2388
+msgid ""
+"A full palette for panels, type and brand. Status greens/ambers stay the "
+"same."
+msgstr "یک پالت کامل برای پانل ها، نوع و مارک. وضعیت سبز/کهربا ثابت می ماند."
+
+#: assets/js/app.js:2395
+msgid "Match the device setting"
+msgstr "با تنظیمات دستگاه مطابقت دهید"
+
+#: assets/js/app.js:2396
+msgid "Light"
+msgstr "روشن"
+
+#: assets/js/app.js:2396
+msgid "Always light"
+msgstr "همیشه سبک"
+
+#: assets/js/app.js:2397
+msgid "Dark"
+msgstr "تاریک"
+
+#: assets/js/app.js:2397
+msgid "Always dark"
+msgstr "همیشه تاریک"
+
+#: assets/js/app.js:2402
+msgid "Theme mode"
+msgstr "حالت تم"
+
+#: assets/js/app.js:2414
+#: assets/js/app.js:2416
+msgid "Minn is the default admin"
+msgstr "Minn مدیر پیش فرض است"
+
+#: assets/js/app.js:2417
+msgid ""
+"After sign-in, land here. The admin bar Edit link opens the Minn editor. "
+"Full wp-admin stays available everywhere else."
+msgstr ""
+"پس از ورود به سیستم، اینجا فرود بیایید. پیوند ویرایش نوار مدیریت، ویرایشگر "
+"Minn را باز می کند. wp-admin کامل در همه جا در دسترس باقی می ماند."
+
+#: assets/js/app.js:2552
+msgid "Store"
+msgstr "فروشگاه"
+
+#: assets/js/app.js:2555
+msgid "All caught up. No orders need attention."
+msgstr "همه گرفتار شدند. هیچ سفارشی نیاز به توجه ندارد"
+
+#: assets/js/app.js:2556
+#: assets/js/app.js:7271
+msgid "View orders"
+msgstr "مشاهده سفارشات"
+
+#: assets/js/app.js:2564
+msgid "Loading overview…"
+msgstr "در حال بارگیری نمای کلی…"
+
+#: assets/js/app.js:2590
+msgid "Here's what's happening across your site today."
+msgstr "این چیزی است که امروز در سراسر سایت شما اتفاق می افتد."
+
+#: assets/js/app.js:2631
+msgid "Recent activity"
+msgstr "فعالیت اخیر"
+
+#: assets/js/app.js:2640
+msgid "No activity yet."
+msgstr "هنوز هیچ فعالیتی وجود ندارد."
+
+#: assets/js/app.js:2805
+#: assets/js/app.js:27781
+#: assets/js/app.js:27794
+msgid "Visitors"
+msgstr "بازدیدکنندگان"
+
+#: assets/js/app.js:2806
+#: assets/js/app.js:27782
+#: assets/js/app.js:27795
+msgid "Pageviews"
+msgstr "بازدید از صفحه"
+
+#: assets/js/app.js:2810
+msgid "Click for details"
+msgstr "برای جزئیات کلیک کنید"
+
+#: assets/js/app.js:3017
+#: assets/js/app.js:4332
+#: assets/js/app.js:7860
+#: assets/js/app.js:27055
+msgid "Working…"
+msgstr "در حال انجام…"
+
+#: assets/js/app.js:3054
+msgid "Loading content…"
+msgstr "در حال بارگیری محتوا…"
+
+#: assets/js/app.js:3127
+#: assets/js/app.js:3128
+msgid "Post type"
+msgstr "نوع پست"
+
+#: assets/js/app.js:3140
+msgid "Only live content carrying unsaved edits"
+msgstr "فقط محتوای زنده حاوی ویرایش های ذخیره نشده است"
+
+#: assets/js/app.js:3140
+#: assets/js/app.js:3176
+msgid "Modified"
+msgstr "اصلاح شد"
+
+#: assets/js/app.js:3146
+msgid "Search content…"
+msgstr "جستجو در محتوا…"
+
+#: assets/js/app.js:3160
+#: assets/js/app.js:10444
+#: assets/js/app.js:10445
+#: assets/js/app.js:20729
+#: assets/js/app.js:27913
+#: assets/js/app.js:31473
+#: assets/js/app.js:31474
+msgid "Title"
+msgstr "عنوان"
+
+#: assets/js/app.js:3160
+msgid "Author"
+msgstr "نویسنده"
+
+#: assets/js/app.js:3160
+msgid "Date"
+msgstr "تاریخ"
+
+#: assets/js/app.js:3176
+msgid "Carrying unsaved edits: an autosave is newer than the version being served"
+msgstr "انجام ویرایش های ذخیره نشده: ذخیره خودکار جدیدتر از نسخه در حال ارائه است"
+
+#: assets/js/app.js:3182
+#: assets/js/app.js:3456
+#: assets/js/app.js:4112
+#: assets/js/app.js:24215
+#: assets/js/app.js:24221
+#: assets/js/app.js:28219
+msgid "Delete"
+msgstr "حذف"
+
+#: assets/js/app.js:3183
+#: assets/js/app.js:7496
+#: assets/js/app.js:7957
+#: assets/js/app.js:9479
+msgid "Actions"
+msgstr "کارها"
+
+#: assets/js/app.js:3308
+msgid "Open in Minn"
+msgstr "در Minn باز کنید"
+
+#: assets/js/app.js:3310
+msgid "Edit in block editor ↗"
+msgstr "ویرایش در ویرایشگر بلوک ↗"
+
+#: assets/js/app.js:3311
+msgid "Copy public preview link"
+msgstr "پیوند پیش نمایش عمومی را کپی کنید"
+
+#: assets/js/app.js:3312
+#: assets/js/app.js:22480
+msgid "Duplicate"
+msgstr "تکراری"
+
+#: assets/js/app.js:3314
+msgid "Publish now"
+msgstr "انتشار اکنون"
+
+#: assets/js/app.js:3315
+msgid "Move to draft"
+msgstr "انتقال به پیش نویس"
+
+#: assets/js/app.js:3316
+#: assets/js/app.js:20160
+msgid "Move to trash"
+msgstr "انتقال به زباله‌دان"
+
+#: assets/js/app.js:3442
+msgid "Delete this item permanently?"
+msgstr "این مورد برای همیشه حذف شود؟"
+
+#: assets/js/app.js:3442
+#: assets/js/app.js:4516
+msgid "It is removed for good. There is no undo for this."
+msgstr "برای همیشه حذف می شود. هیچ لغو برای این وجود ندارد."
+
+#: assets/js/app.js:3442
+#: assets/js/app.js:3492
+#: assets/js/app.js:3783
+#: assets/js/app.js:4330
+msgid "Delete permanently"
+msgstr "حذف برای همیشه"
+
+#: assets/js/app.js:3447
+msgid "Deleted permanently"
+msgstr "برای همیشه حذف شد"
+
+#: assets/js/app.js:3472
+#: assets/js/app.js:3482
+#: assets/js/app.js:4138
+#: assets/js/app.js:4587
+#: assets/js/app.js:6753
+#: assets/js/app.js:8146
+#: assets/js/app.js:9596
+#: assets/js/app.js:13145
+#: assets/js/app.js:19166
+msgid "Clear"
+msgstr "پاکسازی"
+
+#: assets/js/app.js:3477
+#: assets/js/app.js:3499
+#: assets/js/app.js:6745
+#: assets/js/app.js:6758
+msgid "Set status…"
+msgstr "تنظیم وضعیت…"
+
+#: assets/js/app.js:3477
+#: assets/js/app.js:6745
+msgid "Set status"
+msgstr "تعیین وضعیت"
+
+#: assets/js/app.js:3492
+#, js-format
+msgid "Delete %d item permanently?"
+msgid_plural "Delete %d items permanently?"
+msgstr[0] "مورد %d برای همیشه حذف شود؟"
+msgstr[1] "موارد %d برای همیشه حذف شود؟"
+
+#: assets/js/app.js:3492
+#: assets/js/app.js:4330
+msgid "They are removed for good. There is no undo for this."
+msgstr "برای همیشه حذف می شوند. هیچ لغو برای این وجود ندارد."
+
+#: assets/js/app.js:3500
+#: assets/js/app.js:6759
+#: assets/js/app.js:28175
+#: assets/js/app.js:28328
+msgid "Published"
+msgstr "منتشرشده"
+
+#: assets/js/app.js:3502
+msgid "Pending"
+msgstr "در انتظار"
+
+#: assets/js/app.js:3503
+#: assets/js/app.js:5024
+#: assets/js/app.js:6761
+#: assets/js/app.js:20173
+msgid "Private"
+msgstr "خصوصی"
+
+#: assets/js/app.js:3510
+msgid "Pick a status first"
+msgstr "ابتدا یک وضعیت را انتخاب کنید"
+
+#: assets/js/app.js:3515
+#, js-format
+msgid "Move %d item to trash?"
+msgid_plural "Move %d items to trash?"
+msgstr[0] "مورد %d به سطل زباله منتقل شود؟"
+msgstr[1] "موارد %d به سطل زباله منتقل شود؟"
+
+#: assets/js/app.js:3742
+msgid "Nothing to save — rotate or crop first"
+msgstr "چیزی برای ذخیره کردن وجود ندارد - ابتدا بچرخانید یا برش دهید"
+
+#: assets/js/app.js:3745
+#: assets/js/app.js:5321
+#: assets/js/app.js:23438
+#: assets/js/app.js:29421
+#: assets/js/app.js:29565
+#: assets/js/app.js:29744
+#: assets/js/app.js:29796
+#: assets/js/app.js:29842
+#: assets/js/app.js:29872
+#: assets/js/app.js:30020
+msgid "Saving…"
+msgstr "در حال ذخیره…"
+
+#: assets/js/app.js:3760
+msgid "Edited copy saved · set as featured image"
+msgstr "نسخه ویرایش شده ذخیره شد · به عنوان تصویر برجسته تنظیم شود"
+
+#: assets/js/app.js:3762
+msgid "Edited copy saved"
+msgstr "نسخه ویرایش شده ذخیره شد"
+
+#: assets/js/app.js:3772
+#: assets/js/app.js:27853
+msgid "Save as copy"
+msgstr "ذخیره به عنوان کپی"
+
+#: assets/js/app.js:3783
+#, js-format
+msgid "Delete %d file permanently?"
+msgid_plural "Delete %d files permanently?"
+msgstr[0] "فایل %d برای همیشه حذف شود؟"
+msgstr[1] "فایل های %d برای همیشه حذف شوند؟"
+
+#: assets/js/app.js:3783
+msgid ""
+"The files and their thumbnails are removed from the server. Posts that use "
+"them keep broken references."
+msgstr ""
+"فایل ها و تصاویر کوچک آنها از سرور حذف می شوند. پست هایی که از آنها استفاده "
+"می کنند، ارجاعات خراب را حفظ می کنند."
+
+#: assets/js/app.js:3785
+msgid "Deleting…"
+msgstr "در حال حذف…"
+
+#: assets/js/app.js:3800
+msgid ""
+"The file and its thumbnails are removed from the server. Posts that use it "
+"keep broken references."
+msgstr ""
+"فایل و تصاویر کوچک آن از سرور حذف می شوند. پست هایی که از آن استفاده می "
+"کنند، ارجاعات خراب را حفظ می کنند."
+
+#: assets/js/app.js:3800
+msgid "Delete file"
+msgstr "حذف فایل"
+
+#: assets/js/app.js:3803
+msgid "File deleted"
+msgstr "فایل حذف شد"
+
+#: assets/js/app.js:3850
+#, js-format
+msgid "Uploading %d file…"
+msgid_plural "Uploading %d files…"
+msgstr[0] "در حال آپلود فایل %d…"
+msgstr[1] "در حال آپلود فایل های %d…"
+
+#: assets/js/app.js:3861
+#, js-format
+msgid "Uploaded %d file"
+msgid_plural "Uploaded %d files"
+msgstr[0] "فایل %d آپلود شد"
+msgstr[1] "فایل های %d آپلود شد"
+
+#: assets/js/app.js:3884
+msgid "Files not attached to any post or page"
+msgstr "فایل هایی که به هیچ پست یا صفحه ای پیوست نشده اند"
+
+#: assets/js/app.js:3884
+msgid "Unattached"
+msgstr "پیوست‌ نشده"
+
+#: assets/js/app.js:3887
+#: assets/js/app.js:3888
+msgid "Filter by upload month"
+msgstr "فیلتر بر اساس ماه آپلود"
+
+#: assets/js/app.js:3897
+msgid "Filter by folder"
+msgstr "فیلتر بر اساس پوشه"
+
+#: assets/js/app.js:3902
+msgid "Grid"
+msgstr "شبکه‌ای"
+
+#: assets/js/app.js:3903
+msgid "List"
+msgstr "فهرست"
+
+#: assets/js/app.js:3914
+#: assets/js/app.js:3958
+msgid "Search files…"
+msgstr "جستجوی فایل ها…"
+
+#: assets/js/app.js:3917
+msgid "Loading media…"
+msgstr "در حال بارگیری رسانه…"
+
+#: assets/js/app.js:3967
+msgid "Drag & drop files here"
+msgstr "فایل ها را به اینجا بکشید و رها کنید"
+
+#: assets/js/app.js:3968
+msgid "or"
+msgstr "یا"
+
+#: assets/js/app.js:3968
+msgid "browse your computer"
+msgstr "کامپیوتر خود را مرور کنید"
+
+#: assets/js/app.js:3974
+#: assets/js/app.js:3985
+#: assets/js/app.js:4424
+msgid "Select"
+msgstr "گزینش"
+
+#: assets/js/app.js:4051
+msgid "All folders"
+msgstr "همه پوشه ها"
+
+#: assets/js/app.js:4067
+msgid "All dates"
+msgstr "همهٔ تاریخ‌ها"
+
+#: assets/js/app.js:4105
+msgid "Preview"
+msgstr "پیش‌نمایش"
+
+#: assets/js/app.js:4106
+msgid "Copy URL"
+msgstr "کپی URL"
+
+#: assets/js/app.js:4107
+#: assets/js/app.js:29390
+msgid "URL copied"
+msgstr "URL کپی شد"
+
+#: assets/js/app.js:4108
+#: assets/js/app.js:5140
+#: assets/js/app.js:8062
+#: assets/js/app.js:12122
+#: assets/js/app.js:12437
+#: assets/js/app.js:29392
+#: assets/js/app.js:32394
+msgid "Could not copy"
+msgstr "کپی نشد"
+
+#: assets/js/app.js:4110
+#: assets/js/app.js:14206
+msgid "Open ↗"
+msgstr "باز کردن ↗"
+
+#: assets/js/app.js:4111
+msgid "Edit image"
+msgstr "ویرایش تصویر"
+
+#: assets/js/app.js:4133
+msgid "Move to folder…"
+msgstr "انتقال به پوشه…"
+
+#: assets/js/app.js:4133
+msgid "Move to folder"
+msgstr "انتقال به پوشه"
+
+#: assets/js/app.js:4136
+#: assets/js/app.js:4180
+msgid "Move"
+msgstr "جابه‌جایی"
+
+#: assets/js/app.js:4165
+msgid "Moving…"
+msgstr "در حال حرکت…"
+
+#: assets/js/app.js:4298
+msgid "Unblocked"
+msgstr "رفع انسداد"
+
+#: assets/js/app.js:4330
+#, js-format
+msgid "Delete %d comment permanently?"
+msgid_plural "Delete %d comments permanently?"
+msgstr[0] "نظر %d برای همیشه حذف شود؟"
+msgstr[1] "نظرات %d برای همیشه حذف شود؟"
+
+#: assets/js/app.js:4352
+msgid "Comments are disabled on this site."
+msgstr "نظرات در این سایت غیرفعال است."
+
+#: assets/js/app.js:4365
+msgid "Loading comments…"
+msgstr "در حال بارگیری نظرات…"
+
+#: assets/js/app.js:4429
+#: assets/js/app.js:27883
+msgid "Open in the editor"
+msgstr "در ویرایشگر باز کنید"
+
+#: assets/js/app.js:4429
+msgid "View on the site (lands on this comment)"
+msgstr "مشاهده در سایت (در این نظر قرار دارد)"
+
+#: assets/js/app.js:4450
+msgid "Author name"
+msgstr "نام نویسنده"
+
+#: assets/js/app.js:4451
+msgid "Author email"
+msgstr "ایمیل نویسنده"
+
+#: assets/js/app.js:4455
+#: assets/js/app.js:10158
+#: assets/js/app.js:27924
+#: assets/js/app.js:28527
+#: assets/js/app.js:29437
+#: assets/js/app.js:30030
+msgid "Save"
+msgstr "ذخیره"
+
+#: assets/js/app.js:4500
+msgid "Open post in editor"
+msgstr "باز کردن پست در ویرایشگر"
+
+#: assets/js/app.js:4501
+msgid "View post"
+msgstr "نمایش نوشته"
+
+#: assets/js/app.js:4504
+msgid "Block commenter"
+msgstr "مسدود کردن نظر دهنده"
+
+#: assets/js/app.js:4516
+msgid "Delete this comment permanently?"
+msgstr "این نظر برای همیشه حذف شود؟"
+
+#: assets/js/app.js:4516
+msgid "Delete comment"
+msgstr "حذف نظر"
+
+#: assets/js/app.js:4535
+msgid "A comment needs some text"
+msgstr "نظر نیاز به متن دارد"
+
+#: assets/js/app.js:4548
+msgid "Comment updated"
+msgstr "نظر به روز شد"
+
+#: assets/js/app.js:4637
+msgid "Write a reply first"
+msgstr "ابتدا یک پاسخ بنویسید"
+
+#: assets/js/app.js:4852
+msgid "N/A"
+msgstr "N/A"
+
+#: assets/js/app.js:4854
+msgid "Other"
+msgstr "دیگر"
+
+#: assets/js/app.js:4889
+#: assets/js/app.js:5024
+#: assets/js/app.js:5968
+#: assets/js/app.js:6290
+#: assets/js/app.js:7205
+#: assets/js/app.js:27975
+#: assets/js/app.js:28359
+msgid "Customer"
+msgstr "مشتری"
+
+#: assets/js/app.js:4897
+#: assets/js/app.js:28270
+msgid "Phone"
+msgstr "تلفن"
+
+#: assets/js/app.js:4898
+msgid "Billing address"
+msgstr "آدرس صورتحساب"
+
+#: assets/js/app.js:4899
+#: assets/js/app.js:4920
+msgid "Address line 1"
+msgstr "آدرس خط 1"
+
+#: assets/js/app.js:4900
+#: assets/js/app.js:4921
+msgid "Address line 2"
+msgstr "آدرس خط 2"
+
+#: assets/js/app.js:4903
+#: assets/js/app.js:4924
+msgid "City"
+msgstr "شهر"
+
+#: assets/js/app.js:4904
+#: assets/js/app.js:4925
+msgid "State"
+msgstr "ایالت"
+
+#: assets/js/app.js:4905
+#: assets/js/app.js:4926
+msgid "Postcode"
+msgstr "کد پستی"
+
+#: assets/js/app.js:4907
+#: assets/js/app.js:4928
+msgid "Country"
+msgstr "کشور"
+
+#: assets/js/app.js:4910
+#: assets/js/app.js:7487
+#: assets/js/app.js:7616
+#: assets/js/app.js:7782
+#: assets/js/app.js:12559
+#: assets/js/app.js:12603
+#: assets/js/app.js:27977
+#: assets/js/app.js:28070
+#: assets/js/app.js:28085
+#: assets/js/app.js:28268
+#: assets/js/app.js:28321
+msgid "Name"
+msgstr "نام"
+
+#: assets/js/app.js:4912
+#: assets/js/app.js:27984
+#: assets/js/app.js:28266
+msgid "Billing"
+msgstr "صورتحساب"
+
+#: assets/js/app.js:4916
+msgid "Shipping & note"
+msgstr "حمل و نقل و توجه داشته باشید"
+
+#: assets/js/app.js:4919
+msgid "Ship to"
+msgstr "ارسال به"
+
+#: assets/js/app.js:4929
+msgid "Customer note"
+msgstr "یادداشت مشتری"
+
+#: assets/js/app.js:4929
+msgid "Note from the customer…"
+msgstr "یادداشت مشتری…"
+
+#: assets/js/app.js:4932
+#: assets/js/app.js:4955
+msgid "Shipping"
+msgstr "حمل و نقل"
+
+#: assets/js/app.js:4933
+msgid "Note"
+msgstr "توجه داشته باشید"
+
+#: assets/js/app.js:4937
+msgid "Payment link"
+msgstr "لینک پرداخت"
+
+#: assets/js/app.js:4953
+msgid "Discount"
+msgstr "تخفیف"
+
+#: assets/js/app.js:4957
+msgid "Tax"
+msgstr "مالیات"
+
+#: assets/js/app.js:4967
+msgid "Delete this refund record"
+msgstr "این سابقه بازپرداخت را حذف کنید"
+
+#: assets/js/app.js:4970
+#: assets/js/app.js:5968
+#: assets/js/app.js:6290
+msgid "Total"
+msgstr "مجموع"
+
+#: assets/js/app.js:4981
+msgid ""
+"Saves status, payment details, customer details, shipping and the customer "
+"note."
+msgstr ""
+"وضعیت، جزئیات پرداخت، جزئیات مشتری، حمل و نقل و یادداشت مشتری را ذخیره می "
+"کند."
+
+#: assets/js/app.js:4984
+#: assets/js/app.js:27989
+msgid "Payment"
+msgstr "پرداخت"
+
+#: assets/js/app.js:4985
+msgid "Loading payment methods…"
+msgstr "در حال بارگیری روش‌های پرداخت…"
+
+#: assets/js/app.js:4988
+msgid "Payment method"
+msgstr "روش پرداخت"
+
+#: assets/js/app.js:4992
+msgid "Transaction ID"
+msgstr "شناسه تراکنش"
+
+#: assets/js/app.js:4993
+msgid "Check number, reference…"
+msgstr "شماره چک، مرجع…"
+
+#: assets/js/app.js:4997
+msgid "Method name"
+msgstr "نام روش"
+
+#: assets/js/app.js:4998
+msgid "How this method reads on the order"
+msgstr "نحوه خواندن این روش بر اساس سفارش"
+
+#: assets/js/app.js:5002
+#: assets/js/app.js:5261
+msgid "Record payment"
+msgstr "ثبت پرداخت"
+
+#: assets/js/app.js:5003
+msgid ""
+"Marks the order paid now with the method and transaction ID above. For a "
+"check that arrived in the mail, pick the check method, note the check "
+"number, and record."
+msgstr ""
+"سفارش پرداخت شده را با روش و شناسه تراکنش بالا علامت گذاری می کند. برای چکی "
+"که از طریق پست رسیده است، روش چک را انتخاب کنید، شماره چک را یادداشت کنید و "
+"ثبت کنید."
+
+#: assets/js/app.js:5007
+msgid "WooCommerce email"
+msgstr "ایمیل WooCommerce"
+
+#: assets/js/app.js:5008
+msgid "Loading email types…"
+msgstr "در حال بارگیری انواع ایمیل…"
+
+#: assets/js/app.js:5013
+msgid ""
+"Resends a transactional email through WooCommerce (invoice, processing, "
+"completed, …)."
+msgstr ""
+"یک ایمیل تراکنشی را از طریق WooCommerce مجدد ارسال می کند (فاکتور، پردازش، "
+"تکمیل، ...)."
+
+#: assets/js/app.js:5016
+msgid "Order notes"
+msgstr "یادداشت ها را سفارش دهید"
+
+#: assets/js/app.js:5017
+msgid "Loading notes…"
+msgstr "در حال بارگیری یادداشت ها…"
+
+#: assets/js/app.js:5027
+msgid "No notes yet."
+msgstr "هنوز یادداشتی وجود ندارد."
+
+#: assets/js/app.js:5031
+msgid "Add a note"
+msgstr "یک یادداشت اضافه کنید"
+
+#: assets/js/app.js:5032
+msgid "Internal note for staff…"
+msgstr "یادداشت داخلی برای کارکنان …"
+
+#: assets/js/app.js:5036
+msgid "Visible to the customer"
+msgstr "برای مشتری قابل مشاهده است"
+
+#: assets/js/app.js:5038
+msgid "Add note"
+msgstr "اضافه کردن یادداشت"
+
+#: assets/js/app.js:5044
+#: assets/js/app.js:5055
+#: assets/js/app.js:11309
+#: assets/js/app.js:14618
+msgid "Checking…"
+msgstr "در حال بررسی…"
+
+#: assets/js/app.js:5045
+msgid "No related subscriptions on this order."
+msgstr "هیچ اشتراک مرتبطی در این سفارش وجود ندارد."
+
+#: assets/js/app.js:5054
+msgid "More from this customer"
+msgstr "بیشتر از این مشتری"
+
+#: assets/js/app.js:5056
+msgid "No other orders from this customer."
+msgstr "هیچ سفارش دیگری از این مشتری وجود ندارد."
+
+#: assets/js/app.js:5072
+msgid "Generated by PDF Invoices & Packing slips"
+msgstr "تولید شده توسط فاکتورهای PDF و برگه های بسته بندی"
+
+#: assets/js/app.js:5093
+#: assets/js/app.js:5693
+msgid "Loading order…"
+msgstr "در حال بارگیری سفارش…"
+
+#: assets/js/app.js:5138
+msgid "No payment URL on this order"
+msgstr "بدون پرداخت URL در این سفارش"
+
+#: assets/js/app.js:5139
+msgid "Payment URL copied"
+msgstr "پرداخت URL کپی شد"
+
+#: assets/js/app.js:5247
+msgid "Recording…"
+msgstr "در حال ضبط…"
+
+#: assets/js/app.js:5253
+msgid "Payment recorded"
+msgstr "پرداخت ثبت شد"
+
+#: assets/js/app.js:5336
+msgid "Order updated"
+msgstr "سفارش به روز شد"
+
+#: assets/js/app.js:5415
+#: assets/js/app.js:5734
+#: assets/js/app.js:5746
+msgid "Refund"
+msgstr "بازپرداخت"
+
+#: assets/js/app.js:5418
+msgid "Refunding…"
+msgstr "در حال بازپرداخت…"
+
+#: assets/js/app.js:5448
+#: assets/js/app.js:5777
+msgid "Issue refund"
+msgstr "صدور بازپرداخت"
+
+#: assets/js/app.js:5456
+msgid "Delete this refund record?"
+msgstr "این سابقه بازپرداخت حذف شود؟"
+
+#: assets/js/app.js:5456
+msgid ""
+"Its amount is restored to the order totals. Money already sent back through "
+"the gateway is not pulled back."
+msgstr ""
+"مقدار آن به مجموع سفارش بازگردانده می شود. پولی که قبلاً از طریق دروازه "
+"بازگردانده شده است، پس گرفته نمی شود."
+
+#: assets/js/app.js:5456
+msgid "Delete refund"
+msgstr "حذف بازپرداخت"
+
+#: assets/js/app.js:5466
+msgid "Refund deleted"
+msgstr "بازپرداخت حذف شد"
+
+#: assets/js/app.js:5490
+#: assets/js/app.js:28405
+#: assets/js/app.js:28621
+msgid "Send email"
+msgstr "ارسال ایمیل"
+
+#: assets/js/app.js:5508
+msgid "Write a note first"
+msgstr "ابتدا یک یادداشت بنویسید"
+
+#: assets/js/app.js:5672
+msgid "You don't have access to orders on this site."
+msgstr "شما به سفارشات در این سایت دسترسی ندارید."
+
+#: assets/js/app.js:5735
+msgid "Loading refund details…"
+msgstr "در حال بارگیری جزئیات بازپرداخت…"
+
+#: assets/js/app.js:5755
+msgid "Pick item quantities to refund, or enter an amount directly."
+msgstr "مقادیر مورد را برای بازپرداخت انتخاب کنید، یا مبلغی را مستقیما وارد کنید."
+
+#: assets/js/app.js:5763
+msgid "Reason"
+msgstr "دلیل"
+
+#: assets/js/app.js:5764
+msgid "Optional note on the refund"
+msgstr "یادداشت اختیاری در مورد بازپرداخت"
+
+#: assets/js/app.js:5769
+msgid "Restock refunded items"
+msgstr "کالاهای بازپرداخت شده را دوباره ذخیره کنید"
+
+#: assets/js/app.js:5812
+#: assets/js/app.js:30414
+msgid "Analytics"
+msgstr "تجزیه و تحلیل"
+
+#: assets/js/app.js:5850
+msgid "WooCommerce Analytics"
+msgstr "تجزیه و تحلیل WooCommerce"
+
+#: assets/js/app.js:5862
+msgid "Revenue"
+msgstr "درآمد"
+
+#: assets/js/app.js:5864
+msgid "Loading analytics…"
+msgstr "در حال بارگیری تجزیه و تحلیل…"
+
+#: assets/js/app.js:5871
+msgid "No sales in this range."
+msgstr "فروش در این محدوده وجود ندارد."
+
+#: assets/js/app.js:5876
+msgid "Top products"
+msgstr "محصولات برتر"
+
+#: assets/js/app.js:5876
+msgid "Sold"
+msgstr "فروخته شد"
+
+#: assets/js/app.js:5876
+msgid "Net"
+msgstr "خالص"
+
+#: assets/js/app.js:5878
+#: assets/js/app.js:9395
+#: assets/js/app.js:9763
+#: assets/js/app.js:12538
+#: assets/js/app.js:13069
+#: assets/js/app.js:14608
+#: assets/js/app.js:19456
+#: assets/js/app.js:20149
+#: assets/js/app.js:27375
+#: assets/js/app.js:28012
+#: assets/js/app.js:28510
+#: assets/js/app.js:28549
+#: assets/js/app.js:30576
+#: assets/js/app.js:30826
+msgid "Loading…"
+msgstr "در حال بارگذاری…"
+
+#: assets/js/app.js:5886
+msgid "No product sales in this range."
+msgstr "هیچ فروش محصولی در این محدوده وجود ندارد."
+
+#: assets/js/app.js:5924
+#: assets/js/app.js:28277
+msgid "Loading orders…"
+msgstr "در حال بارگیری سفارشات…"
+
+#: assets/js/app.js:5963
+msgid "Search orders (ID, name, email…)"
+msgstr "سفارشات جستجو (شناسه، نام، ایمیل…)"
+
+#: assets/js/app.js:5968
+#: assets/js/app.js:12603
+#: assets/js/app.js:27995
+msgid "Items"
+msgstr "موارد"
+
+#: assets/js/app.js:5980
+#: assets/js/app.js:6081
+msgid "Quick view"
+msgstr "نمای سریع"
+
+#: assets/js/app.js:6248
+#: assets/js/app.js:28292
+msgid "Loading subscriptions…"
+msgstr "در حال بارگیری اشتراک‌ها…"
+
+#: assets/js/app.js:6285
+msgid "Search subscriptions (ID, name, email…)"
+msgstr "جستجوی اشتراک ها (شناسه، نام، ایمیل…)"
+
+#: assets/js/app.js:6290
+msgid "Subscription"
+msgstr "اشتراک"
+
+#: assets/js/app.js:6290
+#: assets/js/app.js:27985
+msgid "Next payment"
+msgstr "پرداخت بعدی"
+
+#: assets/js/app.js:6580
+msgid "Loading products…"
+msgstr "در حال بارگیری محصولات…"
+
+#: assets/js/app.js:6636
+msgid "Search products (name, SKU, ID…)"
+msgstr "جستجوی محصولات (نام، SKU، شناسه…)"
+
+#: assets/js/app.js:6643
+#: assets/js/app.js:28378
+msgid "Product"
+msgstr "محصول"
+
+#: assets/js/app.js:6643
+#: assets/js/app.js:28113
+msgid "Stock"
+msgstr "سهام"
+
+#: assets/js/app.js:6643
+#: assets/js/app.js:28112
+msgid "Price"
+msgstr "قیمت"
+
+#: assets/js/app.js:6749
+#: assets/js/app.js:6764
+msgid "Set stock…"
+msgstr "تنظیم سهام…"
+
+#: assets/js/app.js:6749
+msgid "Set stock"
+msgstr "سهام را تنظیم کنید"
+
+#: assets/js/app.js:6765
+msgid "In stock"
+msgstr "موجود است"
+
+#: assets/js/app.js:6766
+msgid "Out of stock"
+msgstr "موجود نیست"
+
+#: assets/js/app.js:6767
+msgid "On backorder"
+msgstr "در صورت سفارش مجدد"
+
+#: assets/js/app.js:6776
+msgid "Pick a status or stock change"
+msgstr "وضعیت یا تغییر سهام را انتخاب کنید"
+
+#: assets/js/app.js:6789
+#, js-format
+msgid "Updated %d product"
+msgid_plural "Updated %d products"
+msgstr[0] "محصول %d به روز شد"
+msgstr[1] "محصولات %d به روز شده است"
+
+#: assets/js/app.js:6843
+msgid "Open product"
+msgstr "باز کردن محصول"
+
+#: assets/js/app.js:6844
+msgid "View on site ↗"
+msgstr "مشاهده در سایت ↗"
+
+#: assets/js/app.js:6972
+msgid "Open WooCommerce settings ↗"
+msgstr "تنظیمات WooCommerce ↗ را باز کنید"
+
+#: assets/js/app.js:6986
+msgid "Loading coupons…"
+msgstr "در حال بارگیری کوپن ها…"
+
+#: assets/js/app.js:7017
+msgid "Search coupons (code, ID…)"
+msgstr "کوپن های جستجو (کد، شناسه…)"
+
+#: assets/js/app.js:7022
+#: assets/js/app.js:28165
+#: assets/js/app.js:28183
+msgid "Code"
+msgstr "کد"
+
+#: assets/js/app.js:7022
+#: assets/js/app.js:28172
+#: assets/js/app.js:28184
+msgid "Amount"
+msgstr "مقدار"
+
+#: assets/js/app.js:7022
+#: assets/js/app.js:28211
+msgid "Usage"
+msgstr "استفاده"
+
+#: assets/js/app.js:7022
+#: assets/js/app.js:28198
+#: assets/js/app.js:28212
+msgid "Expires"
+msgstr "منقضی می شود"
+
+#: assets/js/app.js:7194
+msgid "Loading customers…"
+msgstr "در حال بارگیری مشتریان…"
+
+#: assets/js/app.js:7200
+msgid "Search customers (name, email, ID…)"
+msgstr "جستجوی مشتریان (نام، ایمیل، شناسه…)"
+
+#: assets/js/app.js:7205
+#: assets/js/app.js:7784
+#: assets/js/app.js:28260
+msgid "Registered"
+msgstr "نام‌نویسی شده"
+
+#: assets/js/app.js:7267
+msgid "Open customer"
+msgstr "مشتری باز"
+
+#: assets/js/app.js:7280
+msgid "Edit user in wp-admin ↗"
+msgstr "ویرایش کاربر در wp-admin ↗"
+
+#: assets/js/app.js:7457
+msgid "You need permission to manage terms."
+msgstr "برای مدیریت شرایط به مجوز نیاز دارید."
+
+#: assets/js/app.js:7463
+msgid "Loading terms…"
+msgstr "در حال بارگیری شرایط…"
+
+#: assets/js/app.js:7469
+msgid "No manageable taxonomies on this site."
+msgstr "هیچ طبقه بندی قابل مدیریتی در این سایت وجود ندارد."
+
+#: assets/js/app.js:7487
+#: assets/js/app.js:7617
+#: assets/js/app.js:12603
+#: assets/js/app.js:28798
+#: assets/js/app.js:28870
+msgid "Slug"
+msgstr "نامک"
+
+#: assets/js/app.js:7494
+msgid "View these posts"
+msgstr "این پست ها را ببینید"
+
+#: assets/js/app.js:7496
+msgid "Term actions"
+msgstr "اقدامات مدت"
+
+#: assets/js/app.js:7545
+msgid "View posts"
+msgstr "مشاهده پست ها"
+
+#: assets/js/app.js:7546
+msgid "Open archive ↗"
+msgstr "باز کردن آرشیو ↗"
+
+#: assets/js/app.js:7547
+msgid "Merge into…"
+msgstr "ادغام در…"
+
+#: assets/js/app.js:7606
+#: assets/js/app.js:19496
+msgid "Parent"
+msgstr "مادر"
+
+#: assets/js/app.js:7608
+#: assets/js/app.js:7633
+msgid "None (top level)"
+msgstr "هیچ (سطح بالا)"
+
+#: assets/js/app.js:7617
+msgid "auto from name"
+msgstr "خودکار از نام"
+
+#: assets/js/app.js:7620
+#: assets/js/app.js:27919
+#: assets/js/app.js:28180
+msgid "Description"
+msgstr "توضیحات"
+
+#: assets/js/app.js:7703
+#: assets/js/app.js:7713
+#: assets/js/app.js:7753
+#: assets/js/app.js:7767
+msgid "Merge"
+msgstr "ادغام"
+
+#: assets/js/app.js:7705
+msgid "Merge into"
+msgstr "ادغام در"
+
+#: assets/js/app.js:7734
+#: assets/js/app.js:13931
+msgid "No matches"
+msgstr "موردی یافت نشد"
+
+#: assets/js/app.js:7751
+msgid "There is no undo for this."
+msgstr "هیچ لغو برای این وجود ندارد."
+
+#: assets/js/app.js:7756
+msgid "Merging…"
+msgstr "ادغام…"
+
+#: assets/js/app.js:7856
+msgid "Pick users other than yourself to change roles in bulk."
+msgstr "برای تغییر نقش ها به صورت انبوه، کاربرانی غیر از خودتان انتخاب کنید."
+
+#: assets/js/app.js:7882
+#: assets/js/app.js:7925
+#: assets/js/app.js:28666
+msgid "Search users…"
+msgstr "جستجوی کاربران…"
+
+#: assets/js/app.js:7890
+#: assets/js/app.js:28664
+msgid "Loading users…"
+msgstr "در حال بارگیری کاربران…"
+
+#: assets/js/app.js:7922
+#: assets/js/app.js:8005
+msgid "All roles"
+msgstr "همه نقش ها"
+
+#: assets/js/app.js:7943
+msgid "Role is not sortable via the users API"
+msgstr "نقش از طریق API کاربران قابل مرتب‌سازی نیست"
+
+#: assets/js/app.js:7957
+msgid "User actions"
+msgstr "اقدامات کاربر"
+
+#: assets/js/app.js:8057
+msgid "View user"
+msgstr "مشاهده کاربر"
+
+#: assets/js/app.js:8059
+msgid "Copy email"
+msgstr "ایمیل را کپی کنید"
+
+#: assets/js/app.js:8061
+msgid "Email copied"
+msgstr "ایمیل کپی شد"
+
+#: assets/js/app.js:8068
+msgid "Send password reset"
+msgstr "ارسال بازنشانی رمز عبور"
+
+#: assets/js/app.js:8072
+msgid "Send email…"
+msgstr "ارسال ایمیل…"
+
+#: assets/js/app.js:8080
+msgid "Switch to this user"
+msgstr "به این کاربر تغییر دهید"
+
+#: assets/js/app.js:8088
+msgid "Copy one-time login link"
+msgstr "لینک ورود یک بار مصرف را کپی کنید"
+
+#: assets/js/app.js:8096
+msgid "Edit in wp-admin ↗"
+msgstr "ویرایش در wp-admin ↗"
+
+#: assets/js/app.js:8102
+msgid "Delete user…"
+msgstr "حذف کاربر…"
+
+#: assets/js/app.js:8140
+msgid "Change role to"
+msgstr "تغییر نقش به"
+
+#: assets/js/app.js:8142
+#: assets/js/app.js:8152
+msgid "Choose a role…"
+msgstr "انتخاب نقش…"
+
+#: assets/js/app.js:8157
+msgid "Choose a role first"
+msgstr "ابتدا یک نقش را انتخاب کنید"
+
+#: assets/js/app.js:8231
+msgid "One-time login link (copy it now):"
+msgstr "لینک ورود یک بار مصرف (اکنون آن را کپی کنید):"
+
+#: assets/js/app.js:8423
+msgid "Copy command"
+msgstr "دستور کپی"
+
+#: assets/js/app.js:8583
+msgid "Open"
+msgstr "بازکردن"
+
+#: assets/js/app.js:8616
+#: assets/js/app.js:29840
+msgid "Fill in all fields first"
+msgstr "ابتدا تمام فیلدها را پر کنید"
+
+#: assets/js/app.js:8642
+msgid "Copy failed — select the text instead"
+msgstr "کپی انجام نشد - به جای آن متن را انتخاب کنید"
+
+#: assets/js/app.js:8968
+msgid "No answers on this entry."
+msgstr "هیچ پاسخی در این ورودی وجود ندارد."
+
+#: assets/js/app.js:9121
+msgid "Event"
+msgstr "رویداد"
+
+#: assets/js/app.js:9144
+msgid "No details for this event."
+msgstr "جزئیاتی برای این رویداد وجود ندارد."
+
+#: assets/js/app.js:9246
+msgid "Open setup ↗"
+msgstr "راه اندازی ↗ را باز کنید"
+
+#: assets/js/app.js:9247
+msgid ""
+"This plugin's setup runs on its own screen; this view comes alive once it's "
+"done."
+msgstr ""
+"راه اندازی این افزونه بر روی صفحه نمایش خود اجرا می شود. این دیدگاه پس از "
+"انجام آن زنده می شود."
+
+#: assets/js/app.js:9248
+#: assets/js/app.js:9276
+msgid "Set up now"
+msgstr "اکنون تنظیم کنید"
+
+#: assets/js/app.js:9260
+msgid "Setting up…"
+msgstr "راه اندازی…"
+
+#: assets/js/app.js:9481
+msgid "Nothing here."
+msgstr "چیزی اینجا نیست."
+
+#: assets/js/app.js:9797
+#: assets/js/app.js:19364
+msgid "edit in wp-admin ↗"
+msgstr "ویرایش در wp-admin ↗"
+
+#: assets/js/app.js:9802
+msgid "Nothing to configure here."
+msgstr "اینجا چیزی برای پیکربندی وجود ندارد."
+
+#: assets/js/app.js:9850
+msgid "Nothing changed yet"
+msgstr "هنوز چیزی تغییر نکرده است"
+
+#: assets/js/app.js:9857
+#: assets/js/app.js:14937
+msgid "Settings saved"
+msgstr "تنظیمات ذخیره شد"
+
+#: assets/js/app.js:10008
+#: assets/js/app.js:10112
+msgid "Loading menu…"
+msgstr "در حال بارگیری منو…"
+
+#: assets/js/app.js:10018
+msgid "Name for the new menu:"
+msgstr "نام منوی جدید:"
+
+#: assets/js/app.js:10022
+msgid "Menu created"
+msgstr "فهرست ساخته شد"
+
+#: assets/js/app.js:10115
+msgid "Loading menus…"
+msgstr "در حال بارگیری منوها…"
+
+#: assets/js/app.js:10139
+msgid "No menus yet. Create one to build your site navigation."
+msgstr "هنوز منویی وجود ندارد. یکی برای ایجاد ناوبری سایت خود ایجاد کنید."
+
+#: assets/js/app.js:10142
+msgid "Theme locations"
+msgstr "مکان های تم"
+
+#: assets/js/app.js:10147
+#: assets/js/app.js:10206
+#: assets/js/app.js:19942
+msgid "— none —"
+msgstr "- هیچ -"
+
+#: assets/js/app.js:10156
+#: assets/js/app.js:16069
+msgid "Label"
+msgstr "برچسب بزنید"
+
+#: assets/js/app.js:10163
+#: assets/js/app.js:10507
+msgid "Drag to reorder"
+msgstr "برای سفارش مجدد بکشید"
+
+#: assets/js/app.js:10172
+msgid "Outdent"
+msgstr "بیرونی"
+
+#: assets/js/app.js:10173
+msgid "Make child of the item above"
+msgstr "از مورد بالا فرزند بگیرید"
+
+#: assets/js/app.js:10174
+msgid "Remove from menu"
+msgstr "حذف از منو"
+
+#: assets/js/app.js:10176
+msgid "This menu is empty — add pages or links below."
+msgstr "این منو خالی است - صفحات یا پیوندهای زیر را اضافه کنید."
+
+#: assets/js/app.js:10180
+msgid "Add to menu"
+msgstr "به منو اضافه کنید"
+
+#: assets/js/app.js:10189
+msgid "Link label"
+msgstr "برچسب پیوند"
+
+#: assets/js/app.js:10220
+msgid "Location updated"
+msgstr "مکان به روز شد"
+
+#: assets/js/app.js:10326
+msgid "Removed from menu"
+msgstr "از منو حذف شد"
+
+#: assets/js/app.js:10348
+msgid "Edit label…"
+msgstr "ویرایش برچسب…"
+
+#: assets/js/app.js:10369
+msgid "Item updated"
+msgstr "مورد به روز شد"
+
+#: assets/js/app.js:10387
+msgid "Added to menu"
+msgstr "به منو اضافه شد"
+
+#: assets/js/app.js:10401
+msgid "Pick a page or post first"
+msgstr "ابتدا یک صفحه یا پست را انتخاب کنید"
+
+#: assets/js/app.js:10408
+msgid "A label and URL are both needed"
+msgstr "یک برچسب و URL هر دو مورد نیاز هستند"
+
+#: assets/js/app.js:10413
+msgid "New name for this menu:"
+msgstr "نام جدید این منو:"
+
+#: assets/js/app.js:10417
+msgid "Menu renamed"
+msgstr "منو تغییر نام داد"
+
+#: assets/js/app.js:10425
+msgid "Every item in it is deleted too. There is no undo for this."
+msgstr "تمام موارد موجود در آن نیز حذف می شود. هیچ لغو برای این وجود ندارد."
+
+#: assets/js/app.js:10425
+msgid "Delete menu"
+msgstr "حذف منو"
+
+#: assets/js/app.js:10428
+msgid "Menu deleted"
+msgstr "فهرست پاک شد"
+
+#: assets/js/app.js:10443
+msgid "Content (block markup or HTML)"
+msgstr "محتوا (بلاک نشانه گذاری یا HTML)"
+
+#: assets/js/app.js:10488
+msgid "Loading widgets…"
+msgstr "در حال بارگیری ویجت‌ها…"
+
+#: assets/js/app.js:10515
+#: assets/js/app.js:10516
+msgid "Move to…"
+msgstr "انتقال به…"
+
+#: assets/js/app.js:10519
+msgid "Edit"
+msgstr "ویرایش"
+
+#: assets/js/app.js:10520
+#: assets/js/app.js:10566
+msgid "Delete widget"
+msgstr "ویجت را حذف کنید"
+
+#: assets/js/app.js:10528
+msgid "The active theme registers no widget areas."
+msgstr "موضوع فعال هیچ ناحیه ویجتی را ثبت نمی کند."
+
+#: assets/js/app.js:10566
+msgid "Delete this widget?"
+msgstr "این ویجت حذف شود؟"
+
+#: assets/js/app.js:10566
+msgid "Its settings are lost. There is no undo for this."
+msgstr "تنظیمات آن از بین رفته است. هیچ لغو برای این وجود ندارد."
+
+#: assets/js/app.js:10570
+msgid "Widget deleted"
+msgstr "ویجت حذف شد"
+
+#: assets/js/app.js:10658
+msgid "Widget moved"
+msgstr "ویجت منتقل شد"
+
+#: assets/js/app.js:10990
+msgid ""
+"Updated, but the plugin list could not refresh yet. Reload if badges look "
+"stale."
+msgstr ""
+"به‌روزرسانی شد، اما فهرست افزونه‌ها هنوز بازخوانی نشده است. اگر نشان‌ها "
+"قدیمی به نظر می‌رسند، دوباره بارگیری کنید."
+
+#: assets/js/app.js:11002
+#: assets/js/app.js:28720
+msgid "Plugins"
+msgstr "افزونه‌ها"
+
+#: assets/js/app.js:11003
+msgid "Themes"
+msgstr "پوسته‌ها"
+
+#: assets/js/app.js:11004
+msgid "Licenses"
+msgstr "مجوزها"
+
+#: assets/js/app.js:11121
+msgid "Activate…"
+msgstr "فعال کردن…"
+
+#: assets/js/app.js:11127
+msgid "Deactivate"
+msgstr "غیرفعال‌سازی"
+
+#: assets/js/app.js:11129
+msgid "Re-verify"
+msgstr "دوباره تأیید کنید"
+
+#: assets/js/app.js:11134
+msgid "theme"
+msgstr "موضوع"
+
+#: assets/js/app.js:11139
+msgid "More actions"
+msgstr "اقدامات بیشتر"
+
+#: assets/js/app.js:11378
+msgid "License deactivated"
+msgstr "مجوز غیرفعال شد"
+
+#: assets/js/app.js:11392
+msgid ""
+"No activations left on this license. Free a seat with the vendor first — "
+"Minn never retries an activation."
+msgstr ""
+"هیچ فعال سازی در این مجوز باقی نمانده است. ابتدا یک صندلی با فروشنده رایگان "
+"کنید — Minn هرگز فعال سازی را دوباره انجام نمی دهد."
+
+#: assets/js/app.js:11415
+msgid "Turning on…"
+msgstr "در حال روشن شدن…"
+
+#: assets/js/app.js:11445
+msgid ""
+"The seat frees up for another site, and the plugin may stop receiving "
+"updates until a license is activated again."
+msgstr ""
+"صندلی برای سایت دیگری آزاد می شود و ممکن است این افزونه تا زمانی که مجوز "
+"دوباره فعال نشود، دریافت به روز رسانی را متوقف کند."
+
+#: assets/js/app.js:11445
+msgid "Deactivate license"
+msgstr "غیرفعال کردن مجوز"
+
+#: assets/js/app.js:11466
+#: assets/js/app.js:12315
+#: assets/js/app.js:12408
+#: assets/js/app.js:14384
+msgid "Activate"
+msgstr "فعال‌سازی"
+
+#: assets/js/app.js:11631
+#: assets/js/app.js:14213
+msgid "Maintenance mode"
+msgstr "حالت تعمیر و نگهداری"
+
+#: assets/js/app.js:11639
+#: assets/js/app.js:14212
+msgid "Search engine visibility"
+msgstr "نمایش به موتورهای جستجو"
+
+#: assets/js/app.js:11758
+msgid "Your site is hidden from the public"
+msgstr "سایت شما از دید عموم پنهان است"
+
+#: assets/js/app.js:11761
+msgid "Your site is password-protected"
+msgstr "سایت شما دارای رمز عبور است"
+
+#: assets/js/app.js:11766
+msgid "Part of your site is hidden"
+msgstr "بخشی از سایت شما مخفی است"
+
+#: assets/js/app.js:11769
+msgid "Search engines are discouraged"
+msgstr "موتورهای جستجو دلسرد می شوند"
+
+#: assets/js/app.js:11770
+msgid ""
+"The site is public, but \"Discourage search engines\" is on in Settings → "
+"Reading, so it asks not to be indexed."
+msgstr ""
+"سایت عمومی است، اما «Descourage search engines» در تنظیمات ← خواندن روشن "
+"است، بنابراین درخواست می‌کند ایندکس نشود."
+
+#: assets/js/app.js:11859
+msgid "Updating WordPress…"
+msgstr "در حال به‌روزرسانی WordPress…"
+
+#: assets/js/app.js:11944
+#: assets/js/app.js:12275
+msgid "Force a fresh check against WordPress.org and licensed vendors"
+msgstr "اجبار به بررسی مجدد WordPress.org و فروشندگان دارای مجوز"
+
+#: assets/js/app.js:11982
+msgid "Update"
+msgstr "به‌روزرسانی"
+
+#: assets/js/app.js:12056
+msgid ""
+"Its files are removed from the server, and a plugin may take its stored "
+"data with it. There is no trash for this. Deactivating instead keeps "
+"everything."
+msgstr ""
+"فایل‌های آن از سرور حذف می‌شوند و یک افزونه ممکن است داده‌های ذخیره‌شده خود "
+"را با خود ببرد. هیچ زباله ای برای این وجود ندارد. در عوض غیرفعال کردن همه "
+"چیز را حفظ می کند."
+
+#: assets/js/app.js:12058
+#: assets/js/app.js:12099
+msgid "Delete plugin"
+msgstr "حذف افزونه"
+
+#: assets/js/app.js:12116
+msgid "Copy plugin file"
+msgstr "کپی فایل افزونه"
+
+#: assets/js/app.js:12120
+msgid "Plugin file copied"
+msgstr "فایل افزونه کپی شد"
+
+#: assets/js/app.js:12299
+msgid "Active"
+msgstr "فعال"
+
+#: assets/js/app.js:12352
+msgid "Its files are removed from the server. There is no trash for this."
+msgstr "فایل های آن از سرور حذف می شود. هیچ زباله ای برای این وجود ندارد."
+
+#: assets/js/app.js:12354
+#: assets/js/app.js:12414
+msgid "Delete theme"
+msgstr "حذف تم"
+
+#: assets/js/app.js:12431
+msgid "Copy stylesheet"
+msgstr "شیوه نامه را کپی کنید"
+
+#: assets/js/app.js:12435
+msgid "Stylesheet copied"
+msgstr "صفحه سبک کپی شد"
+
+#: assets/js/app.js:12468
+msgid "Updates are already running — watch the cards for progress."
+msgstr "به‌روزرسانی‌ها در حال اجرا هستند - برای پیشرفت کارت‌ها را تماشا کنید."
+
+#: assets/js/app.js:12470
+msgid "Everything is up to date"
+msgstr "همه چیز به روز است"
+
+#: assets/js/app.js:12559
+#: assets/js/app.js:27880
+msgid "Attached to"
+msgstr "پیوست به"
+
+#: assets/js/app.js:12559
+#: assets/js/app.js:12603
+msgid "Managed by"
+msgstr "مدیریت شده توسط"
+
+#: assets/js/app.js:12569
+msgid "Manage terms"
+msgstr "مدیریت شرایط"
+
+#: assets/js/app.js:12710
+msgid "Reading the system…"
+msgstr "خواندن سیستم…"
+
+#: assets/js/app.js:12722
+msgid "View every scheduled event"
+msgstr "مشاهده هر رویداد برنامه ریزی شده"
+
+#: assets/js/app.js:12733
+msgid "Largest tables"
+msgstr "بزرگ ترین میزها"
+
+#: assets/js/app.js:12743
+msgid "View every autoloaded option"
+msgstr "مشاهده هر گزینه خودکار بارگذاری شده"
+
+#: assets/js/app.js:12743
+msgid "view all ›"
+msgstr "مشاهده همه ›"
+
+#: assets/js/app.js:12759
+msgid "Debug tools"
+msgstr "ابزارهای اشکال زدایی"
+
+#: assets/js/app.js:12760
+msgid "writes wp-config.php"
+msgstr "wp-config.php می نویسد"
+
+#: assets/js/app.js:12771
+msgid "defined elsewhere"
+msgstr "در جای دیگری تعریف شده است"
+
+#: assets/js/app.js:12780
+msgid "View log →"
+msgstr "مشاهده گزارش →"
+
+#: assets/js/app.js:12786
+msgid "Browse →"
+msgstr "مرور →"
+
+#: assets/js/app.js:12794
+msgid "active"
+msgstr "فعال"
+
+#: assets/js/app.js:12849
+msgid "Integrations"
+msgstr "ادغام ها"
+
+#: assets/js/app.js:12906
+msgid "View the full list"
+msgstr "مشاهده لیست کامل"
+
+#: assets/js/app.js:12906
+msgid "Open in wp-admin"
+msgstr "در wp-admin باز کنید"
+
+#: assets/js/app.js:12922
+msgid "one-shot jobs, in wp-admin"
+msgstr "کارهای تک شات، در wp-admin"
+
+#: assets/js/app.js:13037
+#: assets/js/app.js:13044
+msgid "System report copied"
+msgstr "گزارش سیستم کپی شد"
+
+#: assets/js/app.js:13074
+msgid "Option"
+msgstr "گزینه"
+
+#: assets/js/app.js:13074
+msgid "Autoload"
+msgstr "بارگذاری خودکار"
+
+#: assets/js/app.js:13086
+msgid "Hook"
+msgstr "قلاب"
+
+#: assets/js/app.js:13086
+msgid "Next run"
+msgstr "اجرای بعدی"
+
+#: assets/js/app.js:13086
+msgid "Recurrence"
+msgstr "عود"
+
+#: assets/js/app.js:13138
+msgid "Log"
+msgstr "ورود به سیستم"
+
+#: assets/js/app.js:13138
+msgid "Log source"
+msgstr "منبع لاگ"
+
+#: assets/js/app.js:13143
+msgid "Copy all"
+msgstr "همه را کپی کنید"
+
+#: assets/js/app.js:13144
+msgid "Collapse repeated lines (digits ignored)"
+msgstr "کوچک کردن خطوط تکراری (اعداد نادیده گرفته می شوند)"
+
+#: assets/js/app.js:13149
+#: assets/js/app.js:13177
+msgid "Reading log…"
+msgstr "خواندن گزارش…"
+
+#: assets/js/app.js:13167
+msgid "The log is empty."
+msgstr "لاگ خالی است"
+
+#: assets/js/app.js:13218
+msgid "Log copied"
+msgstr "گزارش کپی شد"
+
+#: assets/js/app.js:13228
+msgid "Empty this log?"
+msgstr "این لاگ خالی شود؟"
+
+#: assets/js/app.js:13228
+msgid "Its entries are deleted from the server. There is no undo for this."
+msgstr "ورودی های آن از سرور حذف می شود. هیچ لغو برای این وجود ندارد."
+
+#: assets/js/app.js:13228
+msgid "Empty log"
+msgstr "لاگ خالی"
+
+#: assets/js/app.js:13232
+msgid "Log cleared"
+msgstr "گزارش پاک شد"
+
+#: assets/js/app.js:14119
+msgid "Site icon"
+msgstr "نماد سایت"
+
+#: assets/js/app.js:14124
+msgid ""
+"Shown in browser tabs, bookmarks and app icons. Square image, 512×512 or "
+"larger. Drag & drop an image here, or"
+msgstr ""
+"در برگه‌های مرورگر، نشانک‌ها و نمادهای برنامه نشان داده می‌شود. تصویر مربع، "
+"512×512 یا بزرگتر. یک تصویر را به اینجا بکشید و رها کنید، یا"
+
+#: assets/js/app.js:14126
+#: assets/js/app.js:14145
+msgid "Choose image"
+msgstr "انتخاب تصویر"
+
+#: assets/js/app.js:14138
+msgid "Site logo"
+msgstr "لوگوی سایت"
+
+#: assets/js/app.js:14143
+msgid ""
+"Shown by the theme where its design places a logo. Drag & drop an image "
+"here, or"
+msgstr ""
+"با موضوعی که طراحی آن لوگو را در آن قرار می دهد نشان داده می شود. یک تصویر "
+"را به اینجا بکشید و رها کنید، یا"
+
+#: assets/js/app.js:14168
+msgid "Timezone"
+msgstr "زمان محلی"
+
+#: assets/js/app.js:14170
+msgid "Start typing — e.g. Chicago, Berlin, UTC"
+msgstr "شروع به تایپ کنید - به عنوان مثال. شیکاگو، برلین، UTC"
+
+#: assets/js/app.js:14212
+msgid "Allow search engines to index this site."
+msgstr "موتورهای جستجو اجازه دارند محتوای این سایت را بررسی کنند."
+
+#: assets/js/app.js:14213
+msgid "Show a coming-soon page to visitors instead of the site."
+msgstr "به جای سایت، یک صفحه به زودی به بازدیدکنندگان نشان دهید."
+
+#: assets/js/app.js:14214
+msgid "Membership"
+msgstr "عضویت"
+
+#: assets/js/app.js:14214
+msgid "Anyone can register an account (with the default role above)."
+msgstr "هر کسی می تواند یک حساب (با نقش پیش فرض بالا) ثبت کند."
+
+#: assets/js/app.js:14244
+msgid "Additional CSS"
+msgstr "css اضافی"
+
+#: assets/js/app.js:14248
+msgid "Custom CSS couldn't be loaded."
+msgstr "CSS سفارشی بارگیری نشد."
+
+#: assets/js/app.js:14248
+msgid "Open the Customizer ↗"
+msgstr "Customizer ↗ را باز کنید"
+
+#: assets/js/app.js:14259
+msgid "Permalink settings couldn’t be loaded."
+msgstr "تنظیمات پیوند ثابت بارگیری نشد."
+
+#: assets/js/app.js:14259
+msgid "Open in the classic admin ↗"
+msgstr "در ادمین کلاسیک باز کنید ↗"
+
+#: assets/js/app.js:14266
+#, js-format
+msgid ""
+"Tags: %year% %monthnum% %day% %postname% %post_id% %category% %author%. "
+"With Plain permalinks, Minn itself moves from /minn-admin/ to ?minn_admin=1 "
+"and reloads after saving."
+msgstr ""
+"برچسب ها: %year% %monthnum% %day% %postname% %post_id% %category% %author%. "
+"با پیوندهای ثابت ساده، Minn خود از /minn-admin/ به ?minn_admin=1 منتقل "
+"می‌شود و پس از ذخیره مجدد بارگیری می‌شود."
+
+#: assets/js/app.js:14275
+msgid "Convert emoticons"
+msgstr "شکلک ها را تبدیل کنید"
+
+#: assets/js/app.js:14275
+msgid "Turn :-) and :-P into graphics when displayed."
+msgstr "وقتی نمایش داده شد :-) و :-P را به گرافیک تبدیل کنید."
+
+#: assets/js/app.js:14285
+#: assets/js/app.js:19472
+#: assets/js/app.js:19473
+msgid "Allow comments"
+msgstr "پذیرفتن دیدگاه"
+
+#: assets/js/app.js:14285
+msgid "Let readers respond to new posts."
+msgstr "اجازه دهید خوانندگان به پست های جدید پاسخ دهند."
+
+#: assets/js/app.js:14286
+#: assets/js/app.js:19477
+msgid "Allow pingbacks & trackbacks"
+msgstr "پینگ بک و ترک بک را مجاز کنید"
+
+#: assets/js/app.js:14286
+msgid "Accept link notifications from other blogs on new posts."
+msgstr "اعلان های پیوند را از سایر وبلاگ ها در پست های جدید بپذیرید."
+
+#: assets/js/app.js:14287
+msgid "Moderate all comments"
+msgstr "تعدیل همه نظرات"
+
+#: assets/js/app.js:14287
+msgid "Every comment must be manually approved before it appears."
+msgstr "هر نظر قبل از ظاهر شدن باید به صورت دستی تایید شود."
+
+#: assets/js/app.js:14288
+msgid "Registered users only"
+msgstr "فقط کاربران ثبت نام شده"
+
+#: assets/js/app.js:14288
+msgid "Users must be registered and logged in to comment."
+msgstr "کاربران برای نظر دادن باید ثبت نام کرده و وارد سیستم شوند."
+
+#: assets/js/app.js:14289
+msgid "Show avatars"
+msgstr "نمایش آواتارها"
+
+#: assets/js/app.js:14289
+msgid "Display profile pictures next to comments."
+msgstr "نمایش تصاویر نمایه در کنار نظرات"
+
+#: assets/js/app.js:14294
+msgid "Spam protection couldn’t be loaded."
+msgstr "محافظت از هرزنامه بارگیری نشد."
+
+#: assets/js/app.js:14294
+msgid "Open plugins ↗"
+msgstr "پلاگین ها را باز کنید ↗"
+
+#: assets/js/app.js:14302
+msgid "Change key…"
+msgstr "تغییر کلید…"
+
+#: assets/js/app.js:14303
+msgid "Full settings ↗"
+msgstr "تنظیمات کامل ↗"
+
+#: assets/js/app.js:14309
+#: assets/js/app.js:14394
+#: assets/js/app.js:14624
+#: assets/js/app.js:14634
+msgid "Save key"
+msgstr "کلید ذخیره"
+
+#: assets/js/app.js:14322
+msgid ""
+"No spam filter plugin is active. Install Akismet, Antispam Bee or CleanTalk "
+"from"
+msgstr ""
+"هیچ افزونه فیلتر هرزنامه فعال نیست. Akismet، Antispam Bee یا CleanTalk را "
+"از اینجا نصب کنید"
+
+#: assets/js/app.js:14322
+msgid "and it appears here. Core's blocklist below still works on its own."
+msgstr "و اینجا ظاهر می شود. لیست بلاک زیر Core هنوز به تنهایی کار می کند."
+
+#: assets/js/app.js:14329
+msgid "Review spam →"
+msgstr "بررسی هرزنامه →"
+
+#: assets/js/app.js:14332
+msgid ""
+"Commenting is disabled on this site, so there is no comment spam queue to "
+"review."
+msgstr ""
+"نظر دادن در این سایت غیرفعال است، بنابراین صف هرزنامه نظری برای بررسی وجود "
+"ندارد."
+
+#: assets/js/app.js:14336
+msgid "Disallowed comment keys"
+msgstr "کلیدهای نظر غیر مجاز"
+
+#: assets/js/app.js:14337
+msgid "one word, IP, email or URL fragment per line"
+msgstr "یک کلمه، IP، ایمیل یا قطعه URL در هر خط"
+
+#: assets/js/app.js:14338
+msgid ""
+"Core’s built-in filter: comments containing any of these go straight to the "
+"spam folder. One entry per line."
+msgstr ""
+"فیلتر داخلی Core: نظرات حاوی هر یک از اینها مستقیماً به پوشه هرزنامه می "
+"روند. یک ورودی در هر خط"
+
+#: assets/js/app.js:14360
+msgid "Connectors couldn’t be loaded."
+msgstr "رابط‌ها بارگیری نشدند."
+
+#: assets/js/app.js:14379
+#: assets/js/app.js:14666
+msgid "Install & activate"
+msgstr "نصب و فعال کنید"
+
+#: assets/js/app.js:14383
+msgid "The provider plugin is installed but not active."
+msgstr "افزونه ارائه دهنده نصب شده است اما فعال نیست."
+
+#: assets/js/app.js:14387
+msgid ""
+"This connector’s key isn’t writable right now: its plugin registers the "
+"setting while active."
+msgstr ""
+"کلید این کانکتور در حال حاضر قابل نوشتن نیست: افزونه آن هنگام فعال بودن "
+"تنظیمات را ثبت می کند."
+
+#: assets/js/app.js:14404
+msgid "Get an API key ↗"
+msgstr "یک کلید API دریافت کنید ↗"
+
+#: assets/js/app.js:14426
+msgid "Loading settings…"
+msgstr "در حال بارگیری تنظیمات…"
+
+#: assets/js/app.js:14582
+msgid "Could not refresh connectors — try again in a moment."
+msgstr "رابط‌ها را نمی‌توان تازه کرد - یک لحظه دیگر دوباره امتحان کنید."
+
+#: assets/js/app.js:14616
+msgid "Paste a key first"
+msgstr "ابتدا یک کلید بچسبانید"
+
+#: assets/js/app.js:14622
+msgid "The provider rejected that key."
+msgstr "ارائه دهنده آن کلید را رد کرد."
+
+#: assets/js/app.js:14629
+msgid "Key saved"
+msgstr "کلید ذخیره شد"
+
+#: assets/js/app.js:14640
+msgid "Remove the saved key?"
+msgstr "کلید ذخیره شده حذف شود؟"
+
+#: assets/js/app.js:14645
+msgid "Key removed"
+msgstr "کلید حذف شد"
+
+#: assets/js/app.js:14653
+msgid "Installing…"
+msgstr "در حال نصب…"
+
+#: assets/js/app.js:14661
+msgid "Provider plugin installed"
+msgstr "افزونه ارائه دهنده نصب شده است"
+
+#: assets/js/app.js:14679
+msgid "Provider plugin activated"
+msgstr "افزونه ارائه دهنده فعال شد"
+
+#: assets/js/app.js:14713
+#: assets/js/app.js:14757
+#: assets/js/app.js:29944
+msgid "Drop an image file"
+msgstr "یک فایل تصویری را رها کنید"
+
+#: assets/js/app.js:14721
+msgid "Icon uploaded — save to apply"
+msgstr "نماد آپلود شد - ذخیره کنید تا اعمال شود"
+
+#: assets/js/app.js:14765
+msgid "Logo uploaded — save to apply"
+msgstr "لوگو آپلود شد - ذخیره کنید تا اعمال شود"
+
+#: assets/js/app.js:14859
+msgid "Language pack installed"
+msgstr "بسته زبان نصب شده است"
+
+#: assets/js/app.js:14930
+msgid "Settings saved — reloading…"
+msgstr "تنظیمات ذخیره شد - بارگیری مجدد…"
+
+#: assets/js/app.js:15306
+#: assets/js/app.js:15578
+#: assets/js/app.js:15592
+#: assets/js/app.js:15609
+msgid "Configure block"
+msgstr "پیکربندی بلوک"
+
+#: assets/js/app.js:15491
+msgid "A columns block keeps at least one column."
+msgstr "یک بلوک ستونی حداقل یک ستون را نگه می دارد."
+
+#: assets/js/app.js:15578
+msgid "Configure shortcode block"
+msgstr "پیکربندی بلوک کد کوتاه"
+
+#: assets/js/app.js:15579
+msgid "Shortcode"
+msgstr "کد کوتاه"
+
+#: assets/js/app.js:15580
+msgid "[shortcode attr=\"value\"]"
+msgstr "[کوتاه attr=\"value\"]"
+
+#: assets/js/app.js:15592
+msgid "Configure details block"
+msgstr "پیکربندی بلوک جزئیات"
+
+#: assets/js/app.js:15595
+msgid "Details"
+msgstr "جزئیات"
+
+#: assets/js/app.js:15597
+msgid "Write the hidden content…"
+msgstr "محتوای پنهان را بنویسید…"
+
+#: assets/js/app.js:15609
+msgid "Configure buttons block"
+msgstr "پیکربندی بلوک دکمه ها"
+
+#: assets/js/app.js:15654
+msgid "Configure block · ⌥-click duplicates · ⇧⌥-click removes"
+msgstr "پیکربندی بلوک · ⌥-کلیک موارد تکراری · ⇧⌥-کلیک حذف می شود"
+
+#: assets/js/app.js:15659
+msgid "Dynamic block — rendered on the site"
+msgstr "بلوک پویا - ارائه شده در سایت"
+
+#: assets/js/app.js:16071
+msgid "Open in a new tab"
+msgstr "در یک برگه جدید باز کنید"
+
+#: assets/js/app.js:16071
+msgid "New tab"
+msgstr "برگه جدید"
+
+#: assets/js/app.js:16072
+msgid "Outline style"
+msgstr "سبک طرح کلی"
+
+#: assets/js/app.js:16072
+#: assets/js/app.js:20162
+msgid "Outline"
+msgstr "خط بیرونی"
+
+#: assets/js/app.js:16073
+msgid "Remove button"
+msgstr "دکمه حذف"
+
+#: assets/js/app.js:16480
+msgid "Download"
+msgstr "دریافت"
+
+#: assets/js/app.js:18299
+msgid "Word goal"
+msgstr "هدف کلمه"
+
+#: assets/js/app.js:18301
+msgid "e.g. 500"
+msgstr "به عنوان مثال 500"
+
+#: assets/js/app.js:18302
+msgid "Set"
+msgstr "تنظیم کنید"
+
+#: assets/js/app.js:18304
+msgid "Clear goal"
+msgstr "هدف مشخص"
+
+#: assets/js/app.js:18305
+msgid "Shown on every post. Session words start when you first edit."
+msgstr "در هر پست نشان داده شده است. کلمات جلسه از اولین ویرایش شروع می شوند."
+
+#: assets/js/app.js:18334
+msgid "Word goal cleared"
+msgstr "هدف کلمه پاک شد"
+
+#: assets/js/app.js:18851
+msgid "Find in post"
+msgstr "در پست پیدا کنید"
+
+#: assets/js/app.js:18853
+msgid "Previous match (⇧Enter)"
+msgstr "مسابقه قبلی (⇧Enter)"
+
+#: assets/js/app.js:18854
+msgid "Next match (Enter)"
+msgstr "مسابقه بعدی (Enter)"
+
+#: assets/js/app.js:18855
+msgid "Match case"
+msgstr "تطبیق دقیق"
+
+#: assets/js/app.js:18855
+msgid "Aa"
+msgstr "Aa"
+
+#: assets/js/app.js:18856
+msgid "Close (Esc)"
+msgstr "بستن (Esc)"
+
+#: assets/js/app.js:18859
+msgid "Replace with"
+msgstr "جایگزینی با"
+
+#: assets/js/app.js:18860
+#: assets/js/app.js:20147
+msgid "Replace"
+msgstr "جایگزینی"
+
+#: assets/js/app.js:18861
+msgid "Replace all matches"
+msgstr "همه مسابقات را جایگزین کنید"
+
+#: assets/js/app.js:18861
+msgid "All"
+msgstr "همه"
+
+#: assets/js/app.js:18975
+#, js-format
+msgid "Replaced %d match"
+msgid_plural "Replaced %d matches"
+msgstr[0] "مطابق %d جایگزین شد"
+msgstr[1] "کبریت %d جایگزین شد"
+
+#: assets/js/app.js:19152
+msgid "Previous month"
+msgstr "ماه قبل"
+
+#: assets/js/app.js:19153
+msgid "Next month"
+msgstr "ماه آینده"
+
+#: assets/js/app.js:19161
+msgid "Time"
+msgstr "زمان"
+
+#: assets/js/app.js:19165
+msgid "Now"
+msgstr "‫اکنون"
+
+#: assets/js/app.js:19167
+msgid "Done"
+msgstr "انجام شد"
+
+#: assets/js/app.js:19443
+msgid "Permalink"
+msgstr "پیوند ثابت"
+
+#: assets/js/app.js:19448
+msgid "Changing this breaks the current URL."
+msgstr "با تغییر این، URL فعلی شکسته می شود."
+
+#: assets/js/app.js:19450
+msgid "Format"
+msgstr "ساختار"
+
+#: assets/js/app.js:19455
+#: assets/js/app.js:28087
+#: assets/js/app.js:28814
+msgid "Categories"
+msgstr "دسته‌بندی‌ها"
+
+#: assets/js/app.js:19459
+#: assets/js/app.js:28814
+msgid "Tags"
+msgstr "برچسب‌ها"
+
+#: assets/js/app.js:19462
+msgid "Add a tag, press Enter"
+msgstr "یک برچسب اضافه کنید، Enter را فشار دهید"
+
+#: assets/js/app.js:19466
+msgid "Excerpt"
+msgstr "چکیده"
+
+#: assets/js/app.js:19467
+msgid "Optional summary for archives, feeds and shares…"
+msgstr "خلاصه اختیاری برای بایگانی‌ها، فیدها و اشتراک‌گذاری‌ها…"
+
+#: assets/js/app.js:19469
+msgid "Discussion"
+msgstr "گفت‌وگو"
+
+#: assets/js/app.js:19476
+msgid "Allow pingbacks and trackbacks"
+msgstr "پینگ بک و ترک بک را مجاز کنید"
+
+#: assets/js/app.js:19481
+msgid "Stickiness"
+msgstr "چسبندگی"
+
+#: assets/js/app.js:19484
+#: assets/js/app.js:19485
+msgid "Stick to the top of the blog"
+msgstr "به بالای وبلاگ بچسبید"
+
+#: assets/js/app.js:19502
+msgid "Template"
+msgstr "قالب"
+
+#: assets/js/app.js:19504
+#: assets/js/app.js:19818
+msgid "Default template"
+msgstr "قالب پیشفرض"
+
+#: assets/js/app.js:19616
+#: assets/js/app.js:20154
+msgid "Page attributes"
+msgstr "ویژگی های صفحه"
+
+#: assets/js/app.js:19839
+msgid "Remove tag"
+msgstr "حذف برچسب"
+
+#: assets/js/app.js:19840
+msgid "No tags yet"
+msgstr "هنوز هیچ برچسبی وجود ندارد"
+
+#: assets/js/app.js:19992
+msgid "Loading public preview…"
+msgstr "در حال بارگیری پیش‌نمایش عمومی…"
+
+#: assets/js/app.js:20002
+#: assets/js/app.js:20003
+msgid "Public preview link"
+msgstr "لینک پیش نمایش عمومی"
+
+#: assets/js/app.js:20012
+msgid "Share a link so people without accounts can preview this draft."
+msgstr ""
+"پیوندی را به اشتراک بگذارید تا افراد بدون حساب بتوانند این پیش‌نویس را "
+"پیش‌نمایش کنند."
+
+#: assets/js/app.js:20036
+msgid "Public preview on · link copied"
+msgstr "پیش نمایش عمومی در · پیوند کپی شد"
+
+#: assets/js/app.js:20038
+msgid "Public preview enabled"
+msgstr "پیش نمایش عمومی فعال شد"
+
+#: assets/js/app.js:20041
+msgid "Public preview off"
+msgstr "پیش نمایش عمومی خاموش است"
+
+#: assets/js/app.js:20059
+msgid "Public preview link copied"
+msgstr "پیوند پیش نمایش عمومی کپی شد"
+
+#: assets/js/app.js:20063
+msgid "Select the link and copy it"
+msgstr "لینک را انتخاب کرده و کپی کنید"
+
+#: assets/js/app.js:20084
+msgid "Public preview link (copy it now):"
+msgstr "پیوند پیش نمایش عمومی (اکنون آن را کپی کنید):"
+
+#: assets/js/app.js:20120
+msgid "Publish"
+msgstr "انتشار"
+
+#: assets/js/app.js:20123
+#: assets/js/app.js:29431
+#: assets/js/app.js:30023
+#: assets/js/app.js:31475
+msgid "Saved"
+msgstr "ذخیره شد."
+
+#: assets/js/app.js:13795
+#: assets/js/app.js:20124
+#: assets/js/app.js:20126
+#: assets/js/app.js:28804
+msgid "Visibility"
+msgstr "دسترسی‌پذیری"
+
+#: assets/js/app.js:20131
+msgid "Enter a password"
+msgstr "رمز عبور را وارد کنید"
+
+#: assets/js/app.js:20134
+msgid "Immediately"
+msgstr "بلافاصله"
+
+#: assets/js/app.js:20137
+msgid "Save draft"
+msgstr "ذخیرهٔ پیش‌نویس"
+
+#: assets/js/app.js:20143
+msgid "Featured image"
+msgstr "تصویر شاخص"
+
+#: assets/js/app.js:20145
+msgid "Preview featured image"
+msgstr "پیش نمایش تصویر برجسته"
+
+#: assets/js/app.js:20156
+msgid "History"
+msgstr "تاریخچه"
+
+#: assets/js/app.js:20171
+msgid "Public"
+msgstr "عمومی"
+
+#: assets/js/app.js:20172
+msgid "Password"
+msgstr "رمز عبور"
+
+#: assets/js/app.js:20291
+msgid "Draft saved"
+msgstr "پیش نویس ذخیره شد"
+
+#: assets/js/app.js:20334
+msgid "Restore backup"
+msgstr "بازیابی نسخه پشتیبان"
+
+#: assets/js/app.js:20335
+#: assets/js/app.js:20666
+msgid "Dismiss"
+msgstr "لغو"
+
+#: assets/js/app.js:20364
+msgid "Backup restored — review, then Save or Update to apply"
+msgstr ""
+"پشتیبان‌گیری بازیابی شد - مرور کنید، سپس ذخیره یا به‌روزرسانی کنید تا اعمال "
+"شود"
+
+#: assets/js/app.js:20471
+msgid "Take over"
+msgstr "بر عهده گرفتن"
+
+#: assets/js/app.js:20495
+msgid "took over editing \\u2014 this copy is read-only and won\\u2019t save."
+msgstr "ویرایش را بر عهده گرفت \\u2014 این کپی فقط خواندنی است و ذخیره نمی شود."
+
+#: assets/js/app.js:20496
+msgid "Take back"
+msgstr "پس بگیرید"
+
+#: assets/js/app.js:20562
+msgid "Loaded the latest saved version"
+msgstr "آخرین نسخه ذخیره شده بارگیری شد"
+
+#: assets/js/app.js:20577
+msgid "Load theirs"
+msgstr "آنها را بارگیری کنید"
+
+#: assets/js/app.js:20578
+msgid "Keep my copy"
+msgstr "کپی من را نگه دارید"
+
+#: assets/js/app.js:20701
+msgid "Recovered work restored — review, then save"
+msgstr "کار بازیابی شده بازیابی شد - مرور کنید، سپس ذخیره کنید"
+
+#: assets/js/app.js:20708
+msgid "Loading editor…"
+msgstr "در حال بارگیری ویرایشگر…"
+
+#: assets/js/app.js:20747
+msgid "Open in block editor ↗"
+msgstr "باز کردن در ویرایشگر بلوک ↗"
+
+#: assets/js/app.js:20750
+msgid "Formatting"
+msgstr "ساختار"
+
+#: assets/js/app.js:20751
+msgid "Bold"
+msgstr "توپُر"
+
+#: assets/js/app.js:20752
+msgid "Italic"
+msgstr "کج"
+
+#: assets/js/app.js:20753
+msgid "Strikethrough — or wrap it in ~~tildes~~"
+msgstr "Strikethrough - یا آن را در ~~tildes~~ بپیچید"
+
+#: assets/js/app.js:20753
+msgid "Strikethrough"
+msgstr "خط خوردن"
+
+#: assets/js/app.js:20754
+msgid "Inline code — or wrap it in backticks"
+msgstr "کد درون خطی - یا آن را در بکتیک بپیچید"
+
+#: assets/js/app.js:20754
+msgid "Inline code"
+msgstr "کد درون خطی"
+
+#: assets/js/app.js:20755
+msgid "Heading 2"
+msgstr "تیتر ۲"
+
+#: assets/js/app.js:20756
+msgid "Heading 3"
+msgstr "تیتر ۳"
+
+#: assets/js/app.js:20757
+msgid "Quote"
+msgstr "گفتاورد"
+
+#: assets/js/app.js:20758
+#: assets/js/app.js:24449
+msgid "Code block"
+msgstr "بلوک کد"
+
+#: assets/js/app.js:20759
+msgid "Bulleted list"
+msgstr "لیست نشانه‌دار"
+
+#: assets/js/app.js:20760
+msgid "Numbered list"
+msgstr "فهرست عددی"
+
+#: assets/js/app.js:20761
+msgid "Center — press again to clear"
+msgstr "مرکز - دوباره فشار دهید تا پاک شود"
+
+#: assets/js/app.js:20761
+msgid "Align center"
+msgstr "وسط‌چین"
+
+#: assets/js/app.js:20762
+msgid "Align right — press again to clear"
+msgstr "تراز کردن به راست - دوباره فشار دهید تا پاک شود"
+
+#: assets/js/app.js:20762
+msgid "Align right"
+msgstr "راست‌چین"
+
+#: assets/js/app.js:20763
+msgid "Link — or ⌘K"
+msgstr "پیوند — یا ⌘K"
+
+#: assets/js/app.js:20763
+#: assets/js/app.js:24585
+#: assets/js/app.js:24610
+msgid "Link"
+msgstr "پیوند"
+
+#: assets/js/app.js:20764
+msgid "Insert image"
+msgstr "گذاشتن تصویر"
+
+#: assets/js/app.js:20765
+msgid "Paragraph"
+msgstr "بند"
+
+#: assets/js/app.js:20766
+msgid "Clear formatting"
+msgstr "پاک‌سازی ساختار"
+
+#: assets/js/app.js:20767
+msgid "type / for blocks"
+msgstr "/ برای بلوک ها را تایپ کنید"
+
+#: assets/js/app.js:20769
+msgid "Post content"
+msgstr "مطالب ارسال کنید"
+
+#: assets/js/app.js:20770
+msgid "Writing stats"
+msgstr "نوشتن آمار"
+
+#: assets/js/app.js:20943
+#: assets/js/app.js:23684
+#: assets/js/app.js:24897
+msgid "Image replaced"
+msgstr "تصویر جایگزین شد"
+
+#: assets/js/app.js:21506
+msgid "You aren’t allowed to upload files"
+msgstr "شما مجاز به آپلود فایل نیستید"
+
+#: assets/js/app.js:21511
+msgid "Only images can be dropped into the editor"
+msgstr "فقط تصاویر را می توان در ویرایشگر رها کرد"
+
+#: assets/js/app.js:22449
+#: assets/js/app.js:22451
+msgid "Edit images"
+msgstr "ویرایش تصاویر"
+
+#: assets/js/app.js:22460
+msgid "Drop images to add them here"
+msgstr "تصاویر را رها کنید تا آنها را به اینجا اضافه کنید"
+
+#: assets/js/app.js:22462
+msgid "Add images…"
+msgstr "افزودن تصاویر…"
+
+#: assets/js/app.js:22476
+msgid "Click to replace this image"
+msgstr "برای جایگزینی این تصویر کلیک کنید"
+
+#: assets/js/app.js:22478
+msgid "new"
+msgstr "جدید"
+
+#: assets/js/app.js:22479
+#: assets/js/app.js:24781
+msgid "Remove image"
+msgstr "حذف تصویر"
+
+#: assets/js/app.js:22480
+#: assets/js/app.js:24780
+msgid "Duplicate image"
+msgstr "تصویر تکراری"
+
+#: assets/js/app.js:22482
+msgid "Move earlier"
+msgstr "زودتر حرکت کن"
+
+#: assets/js/app.js:22482
+msgid "Move image earlier"
+msgstr "تصویر را زودتر منتقل کنید"
+
+#: assets/js/app.js:22483
+msgid "Move later"
+msgstr "بعدا حرکت کنید"
+
+#: assets/js/app.js:22483
+msgid "Move image later"
+msgstr "تصویر را بعدا منتقل کنید"
+
+#: assets/js/app.js:22486
+msgid ""
+"No images left. Add some, or Cancel and remove the whole block from its ⚙ "
+"popover instead."
+msgstr ""
+"هیچ تصویری باقی نمانده است. مقداری اضافه کنید، یا لغو کنید و در عوض کل بلوک "
+"را از پاپاور ⚙ آن حذف کنید."
+
+#: assets/js/app.js:22502
+msgid "Only image files can be dropped here."
+msgstr "فقط فایل های تصویری را می توان در اینجا رها کرد."
+
+#: assets/js/app.js:22505
+#, js-format
+msgid "Uploading %d image…"
+msgid_plural "Uploading %d images…"
+msgstr[0] "در حال آپلود تصویر %d…"
+msgstr[1] "در حال آپلود تصاویر %d…"
+
+#: assets/js/app.js:22646
+msgid "Every image needs to be in the media library."
+msgstr "هر تصویر باید در کتابخانه رسانه باشد."
+
+#: assets/js/app.js:22648
+#: assets/js/app.js:23832
+msgid "Applying…"
+msgstr "در حال اعمال…"
+
+#: assets/js/app.js:23006
+msgid "Filter settings…"
+msgstr "تنظیمات فیلتر…"
+
+#: assets/js/app.js:23059
+#: assets/js/app.js:28028
+msgid "Close"
+msgstr "بستن"
+
+#: assets/js/app.js:23284
+#: assets/js/app.js:23372
+msgid "Edit images…"
+msgstr "ویرایش تصاویر…"
+
+#: assets/js/app.js:23295
+msgid "Images"
+msgstr "تصویرها"
+
+#: assets/js/app.js:23298
+msgid "Replace…"
+msgstr "جایگزین…"
+
+#: assets/js/app.js:23337
+#: assets/js/app.js:23342
+msgid "text"
+msgstr "متن"
+
+#: assets/js/app.js:23369
+msgid "Change URL…"
+msgstr "تغییر URL…"
+
+#: assets/js/app.js:23370
+msgid "Rebuilds the embed for the new URL."
+msgstr "جاسازی را برای URL جدید بازسازی می کند."
+
+#: assets/js/app.js:23373
+msgid "Reorder, remove or add images; captions and layout stay."
+msgstr "سفارش مجدد، حذف یا اضافه کردن تصاویر؛ زیرنویس‌ها و طرح‌بندی باقی می‌مانند."
+
+#: assets/js/app.js:23374
+msgid "Replace images…"
+msgstr "جایگزینی تصاویر…"
+
+#: assets/js/app.js:23375
+msgid "Re-picks the gallery images; per-image captions and layout tweaks reset."
+msgstr ""
+"تصاویر گالری را دوباره انتخاب می کند. زیرنویس‌ها و تنظیمات طرح‌بندی "
+"بازنشانی می‌شوند."
+
+#: assets/js/app.js:23397
+msgid ""
+"Design controls — layout, spacing, colors — live in the block editor. Saves "
+"this post first so unsaved blocks appear there."
+msgstr ""
+"کنترل‌های طراحی - چیدمان، فاصله، رنگ‌ها - در ویرایشگر بلوک وجود دارند. "
+"ابتدا این پست را ذخیره می کند تا بلوک های ذخیره نشده در آنجا ظاهر شوند."
+
+#: assets/js/app.js:23397
+msgid "Block editor ↗"
+msgstr "ویرایشگر مسدود کردن ↗"
+
+#: assets/js/app.js:23398
+msgid "Move block"
+msgstr "انتقال بلوک"
+
+#: assets/js/app.js:23399
+msgid "Move block up"
+msgstr "بلوک را به بالا منتقل کنید"
+
+#: assets/js/app.js:23400
+msgid "Move block down"
+msgstr "بلوک را به پایین حرکت دهید"
+
+#: assets/js/app.js:23402
+msgid "Move to the previous column"
+msgstr "به ستون قبلی بروید"
+
+#: assets/js/app.js:23402
+msgid "Move block to the previous column"
+msgstr "بلوک را به ستون قبلی منتقل کنید"
+
+#: assets/js/app.js:23403
+msgid "Move to the next column"
+msgstr "به ستون بعدی بروید"
+
+#: assets/js/app.js:23403
+msgid "Move block to the next column"
+msgstr "بلوک را به ستون بعدی منتقل کنید"
+
+#: assets/js/app.js:23405
+msgid "Duplicate this block"
+msgstr "این بلوک را کپی کنید"
+
+#: assets/js/app.js:23406
+msgid "Remove this block"
+msgstr "این بلوک را حذف کنید"
+
+#: assets/js/app.js:23418
+msgid "Another session holds this post — take over before opening the block editor"
+msgstr ""
+"جلسه دیگری این پست را نگه می دارد - قبل از باز کردن ویرایشگر بلوک مسئولیت "
+"را بر عهده بگیرید"
+
+#: assets/js/app.js:23544
+msgid "This block’s markup can’t be parsed safely."
+msgstr "نشانه گذاری این بلوک را نمی توان به طور ایمن تجزیه کرد."
+
+#: assets/js/app.js:23554
+#: assets/js/app.js:23569
+msgid "Block settings"
+msgstr "تنظیمات را مسدود کنید"
+
+#: assets/js/app.js:23627
+msgid "Embed URL (YouTube, tweet, audio…):"
+msgstr "قراردادن URL (یوتیوب، توییت، صدا…):"
+
+#: assets/js/app.js:23629
+#: assets/js/app.js:26731
+msgid "That doesn’t look like a URL"
+msgstr "که شبیه URL نیست"
+
+#: assets/js/app.js:23665
+msgid "These images can’t be edited safely here."
+msgstr "این تصاویر را نمی توان با خیال راحت در اینجا ویرایش کرد."
+
+#: assets/js/app.js:24053
+msgid "Block removed — ⌘Z restores it"
+msgstr "مسدود کردن حذف شد - ⌘Z آن را بازیابی می کند"
+
+#: assets/js/app.js:24178
+msgid "Add row above"
+msgstr "ردیف بالا را اضافه کنید"
+
+#: assets/js/app.js:24179
+msgid "Add row below"
+msgstr "ردیف زیر را اضافه کنید"
+
+#: assets/js/app.js:24180
+msgid "Delete row"
+msgstr "حذف ردیف"
+
+#: assets/js/app.js:24182
+msgid "Add column left"
+msgstr "اضافه کردن ستون سمت چپ"
+
+#: assets/js/app.js:24183
+msgid "Add column right"
+msgstr "ستون را به سمت راست اضافه کنید"
+
+#: assets/js/app.js:24184
+msgid "Delete column"
+msgstr "حذف ستون"
+
+#: assets/js/app.js:24211
+msgid "Row \\u2014 at the caret"
+msgstr "ردیف \\u2014 در گاری"
+
+#: assets/js/app.js:24217
+msgid "Column \\u2014 at the caret"
+msgstr "ستون \\u2014 در گاری"
+
+#: assets/js/app.js:24225
+msgid "Delete table"
+msgstr "حذف جدول"
+
+#: assets/js/app.js:24236
+msgid "Table settings"
+msgstr "تنظیمات جدول"
+
+#: assets/js/app.js:24376
+msgid "Table deleted. ⌘Z restores it"
+msgstr "جدول حذف شد ⌘Z آن را بازیابی می کند"
+
+#: assets/js/app.js:24464
+msgid "Code block settings"
+msgstr "تنظیمات بلوک کد"
+
+#: assets/js/app.js:24589
+msgid "URL or search"
+msgstr "URL یا جستجو کنید"
+
+#: assets/js/app.js:24594
+#: assets/js/app.js:24595
+#: assets/js/app.js:24773
+msgid "Open in new tab"
+msgstr "در تب جدید باز کنید"
+
+#: assets/js/app.js:24601
+msgid "Unlink"
+msgstr "لغو پیوند"
+
+#: assets/js/app.js:24602
+msgid "Open \\u2197"
+msgstr "باز کنید \\u2197"
+
+#: assets/js/app.js:24763
+msgid "Image"
+msgstr "تصویر"
+
+#: assets/js/app.js:24767
+#: assets/js/app.js:27915
+msgid "Alt text"
+msgstr "متن جایگزین"
+
+#: assets/js/app.js:24768
+#: assets/js/app.js:27916
+msgid "Describe this image…"
+msgstr "این تصویر را توضیح دهید…"
+
+#: assets/js/app.js:24770
+msgid "Optional caption"
+msgstr "شرح اختیاری"
+
+#: assets/js/app.js:24771
+msgid "Link URL"
+msgstr "پیوند"
+
+#: assets/js/app.js:24774
+msgid "Expand on click (lightbox)"
+msgstr "بزرگ کردن روی کلیک (لایت باکس)"
+
+#: assets/js/app.js:24775
+msgid "A linked image can’t also open a lightbox — clear the link to use it."
+msgstr ""
+"یک تصویر پیوندی نیز نمی‌تواند یک لایت باکس را باز کند - برای استفاده از آن "
+"پیوند را پاک کنید."
+
+#: assets/js/app.js:24788
+msgid "Image settings"
+msgstr "تنظیمات تصویر"
+
+#: assets/js/app.js:24874
+msgid "Image updated"
+msgstr "تصویر به روز شد"
+
+#: assets/js/app.js:24907
+msgid "Image duplicated"
+msgstr "تصویر کپی شده"
+
+#: assets/js/app.js:24931
+msgid "Image removed — ⌘Z restores it"
+msgstr "تصویر حذف شد - ⌘Z آن را بازیابی می کند"
+
+#: assets/js/app.js:26133
+msgid "This pattern’s markup can’t be parsed safely"
+msgstr "نشانه گذاری این الگو را نمی توان به طور ایمن تجزیه کرد"
+
+#: assets/js/app.js:26142
+msgid "Nothing insertable in this pattern"
+msgstr "هیچ چیز در این الگو قابل درج نیست"
+
+#: assets/js/app.js:26241
+msgid "This layout is locked — open it in the block editor to add blocks"
+msgstr ""
+"این طرح بندی قفل است - آن را در ویرایشگر بلوک باز کنید تا بلوک ها را اضافه "
+"کنید"
+
+#: assets/js/app.js:26291
+msgid "Insert from the block library"
+msgstr "درج از کتابخانه بلوک"
+
+#: assets/js/app.js:26293
+msgid "Search blocks, designs and patterns…"
+msgstr "جستجوی بلوک ها، طرح ها و الگوها…"
+
+#: assets/js/app.js:26296
+msgid "Loading the library…"
+msgstr "در حال بارگیری کتابخانه…"
+
+#: assets/js/app.js:26317
+#: assets/js/app.js:28067
+msgid "Basics"
+msgstr "مبانی"
+
+#: assets/js/app.js:26414
+msgid "Nothing matches."
+msgstr "هیچ چیز مطابقت ندارد."
+
+#: assets/js/app.js:26500
+msgid "Building the gallery…"
+msgstr "ساخت گالری…"
+
+#: assets/js/app.js:26520
+msgid "This block’s columns can’t be edited here."
+msgstr "ستون‌های این بلوک را نمی‌توان در اینجا ویرایش کرد."
+
+#: assets/js/app.js:26537
+msgid "Inserting…"
+msgstr "در حال درج…"
+
+#: assets/js/app.js:26576
+msgid "Inserting design…"
+msgstr "درج طرح…"
+
+#: assets/js/app.js:26580
+msgid "Design source unavailable"
+msgstr "منبع طراحی در دسترس نیست"
+
+#: assets/js/app.js:26729
+msgid "Paste the URL to embed (YouTube, tweet, audio…):"
+msgstr "URL را برای جاسازی (یوتیوب، توییت، صدا…) جای‌گذاری کنید:"
+
+#: assets/js/app.js:26946
+msgid "Insert block"
+msgstr "درج بلوک"
+
+#: assets/js/app.js:27121
+msgid "Update everything?"
+msgstr "همه چیز را به روز کنید؟"
+
+#: assets/js/app.js:27125
+msgid "Update everything"
+msgstr "همه چیز را به روز کنید"
+
+#: assets/js/app.js:27255
+msgid "Updating…"
+msgstr "در حال به‌روزرسانی…"
+
+#: assets/js/app.js:27350
+msgid "Hide this notice from Minn"
+msgstr "این اعلان را از Minn پنهان کنید"
+
+#: assets/js/app.js:27350
+msgid "Hide"
+msgstr "پنهان‌سازی"
+
+#: assets/js/app.js:27360
+msgid "Mark all read"
+msgstr "علامت گذاری به عنوان خوانده شده"
+
+#: assets/js/app.js:27375
+msgid "You’re all caught up."
+msgstr "همه شما گرفتار شده اید"
+
+#: assets/js/app.js:27402
+msgid "Clearing cache…"
+msgstr "در حال پاک کردن حافظه پنهان…"
+
+#: assets/js/app.js:27445
+msgid "Disembark backup command copied"
+msgstr "فرمان پشتیبان‌گیری تخلیه کپی شد"
+
+#: assets/js/app.js:27447
+msgid "Copy failed — the command is on the Backups page"
+msgstr "کپی ناموفق بود - فرمان در صفحه پشتیبان‌گیری است"
+
+#: assets/js/app.js:27458
+msgid "Find & replace (⌘⇧F)"
+msgstr "یافتن و جایگزینی (⌘⇧F)"
+
+#: assets/js/app.js:27459
+msgid "Toggle focus mode (⌘⇧D)"
+msgstr "تغییر حالت فوکوس (⌘⇧D)"
+
+#: assets/js/app.js:27460
+msgid "Toggle outline mode (⌘⇧O)"
+msgstr "تغییر حالت طرح کلی (⌘⇧O)"
+
+#: assets/js/app.js:27465
+msgid "Edit in the block editor ↗"
+msgstr "ویرایش در ویرایشگر بلوک ↗"
+
+#: assets/js/app.js:27468
+msgid "Go to Overview"
+msgstr "به نمای کلی بروید"
+
+#: assets/js/app.js:27469
+msgid "Manage Content"
+msgstr "مدیریت محتوا"
+
+#: assets/js/app.js:27470
+msgid "Open Media Library"
+msgstr "کتابخانه رسانه را باز کنید"
+
+#: assets/js/app.js:27472
+msgid "Review Comments"
+msgstr "نظرات را مرور کنید"
+
+#: assets/js/app.js:27473
+msgid "View Orders"
+msgstr "مشاهده سفارشات"
+
+#: assets/js/app.js:27474
+msgid "View Subscriptions"
+msgstr "مشاهده اشتراک ها"
+
+#: assets/js/app.js:27475
+msgid "View Products"
+msgstr "مشاهده محصولات"
+
+#: assets/js/app.js:27476
+msgid "View Coupons"
+msgstr "مشاهده کوپن ها"
+
+#: assets/js/app.js:27477
+msgid "View Customers"
+msgstr "مشاهده مشتریان"
+
+#: assets/js/app.js:27478
+msgid "Browse Users"
+msgstr "مرور کاربران"
+
+#: assets/js/app.js:27495
+msgid "Edit Menus"
+msgstr "ویرایش فهرست‌ها"
+
+#: assets/js/app.js:27496
+msgid "Manage Widgets"
+msgstr "ویجت ها را مدیریت کنید"
+
+#: assets/js/app.js:27498
+msgid "Manage Extensions"
+msgstr "مدیریت برنامه های افزودنی"
+
+#: assets/js/app.js:27499
+msgid "Manage Post Types"
+msgstr "مدیریت انواع پست"
+
+#: assets/js/app.js:27500
+msgid "Manage categories & tags"
+msgstr "دسته ها و برچسب ها را مدیریت کنید"
+
+#: assets/js/app.js:27501
+msgid "View System diagnostics"
+msgstr "مشاهده عیب یابی سیستم"
+
+#: assets/js/app.js:27503
+msgid "View site logs"
+msgstr "مشاهده گزارش های سایت"
+
+#: assets/js/app.js:27504
+msgid "Open Settings"
+msgstr "تنظیمات را باز کنید"
+
+#: assets/js/app.js:27506
+msgid "Write new post"
+msgstr "پست جدید بنویس"
+
+#: assets/js/app.js:27507
+msgid "Create new page"
+msgstr "صفحه جدید ایجاد کنید"
+
+#: assets/js/app.js:27508
+msgid "Cycle theme (System / Light / Dark)"
+msgstr "موضوع چرخه (سیستم / روشن / تاریک)"
+
+#: assets/js/app.js:27509
+msgid "View notifications"
+msgstr "مشاهده اطلاعیه ها"
+
+#: assets/js/app.js:27523
+msgid "Copy Disembark backup command"
+msgstr "دستور پشتیبان گیری Disembark را کپی کنید"
+
+#: assets/js/app.js:27530
+msgid "Check for updates"
+msgstr "به روز رسانی را بررسی کنید"
+
+#: assets/js/app.js:27533
+msgid "Update all plugins"
+msgstr "همه افزونه ها را به روز کنید"
+
+#: assets/js/app.js:27536
+msgid "Your profile — name, email, password"
+msgstr "نمایه شما - نام، ایمیل، رمز عبور"
+
+#: assets/js/app.js:27538
+msgid "About Minn — help & shortcuts"
+msgstr "درباره Minn - راهنما و میانبرها"
+
+#: assets/js/app.js:27539
+msgid "Visit site"
+msgstr "نمایش سایت"
+
+#: assets/js/app.js:27540
+msgid "Classic wp-admin"
+msgstr "کلاسیک wp-admin"
+
+#: assets/js/app.js:27639
+msgid "Search or run a command…"
+msgstr "جستجو یا اجرای دستور…"
+
+#: assets/js/app.js:27663
+msgid "Your content"
+msgstr "مطالب شما"
+
+#: assets/js/app.js:27667
+msgid "Searching your content…"
+msgstr "جستجوی محتوای شما…"
+
+#: assets/js/app.js:27723
+msgid "Loading events…"
+msgstr "در حال بارگیری رویدادها…"
+
+#: assets/js/app.js:27724
+msgid "Nothing recorded in this period."
+msgstr "در این دوره چیزی ثبت نشده است."
+
+#: assets/js/app.js:27762
+#: assets/js/app.js:27903
+#: assets/js/app.js:28506
+msgid "Previous (←)"
+msgstr "قبلی (←)"
+
+#: assets/js/app.js:27763
+#: assets/js/app.js:27904
+#: assets/js/app.js:28507
+msgid "Next (→)"
+msgstr "بعدی (→)"
+
+#: assets/js/app.js:27766
+msgid "Loading top pages…"
+msgstr "در حال بارگیری صفحات برتر…"
+
+#: assets/js/app.js:27771
+msgid "Top pages"
+msgstr "صفحات برتر"
+
+#: assets/js/app.js:27781
+#: assets/js/app.js:27794
+msgid "vis"
+msgstr "در مقابل"
+
+#: assets/js/app.js:27782
+#: assets/js/app.js:27795
+msgid "views"
+msgstr "دیدگاه ها"
+
+#: assets/js/app.js:27787
+msgid "Top referrers"
+msgstr "ارجاع دهندگان برتر"
+
+#: assets/js/app.js:27825
+msgid "Save widget"
+msgstr "ویجت را ذخیره کنید"
+
+#: assets/js/app.js:27841
+msgid "Rotate left"
+msgstr "چرخش به چپ"
+
+#: assets/js/app.js:27842
+msgid "Rotate right"
+msgstr "چرخش به راست"
+
+#: assets/js/app.js:27843
+msgid "Reset"
+msgstr "بازنشانی کنید"
+
+#: assets/js/app.js:27844
+msgid "Drag on the image to crop"
+msgstr "برای برش تصویر را بکشید"
+
+#: assets/js/app.js:27918
+msgid "Shown beneath the image…"
+msgstr "در زیر تصویر نشان داده شده است…"
+
+#: assets/js/app.js:27920
+msgid "Longer detail, shown on the attachment page…"
+msgstr "جزئیات طولانی تر، نشان داده شده در صفحه پیوست…"
+
+#: assets/js/app.js:27927
+msgid "Rotate and crop — saved as a new copy"
+msgstr "چرخش و برش - به عنوان یک کپی جدید ذخیره می شود"
+
+#: assets/js/app.js:27929
+msgid ""
+"Upload a new file over this one — same name, same URL, every reference "
+"keeps working (Enable Media Replace)"
+msgstr ""
+"یک فایل جدید روی این فایل آپلود کنید - همان نام، همان URL، هر مرجع به کار "
+"خود ادامه می دهد (فعال کردن جایگزینی رسانه)"
+
+#: assets/js/app.js:27931
+msgid "Replace featured"
+msgstr "جایگزین برجسته"
+
+#: assets/js/app.js:27932
+msgid "Remove featured"
+msgstr "حذف ویژه"
+
+#: assets/js/app.js:27969
+msgid "Loading subscription…"
+msgstr "در حال بارگیری اشتراک…"
+
+#: assets/js/app.js:27979
+msgid "Customer ID"
+msgstr "شناسه مشتری"
+
+#: assets/js/app.js:27981
+#: assets/js/app.js:28026
+msgid "View customer"
+msgstr "مشاهده مشتری"
+
+#: assets/js/app.js:27982
+msgid "Schedule"
+msgstr "زمان‌بندی"
+
+#: assets/js/app.js:27986
+msgid "Last payment"
+msgstr "آخرین پرداخت"
+
+#: assets/js/app.js:27987
+msgid "Trial ends"
+msgstr "محاکمه به پایان می رسد"
+
+#: assets/js/app.js:27988
+msgid "Ends"
+msgstr "به پایان می رسد"
+
+#: assets/js/app.js:27990
+msgid "Renewal"
+msgstr "تمدید"
+
+#: assets/js/app.js:27990
+msgid "Manual"
+msgstr "دستی"
+
+#: assets/js/app.js:27991
+msgid "Suspensions"
+msgstr "تعلیق ها"
+
+#: assets/js/app.js:27997
+msgid "No line items."
+msgstr "هیچ مورد خطی وجود ندارد."
+
+#: assets/js/app.js:27998
+msgid "Recurring total"
+msgstr "مجموع تکراری"
+
+#: assets/js/app.js:28003
+msgid ""
+"Active, On hold and Cancelled cover daily work. Switched / Expired are "
+"usually set by WooCommerce Subscriptions itself."
+msgstr ""
+"فعال، در انتظار و لغو کار روزانه را پوشش می دهد. Switched / Expired معمولاً "
+"توسط خود اشتراک WooCommerce تنظیم می شود."
+
+#: assets/js/app.js:28005
+msgid "Parent order"
+msgstr "سفارش والدین"
+
+#: assets/js/app.js:28006
+msgid "Order that started this subscription"
+msgstr "سفارشی که این اشتراک را شروع کرد"
+
+#: assets/js/app.js:28008
+msgid "Initial"
+msgstr "اولیه"
+
+#: assets/js/app.js:28011
+msgid "Related orders"
+msgstr "سفارشات مرتبط"
+
+#: assets/js/app.js:28013
+msgid "No renewal orders yet."
+msgstr "هنوز سفارشی برای تمدید وجود ندارد."
+
+#: assets/js/app.js:28024
+#: assets/js/app.js:29589
+msgid "Save status"
+msgstr "ذخیره وضعیت"
+
+#: assets/js/app.js:28025
+msgid "Open parent order"
+msgstr "باز کردن سفارش والدین"
+
+#: assets/js/app.js:28060
+msgid "Loading product…"
+msgstr "در حال بارگیری محصول…"
+
+#: assets/js/app.js:28071
+#: assets/js/app.js:28096
+#: assets/js/app.js:28324
+msgid "Optional"
+msgstr "اختیاری"
+
+#: assets/js/app.js:28077
+msgid "Catalog visibility"
+msgstr "قابلیت مشاهده کاتالوگ"
+
+#: assets/js/app.js:28091
+msgid "Price & stock"
+msgstr "قیمت و موجودی"
+
+#: assets/js/app.js:28095
+#: assets/js/app.js:28323
+msgid "Regular price"
+msgstr "قیمت معمولی"
+
+#: assets/js/app.js:28096
+msgid "Sale price"
+msgstr "قیمت فروش"
+
+#: assets/js/app.js:28100
+msgid "Track stock quantity"
+msgstr "پیگیری مقدار سهام"
+
+#: assets/js/app.js:28103
+#: assets/js/app.js:28385
+msgid "Quantity"
+msgstr "مقدار"
+
+#: assets/js/app.js:28105
+msgid "Stock status"
+msgstr "وضعیت سهام"
+
+#: assets/js/app.js:28118
+msgid "Short description"
+msgstr "توضیحات کوتاه"
+
+#: assets/js/app.js:28119
+msgid "Shown near the product title…"
+msgstr "در نزدیکی عنوان محصول نشان داده شده است…"
+
+#: assets/js/app.js:28120
+msgid "Plain text; full product description and gallery stay in WooCommerce."
+msgstr "متن ساده؛ توضیحات کامل محصول و گالری ماندن در WooCommerce."
+
+#: assets/js/app.js:28156
+msgid "Loading coupon…"
+msgstr "در حال بارگیری کوپن…"
+
+#: assets/js/app.js:28162
+msgid "Code & discount"
+msgstr "کد و تخفیف"
+
+#: assets/js/app.js:28165
+msgid "e.g. SAVE10"
+msgstr "به عنوان مثال ذخیره 10"
+
+#: assets/js/app.js:28166
+msgid "Discount type"
+msgstr "نوع تخفیف"
+
+#: assets/js/app.js:28180
+msgid "Internal note"
+msgstr "یادداشت داخلی"
+
+#: assets/js/app.js:28189
+msgid "Limits & options"
+msgstr "محدودیت ها و گزینه ها"
+
+#: assets/js/app.js:28193
+msgid "Usage limit"
+msgstr "محدودیت استفاده"
+
+#: assets/js/app.js:28193
+#: assets/js/app.js:28194
+msgid "Unlimited"
+msgstr "نامحدود"
+
+#: assets/js/app.js:28194
+msgid "Per user"
+msgstr "به ازای هر کاربر"
+
+#: assets/js/app.js:28197
+msgid "Minimum spend"
+msgstr "حداقل هزینه"
+
+#: assets/js/app.js:28197
+msgid "None"
+msgstr "هیچ‌کدام"
+
+#: assets/js/app.js:28202
+msgid "Individual use only"
+msgstr "فقط استفاده انفرادی"
+
+#: assets/js/app.js:28206
+msgid "Allow free shipping"
+msgstr "اجازه ارسال رایگان را بدهید"
+
+#: assets/js/app.js:28220
+msgid "Saves code, amount, limits and options through WooCommerce."
+msgstr "کد، مقدار، محدودیت ها و گزینه ها را از طریق WooCommerce ذخیره می کند."
+
+#: assets/js/app.js:28250
+msgid "Loading customer…"
+msgstr "در حال بارگیری مشتری…"
+
+#: assets/js/app.js:28256
+msgid "Profile"
+msgstr "نمایه"
+
+#: assets/js/app.js:28258
+#: assets/js/app.js:28563
+msgid "Username"
+msgstr "نام کاربری"
+
+#: assets/js/app.js:28262
+msgid "Recent total"
+msgstr "کل اخیر"
+
+#: assets/js/app.js:28271
+msgid "Address"
+msgstr "نشانی"
+
+#: assets/js/app.js:28276
+msgid "Recent orders"
+msgstr "سفارشات اخیر"
+
+#: assets/js/app.js:28286
+msgid "No orders for this customer."
+msgstr "هیچ سفارشی برای این مشتری وجود ندارد."
+
+#: assets/js/app.js:28298
+msgid "No subscriptions for this customer."
+msgstr "هیچ اشتراکی برای این مشتری وجود ندارد."
+
+#: assets/js/app.js:28303
+msgid "All subscriptions"
+msgstr "همه اشتراک ها"
+
+#: assets/js/app.js:28316
+msgid "New product"
+msgstr "محصول جدید"
+
+#: assets/js/app.js:28321
+msgid "Product name"
+msgstr "نام محصول"
+
+#: assets/js/app.js:28332
+msgid ""
+"Creates a simple product. Variations, gallery and long description stay in "
+"WooCommerce."
+msgstr ""
+"یک محصول ساده ایجاد می کند. تغییرات، گالری و توضیحات طولانی در WooCommerce "
+"باقی می مانند."
+
+#: assets/js/app.js:28337
+#: assets/js/app.js:29205
+msgid "Create product"
+msgstr "محصول ایجاد کنید"
+
+#: assets/js/app.js:28351
+msgid "New order"
+msgstr "سفارش جدید"
+
+#: assets/js/app.js:28352
+msgid "Simple draft or processing order with one line item"
+msgstr "پیش نویس ساده یا پردازش سفارش با یک مورد"
+
+#: assets/js/app.js:28365
+msgid "customer@example.com"
+msgstr "customer@example.com"
+
+#: assets/js/app.js:28368
+msgid "Pending payment"
+msgstr "در انتظار پرداخت"
+
+#: assets/js/app.js:28369
+msgid "Processing"
+msgstr "پردازش"
+
+#: assets/js/app.js:28370
+msgid "On hold"
+msgstr "در انتظار"
+
+#: assets/js/app.js:28376
+msgid "Line item"
+msgstr "مورد خط"
+
+#: assets/js/app.js:28379
+msgid "Search products…"
+msgstr "جستجوی محصولات…"
+
+#: assets/js/app.js:28384
+msgid "Selected:"
+msgstr "انتخاب شده:"
+
+#: assets/js/app.js:28384
+msgid "Pick a published product to add."
+msgstr "یک محصول منتشر شده را برای افزودن انتخاب کنید."
+
+#: assets/js/app.js:28392
+#: assets/js/app.js:29320
+msgid "Create order"
+msgstr "نظم ایجاد کنید"
+
+#: assets/js/app.js:28412
+#: assets/js/app.js:28628
+msgid "Subject"
+msgstr "موضوع"
+
+#: assets/js/app.js:28416
+#: assets/js/app.js:28632
+msgid "Message"
+msgstr "پیام"
+
+#: assets/js/app.js:28417
+#: assets/js/app.js:28633
+msgid "Write your message…"
+msgstr "پیام خود را بنویسید…"
+
+#: assets/js/app.js:28418
+msgid ""
+"Styled Minn Admin HTML email to the order billing address. Blank lines "
+"become paragraphs. A button links to pay or view the order."
+msgstr ""
+"ایمیل Minn Admin HTML به آدرس صورتحساب سفارش. خطوط خالی تبدیل به پاراگراف "
+"می شوند. یک دکمه برای پرداخت یا مشاهده سفارش پیوند دارد."
+
+#: assets/js/app.js:28523
+msgid "Email preview"
+msgstr "پیش نمایش ایمیل"
+
+#: assets/js/app.js:28594
+msgid "Loading sessions…"
+msgstr "در حال بارگیری جلسات…"
+
+#: assets/js/app.js:28599
+#: assets/js/app.js:32336
+msgid "this session"
+msgstr "این جلسه"
+
+#: assets/js/app.js:28634
+msgid ""
+"Sent as a styled Minn Admin HTML email from the site. Blank lines become "
+"paragraphs."
+msgstr ""
+"ارسال شده به عنوان یک ایمیل با سبک Minn Admin HTML از سایت. خطوط خالی تبدیل "
+"به پاراگراف می شوند."
+
+#: assets/js/app.js:28659
+msgid ""
+"This permanently removes the account. Content they authored must be "
+"reassigned to another user."
+msgstr ""
+"با این کار حساب برای همیشه حذف می شود. محتوایی که آنها تالیف کرده اند باید "
+"دوباره به کاربر دیگری اختصاص داده شود."
+
+#: assets/js/app.js:28663
+msgid "Reassign content to"
+msgstr "مجدداً محتوا را به"
+
+#: assets/js/app.js:28720
+msgid "Done."
+msgstr "انجام شد."
+
+#: assets/js/app.js:28720
+msgid "Heading to the classic dashboard… Reactivate Minn any time from"
+msgstr "به سمت داشبورد کلاسیک می رویم… هر زمان که بخواهید Minn را دوباره فعال کنید"
+
+#: assets/js/app.js:28721
+msgid "This turns off the"
+msgstr "این کار را خاموش می کند"
+
+#: assets/js/app.js:28721
+msgid "dashboard and returns you to the classic wp-admin."
+msgstr "داشبورد و شما را به wp-admin کلاسیک برمی گرداند."
+
+#: assets/js/app.js:28722
+msgid ""
+"Nothing is lost: Minn writes native WordPress content and options, and "
+"reactivating from the Plugins screen brings this dashboard straight back."
+msgstr ""
+"هیچ چیز از دست نمی‌رود: Minn محتوا و گزینه‌های WordPress بومی را می‌نویسد، "
+"و فعال‌سازی مجدد از صفحه افزونه‌ها این داشبورد را مستقیماً به عقب باز "
+"می‌گرداند."
+
+#: assets/js/app.js:28726
+msgid "Deactivate and go to wp-admin"
+msgstr "غیرفعال کنید و به wp-admin بروید"
+
+#: assets/js/app.js:28727
+msgid "Keep Minn"
+msgstr "Minn را نگه دارید"
+
+#: assets/js/app.js:28745
+msgid "Loading changelog…"
+msgstr "در حال بارگیری گزارش تغییرات…"
+
+#: assets/js/app.js:28794
+#: assets/js/app.js:28866
+msgid "Plural label"
+msgstr "برچسب جمع"
+
+#: assets/js/app.js:28795
+msgid "Books"
+msgstr "کتاب ها"
+
+#: assets/js/app.js:28796
+#: assets/js/app.js:28868
+msgid "Singular label"
+msgstr "برچسب مفرد"
+
+#: assets/js/app.js:28797
+msgid "Book"
+msgstr "کتاب"
+
+#: assets/js/app.js:28799
+msgid "book"
+msgstr "کتاب"
+
+#: assets/js/app.js:28800
+msgid "Description (optional)"
+msgstr "توضیحات (اختیاری)"
+
+#: assets/js/app.js:28802
+#: assets/js/app.js:28872
+msgid "Store definition in"
+msgstr "تعریف فروشگاه در"
+
+#: assets/js/app.js:28810
+msgid "Supports"
+msgstr "پشتیبانی می کند"
+
+#: assets/js/app.js:28812
+msgid "Taxonomies"
+msgstr "طبقه بندی ها"
+
+#: assets/js/app.js:28867
+msgid "Genres"
+msgstr "ژانرها"
+
+#: assets/js/app.js:28869
+msgid "Genre"
+msgstr "نوع"
+
+#: assets/js/app.js:28871
+msgid "genre"
+msgstr "ژانر"
+
+#: assets/js/app.js:28874
+msgid "Behavior"
+msgstr "رفتار"
+
+#: assets/js/app.js:28878
+msgid "Attach to"
+msgstr "پیوست به"
+
+#: assets/js/app.js:28912
+msgid "Keyboard shortcuts"
+msgstr "میانبرهای صفحه کلید"
+
+#: assets/js/app.js:28914
+msgid "Command palette · with text selected in the editor: link"
+msgstr "پالت فرمان · با متن انتخاب شده در ویرایشگر: پیوند"
+
+#: assets/js/app.js:28915
+msgid "Save, keeping the current status"
+msgstr "ذخیره، حفظ وضعیت فعلی"
+
+#: assets/js/app.js:28916
+msgid "Publish, Update or Schedule"
+msgstr "انتشار، به‌روزرسانی یا زمان‌بندی"
+
+#: assets/js/app.js:28917
+msgid "Block library: browse every block, design and pattern"
+msgstr "کتابخانه بلوک: هر بلوک، طرح و الگو را مرور کنید"
+
+#: assets/js/app.js:28918
+msgid "Find & replace in the post"
+msgstr "در پست پیدا و جایگزین کنید"
+
+#: assets/js/app.js:28919
+msgid "Focus mode: fade all but the current paragraph"
+msgstr "حالت فوکوس: همه موارد به جز پاراگراف فعلی را محو کنید"
+
+#: assets/js/app.js:28920
+msgid "Outline mode: just the writing and the outline"
+msgstr "حالت طرح کلی: فقط نوشته و طرح کلی"
+
+#: assets/js/app.js:28921
+msgid "Show or hide the navigation"
+msgstr "نمایش یا پنهان کردن پیمایش"
+
+#: assets/js/app.js:28922
+msgid "A block's ⚙ handle: duplicate that block in place"
+msgstr "دسته ⚙ یک بلوک: آن بلوک را در جای خود کپی کنید"
+
+#: assets/js/app.js:28923
+msgid "A block's ⚙ handle: remove that block (⌘Z restores it)"
+msgstr "دسته ⚙ یک بلوک: آن بلوک را بردارید (⌘Z آن را بازیابی می کند)"
+
+#: assets/js/app.js:28924
+msgid ""
+"The WordPress button (bottom left) while editing: open this post in the "
+"block editor"
+msgstr ""
+"دکمه WordPress (پایین سمت چپ) هنگام ویرایش: این پست را در ویرایشگر بلوک باز "
+"کنید"
+
+#: assets/js/app.js:28925
+msgid "click"
+msgstr "کلیک کنید"
+
+#: assets/js/app.js:28925
+msgid "An image in a protected block: edit, reorder or replace its images"
+msgstr ""
+"یک تصویر در یک بلوک محافظت شده: تصاویر آن را ویرایش، مرتب کنید یا جایگزین "
+"کنید"
+
+#: assets/js/app.js:28926
+msgid "Previous / next item in a media or entry detail"
+msgstr "مورد قبلی / بعدی در یک رسانه یا جزئیات ورودی"
+
+#: assets/js/app.js:28927
+msgid "Close menus and dialogs"
+msgstr "منوها و دیالوگ ها را ببندید"
+
+#: assets/js/app.js:28929
+msgid ""
+"The word-count pill (bottom-right in the editor) shows total words, reading "
+"time, and words written this session. Click it to set or clear a word goal."
+msgstr ""
+"قرص شمارش کلمات (پایین سمت راست در ویرایشگر) کل کلمات، زمان خواندن و کلمات "
+"نوشته شده در این جلسه را نشان می دهد. برای تنظیم یا پاک کردن یک هدف کلمه، "
+"روی آن کلیک کنید."
+
+#: assets/js/app.js:28930
+msgid "On Windows and Linux, use"
+msgstr "در ویندوز و لینوکس، استفاده کنید"
+
+#: assets/js/app.js:28930
+msgid "in place of"
+msgstr "به جای"
+
+#: assets/js/app.js:28973
+msgid "Browse more on WordPress.org →"
+msgstr "مرور بیشتر در WordPress.org →"
+
+#: assets/js/app.js:28976
+#: assets/js/app.js:29038
+msgid "Searching…"
+msgstr "در حال جست‌وجو…"
+
+#: assets/js/app.js:28998
+msgid "Add plugin"
+msgstr "افزونه اضافه کنید"
+
+#: assets/js/app.js:29004
+msgid "Drop a plugin"
+msgstr "یک پلاگین را رها کنید"
+
+#: assets/js/app.js:29004
+#: assets/js/app.js:29033
+msgid "here or"
+msgstr "اینجا یا"
+
+#: assets/js/app.js:29004
+#: assets/js/app.js:29033
+#: assets/js/app.js:29072
+msgid "browse"
+msgstr "مرور کنید"
+
+#: assets/js/app.js:29007
+msgid "Search the WordPress.org directory…"
+msgstr "جستجو در فهرست WordPress.org…"
+
+#: assets/js/app.js:29027
+msgid "Add theme"
+msgstr "اضافه کردن تم"
+
+#: assets/js/app.js:29033
+msgid "Drop a theme"
+msgstr "یک موضوع را رها کنید"
+
+#: assets/js/app.js:29036
+msgid "Search the WordPress.org theme directory…"
+msgstr "دایرکتوری تم WordPress.org را جستجو کنید…"
+
+#: assets/js/app.js:29039
+msgid "Search for a theme, or drop a zip above."
+msgstr "یک موضوع را جستجو کنید یا یک فایل فشرده را در بالا قرار دهید."
+
+#: assets/js/app.js:29066
+msgid "Pick images in order"
+msgstr "تصاویر را به ترتیب انتخاب کنید"
+
+#: assets/js/app.js:29072
+msgid "Drag & drop an image here, or"
+msgstr "یک تصویر را به اینجا بکشید و رها کنید، یا"
+
+#: assets/js/app.js:29181
+#: assets/js/app.js:29723
+msgid "Name is required"
+msgstr "نام الزامی است"
+
+#: assets/js/app.js:29191
+#: assets/js/app.js:29305
+msgid "Creating…"
+msgstr "در حال ایجاد…"
+
+#: assets/js/app.js:29197
+msgid "Product created"
+msgstr "محصول ایجاد شد"
+
+#: assets/js/app.js:29292
+msgid "Pick a product"
+msgstr "یک محصول را انتخاب کنید"
+
+#: assets/js/app.js:29333
+msgid "Widget saved"
+msgstr "ویجت ذخیره شد"
+
+#: assets/js/app.js:29453
+msgid "Featured image updated"
+msgstr "تصویر ویژه به روز شد"
+
+#: assets/js/app.js:29466
+msgid "Featured image removed"
+msgstr "تصویر ویژه حذف شد"
+
+#: assets/js/app.js:29476
+msgid "Regenerating…"
+msgstr "در حال بازسازی…"
+
+#: assets/js/app.js:29480
+#, js-format
+msgid "Regenerated %d thumbnail size"
+msgid_plural "Regenerated %d thumbnail sizes"
+msgstr[0] "اندازه تصویر کوچک %d بازسازی شده"
+msgstr[1] "اندازه های کوچک %d بازسازی شده"
+
+#: assets/js/app.js:29486
+msgid "Thumbnails rebuilt (Force Regenerate Thumbnails)"
+msgstr "ریز عکس‌ها بازسازی شدند (تقویت‌های کوچک را به اجبار بازسازی کنید)"
+
+#: assets/js/app.js:29492
+msgid "↻ Thumbnails"
+msgstr "↻ تصاویر کوچک"
+
+#: assets/js/app.js:29516
+msgid "Replacing…"
+msgstr "در حال تعویض…"
+
+#: assets/js/app.js:29526
+msgid "File replaced — same URL, new content"
+msgstr "فایل جایگزین شد - همان URL، محتوای جدید"
+
+#: assets/js/app.js:29532
+msgid "⇅ Replace file"
+msgstr "⇅ فایل را جایگزین کنید"
+
+#: assets/js/app.js:29615
+#: assets/js/app.js:30080
+msgid "Subject and message are required"
+msgstr "موضوع و پیام الزامی است"
+
+#: assets/js/app.js:29639
+msgid "Code is required"
+msgstr "کد مورد نیاز است"
+
+#: assets/js/app.js:29641
+msgid "Amount is required"
+msgstr "مبلغ مورد نیاز است"
+
+#: assets/js/app.js:29667
+msgid "Coupon created"
+msgstr "کوپن ایجاد شد"
+
+#: assets/js/app.js:29674
+msgid "Coupon updated"
+msgstr "کوپن به روز شد"
+
+#: assets/js/app.js:29695
+msgid "It is removed for good; orders that already used it keep their totals."
+msgstr ""
+"برای همیشه حذف می شود. سفارش هایی که قبلاً از آن استفاده کرده اند مجموع خود "
+"را حفظ می کنند."
+
+#: assets/js/app.js:29695
+msgid "Delete coupon"
+msgstr "حذف کوپن"
+
+#: assets/js/app.js:29699
+msgid "Coupon deleted"
+msgstr "کوپن حذف شد"
+
+#: assets/js/app.js:29767
+msgid "Product updated"
+msgstr "محصول به روز شد"
+
+#: assets/js/app.js:29814
+msgid "Post type removed — content preserved"
+msgstr "نوع پست حذف شد - محتوا حفظ شد"
+
+#: assets/js/app.js:29890
+msgid "Taxonomy removed — terms preserved"
+msgstr "طبقه بندی حذف شد - شرایط حفظ شد"
+
+#: assets/js/app.js:29946
+msgid "Uploading…"
+msgstr "در حال آپلود…"
+
+#: assets/js/app.js:29966
+msgid "Image uploaded and selected"
+msgstr "تصویر آپلود و انتخاب شد"
+
+#: assets/js/app.js:29972
+msgid "Image uploaded"
+msgstr "تصویر آپلود شد"
+
+#: assets/js/app.js:30115
+msgid "Pick a user to reassign content to"
+msgstr "کاربری را برای تخصیص مجدد محتوا به آن انتخاب کنید"
+
+#: assets/js/app.js:30118
+msgid ""
+"The account is removed for good, and their content moves to the user you "
+"picked. There is no undo for this."
+msgstr ""
+"حساب برای همیشه حذف می شود و محتوای آن به کاربری که انتخاب کرده اید منتقل "
+"می شود. هیچ لغو برای این وجود ندارد."
+
+#: assets/js/app.js:30122
+msgid "User deleted"
+msgstr "کاربر حذف شد"
+
+#: assets/js/app.js:30319
+msgid "Theme uploads must be .zip files"
+msgstr "بارگذاری‌های تم باید فایل‌های zip. باشند"
+
+#: assets/js/app.js:30328
+msgid "Theme installed — activate it from the Themes tab"
+msgstr "طرح زمینه نصب شد - آن را از تب Themes فعال کنید"
+
+#: assets/js/app.js:30370
+msgid "Forms"
+msgstr "فرم ها"
+
+#: assets/js/app.js:30383
+msgid "Ecommerce"
+msgstr "تجارت الکترونیک"
+
+#: assets/js/app.js:30392
+msgid "Security"
+msgstr "امنیت"
+
+#: assets/js/app.js:30402
+msgid "Backup"
+msgstr "پشتیبان گیری"
+
+#: assets/js/app.js:30424
+msgid "Cache"
+msgstr "حافظه پنهان"
+
+#: assets/js/app.js:30436
+msgid "Performance"
+msgstr "کارایی"
+
+#: assets/js/app.js:30446
+msgid "Email / SMTP"
+msgstr "ایمیل / SMTP"
+
+#: assets/js/app.js:30455
+msgid "Redirects"
+msgstr "تغییر مسیرها"
+
+#: assets/js/app.js:30464
+msgid "Snippets"
+msgstr "تکه ها"
+
+#: assets/js/app.js:30474
+msgid "Dev tools"
+msgstr "ابزارهای توسعه دهنده"
+
+#: assets/js/app.js:14294
+#: assets/js/app.js:14334
+#: assets/js/app.js:30484
+msgid "Spam"
+msgstr "جفنگ"
+
+#: assets/js/app.js:30493
+msgid "Blocks"
+msgstr "بلوک‌ها"
+
+#: assets/js/app.js:30504
+msgid "Custom fields"
+msgstr "زمینه های سفارشی"
+
+#: assets/js/app.js:30513
+msgid "Little extras"
+msgstr "موارد اضافی کوچک"
+
+#: assets/js/app.js:30578
+msgid "No details available."
+msgstr "هیچ جزئیاتی در دسترس نیست."
+
+#: assets/js/app.js:30876
+msgid "Plugin uploads must be .zip files"
+msgstr "آپلود افزونه ها باید فایل های .zip باشند"
+
+#: assets/js/app.js:30885
+msgid "Plugin installed — activate it from the list"
+msgstr "پلاگین نصب شده - آن را از لیست فعال کنید"
+
+#: assets/js/app.js:31116
+msgid "No changelog found."
+msgstr "تغییراتی پیدا نشد"
+
+#: assets/js/app.js:31352
+msgid "Less"
+msgstr "کمتر"
+
+#: assets/js/app.js:31358
+msgid "More"
+msgstr "بیشتر"
+
+#: assets/js/app.js:31432
+msgid "All revisions"
+msgstr "همه بازنگری ها"
+
+#: assets/js/app.js:31439
+msgid "Loading revisions…"
+msgstr "در حال بارگیری بازبینی‌ها…"
+
+#: assets/js/app.js:31476
+msgid "Changes"
+msgstr "تغییرات"
+
+#: assets/js/app.js:31480
+msgid "This revision"
+msgstr "این تجدید نظر"
+
+#: assets/js/app.js:31480
+msgid "Current"
+msgstr "فعلی"
+
+#: assets/js/app.js:31488
+#: assets/js/app.js:31549
+msgid "Restore this revision"
+msgstr "این ویرایش را بازیابی کنید"
+
+#: assets/js/app.js:31502
+msgid "Newer (←)"
+msgstr "جدیدتر (←)"
+
+#: assets/js/app.js:31503
+msgid "Older (→)"
+msgstr "قدیمی تر (→)"
+
+#: assets/js/app.js:31506
+msgid "Loading revision…"
+msgstr "در حال بارگیری بازبینی…"
+
+#: assets/js/app.js:31530
+msgid ""
+"Replace the current content with this revision? The current state is saved "
+"as its own revision first."
+msgstr ""
+"محتوای فعلی را با این ویرایش جایگزین کنید؟ وضعیت فعلی ابتدا به عنوان "
+"بازبینی خودش ذخیره می شود."
+
+#: assets/js/app.js:31532
+msgid "Restoring…"
+msgstr "در حال بازیابی…"
+
+#: assets/js/app.js:31541
+msgid "Revision restored"
+msgstr "بازبینی بازیابی شد"
+
+#: assets/js/app.js:31708
+msgid "User created"
+msgstr "کاربر ایجاد شد"
+
+#: assets/js/app.js:32189
+msgid "Loading your profile…"
+msgstr "در حال بارگیری نمایه شما…"
+
+#: assets/js/app.js:32224
+msgid "Any language — ones not yet installed download automatically when you save."
+msgstr ""
+"هر زبانی – آنهایی که هنوز نصب نشده‌اند به‌طور خودکار با ذخیره کردن دانلود "
+"می‌شوند."
+
+#: assets/js/app.js:32255
+msgid "A couple of sentences about you — themes show this in author boxes."
+msgstr "چند جمله در مورد شما - مضامین این را در جعبه های نویسنده نشان می دهد."
+
+#: assets/js/app.js:32259
+msgid "Your profile picture comes from"
+msgstr "عکس نمایه شما از"
+
+#: assets/js/app.js:32259
+msgid "Gravatar ↗"
+msgstr "Gravatar ↗"
+
+#: assets/js/app.js:32265
+msgid "AI Access"
+msgstr "دسترسی هوش مصنوعی"
+
+#: assets/js/app.js:32265
+msgid "application passwords"
+msgstr "رمزهای عبور برنامه"
+
+#: assets/js/app.js:32266
+msgid ""
+"Give an AI agent its own revocable credential instead of your login. It "
+"authenticates against the REST API with HTTP Basic auth."
+msgstr ""
+"به یک عامل هوش مصنوعی به جای ورود به سیستم، اعتبار قابل فسخ خود را بدهید. "
+"در برابر REST API با HTTP اولیه احراز هویت می شود."
+
+#: assets/js/app.js:32276
+msgid "No application passwords yet."
+msgstr "هنوز پسورد برنامه وجود ندارد."
+
+#: assets/js/app.js:32283
+msgid "Revoke"
+msgstr "ابطال"
+
+#: assets/js/app.js:32286
+msgid "AI Agent"
+msgstr "عامل هوش مصنوعی"
+
+#: assets/js/app.js:32304
+msgid "Theme"
+msgstr "پوسته"
+
+#: assets/js/app.js:32311
+msgid ""
+"The WordPress admin bar on the front end while you're signed in. Applies "
+"only to you."
+msgstr ""
+"وقتی وارد سیستم شده‌اید، نوار مدیریت WordPress در قسمت جلویی قرار دارد. فقط "
+"برای شما اعمال می‌شود."
+
+#: assets/js/app.js:32320
+msgid "Hidden for you"
+msgstr "برای شما پنهان شده است"
+
+#: assets/js/app.js:32438
+msgid "Password changed — refreshing…"
+msgstr "گذرواژه تغییر کرد - در حال تازه کردن…"
+
+#: assets/js/app.js:32486
+msgid ""
+"Revoke this application password? Anything using it loses access "
+"immediately."
+msgstr ""
+"گذرواژه این برنامه لغو شود؟ هر چیزی که از آن استفاده می کند بلافاصله دسترسی "
+"را از دست می دهد."
+
+#: assets/js/app.js:32490
+msgid "Application password revoked"
+msgstr "رمز برنامه لغو شد"
+
+#: assets/js/app.js:32536
+msgid "Sign out of all other sessions?"
+msgstr "از همه جلسات دیگر خارج شوید؟"
+
+#: assets/js/app.js:32624
+msgid "All notifications marked read"
+msgstr "همهٔ اعلان‌ها خوانده علامت‌گذاری شدند"
+
+#: assets/js/app.js:32763
+msgid "Scroll tabs left"
+msgstr "برگه ها را به سمت چپ اسکرول کنید"
+
+#: assets/js/app.js:32765
+msgid "Scroll tabs right"
+msgstr "برگه ها را به سمت راست اسکرول کنید"
+
+#: includes/class-minn-admin-rest.php:2379
+msgid "Published posts"
+msgstr "نوشته‌های منتشرشده"
+
+#: includes/class-minn-admin-rest.php:2383
+#. translators: %d: number of draft posts.
+#, php-format
+msgid "%d draft"
+msgid_plural "%d drafts"
+msgstr[0] "%d پیش‌نویس"
+msgstr[1] "%d پیش‌نویس"
+
+#: includes/class-minn-admin-rest.php:2390
+msgid "published"
+msgstr "منتشرشده"
+
+#: includes/class-minn-admin-rest.php:2400
+msgid "registered"
+msgstr "ثبت‌نام‌شده"
+
+#: includes/class-minn-admin-rest.php:2407
+#. translators: %d: number of pending comments.
+#, php-format
+msgid "%d pending"
+msgid_plural "%d pending"
+msgstr[0] "%d در انتظار"
+msgstr[1] "%d در انتظار"
+
+#: includes/class-minn-admin-rest.php:2411
+msgid "Media files"
+msgstr "فایل‌های رسانه‌ای"
+
+#: includes/class-minn-admin-rest.php:2415
+#. translators: %s: formatted media-library size.
+#, php-format
+msgid "%s used"
+msgstr "%s استفاده‌شده"
+
+#: includes/class-minn-admin-rest.php:2971
+msgid "Good morning"
+msgstr "صبح بخیر"
+
+#: includes/class-minn-admin-rest.php:2974
+msgid "Good afternoon"
+msgstr "ظهر بخیر"
+
+#: includes/class-minn-admin-rest.php:2976
+msgid "Good evening"
+msgstr "عصر بخیر"
+
+#: assets/js/app.js:2585
+msgid "Traffic"
+msgstr "بازدید"
+
+#: assets/js/app.js:2585
+msgid "Activity"
+msgstr "فعالیت"
+
+#: assets/js/app.js:13795
+#: assets/js/app.js:14231
+msgid "Homepage"
+msgstr "صفحهٔ اصلی"
+
+#: assets/js/app.js:13796
+msgid "Design"
+msgstr "طراحی"
+
+#: assets/js/app.js:13796
+msgid "Connectors"
+msgstr "اتصال‌ها"
+
+#: assets/js/app.js:14155
+msgid "Your site’s identity, locale and admin."
+msgstr "هویت، زبان و مدیریت سایت شما."
+
+#: assets/js/app.js:14156
+msgid "Site title"
+msgstr "عنوان سایت"
+
+#: assets/js/app.js:14157
+msgid "Tagline"
+msgstr "معرفی کوتاه"
+
+#: assets/js/app.js:14160
+msgid "Site address"
+msgstr "نشانی سایت"
+
+#: assets/js/app.js:14161
+msgid "Administration email"
+msgstr "ایمیل مدیریت"
+
+#: assets/js/app.js:14174
+msgid "Date format"
+msgstr "قالب تاریخ"
+
+#: assets/js/app.js:14175
+msgid "Time format"
+msgstr "قالب زمان"
+
+#: assets/js/app.js:14176
+msgid "Week starts on"
+msgstr "آغاز هفته"
+
+#: assets/js/app.js:14184
+msgid "Site language"
+msgstr "زبان سایت"
+
+#: assets/js/app.js:14199
+msgid "Also limiting visibility"
+msgstr "همچنین محدودیت دید"
+
+#: assets/js/app.js:14209
+msgid "Who can see, index and join your site."
+msgstr "چه کسی می تواند سایت شما را ببیند، فهرست کند و به آن بپیوندد."
+
+#: assets/js/app.js:14210
+msgid "New user default role"
+msgstr "نقش پیش فرض کاربر جدید"
+
+#: assets/js/app.js:14220
+msgid "Your homepage displays"
+msgstr "صفحه اصلی شما نمایش داده می شود"
+
+#: assets/js/app.js:14229
+msgid "What visitors land on, and how much shows."
+msgstr "بازدیدکنندگان در چه چیزی فرود می آیند و چقدر نشان می دهد."
+
+#: assets/js/app.js:14231
+msgid "Posts page"
+msgstr "صفحه پست ها"
+
+#: assets/js/app.js:14232
+msgid "Blog pages show at most"
+msgstr "صفحات وبلاگ حداکثر نمایش داده می شوند"
+
+#: assets/js/app.js:14241
+msgid "Site-wide CSS on top of the active theme."
+msgstr "CSS در سراسر سایت در بالای موضوع فعال است."
+
+#: assets/js/app.js:14259
+#: assets/js/app.js:14262
+msgid "URLs"
+msgstr "URL ها"
+
+#: assets/js/app.js:14264
+msgid "Permalink structure"
+msgstr "ساختار پیوند ثابت"
+
+#: assets/js/app.js:14265
+msgid "Custom structure"
+msgstr "ساختار سفارشی"
+
+#: assets/js/app.js:14267
+msgid "Category base (optional)"
+msgstr "پایه دسته (اختیاری)"
+
+#: assets/js/app.js:14268
+msgid "Tag base (optional)"
+msgstr "پایه برچسب (اختیاری)"
+
+#: assets/js/app.js:14272
+msgid "Defaults for new content, and the URL structure."
+msgstr "پیش‌فرض‌های محتوای جدید و ساختار URL."
+
+#: assets/js/app.js:14273
+msgid "Default post category"
+msgstr "دسته پست پیش فرض"
+
+#: assets/js/app.js:14274
+msgid "Default post format"
+msgstr "قالب پیش فرض پست"
+
+#: assets/js/app.js:14342
+msgid "How comments behave, and how spam is handled."
+msgstr "نظرها چگونه رفتار می کنند و هرزنامه چگونه مدیریت می شود."
+
+#: assets/js/app.js:14412
+msgid ""
+"External services WordPress can use: AI providers and other connected APIs. "
+"Keys are stored by core, validated on save, and never shown again once "
+"saved."
+msgstr ""
+"خدمات خارجی که WordPress می تواند استفاده کند: ارائه دهندگان هوش مصنوعی و "
+"سایر APIهای متصل. کلیدها توسط هسته ذخیره می شوند، در ذخیره اعتبارسنجی می "
+"شوند و پس از ذخیره شدن دیگر هرگز نشان داده نمی شوند."
+
+#. translators: %s: localized start date of a week.
+#: includes/class-minn-admin-rest.php
+#, php-format
+msgid "Week of %s"
+msgstr "هفتهٔ %s"
+
+#. translators: %s: localized page-view count.
+#: includes/class-minn-admin-rest.php
+#, php-format
+msgid "%s pageview"
+msgid_plural "%s pageviews"
+msgstr[0] "%s بازدید صفحه"
+msgstr[1] "%s بازدید صفحه"
+
+#. translators: 1: percentage change, 2: number of days in the comparison period.
+#: includes/class-minn-admin-rest.php
+#, php-format
+msgid "%1$s%% vs prior %2$d day"
+msgid_plural "%1$s%% vs prior %2$d days"
+msgstr[0] "%1$s%% در مقایسه با %2$d روز قبل"
+msgstr[1] "%1$s%% در مقایسه با %2$d روز قبل"

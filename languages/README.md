@@ -16,6 +16,10 @@ Front-end requests normally use the site locale. Before the shell and its boot
 payload are built, Minn switches to the signed-in user's locale so PHP strings and
 JavaScript catalogs follow the Language choice on that user's profile.
 
+The JavaScript app also reads that effective language from the shell's `<html lang>`
+attribute and passes it explicitly to `Intl`/`toLocale*`. Numbers and dates therefore
+follow WordPress even when the browser's preferred language is different.
+
 The module-local `__()`, `_n()` and `sprintf()` helpers delegate to `wp.i18n`. They
 retain an English fallback so a missing catalog never prevents the app from loading.
 The `minn_admin_js_translations` filter and `B.i18n` map are override seams for sites
@@ -61,6 +65,13 @@ the path-hashed JSON generated for `assets/js/app.js`. Persian uses the WordPres
 rule `nplurals=2; plural=(n > 1);`. Regenerate the MO and JSON files with the commands
 above whenever the PO changes; never edit those compiled artifacts by hand.
 
+Before compiling, merge the refreshed POT into the PO so existing translations are
+preserved and removed source strings are retired:
+
+```sh
+wp i18n update-po languages/minn-admin.pot languages/minn-admin-fa_IR.po
+```
+
 ## Validation
 
 Run the site-independent contract check after regenerating:
@@ -69,6 +80,11 @@ Run the site-independent contract check after regenerating:
 cd tests
 npm run test:i18n
 ```
+
+That command uses a real gettext parser (including multiline entries and plurals),
+requires exact POT/PO coverage with no empty, fuzzy or obsolete entries, verifies
+printf placeholders and compiled artifacts, and rejects direct static HTML or common
+JavaScript UI literals that bypass gettext.
 
 The browser-backed `tests/i18n.test.js` verifies the WordPress i18n runtime, a standard
 in-memory JED catalog with a non-English plural rule, translated Minn DOM, English

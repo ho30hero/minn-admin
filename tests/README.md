@@ -7,8 +7,8 @@ its own posts through the app's REST credentials and deletes them on exit.
 ## Run
 
 ```bash
-cd tests && npm run test:i18n  # fast i18n contract check; no site required
-cd tests && npm install          # once — installs playwright-core only
+cd tests && npm run test:i18n  # fast catalog + UI-literal contract; no site required
+cd tests && npm install          # once — installs browser and static-analysis tools
 MINN_TEST_PASS=<admin password> node markdown.test.js
 MINN_TEST_PASS=<admin password> node autosave.test.js   # slow (~90s) by design
 MINN_TEST_PASS=<admin password> node paste.test.js      # Word/Docs/web fixtures → saved markup

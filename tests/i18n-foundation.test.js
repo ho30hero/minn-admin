@@ -5,6 +5,7 @@
 const fs = require( 'fs' );
 const path = require( 'path' );
 const crypto = require( 'crypto' );
+const gettext = require( 'gettext-parser' );
 
 const root = path.resolve( __dirname, '..' );
 const read = ( file ) => fs.readFileSync( path.join( root, file ), 'utf8' );
@@ -20,23 +21,27 @@ const scriptPath = 'assets/js/app.js';
 const scriptHash = crypto.createHash( 'md5' ).update( scriptPath ).digest( 'hex' );
 const jsonPath = `languages/minn-admin-fa_IR-${ scriptHash }.json`;
 const scriptCatalog = JSON.parse( read( jsonPath ) );
-const potIds = pot.split( /\r?\n/ )
-	.filter( ( line ) => line.startsWith( 'msgid "' ) && line !== 'msgid ""' )
-	.map( ( line ) => line.slice( 7, -1 ) );
+const parseCatalog = ( source ) => {
+	const catalog = gettext.po.parse( Buffer.from( source ) );
+	const messages = [];
+	for ( const context of Object.values( catalog.translations ) ) {
+		for ( const message of Object.values( context ) ) {
+			if ( message.msgid ) messages.push( message );
+		}
+	}
+	return { catalog, messages };
+};
+const parsedPot = parseCatalog( pot );
+const parsedPo = parseCatalog( po );
+const potIds = parsedPot.messages.map( ( message ) => message.msgid );
 const duplicatePotIds = potIds.filter( ( id, index ) => potIds.indexOf( id ) !== index );
-const poBlocks = po.split( /\r?\n\r?\n/ ).slice( 1 );
-const poIds = poBlocks.map( ( block ) => ( block.match( /^msgid "(.*)"$/m ) || [] )[ 1 ] ).filter( Boolean );
+const poIds = parsedPo.messages.map( ( message ) => message.msgid );
 const duplicatePoIds = poIds.filter( ( id, index ) => poIds.indexOf( id ) !== index );
-const untranslatedPoEntries = poBlocks.filter( ( block ) => (
-	/^msgstr ""$/m.test( block ) || /^msgstr\[\d+\] ""$/m.test( block )
-) );
+const untranslatedPoEntries = parsedPo.messages.filter( ( message ) => ! message.msgstr || message.msgstr.some( ( value ) => ! value ) );
 const placeholderPattern = /%(?:\d+\$)?[bcdeEfFgGosuxX]/g;
 const placeholders = ( value ) => ( value.match( placeholderPattern ) || [] ).sort().join( ',' );
-const placeholderErrors = poBlocks.filter( ( block ) => {
-	const source = ( block.match( /^msgid "(.*)"$/m ) || [] )[ 1 ] || '';
-	const plural = ( block.match( /^msgid_plural "(.*)"$/m ) || [] )[ 1 ];
-	const targets = [ ...block.matchAll( /^msgstr(?:\[\d+\])? "(.*)"$/gm ) ].map( ( match ) => match[ 1 ] );
-	return targets.some( ( target, index ) => placeholders( target ) !== placeholders( index && plural ? plural : source ) );
+const placeholderErrors = parsedPo.messages.filter( ( message ) => {
+	return message.msgstr.some( ( target, index ) => placeholders( target ) !== placeholders( index && message.msgid_plural ? message.msgid_plural : message.msgid ) );
 } );
 const localeData = scriptCatalog.locale_data.messages;
 

@@ -2376,35 +2376,43 @@ class Minn_Admin_REST {
 
 		$stats = array(
 			array(
-				'label' => 'Published posts',
+				'label' => __( 'Published posts', 'minn-admin' ),
+				'route' => 'content:posts',
 				'value' => number_format_i18n( (int) $posts->publish ),
-				'delta' => (int) $posts->draft . ' draft' . ( 1 === (int) $posts->draft ? '' : 's' ),
+				/* translators: %d: number of draft posts. */
+				'delta' => sprintf( _n( '%d draft', '%d drafts', (int) $posts->draft, 'minn-admin' ), (int) $posts->draft ),
 				'up'    => null,
 			),
 			array(
-				'label' => 'Pages',
+				'label' => __( 'Pages', 'minn-admin' ),
+				'route' => 'content:pages',
 				'value' => number_format_i18n( (int) $pages->publish ),
-				'delta' => 'published',
+				'delta' => __( 'published', 'minn-admin' ),
 				'up'    => null,
 			),
 			// Many sites never use comments — an eternal zero is dead weight,
 			// so a comment-less site gets a Users count instead. Pending
 			// comments still force the card (they need moderating).
 			( 0 === (int) $comments->approved && 0 === (int) $comments->moderated ) ? array(
-				'label' => 'Users',
+				'label' => __( 'Users', 'minn-admin' ),
+				'route' => 'users',
 				'value' => number_format_i18n( self::user_count() ),
-				'delta' => 'registered',
+				'delta' => __( 'registered', 'minn-admin' ),
 				'up'    => null,
 			) : array(
-				'label' => 'Comments',
+				'label' => __( 'Comments', 'minn-admin' ),
+				'route' => 'comments',
 				'value' => number_format_i18n( (int) $comments->approved ),
-				'delta' => (int) $comments->moderated . ' pending',
+				/* translators: %d: number of pending comments. */
+				'delta' => sprintf( _n( '%d pending', '%d pending', (int) $comments->moderated, 'minn-admin' ), (int) $comments->moderated ),
 				'up'    => (int) $comments->moderated > 0 ? 'warn' : null,
 			),
 			array(
-				'label' => 'Media files',
+				'label' => __( 'Media files', 'minn-admin' ),
+				'route' => 'media',
 				'value' => number_format_i18n( (int) $media->inherit ),
-				'delta' => size_format( self::uploads_size(), 1 ) . ' used',
+				/* translators: %s: formatted media-library size. */
+				'delta' => sprintf( __( '%s used', 'minn-admin' ), size_format( self::uploads_size(), 1 ) ),
 				'up'    => null,
 			),
 		);
@@ -2440,7 +2448,11 @@ class Minn_Admin_REST {
 			$offset  = ( $buckets - 1 - $i ) * $bucket_days;
 			$label   = 1 === $bucket_days
 				? date_i18n( 'M j', time() - $offset * DAY_IN_SECONDS )
-				: 'Week of ' . date_i18n( 'M j', time() - ( $offset + $bucket_days - 1 ) * DAY_IN_SECONDS );
+				: sprintf(
+					/* translators: %s: localized start date of a week. */
+					__( 'Week of %s', 'minn-admin' ),
+					date_i18n( 'M j', time() - ( $offset + $bucket_days - 1 ) * DAY_IN_SECONDS )
+				);
 			$chart[] = array(
 				'label' => $label,
 				'value' => $count,
@@ -2491,7 +2503,11 @@ class Minn_Admin_REST {
 				$to_ts    = time() - $offset * DAY_IN_SECONDS;
 				$label    = 1 === $bucket_days
 					? date_i18n( 'M j, Y', $to_ts )
-					: 'Week of ' . date_i18n( 'M j, Y', $from_ts );
+					: sprintf(
+						/* translators: %s: localized start date of a week. */
+						__( 'Week of %s', 'minn-admin' ),
+						date_i18n( 'M j, Y', $from_ts )
+					);
 				$tchart[] = array(
 					'label' => $label,
 					'value' => $bucket['v'],
@@ -2508,21 +2524,32 @@ class Minn_Admin_REST {
 			$delta = $prev > 0 ? round( ( $visitors - $prev ) / $prev * 100, 1 ) : null;
 			// Always surface pageviews on the card; when a period delta exists
 			// it leads, with pageviews as a quiet second clause.
-			$views_bit = $compact( $pageviews ) . ' pageviews';
-			$delta_bit = null !== $delta
-				? ( $delta >= 0 ? '↑ ' : '↓ ' ) . abs( $delta ) . '% vs prior ' . $days . 'd · ' . $views_bit
-				: $views_bit;
+			$views_bit = sprintf(
+				/* translators: %s: localized page-view count. */
+				_n( '%s pageview', '%s pageviews', $pageviews, 'minn-admin' ),
+				$compact( $pageviews )
+			);
+			$delta_bit = $views_bit;
+			if ( null !== $delta ) {
+				$comparison = sprintf(
+					/* translators: 1: percentage change, 2: number of days in the comparison period. */
+					_n( '%1$s%% vs prior %2$d day', '%1$s%% vs prior %2$d days', $days, 'minn-admin' ),
+					abs( $delta ),
+					$days
+				);
+				$delta_bit = ( $delta >= 0 ? '↑ ' : '↓ ' ) . $comparison . ' · ' . $views_bit;
+			}
 			array_unshift(
 				$stats,
 				array(
-					'label' => 'Visitors',
+					'label' => __( 'Visitors', 'minn-admin' ),
 					'value' => $compact( $visitors ),
 					'delta' => $delta_bit,
 					'up'    => null !== $delta ? ( $delta >= 0 ? true : 'down' ) : null,
 				)
 			);
 			$traffic_out = array(
-				'source' => isset( $traffic['source'] ) ? $traffic['source'] : 'Analytics',
+				'source' => isset( $traffic['source'] ) ? $traffic['source'] : __( 'Analytics', 'minn-admin' ),
 				'chart'  => $tchart,
 			);
 		}
@@ -2960,12 +2987,12 @@ class Minn_Admin_REST {
 	private static function greeting() {
 		$hour = (int) current_time( 'G' );
 		if ( $hour < 12 ) {
-			return 'Good morning';
+			return __( 'Good morning', 'minn-admin' );
 		}
 		if ( $hour < 17 ) {
-			return 'Good afternoon';
+			return __( 'Good afternoon', 'minn-admin' );
 		}
-		return 'Good evening';
+		return __( 'Good evening', 'minn-admin' );
 	}
 
 	/**
