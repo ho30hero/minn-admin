@@ -41,6 +41,12 @@ const { BASE, launch, login, reporter } = require( './helpers' );
 				return { dependency, translation, app };
 			} )(),
 		} ) );
+		await page.waitForSelector( '.minn-stat-label', { timeout: 15000 } );
+		const linguistic = await page.evaluate( () => ( {
+			greeting: ( document.querySelector( '.minn-dash-greeting' ) || {} ).textContent || '',
+			stats: [ ...document.querySelectorAll( '.minn-stat-label,.minn-stat-delta' ) ].map( ( el ) => el.textContent.trim() ),
+			chart: ( document.querySelector( '.minn-chart-head .minn-panel-title' ) || {} ).textContent || '',
+		} ) );
 
 		t.check( 'user locale reaches the document', /^fa(?:-|$)/i.test( state.htmlLang ) );
 		t.check( 'user locale makes the document RTL', state.htmlDir === 'rtl' );
@@ -53,6 +59,17 @@ const { BASE, launch, login, reporter } = require( './helpers' );
 		t.check( 'missing entries retain the English source', state.fallback === 'Deliberately absent release-smoke string' );
 		t.check( 'other domains retain the English source', state.otherDomain === 'Overview' );
 		t.check( 'dependency and translation data precede the app', state.scriptOrder.dependency >= 0 && state.scriptOrder.translation > state.scriptOrder.dependency && state.scriptOrder.app > state.scriptOrder.translation );
+		t.check( 'overview REST and JS labels are translated', /[\u0600-\u06ff]/.test( linguistic.greeting ) && linguistic.stats.length >= 4 && linguistic.stats.every( ( value ) => /[\u0600-\u06ff]/.test( value ) ) && /[\u0600-\u06ff]/.test( linguistic.chart ), JSON.stringify( linguistic ) );
+		await page.goto( BASE + '/minn-admin/settings', { waitUntil: 'domcontentloaded' } );
+		await page.waitForSelector( '.minn-settings-nav-item', { timeout: 15000 } );
+		const settingsText = await page.evaluate( () => ( {
+			nav: [ ...document.querySelectorAll( '.minn-settings-nav-item' ) ].map( ( el ) => el.textContent.trim() ),
+			labels: [ ...document.querySelectorAll( '.minn-field-label' ) ].map( ( el ) => el.textContent.trim() ),
+			sub: ( document.querySelector( '.minn-settings-sub' ) || {} ).textContent || '',
+		} ) );
+		t.check( 'settings navigation, labels and subtitle are translated', settingsText.nav.every( ( value ) => /[\u0600-\u06ff]/.test( value ) ) && settingsText.labels.length >= 5 && settingsText.labels.every( ( value ) => /[\u0600-\u06ff]/.test( value ) ) && /[\u0600-\u06ff]/.test( settingsText.sub ), JSON.stringify( settingsText ) );
+	} catch ( error ) {
+		t.check( 'release smoke completed without an exception', false, error.message );
 	} finally {
 		await t.done( browser, errors );
 	}

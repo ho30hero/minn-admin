@@ -3,12 +3,14 @@
 	"private": true,
 	"description": "Browser test harness for Minn Admin — see README.md",
 	"scripts": {
-		"test:i18n": "node i18n-foundation.test.js && node rtl-foundation.test.js"
+		"test:i18n": "node i18n-foundation.test.js && node rtl-foundation.test.js && node i18n-completeness.test.js && node i18n-ui-ast.test.js"
 	},
 	"dependencies": {
 		"playwright-core": "^1.45.0"
 	},
 	"devDependencies": {
-		"axe-core": "^4.12.1"
+		"acorn": "^8.15.0",
+		"axe-core": "^4.12.1",
+		"gettext-parser": "^9.1.1"
 	}
 }

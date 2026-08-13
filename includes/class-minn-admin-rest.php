@@ -2376,35 +2376,43 @@ class Minn_Admin_REST {
 
 		$stats = array(
 			array(
-				'label' => 'Published posts',
+				'label' => __( 'Published posts', 'minn-admin' ),
+				'route' => 'content:posts',
 				'value' => number_format_i18n( (int) $posts->publish ),
-				'delta' => (int) $posts->draft . ' draft' . ( 1 === (int) $posts->draft ? '' : 's' ),
+				/* translators: %d: number of draft posts. */
+				'delta' => sprintf( _n( '%d draft', '%d drafts', (int) $posts->draft, 'minn-admin' ), (int) $posts->draft ),
 				'up'    => null,
 			),
 			array(
-				'label' => 'Pages',
+				'label' => __( 'Pages', 'minn-admin' ),
+				'route' => 'content:pages',
 				'value' => number_format_i18n( (int) $pages->publish ),
-				'delta' => 'published',
+				'delta' => __( 'published', 'minn-admin' ),
 				'up'    => null,
 			),
 			// Many sites never use comments — an eternal zero is dead weight,
 			// so a comment-less site gets a Users count instead. Pending
 			// comments still force the card (they need moderating).
 			( 0 === (int) $comments->approved && 0 === (int) $comments->moderated ) ? array(
-				'label' => 'Users',
+				'label' => __( 'Users', 'minn-admin' ),
+				'route' => 'users',
 				'value' => number_format_i18n( self::user_count() ),
-				'delta' => 'registered',
+				'delta' => __( 'registered', 'minn-admin' ),
 				'up'    => null,
 			) : array(
-				'label' => 'Comments',
+				'label' => __( 'Comments', 'minn-admin' ),
+				'route' => 'comments',
 				'value' => number_format_i18n( (int) $comments->approved ),
-				'delta' => (int) $comments->moderated . ' pending',
+				/* translators: %d: number of pending comments. */
+				'delta' => sprintf( _n( '%d pending', '%d pending', (int) $comments->moderated, 'minn-admin' ), (int) $comments->moderated ),
 				'up'    => (int) $comments->moderated > 0 ? 'warn' : null,
 			),
 			array(
-				'label' => 'Media files',
+				'label' => __( 'Media files', 'minn-admin' ),
+				'route' => 'media',
 				'value' => number_format_i18n( (int) $media->inherit ),
-				'delta' => size_format( self::uploads_size(), 1 ) . ' used',
+				/* translators: %s: formatted media-library size. */
+				'delta' => sprintf( __( '%s used', 'minn-admin' ), size_format( self::uploads_size(), 1 ) ),
 				'up'    => null,
 			),
 		);
@@ -2960,12 +2968,12 @@ class Minn_Admin_REST {
 	private static function greeting() {
 		$hour = (int) current_time( 'G' );
 		if ( $hour < 12 ) {
-			return 'Good morning';
+			return __( 'Good morning', 'minn-admin' );
 		}
 		if ( $hour < 17 ) {
-			return 'Good afternoon';
+			return __( 'Good afternoon', 'minn-admin' );
 		}
-		return 'Good evening';
+		return __( 'Good evening', 'minn-admin' );
 	}
 
 	/**
