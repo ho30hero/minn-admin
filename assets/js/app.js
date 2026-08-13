@@ -1349,8 +1349,14 @@
 			${ builderRows }`;
 		const r = btn.getBoundingClientRect();
 		menu.style.top = ( r.bottom + 6 ) + 'px';
-		menu.style.right = Math.max( 8, window.innerWidth - r.right ) + 'px';
 		document.body.appendChild( menu );
+		// The topbar actions switch physical sides in RTL. Anchor the menu to
+		// the trigger's inline end, then clamp it fully inside the viewport.
+		const anchorLeft = document.documentElement.dir === 'rtl'
+			? r.left
+			: r.right - menu.offsetWidth;
+		const maxLeft = Math.max( 8, window.innerWidth - menu.offsetWidth - 8 );
+		menu.style.left = Math.max( 8, Math.min( anchorLeft, maxLeft ) ) + 'px';
 		$$( 'button[data-newtype]', menu ).forEach( ( b ) =>
 			b.addEventListener( 'click', () => {
 				menu.remove();
