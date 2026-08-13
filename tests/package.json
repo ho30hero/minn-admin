@@ -3,7 +3,7 @@
 	"private": true,
 	"description": "Browser test harness for Minn Admin — see README.md",
 	"scripts": {
-		"test:i18n": "node i18n-foundation.test.js"
+		"test:i18n": "node i18n-foundation.test.js && node rtl-foundation.test.js"
 	},
 	"dependencies": {
 		"playwright-core": "^1.45.0"

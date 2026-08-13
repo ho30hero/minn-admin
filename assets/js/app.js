@@ -1537,7 +1537,8 @@
 		};
 		// Icons are always decorative: the accessible name lives on the
 		// control (text, aria-label or title), never on the glyph.
-		return `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">${ icons[ name ] || '' }</svg>`;
+		const directional = 'chevron-left' === name || 'chevron-right' === name;
+		return `<svg${ directional ? ' class="minn-directional-icon"' : '' } width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">${ icons[ name ] || '' }</svg>`;
 	}
 
 	function navBtnHtml( n ) {

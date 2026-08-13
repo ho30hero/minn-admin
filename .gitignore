@@ -3,3 +3,4 @@ node_modules/
 tests/package-lock.json
 # local full-suite run logs (release preflight)
 tests/.release-*
+tests/.rtl-smoke/
